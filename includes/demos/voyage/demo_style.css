@@ -51,6 +51,7 @@ usage:
 .td-voyage .block-title {
   width: 100%;
   padding-bottom: 5px;
+  font-size: 17px;
 }
 .td-voyage .block-title:after {
   width: 100%;
@@ -62,6 +63,14 @@ usage:
 }
 .td-voyage .td-wrapper-pulldown-filter {
   bottom: 22px;
+}
+.td-voyage .td-post-category {
+  font-size: 11px;
+}
+.td-voyage .td_module_rd_3 .entry-title {
+  padding-bottom: 14px;
+  font-size: 16px;
+  line-height: 21px;
 }
 .td-voyage .td_module_rd_7 {
   text-align: center;
@@ -87,8 +96,8 @@ usage:
 }
 @media (min-width: 1018px) {
   .td-voyage .td_block_image_box .entry-title {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 32px;
+    line-height: 32px;
   }
 }
 .td-voyage .td-footer-wrapper .block-title {
@@ -97,4 +106,23 @@ usage:
 }
 .td-voyage .td-footer-wrapper .block-title:after {
   display: none;
+}
+.td-voyage .td-mx-15 .entry-title {
+  font-size: 16px;
+  line-height: 21px;
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-voyage .td-mx-15 .entry-title {
+    font-size: 15px !important;
+    line-height: 20px !important;
+  }
+}
+.td-voyage .td-mx-19 .entry-title {
+  font-size: 21px;
+  line-height: 26px;
+}
+.td-voyage .td_block_related_posts .entry-title {
+  font-size: 13px;
+  line-height: 16px;
 }
