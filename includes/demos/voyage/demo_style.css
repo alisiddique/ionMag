@@ -64,8 +64,13 @@ usage:
 .td-voyage .td-wrapper-pulldown-filter {
   bottom: 22px;
 }
+.td-voyage .td-category-header .entry-category a,
 .td-voyage .td-post-category {
   font-size: 11px;
+}
+.td-voyage .td-category-header .entry-title {
+  font-size: 27px;
+  line-height: 26px;
 }
 .td-voyage .td_module_rd_3 .entry-title {
   padding-bottom: 14px;
