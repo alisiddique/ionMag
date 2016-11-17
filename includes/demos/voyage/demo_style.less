@@ -22,6 +22,7 @@
   .block-title {
     width: 100%;
     padding-bottom: 5px;
+    font-size: 17px;
 
     &:after {
       width: 100%;
@@ -33,6 +34,25 @@
 
   .td-wrapper-pulldown-filter {
     bottom: 22px;
+  }
+
+  .td-category-header .entry-category a,
+  .td-post-category {
+    font-size: 11px;
+  }
+
+  .td-category-header .entry-title {
+    padding-bottom: 18px;
+    font-size: 26px;
+    line-height: 25px;
+  }
+
+  .td_module_rd_3 {
+    .entry-title {
+      padding-bottom: 14px;
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   .td_module_rd_7 {
@@ -60,9 +80,19 @@
 
     /* tablet + desktop */
     @media (min-width: @responsive_p_tablet_max) {
-      font-size: 36px;
-      line-height: 36px;
+      font-size: 32px;
+      line-height: 32px;
     }
+  }
+
+  .td_block_author .td-author-name {
+    font-family: "Ubuntu Condensed";
+    font-family: 19px;
+    font-weight: bold;
+  }
+
+  .td-author-header .entry-title {
+    font-weight: bold;
   }
 
   .td-footer-wrapper {
@@ -74,6 +104,27 @@
         display: none;
       }
     }
+  }
+
+  .td-mx-15 .entry-title {
+    font-size: 16px;
+    line-height: 21px;
+
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      font-size: 15px !important;
+      line-height: 20px !important;
+    }
+  }
+
+  .td-mx-19 .entry-title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .td_block_related_posts .entry-title {
+    font-size: 13px;
+    line-height: 16px;
   }
 
 }

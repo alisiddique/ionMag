@@ -280,15 +280,6 @@ $td_homepage_id = td_demo_content::add_page(array(
     'limit' => '5'
 ));
 
-//about
-$td_aboutpage_id = td_demo_content::add_page(array(
-    'title' => 'About',
-    'file' => td_global::$get_template_directory . '/includes/demos/voyage/pages/about.txt',
-    'template' => 'default',   // the page template full file name with .php
-    'td_layout' => '',
-    'homepage' => false
-));
-
 /*  ----------------------------------------------------------------------------
     menu
  */
@@ -347,18 +338,6 @@ td_demo_menus::add_category(array(
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_11_id,
     'parent_id' => $parent_submenu_id
-));
-td_demo_menus::add_page(array(
-    'title' => 'About',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'page_id' => $td_aboutpage_id,
-    'parent_id' => ''
-));
-td_demo_menus::add_link(array(
-    'title' => 'Contact',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'url' => '#',
-    'parent_id' => ''
 ));
 
 
