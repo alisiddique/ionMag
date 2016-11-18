@@ -40,6 +40,7 @@ usage:
 @media (min-width: 767px) {
   .td-voyage .td-header-style-pr-4 {
     margin-top: 48px;
+    margin-bottom: 28px;
   }
 }
 .td-voyage .td-header-top-menu {
@@ -47,6 +48,9 @@ usage:
 }
 .td-voyage .td-header-top-menu .td-container {
   border-bottom: 1px dashed #e0e0e0;
+}
+.td-voyage .td-main-page-wrap {
+  padding-top: 0;
 }
 .td-voyage .block-title {
   width: 100%;

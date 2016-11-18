@@ -3208,7 +3208,7 @@ textarea {
 }
 textarea:active,
 textarea:focus {
-  border-color: #b0b0b0;
+  border-color: #b0b0b0 !important;
 }
 textarea:focus,
 input:focus,
@@ -3259,7 +3259,7 @@ input[type=text]:focus,
 input[type=url]:focus,
 input[type=tel]:focus,
 input[type=email]:focus {
-  border-color: #b0b0b0;
+  border-color: #b0b0b0 !important;
 }
 input[type=password] {
   width: 100%;
@@ -7861,6 +7861,32 @@ body .dropcap3 {
   opacity: 0.04;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='4')";
   filter: alpha(opacity=4);
+}
+.comments .comment-form .td-warning-comment,
+.comments .comment-form .td-warning-author,
+.comments .comment-form .td-warning-email,
+.comments .comment-form .td-warning-email-error {
+  display: none;
+}
+.comments .comment-form textarea {
+  display: block;
+}
+.comments .td-comment-form-warnings .td-warning-comment,
+.comments .td-comment-form-warnings .td-warning-author,
+.comments .td-comment-form-warnings .td-warning-email,
+.comments .td-comment-form-warnings .td-warning-email-error {
+  margin-bottom: -11px;
+  color: #ff7a7a;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 15px;
+}
+.comments .td-form-comment,
+.comments .td-form-author,
+.comments .td-form-email,
+.comments .td-form-url {
+  margin-top: 0;
+  margin-bottom: 21px;
 }
 .td-comments-title-wrap h4,
 .comment-reply-title {
