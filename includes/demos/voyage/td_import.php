@@ -104,6 +104,12 @@ td_demo_misc::add_ad_image('sidebar', 'td_blog_voyage_sidebar_ad');
 //default sidebar
 td_demo_widgets::remove_widgets_from_sidebar('default');
 
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_author_widget',
+    array (
+        'author_id'  => "1"
+    )
+);
+
 td_demo_widgets::add_widget_to_sidebar('default', 'td_block_social_counter_widget',
     array (
         'custom_title'  => "FOLLOW ME",
@@ -119,7 +125,7 @@ td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
     )
 );
 
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_9_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_6_widget',
     array (
         'sort' => 'random_posts',
         'custom_title' => 'POPULAR ARTICLES',

@@ -214,7 +214,7 @@ textarea {
 }
 textarea:active,
 textarea:focus {
-  border-color: #b0b0b0;
+  border-color: #b0b0b0 !important;
 }
 textarea:focus,
 input:focus,
@@ -265,7 +265,7 @@ input[type=text]:focus,
 input[type=url]:focus,
 input[type=tel]:focus,
 input[type=email]:focus {
-  border-color: #b0b0b0;
+  border-color: #b0b0b0 !important;
 }
 input[type=password] {
   width: 100%;

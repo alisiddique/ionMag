@@ -112,7 +112,7 @@ usage:
 }
 .td-voyage .td_block_author .td-author-name {
   font-family: "Ubuntu Condensed";
-  font-family: 19px;
+  font-size: 19px;
   font-weight: bold;
 }
 .td-voyage .td-author-header .entry-title {
@@ -126,7 +126,7 @@ usage:
   display: none;
 }
 .td-voyage .td-mx-15 .entry-title {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 21px;
   /* responsive portrait phone */
 }
@@ -137,7 +137,7 @@ usage:
   }
 }
 .td-voyage .td-mx-19 .entry-title {
-  font-size: 21px;
+  font-size: 22px;
   line-height: 26px;
 }
 .td-voyage .td_block_related_posts .entry-title {
