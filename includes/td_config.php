@@ -2517,7 +2517,8 @@ class td_config {
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/voyage/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_voyage/',
                 'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'demo_installed_text' => '<a href="http://forum.tagdiv.com/import-revolution-sliders-on-demos/" target="_blank">Import revolution slider</a>'
             ),
 	    );
 
