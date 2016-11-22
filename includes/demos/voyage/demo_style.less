@@ -1,5 +1,6 @@
 @import "../../less_files/variables.less";
 @import "../../less_files/mixin.less";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
 
 /* Travel demo */
 .td-voyage {
@@ -57,6 +58,7 @@
       padding-bottom: 14px;
       font-size: 16px;
       line-height: 21px;
+      letter-spacing: -0.6px;
     }
   }
 
@@ -66,6 +68,8 @@
     .entry-title {
       font-size: 25px;
       line-height: 32px;
+      font-weight: 500;
+      letter-spacing: -0.6px;
 
       /* phone + tablet */
       @media (max-width: @responsive_p_tablet_max) {
@@ -81,7 +85,9 @@
   }
 
   .td_block_image_box .entry-title {
-    font-family: "Ubuntu Condensed";
+    font-family: "Ubuntu";
+    font-weight: 500;
+    letter-spacing: -0.6px;
 
     /* tablet + desktop */
     @media (min-width: @responsive_p_tablet_max) {
@@ -91,9 +97,9 @@
   }
 
   .td_block_author .td-author-name {
-    font-family: "Ubuntu Condensed";
+    font-family: "Ubuntu";
     font-size: 19px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   .td-author-header .entry-title {
@@ -113,7 +119,9 @@
 
   .td-mx-15 .entry-title {
     font-size: 17px;
+    font-weight: 500;
     line-height: 21px;
+    letter-spacing: -0.6px;
 
     /* responsive portrait phone */
     @media (max-width: @responsive_p_phone_max) {
@@ -124,7 +132,9 @@
 
   .td-mx-19 .entry-title {
     font-size: 22px;
+    font-weight: 500;
     line-height: 26px;
+    letter-spacing: -0.6px;
   }
 
   .td_block_related_posts .entry-title {
