@@ -9060,9 +9060,6 @@ body .dropcap3 {
 .td-icon-googleplus:before {
   content: "\e81b";
 }
-.td-icon-html5:before {
-  content: "\e81c";
-}
 .td-icon-lastfm:before {
   content: "\e81e";
 }
@@ -9081,14 +9078,8 @@ body .dropcap3 {
 .td-icon-paypal:before {
   content: "\e823";
 }
-.td-icon-picasa:before {
-  content: "\e824";
-}
 .td-icon-pinterest:before {
   content: "\e825";
-}
-.td-icon-posterous:before {
-  content: "\e826";
 }
 .td-icon-reddit:before {
   content: "\e827";
@@ -9214,9 +9205,6 @@ body .dropcap3 {
 .td-social-icon-wrap:hover i.td-icon-grooveshark {
   color: #f77f00;
 }
-.td-social-icon-wrap:hover i.td-icon-html5 {
-  color: #f16729;
-}
 .td-social-icon-wrap:hover i.td-icon-instagram {
   color: #3f729b;
 }
@@ -9238,14 +9226,8 @@ body .dropcap3 {
 .td-social-icon-wrap:hover i.td-icon-paypal {
   color: #009cde;
 }
-.td-social-icon-wrap:hover i.td-icon-picasa {
-  color: #000000;
-}
 .td-social-icon-wrap:hover i.td-icon-pinterest {
   color: #cb2027;
-}
-.td-social-icon-wrap:hover i.td-icon-posterous {
-  color: #ffe173;
 }
 .td-social-icon-wrap:hover i.td-icon-reddit {
   color: #ff4100;
