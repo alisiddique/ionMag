@@ -354,5 +354,15 @@
 .td-a-rec-id-custom_ad_5 {
   .td-rec-wrap {
     margin-bottom: 40px;
+
+    /* responsive portrait tablet */
+    @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        margin-bottom: 30px;
+    }
+
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      margin-bottom: 0;
+    }
   }
 }

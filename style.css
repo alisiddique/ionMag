@@ -7862,29 +7862,29 @@ body .dropcap3 {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='4')";
   filter: alpha(opacity=4);
 }
-.comments .comment-form .td-warning-comment,
-.comments .comment-form .td-warning-author,
-.comments .comment-form .td-warning-email,
-.comments .comment-form .td-warning-email-error {
+.comment-form .td-warning-comment,
+.comment-form .td-warning-author,
+.comment-form .td-warning-email,
+.comment-form .td-warning-email-error {
   display: none;
 }
-.comments .comment-form textarea {
+.comment-form textarea {
   display: block;
 }
-.comments .td-comment-form-warnings .td-warning-comment,
-.comments .td-comment-form-warnings .td-warning-author,
-.comments .td-comment-form-warnings .td-warning-email,
-.comments .td-comment-form-warnings .td-warning-email-error {
+.td-comment-form-warnings .td-warning-comment,
+.td-comment-form-warnings .td-warning-author,
+.td-comment-form-warnings .td-warning-email,
+.td-comment-form-warnings .td-warning-email-error {
   margin-bottom: -11px;
   color: #ff7a7a;
   font-size: 11px;
   font-style: italic;
   line-height: 15px;
 }
-.comments .td-form-comment,
-.comments .td-form-author,
-.comments .td-form-email,
-.comments .td-form-url {
+.td-form-comment,
+.td-form-author,
+.td-form-email,
+.td-form-url {
   margin-top: 0;
   margin-bottom: 21px;
 }
@@ -10527,6 +10527,26 @@ tagdiv animations
 .td-a-rec-id-custom_ad_4 .td-rec-wrap,
 .td-a-rec-id-custom_ad_5 .td-rec-wrap {
   margin-bottom: 40px;
+  /* responsive portrait tablet */
+  /* responsive portrait phone */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-a-rec-id-custom_ad_1 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_2 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_3 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_4 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_5 .td-rec-wrap {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .td-a-rec-id-custom_ad_1 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_2 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_3 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_4 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_5 .td-rec-wrap {
+    margin-bottom: 0;
+  }
 }
 /*  ----------------------------------------------------------------------------
     WordPress default widgets
