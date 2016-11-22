@@ -34,7 +34,7 @@ usage:
 
 @all_span_selector - is the begining of the span selector
  */
-/* Travel demo */
+/* Voyage demo */
 .td-voyage {
   /* tablet + desktop */
 }
@@ -105,7 +105,7 @@ usage:
   margin: 0 auto;
 }
 .td-voyage .td_block_image_box .entry-title {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   letter-spacing: -0.6px;
   /* tablet + desktop */
@@ -117,7 +117,7 @@ usage:
   }
 }
 .td-voyage .td_block_author .td-author-name {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu", sans-serif;
   font-size: 19px;
   font-weight: 500;
 }
