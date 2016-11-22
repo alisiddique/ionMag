@@ -33,12 +33,7 @@ usage:
 
 @all_span_selector - is the begining of the span selector
  */
-/*
-Say what demo
-*/
-.td-viral {
-  background-color: red !important;
-}
+/* Viral demo */
 .td-viral .td-header-style-pr-8 .td-header-main-menu {
   width: 100%;
 }
