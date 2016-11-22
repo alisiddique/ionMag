@@ -10527,6 +10527,26 @@ tagdiv animations
 .td-a-rec-id-custom_ad_4 .td-rec-wrap,
 .td-a-rec-id-custom_ad_5 .td-rec-wrap {
   margin-bottom: 40px;
+  /* responsive portrait tablet */
+  /* responsive portrait phone */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-a-rec-id-custom_ad_1 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_2 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_3 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_4 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_5 .td-rec-wrap {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .td-a-rec-id-custom_ad_1 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_2 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_3 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_4 .td-rec-wrap,
+  .td-a-rec-id-custom_ad_5 .td-rec-wrap {
+    margin-bottom: 0;
+  }
 }
 /*  ----------------------------------------------------------------------------
     WordPress default widgets
