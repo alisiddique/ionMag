@@ -36,6 +36,9 @@ usage:
 /*
 Say what demo
 */
+.td-viral {
+  background-color: red !important;
+}
 .td-viral .td-header-style-pr-8 .td-header-main-menu {
   width: 100%;
 }
