@@ -2696,18 +2696,18 @@ class td_config {
             td_api_text::set('welcome_support_forum', '
             <h2>Support forum</h2>
             <p>We offer outstanding support through our forum. To get support first you need to register (create an account) and open a thread in the ' . TD_THEME_NAME . ' Section.</p>
-            <a class="button button-primary" href="#">Coming soon!</a>'
+            <a class="button button-primary" href="http://forum.wpion.com/" target="_blank">Open forum</a>'
             );
 
             td_api_text::set('welcome_docs', '
             <h2>Docs and learning</h2>
             <p>Our online documentation will give you important information about the theme. This is a exceptional resource to start discovering the theme’s true potential.</p>
-            <a class="button button-primary" href="#">Coming soon!</a>'
+            <a class="button button-primary" href="http://forum.wpion.com/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
             );
 
             td_api_text::set('welcome_video_tutorials', '
             <h2>Video tutorials</h2>
-            <p>We believe that the easiest way to learn is watching a video tutorial. We have a growing library of narrated video tutorials to help you do just that.</p>
+            <p>We believe that the easiest way to learn is watching a video tutorial. Our library of narrated video tutorials was made to help you do just that.</p>
             <a class="button button-primary" href="#">Coming soon!</a>'
             );
 
