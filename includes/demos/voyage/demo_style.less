@@ -5,11 +5,16 @@
 /* Travel demo */
 .td-voyage {
 
-  /* tablet + desktop */
-  @media (min-width: @responsive_p_phone_max) {
-    .td-header-style-pr-4 {
+  .td-header-style-pr-4 {
+    /* tablet + desktop */
+    @media (min-width: @responsive_p_phone_max) {
       margin-top: 48px;
       margin-bottom: 28px;
+    }
+
+    .td-header-sp-top-widget .td-search-btns-wrap i,
+    .td-header-sp-top-widget .td-social-icon-wrap i {
+      min-width: 26px;
     }
   }
 
@@ -91,8 +96,8 @@
 
     /* tablet + desktop */
     @media (min-width: @responsive_p_tablet_max) {
-      font-size: 32px;
-      line-height: 32px;
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 
