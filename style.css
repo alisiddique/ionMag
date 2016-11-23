@@ -2078,6 +2078,16 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 }
 .td-mega-row {
   width: 100%;
+  *zoom: 1;
+}
+.td-mega-row:before,
+.td-mega-row:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+.td-mega-row:after {
+  clear: both;
 }
 .td-mega-span {
   width: 33.33333%;
