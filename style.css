@@ -1288,7 +1288,7 @@ img {
   font-size: 13px;
   color: #666;
   border: 0;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb !important;
 }
 .td-header-wrap .td-drop-down-search .btn {
   position: absolute;
@@ -3208,7 +3208,7 @@ textarea {
 }
 textarea:active,
 textarea:focus {
-  border-color: #b0b0b0 !important;
+  border-color: #ccc !important;
 }
 textarea:focus,
 input:focus,
@@ -3259,7 +3259,7 @@ input[type=text]:focus,
 input[type=url]:focus,
 input[type=tel]:focus,
 input[type=email]:focus {
-  border-color: #b0b0b0 !important;
+  border-color: #ccc !important;
 }
 input[type=password] {
   width: 100%;
@@ -8117,7 +8117,7 @@ body .dropcap3 {
 }
 .comment-form-input-wrap textarea:focus,
 .comment-form-input-wrap input:focus {
-  border-color: #d6d6d6;
+  border-color: #ccc;
 }
 .comment-form-input-wrap textarea {
   height: 200px;

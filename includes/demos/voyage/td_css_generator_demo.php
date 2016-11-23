@@ -11,7 +11,7 @@ function td_css_demo_gen() {
 	<style>
 	
 		/* @theme_color */
-		.block-title:after {
+		.td-voyage .block-title:after {
 	       background-color: @theme_color !important;
 	    }
 	    
