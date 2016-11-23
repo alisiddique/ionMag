@@ -2520,6 +2520,14 @@ class td_config {
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'demo_installed_text' => '<a href="http://forum.tagdiv.com/import-revolution-sliders-on-demos/" target="_blank">Import revolution slider</a>'
             ),
+            'tech' => array(
+                'text' => 'Tech Portal',
+                'folder' => td_global::$get_template_directory . '/includes/demos/tech/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/tech/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_tech/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
+            ),
 	    );
 
 

@@ -33,6 +33,10 @@ $td_less_files = array (
 		'source' => 'includes/demos/voyage/demo_style.less',
 		'destination' => 'includes/demos/voyage/demo_style.css'
 	),
+	'tech' => array (
+		'source' => 'includes/demos/tech/demo_style.less',
+		'destination' => 'includes/demos/tech/demo_style.css'
+	),
 );
 
 
