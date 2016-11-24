@@ -79,7 +79,8 @@ function td_css_generator() {
     .widget .current-menu-item a,
     .td-tags span,
     .widget_categories li:hover > a,
-    .widget_search input[type=submit]:hover {
+    .widget_search input[type=submit]:hover,
+    .td-read-more:hover {
       color: @theme_color;
     }
     

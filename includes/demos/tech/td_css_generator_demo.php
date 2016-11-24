@@ -11,7 +11,9 @@ function td_css_demo_gen() {
 	<style>
 
 		/* @theme_color */
-		
+		.td-tech .td-scroll-up .td-icon-menu-up {
+		    color: @theme_color;
+		}
 		
 	</style>
 	";
@@ -19,7 +21,6 @@ function td_css_demo_gen() {
 	$td_demo_css_compiler = new td_css_compiler($td_demo_custom_css);
 
 	$td_demo_css_compiler->load_setting('theme_color');
-	$td_demo_css_compiler->load_setting('submenu_hover_color');
 
 	return $td_demo_css_compiler->compile_css();
 }
