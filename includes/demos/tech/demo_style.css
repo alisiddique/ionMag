@@ -35,9 +35,30 @@ usage:
 @all_span_selector - is the begining of the span selector
  */
 .td-tech .block-title {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.td-tech .td_module_rd_11 .entry-title,
+.td-tech .td_module_rd_12 .entry-title {
+  /* responsive portrait tablet */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-tech .td_module_rd_11 .entry-title,
+  .td-tech .td_module_rd_12 .entry-title {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+.td-tech .td_module_rd_11 .entry-title {
+  font-size: 22px;
+  line-height: 28px;
+}
+.td-tech .td_module_rd_12 .entry-title {
+  font-size: 21px;
+  line-height: 25px;
 }
 .td-tech .page-nav a,
+.td-tech .page-nav a:before,
 .td-tech .page-nav span {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;

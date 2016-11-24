@@ -5,10 +5,37 @@
 .td-tech {
 
   .block-title {
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .td_module_rd_11,
+  .td_module_rd_12 {
+    .entry-title {
+      /* responsive portrait tablet */
+      @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        font-size: 17px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .td_module_rd_11 {
+    .entry-title {
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  .td_module_rd_12 {
+    .entry-title {
+      font-size: 21px;
+      line-height: 25px;
+    }
   }
 
   .page-nav a,
+  .page-nav a:before,
   .page-nav span {
     .border-radius(0);
   }
