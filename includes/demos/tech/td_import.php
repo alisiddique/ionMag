@@ -22,7 +22,7 @@ td_demo_menus::add_link(array(
 ));
 
 td_demo_menus::add_link(array(
-    'title' => 'Guids',
+    'title' => 'Guides',
     'add_to_menu_id' => $td_demo_top_menu_id,
     'url' => '#',
     'parent_id' => ''
@@ -42,13 +42,6 @@ td_demo_menus::add_link(array(
     'parent_id' => ''
 ));
 
-td_demo_menus::add_link(array(
-    'title' => 'Buy Now',
-    'add_to_menu_id' => $td_demo_top_menu_id,
-    'url' => 'http://themeforest.net/item/newspaper/5489609',
-    'parent_id' => ''
-));
-
 
 //main menu
 $td_demo_header_menu_id = td_demo_menus::create_menu('td-demo-header-menu', 'header-menu');
@@ -57,7 +50,7 @@ $td_demo_header_menu_id = td_demo_menus::create_menu('td-demo-header-menu', 'hea
 //footer menu
 $td_demo_footer_menu = td_demo_menus::create_menu('td-demo-footer-menu', 'footer-menu');
 td_demo_menus::add_link(array(
-    'title' => 'About Us',
+    'title' => 'About us',
     'add_to_menu_id' => $td_demo_footer_menu,
     'url' => '#',
     'parent_id' => ''
@@ -69,13 +62,13 @@ td_demo_menus::add_link(array(
     'parent_id' => ''
 ));
 td_demo_menus::add_link(array(
-    'title' => 'Write a Review',
+    'title' => 'Write a review',
     'add_to_menu_id' => $td_demo_footer_menu,
     'url' => '#',
     'parent_id' => ''
 ));
 td_demo_menus::add_link(array(
-    'title' => 'Contact Us',
+    'title' => 'Contact us',
     'add_to_menu_id' => $td_demo_footer_menu,
     'url' => '#',
     'parent_id' => ''
@@ -88,6 +81,12 @@ td_demo_menus::add_link(array(
     background - leave empty if you want to make sure that there is NO background on the demo - td_demo_misc::update_background('');
  */
 td_demo_misc::update_background('');
+
+// mobile background
+td_demo_misc::update_background_mobile('td_pic_3');
+
+// footer background
+td_demo_misc::update_background_footer('td_pic_7');
 
 
 
@@ -111,8 +110,6 @@ td_demo_misc::update_footer_logo(array(
 /*  ----------------------------------------------------------------------------
     footer text
  */
-td_demo_misc::update_footer_text('Newspaper is your news, entertainment, music fashion website. We provide you with the latest breaking news and videos straight from the entertainment industry.');
-
 
 
 /*  ----------------------------------------------------------------------------
@@ -122,7 +119,6 @@ td_demo_misc::add_social_buttons(array(
     'facebook' => '#',
     'twitter' => '#',
     'vimeo' => '#',
-    'vk' => '#',
     'youtube' => '#'
 ));
 
@@ -133,7 +129,6 @@ td_demo_misc::add_social_buttons(array(
 td_demo_misc::clear_all_ads();
 td_demo_misc::add_ad_image('header', 'td_tech_ad_full');
 td_demo_misc::add_ad_image('sidebar', 'td_tech_ad_sidebar');
-td_demo_misc::add_ad_image('post_style_11', 'td_tech_ad_sidebar');
 td_demo_misc::add_ad_image('custom_ad_1', 'td_tech_ad_full');
 
 
@@ -145,11 +140,10 @@ td_demo_misc::add_ad_image('custom_ad_1', 'td_tech_ad_full');
 td_demo_widgets::remove_widgets_from_sidebar('default');
 td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
     array (
-        'spot_title' => '- Advertisement -',
         'spot_id' => 'sidebar'
     )
 );
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_1_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_8_widget',
     array (
         'sort' => 'random_posts',
         'custom_title' => 'APLICATIONS',
@@ -157,40 +151,12 @@ td_demo_widgets::add_widget_to_sidebar('default', 'td_block_1_widget',
         'header_color' => ''
     )
 );
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_15_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_3_widget',
     array (
         'sort' => 'random_posts',
         'custom_title' => 'HOT NEWS',
         'limit' => '4',
         'header_color' => '',
-        'ajax_pagination' => "next_prev"
-    )
-);
-
-
-//category sidebar
-td_demo_widgets::add_sidebar('td_demo_category');
-td_demo_widgets::add_widget_to_sidebar('td_demo_category', 'td_block_ad_box_widget',
-    array (
-        'spot_title' => '- Advertisement -',
-        'spot_id' => 'sidebar'
-    )
-);
-td_demo_widgets::add_widget_to_sidebar('td_demo_category', 'td_block_18_widget',
-    array (
-        'sort' => 'random_posts',
-        'custom_title' => 'LATEST NEWS',
-        'limit' => '3',
-        'header_color' => ''
-    )
-);
-td_demo_widgets::add_widget_to_sidebar('td_demo_category', 'td_block_9_widget',
-    array (
-        'sort' => 'random_posts',
-        'custom_title' => 'MUST READ',
-        'limit' => '3',
-        'header_color' => '',
-        'ajax_pagination' => "load_more"
     )
 );
 
@@ -201,15 +167,15 @@ td_demo_widgets::add_widget_to_sidebar('td_demo_category', 'td_block_9_widget',
 $demo_cat_1_id =td_demo_category::add_category(array(
     'category_name' => 'Mobile',
     'parent_id' => 0,
-    'category_template' => 'td_category_template_3',
-    'top_posts_style' => 'td_category_top_posts_style_5',
-    'tdc_category_td_grid_style' => 'td-grid-style-3',
+    'category_template' => '',
+    'top_posts_style' => '',
+    'tdc_category_td_grid_style' => '',
     'description' => 'On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.',
     'background_td_pic_id' => '',
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#53a5f8'
+    'tdc_color' => ''
 ));
     $demo_cat_2_id =td_demo_category::add_category(array(
         'category_name' => 'Android',
@@ -221,7 +187,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'sidebar_id' => 'td_demo_category',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-        'tdc_color' => '#3ea498'
+        'tdc_color' => ''
     ));
     $demo_cat_3_id =td_demo_category::add_category(array(
         'category_name' => 'Applications',
@@ -235,7 +201,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     ));
     $demo_cat_4_id =td_demo_category::add_category(array(
-        'category_name' => 'Iphone',
+        'category_name' => 'iPhone',
         'parent_id' => $demo_cat_1_id,
         'category_template' => '',
         'top_posts_style' => '',
@@ -244,10 +210,10 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'sidebar_id' => 'td_demo_category',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-        'tdc_color' => '#5c69c1'
+        'tdc_color' => ''
     ));
     $demo_cat_5_id =td_demo_category::add_category(array(
-        'category_name' => 'Windows Phone',
+        'category_name' => 'Windows phone',
         'parent_id' => $demo_cat_1_id,
         'category_template' => '',
         'top_posts_style' => '',
@@ -256,10 +222,10 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'sidebar_id' => 'td_demo_category',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-        'tdc_color' => '#53a5f8'
+        'tdc_color' => ''
     ));
 $demo_cat_6_id =td_demo_category::add_category(array(
-    'category_name' => "Gadgets",
+    'category_name' => "Geeks",
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -268,21 +234,21 @@ $demo_cat_6_id =td_demo_category::add_category(array(
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '11', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#5c69c1'
+    'tdc_color' => ''
 ));
 
 $demo_cat_7_id =td_demo_category::add_category(array(
     'category_name' => 'Design',
     'parent_id' => 0,
-    'category_template' => 'td_category_template_3',
-    'top_posts_style' => 'td_category_top_posts_style_4',
-    'tdc_category_td_grid_style' => 'td-grid-style-3',
+    'category_template' => '',
+    'top_posts_style' => '',
+    'tdc_category_td_grid_style' => '',
     'description' => 'On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.',
     'background_td_pic_id' => '',
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#a444bd'
+    'tdc_color' => ''
 ));
 $demo_cat_8_id =td_demo_category::add_category(array(
     'category_name' => 'Photography',
@@ -294,33 +260,46 @@ $demo_cat_8_id =td_demo_category::add_category(array(
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#4ac5db'
+    'tdc_color' => ''
 ));
 $demo_cat_9_id =td_demo_category::add_category(array(
-    'category_name' => 'Reviews',
+    'category_name' => 'Linux',
     'parent_id' => 0,
     'category_template' => '',
-    'top_posts_style' => 'td_category_top_posts_style_5',
-    'tdc_category_td_grid_style' => 'td-grid-style-5',
+    'top_posts_style' => '',
+    'tdc_category_td_grid_style' => '',
     'description' => '',
     'background_td_pic_id' => '',
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#3ea498'
+    'tdc_color' => ''
 ));
 $demo_cat_10_id =td_demo_category::add_category(array(
     'category_name' => 'Apple',
     'parent_id' => 0,
-    'category_template' => 'td_category_template_4',
-    'top_posts_style' => 'td_category_top_posts_style_4',
-    'tdc_category_td_grid_style' => 'td-grid-style-3',
+    'category_template' => '',
+    'top_posts_style' => '',
+    'tdc_category_td_grid_style' => '',
     'description' => "On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.",
     'background_td_pic_id' => '',
     'sidebar_id' => 'td_demo_category',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => '#ec5a4d'
+    'tdc_color' => ''
+));
+$demo_cat_11_id =td_demo_category::add_category(array(
+    'category_name' => 'Applications',
+    'parent_id' => 0,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'tdc_category_td_grid_style' => '',
+    'description' => "On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.",
+    'background_td_pic_id' => '',
+    'sidebar_id' => 'td_demo_category',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+    'tdc_color' => ''
 ));
 
 
@@ -333,7 +312,7 @@ $td_homepage_id = td_demo_content::add_page(array(
     'title' => 'News',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/homepage.txt',
     'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php
-    'td_layout' => '10',
+    'td_layout' => 'td_module_rd_11',
     'homepage' => true
 ));
 
@@ -351,6 +330,28 @@ td_demo_menus::add_page(array(
 ));
 
 
+// mega menu one subcateg
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Applications',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_11_id
+));
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Design',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_7_id
+));
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Geeks',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_6_id
+));
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Linux',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_9_id
+));
+
 // mega menu multiple subcateg
 td_demo_menus::add_mega_menu(array(
     'title' => 'Mobile',
@@ -360,26 +361,10 @@ td_demo_menus::add_mega_menu(array(
 
 // mega menu one subcateg
 td_demo_menus::add_mega_menu(array(
-    'title' => 'Gadgets',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_6_id
-));
-td_demo_menus::add_mega_menu(array(
-    'title' => 'Design',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_7_id
-));
-td_demo_menus::add_mega_menu(array(
     'title' => 'Photography',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_8_id
 ));
-td_demo_menus::add_mega_menu(array(
-    'title' => 'Reviews',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_9_id
-));
-
 
 // add a subcategory to the sub-menu
 $parent_submenu_id = td_demo_menus::add_link(array(
@@ -402,13 +387,13 @@ td_demo_menus::add_category(array(
     'parent_id' => $parent_submenu_id
 ));
 td_demo_menus::add_category(array(
-    'title' => 'Windows Phone',
+    'title' => 'Windows phone',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_5_id,
     'parent_id' => $parent_submenu_id
 ));
 td_demo_menus::add_category(array(
-    'title' => 'Iphone',
+    'title' => 'iPhone',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_4_id,
     'parent_id' => $parent_submenu_id
@@ -529,7 +514,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_9',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -538,7 +522,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_7',
-    'template' => 'single_template_8'
 ));
 td_demo_content::add_post(array(
     'title' => "50 Tips and Insights About Productivity, Happiness, and Life",
@@ -599,14 +582,12 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_10',
-    'template' => 'single_template_8'
 ));
 td_demo_content::add_post(array(
     'title' => 'I built an app that does triangulation of points on the earth',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_11',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -661,7 +642,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_5',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -670,7 +650,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_6',
-    'template' => 'single_template_8'
 ));
 td_demo_content::add_post(array(
     'title' => "Show HN: Full Stack Entrepreneur – A Full Stack Guide To Entrepreneurship",
@@ -704,7 +683,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_2',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -727,7 +705,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_14',
-    'template' => 'single_template_8'
 ));
 td_demo_content::add_post(array(
     'title' => "Let’s Build a Traditional City and Make a Profit",
@@ -746,14 +723,12 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_2',
-    'template' => 'single_template_8'
 ));
 td_demo_content::add_post(array(
     'title' => "Audio Tour App Detour Steers You Away from the Typical Tourist Traps",
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_4',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -782,7 +757,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_8',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -791,7 +765,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_3_id),
     'featured_image_td_id' => 'td_pic_9',
-    'template' => 'single_template_8'
 ));
 
 //  ----------------------------------------------------------------------------
@@ -812,7 +785,6 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_2',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
     'post_format' => 'video'
 ));
@@ -827,6 +799,5 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_7_id),
     'featured_image_td_id' => 'td_pic_1',
-    'template' => 'single_template_8'
 ));
 
