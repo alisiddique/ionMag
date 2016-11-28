@@ -94,16 +94,16 @@ td_demo_misc::update_background_footer('td_pic_7');
     logo
  */
 td_demo_misc::update_logo(array(
-    'normal' => 'td_pic_logo',
-    'retina' => 'td_pic_logo',
-    'mobile' => 'td_pic_logo_footer'
+    'normal' => 'td_logo_header',
+    'retina' => 'td_logo_header_retina',
+    'mobile' => 'td_logo_footer'
 ));
 
 
 //footer
 td_demo_misc::update_footer_logo(array(
-    'normal' => 'td_pic_logo_footer',
-    'retina' => 'td_pic_logo_footer'
+    'normal' => 'td_logo_footer',
+    'retina' => 'td_logo_footer_retina'
 ));
 
 
@@ -172,7 +172,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
     'tdc_category_td_grid_style' => '',
     'description' => 'On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.',
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -184,7 +184,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'top_posts_style' => '',
         'description' => '',
         'background_td_pic_id' => '',
-        'sidebar_id' => 'td_demo_category',
+        'sidebar_id' => '',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
         'tdc_color' => ''
@@ -196,7 +196,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'top_posts_style' => '',
         'description' => '',
         'background_td_pic_id' => '',
-        'sidebar_id' => 'td_demo_category',
+        'sidebar_id' => '',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     ));
@@ -207,7 +207,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'top_posts_style' => '',
         'description' => '',
         'background_td_pic_id' => '',
-        'sidebar_id' => 'td_demo_category',
+        'sidebar_id' => '',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
         'tdc_color' => ''
@@ -219,7 +219,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'top_posts_style' => '',
         'description' => '',
         'background_td_pic_id' => '',
-        'sidebar_id' => 'td_demo_category',
+        'sidebar_id' => '',
         'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
         'tdc_color' => ''
@@ -231,7 +231,7 @@ $demo_cat_6_id =td_demo_category::add_category(array(
     'top_posts_style' => '',
     'description' => 'On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.',
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '11', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -245,7 +245,7 @@ $demo_cat_7_id =td_demo_category::add_category(array(
     'tdc_category_td_grid_style' => '',
     'description' => 'On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.',
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -257,7 +257,7 @@ $demo_cat_8_id =td_demo_category::add_category(array(
     'top_posts_style' => '',
     'description' => '',
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -270,7 +270,7 @@ $demo_cat_9_id =td_demo_category::add_category(array(
     'tdc_category_td_grid_style' => '',
     'description' => '',
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -283,7 +283,7 @@ $demo_cat_10_id =td_demo_category::add_category(array(
     'tdc_category_td_grid_style' => '',
     'description' => "On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.",
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
@@ -296,7 +296,7 @@ $demo_cat_11_id =td_demo_category::add_category(array(
     'tdc_category_td_grid_style' => '',
     'description' => "On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.",
     'background_td_pic_id' => '',
-    'sidebar_id' => 'td_demo_category',
+    'sidebar_id' => '',
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
