@@ -2501,7 +2501,8 @@ class td_config {
 			    'img' => td_global::$get_template_directory_uri . '/includes/demos/default/screenshot.png',
 			    'demo_url' => 'http://demo.wpion.com/ionmag/',
 			    'td_css_generator_demo' => false,
-			    'uses_custom_style_css' => false
+			    'uses_custom_style_css' => false,
+                'required_plugins' => array()
 		    ),
             'viral' => array(
                 'text' => 'Viral',
@@ -2509,7 +2510,12 @@ class td_config {
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/viral/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_viral/',
                 'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-api-plugin.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-api-plugin.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-api-plugin.php'
+                )
             ),
             'voyage' => array(
                 'text' => 'Voyage',
@@ -2518,6 +2524,11 @@ class td_config {
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_voyage/',
                 'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-api-plugin.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-api-plugin.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-api-plugin.php'
+                ),
                 'demo_installed_text' => '<a href="http://forum.tagdiv.com/import-revolution-sliders-on-demos/" target="_blank">Import revolution slider</a>'
             ),
             'tech' => array(
@@ -2526,7 +2537,12 @@ class td_config {
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/tech/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_tech/',
                 'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-api-plugin.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-api-plugin.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-api-plugin.php'
+                )
             ),
             'cook_book' => array(
                 'text' => 'Cook Book',
