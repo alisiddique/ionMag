@@ -37,6 +37,10 @@ $td_less_files = array (
 		'source' => 'includes/demos/tech/demo_style.less',
 		'destination' => 'includes/demos/tech/demo_style.css'
 	),
+	'cook_book' => array (
+		'source' => 'includes/demos/cook_book/demo_style.less',
+		'destination' => 'includes/demos/cook_book/demo_style.css'
+	),
 );
 
 

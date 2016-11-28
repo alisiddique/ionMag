@@ -1,0 +1,25 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+/* Recipes demo */
+.td-cook-book .td-header-logo-wrap {
+  padding: 0;
+}
+.td-cook-book .td-header-logo-wrap .td-container {
+  width: 100%;
+}
+.td-cook-book .footer-social-wrap {
+  margin-bottom: 0;
+}
+.td-cook-book .footer-social-wrap:after {
+  display: none;
+}
+.td-cook-book .td-social-icon-wrap i {
+  margin-right: 0;
+}
+.td-cook-book .td-social-name {
+  display: none;
+}

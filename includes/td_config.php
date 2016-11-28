@@ -2528,6 +2528,14 @@ class td_config {
                 'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
                 'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
             ),
+            'cook_book' => array(
+                'text' => 'Cook Book',
+                'folder' => td_global::$get_template_directory . '/includes/demos/cook_book/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/cook_book/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_cook_book/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true                // load a custom demo_style.less - must also be added to td_less_style.css.php
+            ),
 	    );
 
 
