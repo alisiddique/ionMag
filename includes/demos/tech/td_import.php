@@ -418,7 +418,7 @@ td_demo_content::add_post(array(
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_2',
     'template' => 'single_template_11',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 
@@ -442,7 +442,7 @@ td_demo_content::add_post(array(
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_13',
     'template' => 'single_template_11',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -514,7 +514,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_9',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -588,7 +588,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_11',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -642,7 +642,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_5',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -683,7 +683,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_2',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -729,7 +729,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_4',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 
@@ -757,7 +757,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_8',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(
@@ -785,7 +785,7 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_2',
-    'featured_video_url' => 'https://www.youtube.com/watch?v=o7JSltCqpCI',
+    'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
 td_demo_content::add_post(array(

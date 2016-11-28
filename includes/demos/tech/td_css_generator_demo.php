@@ -11,7 +11,7 @@ function td_css_demo_gen() {
 	<style>
 
 		/* @theme_color */
-		.td-tech .td-scroll-up .td-icon-menu-up {
+		.td-tech .td-scroll-up:hover .td-icon-menu-up {
 		    color: @theme_color;
 		}
 		
