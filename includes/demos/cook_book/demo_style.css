@@ -11,6 +11,23 @@
 .td-cook-book .td-header-logo-wrap .td-container {
   width: 100%;
 }
+.td-cook-book .td_module_rd_2 .entry-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 18px;
+  line-height: 23px;
+}
+.td-cook-book .td_module_rd_2 .entry-title:after {
+  display: none;
+}
+.td-cook-book .td-mx-15 .entry-title {
+  font-size: 17px;
+  line-height: 21px;
+}
+.td-cook-book .td-mx-19 .entry-title {
+  font-size: 21px;
+  line-height: 25px;
+}
 .td-cook-book .footer-social-wrap {
   margin-bottom: 0;
 }
