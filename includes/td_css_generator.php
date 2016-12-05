@@ -381,8 +381,8 @@ function td_css_generator() {
         border-color: @mobile_text_color;
     }
 
-    #td-mobile-nav .td-register-section .td-login-input {
-        border-bottom-color: @mobile_text_color !important;
+    #td-mobile-nav .td-register-section .td-login-inputs:after {
+        background-color: @mobile_text_color;
     }
 
     /* @mobile_background_image */
@@ -442,7 +442,8 @@ function td_css_generator() {
     }
     /* @login_hover_color */
     .mfp-content .td-login-button:active,
-    .mfp-content .td-login-button:hover {
+    .mfp-content .td-login-button:hover,
+    .mfp-content .td-login-info-text a:hover{
         color: @login_hover_color;
     }
     /* @login_gradient_one */

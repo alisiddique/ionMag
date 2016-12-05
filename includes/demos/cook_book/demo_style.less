@@ -4,6 +4,17 @@
 /* Recipes demo */
 .td-cook-book {
 
+  &.td-boxed-layout #td-outer-wrap {
+    /* responsive on desktop */
+    @media (min-width: 1080px) {
+      width: 1060px;
+      margin: 0 auto;
+      -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+      -moz-box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+      margin-top: 40px;
+    }
+  }
   .td-header-style-pr-2 {
     .td-header-sp-top-widget .td-search-btns-wrap i,
     .td-header-sp-top-widget .td-social-icon-wrap i {
@@ -19,6 +30,7 @@
     }
   }
 
+  .td_module_1,
   .td_module_rd_2 {
     .entry-title {
       margin-bottom: 0;
@@ -78,6 +90,14 @@
 
   .td-social-name {
     display: none;
+  }
+
+  /* responsive portrait phone */
+  @media (max-width: @responsive_p_phone_max) {
+    .footer-text-wrap {
+      font-size: 13px;
+      line-height: 21px;
+    }
   }
 
   .td-scroll-up {

@@ -34,6 +34,22 @@ usage:
 @all_span_selector - is the begining of the span selector
  */
 /* Recipes demo */
+.td-cook-book {
+  /* responsive portrait phone */
+}
+.td-cook-book.td-boxed-layout #td-outer-wrap {
+  /* responsive on desktop */
+}
+@media (min-width: 1080px) {
+  .td-cook-book.td-boxed-layout #td-outer-wrap {
+    width: 1060px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+}
 .td-cook-book .td-header-style-pr-2 .td-header-sp-top-widget .td-search-btns-wrap i,
 .td-cook-book .td-header-style-pr-2 .td-header-sp-top-widget .td-social-icon-wrap i {
   min-width: 32px;
@@ -44,12 +60,14 @@ usage:
 .td-cook-book .td-header-logo-wrap .td-container {
   width: 100%;
 }
+.td-cook-book .td_module_1 .entry-title,
 .td-cook-book .td_module_rd_2 .entry-title {
   margin-bottom: 0;
   padding-bottom: 0;
   font-size: 18px;
   line-height: 23px;
 }
+.td-cook-book .td_module_1 .entry-title:after,
 .td-cook-book .td_module_rd_2 .entry-title:after {
   display: none;
 }
@@ -87,6 +105,12 @@ usage:
 }
 .td-cook-book .td-social-name {
   display: none;
+}
+@media (max-width: 767px) {
+  .td-cook-book .footer-text-wrap {
+    font-size: 13px;
+    line-height: 21px;
+  }
 }
 .td-cook-book .td-scroll-up {
   background-color: #42bdcd;

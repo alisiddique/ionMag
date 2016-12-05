@@ -2732,15 +2732,14 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   border: 0;
   background: transparent;
   outline: 0;
-  margin: 18px 0;
+  margin: 0;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0;
   box-shadow: none;
 }
 #td-mobile-nav .td-register-section .td-login-input:focus ~ label,
 #td-mobile-nav .td-register-section .td-login-input:valid ~ label {
-  top: -6px;
+  top: -24px;
   font-size: 14px;
   opacity: 0.4;
 }
@@ -2998,7 +2997,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 }
 #td-mobile-nav label {
   position: absolute;
-  top: 26px;
+  top: 8px;
   left: 10px;
   font-size: 17px;
   color: #000;
@@ -3011,6 +3010,19 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 }
 .td-login-inputs {
   position: relative;
+  margin: 35px 0;
+}
+.td-login-inputs:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='20')";
+  filter: alpha(opacity=20);
 }
 /*
 ----------------------------------------------------------------------------
