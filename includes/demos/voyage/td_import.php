@@ -104,6 +104,12 @@ td_demo_misc::add_ad_image('sidebar', 'td_blog_voyage_sidebar_ad');
 //default sidebar
 td_demo_widgets::remove_widgets_from_sidebar('default');
 
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_author_widget',
+    array (
+        'author_id'  => "1"
+    )
+);
+
 td_demo_widgets::add_widget_to_sidebar('default', 'td_block_social_counter_widget',
     array (
         'custom_title'  => "FOLLOW ME",
@@ -119,7 +125,7 @@ td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
     )
 );
 
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_9_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_6_widget',
     array (
         'sort' => 'random_posts',
         'custom_title' => 'POPULAR ARTICLES',
@@ -280,15 +286,6 @@ $td_homepage_id = td_demo_content::add_page(array(
     'limit' => '5'
 ));
 
-//about
-$td_aboutpage_id = td_demo_content::add_page(array(
-    'title' => 'About',
-    'file' => td_global::$get_template_directory . '/includes/demos/voyage/pages/about.txt',
-    'template' => 'default',   // the page template full file name with .php
-    'td_layout' => '',
-    'homepage' => false
-));
-
 /*  ----------------------------------------------------------------------------
     menu
  */
@@ -347,18 +344,6 @@ td_demo_menus::add_category(array(
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_11_id,
     'parent_id' => $parent_submenu_id
-));
-td_demo_menus::add_page(array(
-    'title' => 'About',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'page_id' => $td_aboutpage_id,
-    'parent_id' => ''
-));
-td_demo_menus::add_link(array(
-    'title' => 'Contact',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'url' => '#',
-    'parent_id' => ''
 ));
 
 

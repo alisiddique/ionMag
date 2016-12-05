@@ -504,7 +504,7 @@ td_demo_menus::add_page(array(
 td_demo_content::add_post(array(
     'title' => 'The 5 Most Influential People In The World',
     'file' => td_global::$get_template_directory . '/includes/demos/default/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT),$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
 
@@ -518,7 +518,7 @@ td_demo_content::add_post(array(
 td_demo_content::add_post(array(
     'title' => 'Polo Can’t Be Allowed to Go on in its Current Situation',
     'file' => td_global::$get_template_directory . '/includes/demos/default/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT),$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
 
@@ -532,7 +532,7 @@ td_demo_content::add_post(array(
 td_demo_content::add_post(array(
     'title' => 'Celebrating Body Empowerment with Real Women',
     'file' => td_global::$get_template_directory . '/includes/demos/default/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT),$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
     'featured_image_td_id' => 'td_pic_8'
 ));
 

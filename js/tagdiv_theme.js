@@ -492,6 +492,9 @@ var tdViewport = {};
 /* global jQuery:{} */
 /* global tdDetect:{} */
 
+//top menu works only on 1 level, the other submenus are hidden from css
+//on tablets, wide level 3 submenus may go out of screen
+
 var tdMenu = {};
 (function(){
     'use strict';
@@ -900,78 +903,6 @@ var tdMenu = {};
 
 //initialize menu
 tdMenu.init();
-
-
-
-
-
-
-
-
-
-
-// // the old code
-// (function(){
-//     'use strict';
-//
-//     // top menu
-//
-//     if (tdDetect.isTouchDevice) {
-//         //touch
-//         jQuery('.td-header-sp-top-menu .top-header-menu').superfish({
-//             delay:300,
-//             speed:'fast',
-//             useClick:true
-//         });
-//
-//     } else {
-//
-//         //not touch
-//         jQuery('.td-header-sp-top-menu .top-header-menu').superfish({
-//             delay:600,
-//             speed:200,
-//             useClick:false
-//         });
-//     }
-//
-// /*  ----------------------------------------------------------------------------
-//  On load
-//  */
-//
-//     // header menu
-//     jQuery('#td-header-menu .sf-menu').supersubs({
-//         minWidth: 10, // minimum width of sub-menus in em units
-//         maxWidth: 40, // maximum width of sub-menus in em units
-//         extraWidth: 1 // extra width can ensure lines don't sometimes turn over
-//     });
-//
-//
-//
-//     if (tdDetect.isTouchDevice) {
-//         //touch
-//         jQuery('#td-header-menu .sf-menu').superfish({
-//             delay:300,
-//             speed:'fast',
-//             useClick:true
-//         });
-//
-//     } else {
-//
-//         //not touch
-//         jQuery('#td-header-menu .sf-menu').superfish({
-//             delay:600,
-//             speed:200,
-//             useClick:false
-//         });
-//     }
-// })();
-
-
-
-
-
-
-
 /*
  td_util.js
  v2.0
@@ -988,6 +919,8 @@ var tdUtil = {};
 
     tdUtil = {
 
+        //patern to check emails
+        email_pattern : /^[a-zA-Z0-9][a-zA-Z0-9_\.-]{0,}[a-zA-Z0-9]@[a-zA-Z0-9][a-zA-Z0-9_\.-]{0,}[a-z0-9][\.][a-z0-9]{2,4}$/,
 
         /**
          * stop propagation of an event - we should check this if we can remove window.event.cancelBubble - possible
@@ -1000,6 +933,15 @@ var tdUtil = {};
             } else {
                 window.event.cancelBubble=true;
             }
+        },
+
+        /**
+         * checks if a form input field value is a valid email address
+         * @param val
+         * @returns {boolean}
+         */
+        isEmail: function( val ) {
+            return tdUtil.email_pattern.test(val);
         },
 
         /**
@@ -1718,6 +1660,9 @@ jQuery().ready(function jQuery_ready() {
 
     setMenuMinHeight();
 
+    // prevents comments form submission without filing the required form fields
+    td_comments_form_validation();
+
 }); //end on load
 
 
@@ -1874,19 +1819,14 @@ function td_resize_videos() {
 
     //facebook in content
     jQuery(document).find('iframe[src*="facebook.com/plugins/video.php"]').each(function() {
-        var videoMainContainer = jQuery(this).parent().parent().parent(),
-            video43AspectRatio = videoMainContainer.hasClass("vc_video-aspect-ratio-43"), //video aspect ratio 4:3
-            video235AspectRatio = videoMainContainer.hasClass("vc_video-aspect-ratio-235"); //video aspect ratio 2.35:1
-        if (video43AspectRatio || video235AspectRatio) {
-            //do nothing for video aspect ratios 4:3 and 2.35:1
-            //the video aspect ratio can be set on Visual Composer - Video Player widget settings
-        } else {
-            var td_video = jQuery(this);
+        var td_video = jQuery(this);
+        if ( td_video.parent().hasClass('wpb_video_wrapper') ) {
             td_video.attr('width', '100%');
             var td_video_width = td_video.width();
             td_video.css('height', td_video_width * 0.5625, 'important');
+        } else {
+            td_video.css('max-width', '100%');
         }
-
     });
 
 
@@ -2447,6 +2387,71 @@ function setMenuMinHeight() {
 
 
 }
+
+/**
+ * Used on comments form to prevent comments form submission without filing the required fields
+ */
+
+function td_comments_form_validation() {
+
+    //on form submit
+    jQuery('.comment-form').submit( function(event) {
+
+        jQuery('form#commentform :input').each( function() {
+
+            var current_input_field = jQuery(this);
+            var form = jQuery(this).parent().parent();
+
+            if (current_input_field.attr('aria-required')){
+                if (current_input_field.val() == '') {
+                    event.preventDefault();
+                    form.addClass('td-comment-form-warnings');
+
+                    if (current_input_field.attr('id') == 'comment') {
+                        form.find('.td-warning-comment').show(200);
+                        current_input_field.css('border', '1px solid #ff7a7a');
+                    } else if (current_input_field.attr('id') == 'author') {
+                        form.find('.td-warning-author').show(200);
+                        current_input_field.css('border', '1px solid #ff7a7a');
+                    } else if (current_input_field.attr('id') == 'email') {
+                        form.find('.td-warning-email').show(200);
+                        current_input_field.css('border', '1px solid #ff7a7a');
+                    }
+                } else if ( current_input_field.attr('id') == 'email' && tdUtil.isEmail( current_input_field.val() ) === false ) {
+                    event.preventDefault();
+                    form.addClass('td-comment-form-warnings');
+                    form.find('.td-warning-email-error').show(200);
+                }
+            }
+        });
+
+    });
+
+    //on form input fields focus
+    jQuery('form#commentform :input').each( function() {
+
+        var form = jQuery(this).parent().parent();
+        var current_input_field = jQuery(this);
+
+        current_input_field.focus( function(){
+
+            if (current_input_field.attr('id') == 'comment') {
+                form.find('.td-warning-comment').hide(200);
+                current_input_field.css('border', '1px solid #e1e1e1');
+
+            } else if (current_input_field.attr('id') == 'author') {
+                form.find('.td-warning-author').hide(200);
+                current_input_field.css('border', '1px solid #e1e1e1');
+
+
+            } else if (current_input_field.attr('id') == 'email') {
+                form.find('.td-warning-email').hide(200);
+                form.find('.td-warning-email-error').hide(200);
+                current_input_field.css('border', '1px solid #e1e1e1');
+            }
+        });
+    })
+}
 /* global jQuery:false */
 /* global tdUtil:false */
 
@@ -2654,7 +2659,17 @@ jQuery().ready(function() {
             jQuery( '#td-header-search-button-mob' ).click(function(event){
                 jQuery( 'body' ).addClass( 'td-search-opened' );
 
-                var current_query = jQuery('#td-header-search-mob').val().trim();
+                var search_input = jQuery('#td-header-search-mob');
+
+                /**
+                 * Note: the autofocus does not work for iOS and windows phone devices as it's considered bad user experience
+                 */
+                    //autofocus
+                setTimeout(function(){
+                    search_input.focus();
+                }, 1300);
+
+                var current_query = search_input.val().trim();
                 if ( current_query.length > 0 ) {
                     tdAjaxSearch.do_ajax_call_mob();
                 }
@@ -11237,7 +11252,8 @@ function td_date_i18n(format, timestamp) {
             // timezone_abbreviations_list() function.
             /*              return that.date_default_timezone_get();
              */
-            throw 'Not supported (see source code of date() for timezone on how to add support)';
+            //throw 'Not supported (see source code of date() for timezone on how to add support)';
+            console.log('Not supported (see source code of date() for timezone on how to add support)');
         },
         I: function () { // DST observed?; 0 or 1
             // Compares Jan 1 minus Jan 1 UTC to Jul 1 minus Jul 1 UTC.

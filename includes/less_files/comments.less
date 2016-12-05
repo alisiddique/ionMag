@@ -23,6 +23,40 @@
   }
 }
 
+.comment-form {
+  .td-warning-comment,
+  .td-warning-author,
+  .td-warning-email,
+  .td-warning-email-error {
+    display: none;
+  }
+
+  textarea {
+    display: block;
+  }
+}
+
+.td-comment-form-warnings {
+  .td-warning-comment,
+  .td-warning-author,
+  .td-warning-email,
+  .td-warning-email-error {
+    margin-bottom: -11px;
+    color: #ff7a7a;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 15px;
+  }
+}
+
+.td-form-comment,
+.td-form-author,
+.td-form-email,
+.td-form-url {
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
 // titles
 .td-comments-title-wrap h4,
 .comment-reply-title {
@@ -286,7 +320,7 @@
     border-color: #ebebeb;
 
     &:focus {
-      border-color: #d6d6d6;
+      border-color: #ccc;
     }
   }
 

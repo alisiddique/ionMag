@@ -33,9 +33,7 @@ usage:
 
 @all_span_selector - is the begining of the span selector
  */
-/*
-Say what demo
-*/
+/* Viral demo */
 .td-viral .td-header-style-pr-8 .td-header-main-menu {
   width: 100%;
 }
@@ -233,6 +231,15 @@ Say what demo
     line-height: 26px;
   }
 }
+.td-viral .td_module_rd_12 .td-post-category {
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-viral .td_module_rd_12 .td-post-category {
+    padding: 4px 9px;
+    font-size: 16px;
+  }
+}
 .td-viral .td_module_rd_12 .entry-title {
   padding-bottom: 14px;
   font-size: 26px;
@@ -258,4 +265,18 @@ Say what demo
 }
 .td-viral .td-excerpt {
   font-style: normal;
+}
+.td-viral .td-viral-empty-space {
+  /* responsive portrait tablet */
+  /* responsive portrait phone */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-viral .td-viral-empty-space {
+    height: 22px !important;
+  }
+}
+@media (max-width: 767px) {
+  .td-viral .td-viral-empty-space {
+    display: none;
+  }
 }
