@@ -50,9 +50,14 @@ usage:
   padding-bottom: 13px;
 }
 .td-tech .td_module_rd_11 .entry-title {
-  font-size: 21px;
-  line-height: 25px;
+  /* desktop only */
   /* responsive portrait tablet */
+}
+@media (min-width: 1018px) {
+  .td-tech .td_module_rd_11 .entry-title {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1018px) {
   .td-tech .td_module_rd_11 .entry-title {
