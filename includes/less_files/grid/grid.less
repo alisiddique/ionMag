@@ -26,7 +26,15 @@
   @media (max-width: @responsive_p_phone_max) {
     width: 100%;
   }
+
 }
+
+.tdc-row.stretch_row .vc_row::before {
+  width: 100vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
 
 /*  ----------------------------------------------------------------------------
     rows
