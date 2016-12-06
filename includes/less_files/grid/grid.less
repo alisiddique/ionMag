@@ -26,7 +26,27 @@
   @media (max-width: @responsive_p_phone_max) {
     width: 100%;
   }
+
 }
+
+.tdc-row.stretch_row .vc_row::before {
+  width: 100vw !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.tdc-row.stretch_row_content {
+  width: 100% !important;
+}
+
+.tdc-row.stretch_row_content_no_space {
+  width: 100% !important;
+
+  .vc_row {
+    margin: 0 !important;
+  }
+}
+
 
 /*  ----------------------------------------------------------------------------
     rows
