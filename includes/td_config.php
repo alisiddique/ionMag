@@ -2528,8 +2528,7 @@ class td_config {
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-api-plugin.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-api-plugin.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-api-plugin.php'
-                ),
-                'demo_installed_text' => '<a href="http://forum.tagdiv.com/import-revolution-sliders-on-demos/" target="_blank">Import revolution slider</a>'
+                )
             ),
             'tech' => array(
                 'text' => 'Tech Portal',

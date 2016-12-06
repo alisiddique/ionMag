@@ -288,20 +288,6 @@ $demo_cat_10_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_color' => ''
 ));
-$demo_cat_11_id =td_demo_category::add_category(array(
-    'category_name' => 'Applications',
-    'parent_id' => 0,
-    'category_template' => '',
-    'top_posts_style' => '',
-    'tdc_category_td_grid_style' => '',
-    'description' => "On each category you can set a Category template style, a Top post style (grids) and a module type for article listing. Also each top post style (grids) have 5 different look style. You can mix them to create a beautiful and unique category page.",
-    'background_td_pic_id' => '',
-    'sidebar_id' => '',
-    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    'tdc_color' => ''
-));
-
 
 
 /*  ----------------------------------------------------------------------------
@@ -334,7 +320,7 @@ td_demo_menus::add_page(array(
 td_demo_menus::add_mega_menu(array(
     'title' => 'Applications',
     'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_11_id
+    'category_id' => $demo_cat_3_id
 ));
 td_demo_menus::add_mega_menu(array(
     'title' => 'Design',
@@ -409,15 +395,13 @@ td_demo_content::add_post(array(
     'title' => 'Apple sells 10 million iPhone 6 and iPhone 6 Pluses',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_3_id),
-    'featured_image_td_id' => 'td_pic_1',
-    'template' => 'single_template_6'
+    'featured_image_td_id' => 'td_pic_1'
 ));
 td_demo_content::add_post(array(
     'title' => 'Experiencing the new Oculus Rift VR headset',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_2',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
@@ -426,22 +410,19 @@ td_demo_content::add_post(array(
     'title' => 'Canon XC10 4K Digital Camcorder Is Out: Versatile And For Only $2,500',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_5_id),
-    'featured_image_td_id' => 'td_pic_3',
-    'template' => 'single_template_8'
+    'featured_image_td_id' => 'td_pic_3'
 ));
 td_demo_content::add_post(array(
     'title' => 'Simple form creation and storage, built for developers.',
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_4',
-    'template' => 'single_template_3'
+    'featured_image_td_id' => 'td_pic_4'
 ));
 td_demo_content::add_post(array(
     'title' => "Robots helped inspire deep learning might become",
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_13',
-    'template' => 'single_template_11',
     'featured_video_url' => 'https://www.youtube.com/watch?v=fONGq-Sa12s',
     'post_format' => 'video'
 ));
@@ -456,8 +437,7 @@ td_demo_content::add_post(array(
     'title' => "Apple Server Most Powerful rack optimized server",
     'file' => td_global::$get_template_directory . '/includes/demos/tech/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_4_id),
-    'featured_image_td_id' => 'td_pic_7',
-    'template' => 'single_template_8'
+    'featured_image_td_id' => 'td_pic_7'
 ));
 
 

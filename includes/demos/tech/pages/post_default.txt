@@ -31,8 +31,6 @@ Despite the unusual, curved screen, it still packs all of the good things that m
 
 <div class="td-paragraph-padding-1">
 
-&nbsp;
-
 The exploration of space stands as one of humanity's greatest achievements. While history has hailed the men and women who reached the cosmos, and those who helped them get there, much of the infrastructure that sent them skyward lies forgotten and dilapidated.
 <blockquote class="td_quote td_quote_right">Galaxy Note 4 running Android 4.4 KitKat</blockquote>
 And how does Apple's biggest phone compare to the Note Edge? Well, both remain unwieldy to grip, and the Note Edge is wider. However, the edged screen nuzzles into my hand better and those software tweaks mentioned above give it the advantage. However, just like the stylus, there's a while before you get the knack of all the little provisions Samsung's made to ease users into this screen size.
@@ -49,7 +47,6 @@ If you're looking to learn more about the stylus uses, I'd advise a quick read o
 
 [caption id="attachment_256" align="alignnone" width="1200"]<a href="xxx_td_pic_p3_xxx"><img class=" td-modal-image wp-image-256 size-full" src="xxx_td_pic_p3_xxx" alt="fotolia_81764888" width="1200" height="871" /></a> The Galaxy Note Edge grabs your attention. Its curves are subjective and divisive[/caption]
 
-&nbsp;
 <div class="td-paragraph-padding-1">
 
 But let's focus on what's different here: that edge. There are two display modes you can flit between: a slender, unassuming bar that can display a customized message and a more substantial column that attempts to offer extra functionality, notifications or context-dependent menus for certain apps, like the camera.
