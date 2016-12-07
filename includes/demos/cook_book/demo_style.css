@@ -91,6 +91,25 @@ usage:
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='70')";
   filter: alpha(opacity=70);
 }
+.td-cook-book .td-recipe-time {
+  width: 100%;
+  border: 1px solid #ededed;
+  padding: 11px 16px;
+  margin-bottom: 26px;
+}
+.td-cook-book .td-recipe-time br {
+  display: none;
+}
+.td-cook-book .td-recipe-time .td-recipe-info {
+  float: left;
+  width: 33.3333%;
+  /* responsive portrait tablet */
+}
+@media (max-width: 1018px) {
+  .td-cook-book .td-recipe-time .td-recipe-info {
+    width: 100%;
+  }
+}
 .td-cook-book .footer-social-wrap {
   margin-bottom: 0;
 }

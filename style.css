@@ -1542,6 +1542,10 @@ img {
   font-size: 13px;
   min-width: 38px;
 }
+.td-header-sp-top-widget .td-search-btns-wrap i:before,
+.td-header-sp-top-widget .td-social-icon-wrap i:before {
+  vertical-align: middle;
+}
 .td-header-sp-top-widget .td-search-btns-wrap:before,
 .td-header-sp-top-widget .td-social-icon-wrap:first-of-type:before,
 .td-header-sp-top-widget .td-social-icon-wrap:after {
