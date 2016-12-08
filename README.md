@@ -2,7 +2,7 @@
 
 License: GPL V3
 
-**Official site:** https://www.wpion.com/ionmag-theme/<br>
+**Official site:** [ionMag free news theme](https://www.wpion.com/free-news-theme/)<br>
 **Current release:** [Download now](http://cdn.tagdiv.com/wp-content/uploads/2016/10/IonMag.zip) 
 
 #### What's this?
@@ -12,7 +12,7 @@ A GPL WordPress theme for blogs, magazines and more. The theme is based on our w
 
 
 #### How to use it?
-If you just want to use the stable version of the theme, please [download if from our main site](https://www.wpion.com/ionmag-theme/). The theme that is available here on github is the development version and we don't recommend that you use this on live servers.
+If you just want to use the stable version of the theme, please [download our free news theme](https://www.wpion.com/free-news-theme/). The theme that is available here on github is the development version and we don't recommend that you use this on live servers.
 - Clone this repo in the /wp-content/themes folder of a clean WordPress install
 - Clone: https://github.com/tagDiv/wp_booster_project outside of ionMag theme
 - make a symbolic link or junction from wp_booster_project/wp_booster to /wp-content/themes/ionMag/includes/wp_booster
