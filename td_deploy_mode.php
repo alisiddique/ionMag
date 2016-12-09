@@ -9,3 +9,8 @@
 if (!defined('TD_DEPLOY_MODE')) {
     define("TD_DEPLOY_MODE", 'dev');
 }
+
+
+if (!defined('TD_DEPLOY_IS_PREMIUM')) {
+    define("TD_DEPLOY_IS_PREMIUM", true);
+}
