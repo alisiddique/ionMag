@@ -157,7 +157,7 @@ class td_config {
 			    'text' => 'Fade [full]',
 			    'val' => '', // empty, as a default value
 			    'specific_selectors' => '.entry-thumb, img',
-			    'general_selectors' => '.td-animation-stack img, .post img',
+			    'general_selectors' => '.td-animation-stack img, .td-animation-stack .entry-thumb, .post img',
 		    ),
 
             array(
