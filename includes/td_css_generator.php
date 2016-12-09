@@ -588,6 +588,9 @@ function td_css_generator() {
     .td-sub-footer-copy {
       color: @footer_text_color;
     }
+    .td-footer-wrapper .td-post-category {
+      color: #fff;
+    }
     .td-subfooter-menu li:after,
     .footer-social-wrap:after,
     .td-subfooter-menu:after {

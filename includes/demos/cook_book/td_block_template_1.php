@@ -99,6 +99,7 @@ class td_block_template_1 {
                 color: @header_color;
             }
 
+            .$unique_block_class .td_module_wrap .td-post-category,
             .$unique_block_class .td_module_wrap .td-post-category:hover,
             .$unique_block_class .entry-title:after,
             .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before {

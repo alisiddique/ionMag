@@ -157,7 +157,7 @@ class td_config {
 			    'text' => 'Fade [full]',
 			    'val' => '', // empty, as a default value
 			    'specific_selectors' => '.entry-thumb, img',
-			    'general_selectors' => '.td-animation-stack img, .post img',
+			    'general_selectors' => '.td-animation-stack img, .td-animation-stack .entry-thumb, .post img',
 		    ),
 
             array(
@@ -899,7 +899,7 @@ class td_config {
                         "heading" => 'Title text color',
                         "param_name" => "header_text_color",
                         "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
+                        "description" => 'Optional - Choose a custom title text color for this block',
                     ),
                     array(
                         "type" => "colorpicker",
@@ -908,7 +908,7 @@ class td_config {
                         "heading" => 'Title background color',
                         "param_name" => "header_color",
                         "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
+                        "description" => 'Optional - Choose a custom title background color for this block',
                     ),
                     array(
                         "param_name" => "",
@@ -929,7 +929,7 @@ class td_config {
                             'Custom ad 5' => 'custom_ad_5'
                         ),
                         "heading" => 'Use adspot from:',
-                        "description" => "",
+                        "description" => 'Choose the adspot from list',
                         "holder" => "div",
                         "class" => "tdc-dropdown-big",
                     ),
@@ -1099,7 +1099,7 @@ class td_config {
                         "heading" => 'Title text color',
                         "param_name" => "header_text_color",
                         "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
+                        "description" => 'Optional - Choose a custom title text color for this block',
                     ),
                     array(
                         "type" => "colorpicker",
@@ -1108,14 +1108,14 @@ class td_config {
                         "heading" => 'Title background color',
                         "param_name" => "header_color",
                         "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
+                        "description" => 'Optional - Choose a custom title background color for this block',
                     ),
                     array(
                         "param_name" => "author_id",
                         "type" => "textfield",
                         "value" => '',
                         "heading" => "Author ID",
-                        "description" => "",
+                        "description" => 'Set the author id',
                         "holder" => "div",
                         "class" => "tdc-textfield-small",
                     ),
@@ -1543,7 +1543,7 @@ class td_config {
                         "type" => "textfield",
                         "value" => "6",
                         "heading" => 'Limit the number of categories',
-                        "description" => "",
+                        "description" => 'Optional - Choose a custom limit category number for this block',
                         "holder" => "div",
                         "class" => "tdc-textfield-small",
                     ),
