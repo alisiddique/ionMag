@@ -55,6 +55,11 @@ class td_block_template_1 {
             .$unique_block_class .td-instagram-user a {
                 color: @header_text_color;
             }
+            
+            .$unique_block_class div .block-title span,
+            .$unique_block_class div .block-title a {
+                color: #000 !important;
+            }
 
             .$unique_block_class .td_module_wrap .td-post-category,
             .$unique_block_class .block-title:after,
@@ -64,6 +69,11 @@ class td_block_template_1 {
             }
 
             /* @header_color */
+            .$unique_block_class div .block-title span,
+            .$unique_block_class div .block-title a {
+                color: @header_text_color !important;
+            }
+            
             .$unique_block_class .block-title span,
             .$unique_block_class .block-title a {
                 background-color: @header_color;
