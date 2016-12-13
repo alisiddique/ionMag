@@ -157,90 +157,12 @@
 }
 
 /*
-  Scroll bar
+  Big grids scroll
 */
-.td_block_wrap .td-big-grid-wrapper .td-big-grid-scroll {
+.td-big-grids-scroll {
   /* responsive portrait phone */
   @media (max-width: @responsive_p_phone_max) {
-    overflow-x: auto;
-    white-space: nowrap;
-    font-size: 0;
-    overflow-y: hidden;
-    padding-top: 4px;
-    z-index: 0;
-    -webkit-overflow-scrolling: touch;
-    transform: translate3d(0, 0, 0);
-
-    .td-big-grid-post {
-      margin-left: 4px;
-      margin-right: 0;
-      margin-bottom: 0;
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-
-  .td-big-grid-post {
-    /* responsive portrait phone */
-    @media (max-width: @responsive_p_phone_max) {
-      display: inline-block;
-      white-space: normal;
-      float: none;
-      vertical-align: top;
-      width: 80%;
-    }
-
-    .td-module-thumb {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        height: 165px;
-      }
-      /* responsive smaller portrait phone */
-      @media (max-width: 320px) {
-        height: 130px;
-      }
-    }
-
-    // meta container
-    .td-meta-info-container {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        padding: 0 13px 12px !important;
-      }
-    }
-
-    .td-post-category {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        margin-bottom: 10px;
-      }
-    }
-    .entry-title {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        font-size: 15px !important;
-        line-height: 20px !important;
-      }
-    }
-  }
-
-  // make full scroll when only 2 posts
-  &.td-scroll-full {
-    .td-big-grid-post {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        width: 100%;
-      }
-    }
-  }
-}
-.td-big-grids-scroll {
-  // used for mobile scroll
-  .td-big-grid-post-0 {
-    /* responsive portrait phone */
-    @media (max-width: @responsive_p_phone_max) {
+    .td-big-grid-post-0 {
       width: 100% !important;
       float: none !important;
 
@@ -248,21 +170,79 @@
         height: auto;
         max-height: 420px;
       }
-    }
 
-    .td-post-category {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
+      .td-post-category {
         margin-bottom: 12px !important;
       }
-    }
 
-    .entry-title {
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
+      .entry-title {
         font-size: 19px !important;
         line-height: 24px !important;
       }
+    }
+
+    .td-big-grid-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      font-size: 0;
+      overflow-y: hidden;
+      padding-top: 4px;
+      z-index: 0;
+      -webkit-overflow-scrolling: touch;
+      transform: translate3d(0, 0, 0);
+
+      .td-big-grid-post {
+        display: inline-block;
+        white-space: normal;
+        float: none;
+        vertical-align: top;
+        width: 80%;
+        margin-left: 4px;
+        margin-right: 0;
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .td-module-empty {
+        display: none !important;
+      }
+
+      &.td-scroll-full {
+        .td-big-grid-post {
+          width: 100%;
+        }
+      }
+
+      .td-module-thumb {
+        height: 165px;
+      }
+
+      .td-meta-info-container {
+        padding: 0 13px 12px !important;
+      }
+      .td-post-category {
+        margin-bottom: 10px;
+      }
+      .entry-title {
+        font-size: 15px !important;
+        line-height: 20px !important;
+      }
+    }
+
+    .td-posts-2 {
+      .td-big-grid-post-1 {
+        width: 100%;
+      }
+    }
+  }
+
+  /* responsive smaller portrait phone */
+  @media (max-width: 320px) {
+    .td-big-grid-scroll .td-module-thumb {
+      height: 130px;
     }
   }
 }
