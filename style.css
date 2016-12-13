@@ -6255,6 +6255,12 @@ body .dropcap3 {
 */
 .td-big-grids {
   margin-bottom: 50px;
+  /* responsive portrait tablet */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-big-grids {
+    margin-bottom: 40px;
+  }
 }
 .td-big-grids .td_module_wrap {
   padding-bottom: 0;
