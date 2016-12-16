@@ -476,7 +476,8 @@ img {
     width: 100%;
   }
 }
-.tdc-row.stretch_row .td-pb-row::before {
+.tdc-row.stretch_row .td-pb-row:before,
+.tdc-row.stretch_row .td-pb-row:after {
   width: 100vw !important;
   left: 50% !important;
   transform: translateX(-50%) !important;

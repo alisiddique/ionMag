@@ -29,10 +29,13 @@
 
 }
 
-.tdc-row.stretch_row .td-pb-row::before {
-  width: 100vw !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+.tdc-row.stretch_row .td-pb-row {
+  &:before,
+  &:after {
+    width: 100vw !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
 .tdc-row.stretch_row_content {
