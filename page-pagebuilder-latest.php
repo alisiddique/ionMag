@@ -19,7 +19,7 @@ if ($td_paged > $td_page) {
 
 
 $list_custom_title_show = true; //show the article list title by default
-
+$td_use_page_builder = td_util::is_pagebuilder_content($post); // detect the page builder
 
 
 
@@ -72,26 +72,31 @@ if (!empty($post->ID)) {
 <div class="td-main-content-wrap td-main-page-wrap td-container-wrap">
     <div class="tdc-content-wrap">
         <?php
-        /*
-        the first part of the page (built with the page builder)  - empty($paged) or $paged < 2 = first page
-        ---------------------------------------------------------------------------------------- */
-        //td_global::$cur_single_template_sidebar_pos = 'no_sidebar';
-        if(!empty($post->post_content)) { //show this only when we have content
-            if (empty($paged) or $paged < 2) { //show this only on the first page
-                if (have_posts()) { ?>
-                    <?php while ( have_posts() ) : the_post(); ?>
+        // if pagebuilder is not used add container for the content layout
+        if (!$td_use_page_builder) { ?>
+            <div class="td-container">
+        <?php }
+            /*
+            the first part of the page (built with the page builder)  - empty($paged) or $paged < 2 = first page
+            ---------------------------------------------------------------------------------------- */
+            //td_global::$cur_single_template_sidebar_pos = 'no_sidebar';
+            if(!empty($post->post_content)) { //show this only when we have content
+                if (empty($paged) or $paged < 2) { //show this only on the first page
+                    if (have_posts()) { ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
 
-                            <?php the_content(); ?>
+                                <?php the_content(); ?>
 
-                    <?php endwhile; ?>
-                <?php }
+                        <?php endwhile; ?>
+                    <?php }
+                }
+            } else if ( td_util::tdc_is_live_editor_iframe() ) {
+                // The content needs to be shown (Maybe we have a previewed content, and we need the 'the_content' hook !)
+                the_content();
             }
-        } else if ( td_util::tdc_is_live_editor_iframe() ) {
-	        // The content needs to be shown (Maybe we have a previewed content, and we need the 'the_content' hook !)
-	        the_content();
-        }
-
-        ?>
+        if (!$td_use_page_builder) { ?>
+            </div>
+        <?php } ?>
     </div>
 
     <div class="td-container td-pb-article-list">
