@@ -21,7 +21,7 @@
 <?php locate_template('parts/search.php', true);?>
 
 
-<div id="td-outer-wrap" class="td-theme-wrap">
+<div id="td-outer-wrap" class="td-theme-wrap<?php if (td_util::get_option('tds_search_placement') == 'top_bar') { echo ' td-search-top-bar'; } ?>">
     <?php //this is closing in the footer.php file ?>
 
 <?php
