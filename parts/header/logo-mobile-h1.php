@@ -24,10 +24,26 @@ if (td_util::get_option('tds_logo_on_sticky') == 'show') {
 	$td_sticky_option = 'td-sticky-disable';
 }
 
-// if true make the logo in H1
+// H1 on logo when there's no title with H1 in page
+// So, H1 is on logo when:
+// 1. For index.php template because the content should not have any H1
+// 2. For 'page-pagebuilder-latest.php' template, because the the content does not output any page title
+// 3. For any tdc or vc content, and not the 'page-pagebuilder-title.php' is used
 $td_use_h1_logo = false;
-if( is_home() || is_front_page() ) {
+if (is_home()) {
 	$td_use_h1_logo = true;
+} else if (is_page()) {
+
+	global $post;
+	$_wp_page_template = get_post_meta($post->ID, '_wp_page_template', true );
+
+	if ('page-pagebuilder-title.php' === $_wp_page_template) {
+		$td_use_h1_logo = false;
+	} else if ('page-pagebuilder-latest.php' === $_wp_page_template) {
+		$td_use_h1_logo = true;
+	} else if ( td_util::is_pagebuilder_content($post)) {
+		$td_use_h1_logo = true;
+	}
 }
 
 // mobile logo here
