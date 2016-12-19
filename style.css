@@ -1671,7 +1671,7 @@ img {
 .td-header-main-menu {
   position: relative;
   z-index: 999;
-  padding-right: 35px;
+  padding-right: 56px;
   font-family: 'Work Sans', sans-serif;
 }
 @media (max-width: 767px) {
@@ -1682,6 +1682,9 @@ img {
 }
 .td-header-main-menu .td-search-box-wrap {
   margin-top: -1px;
+}
+.td-search-top-bar .td-header-main-menu {
+  padding-right: 0;
 }
 /*  ----------------------------------------------------------------------------
     SF menu
