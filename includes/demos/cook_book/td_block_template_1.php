@@ -56,8 +56,8 @@ class td_block_template_1 {
                 color: @header_text_color;
             }
             
-            .$unique_block_class div .block-title span,
-            .$unique_block_class div .block-title a {
+            div.$unique_block_class .block-title span,
+            div.$unique_block_class .block-title a {
                 color: #000 !important;
             }
 
