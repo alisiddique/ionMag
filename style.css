@@ -12294,3 +12294,6 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
 .td-md-is-iemobile .td-author-header .count {
   padding-bottom: 2px;
 }
+.td-md-is-iemobile .td-scroll-up {
+  display: none;
+}
