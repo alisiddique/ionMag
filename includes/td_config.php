@@ -636,15 +636,17 @@ class td_config {
 
         td_api_header_style::add('1',
             array(
-                'text' => '<strong>Style 1 - </strong> Default',
-                'file' => td_global::$get_template_directory . '/parts/header/header-style-1.php'
+                'text' => 'Style 1- Default',
+                'file' => td_global::$get_template_directory . '/parts/header/header-style-1.php',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/menu/icon-menu-1.png'
             )
         );
 
         td_api_header_style::add('2',
             array(
-                'text' => '<strong>Style 2 - </strong> Center menu and logo',
-                'file' => td_global::$get_template_directory . '/parts/header/header-style-2.php'
+                'text' => 'Style 2',
+                'file' => td_global::$get_template_directory . '/parts/header/header-style-2.php',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/menu/icon-menu-2.png'
             )
         );
 
