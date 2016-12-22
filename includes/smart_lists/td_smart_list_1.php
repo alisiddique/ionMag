@@ -64,12 +64,15 @@ class td_smart_list_1 extends td_smart_list {
             }
 
             $buffy .= '
-                            <figure class="td-slide-smart-list-figure td-slide-smart-list-1' . $smart_list_lightbox . '">
-                                <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" data-caption="' . esc_attr($first_img_caption, ENT_QUOTES) . '" ' . $first_img_link_target .' >
-                                    <img src="' . $first_img_info[0] . '"/>
-                                </a>
-                                <figcaption class="td-sml-caption">' . $first_img_caption . '</figcaption>
-                            </figure>';
+                <div class="td-sml-figure">
+                    <figure class="td-slide-smart-list-figure td-slide-smart-list-1' . $smart_list_lightbox . '">
+                        <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" data-caption="' . esc_attr($first_img_caption, ENT_QUOTES) . '" ' . $first_img_link_target .' >
+                            <img src="' . $first_img_info[0] . '"/>
+                        </a>
+                    </figure>
+                    <figcaption class="td-sml-caption">' . $first_img_caption . '</figcaption>
+                </div>
+                ';
         }
 
         //adding description
