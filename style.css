@@ -11365,6 +11365,9 @@ input.search-submit:hover {
 .td-sml-caption div {
   margin: 6px 0 0 0;
 }
+.td-sml-description p:first-child br:first-child {
+  display: none;
+}
 /*  ----------------------------------------------------------------------------
     Smart list 1
 */
