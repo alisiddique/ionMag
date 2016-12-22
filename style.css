@@ -11458,23 +11458,23 @@ input.search-submit:hover {
 .td_smart_list_1 .td-sml-description {
   margin-top: 0;
 }
-.td_smart_list_1 .td-slide-smart-list-figure {
+.td_smart_list_1 .td-sml-figure {
   margin: 0 0 29px 0;
   /* responsive portrait tablet */
   /* responsive portrait phone */
 }
 @media (max-width: 1018px) {
-  .td_smart_list_1 .td-slide-smart-list-figure {
+  .td_smart_list_1 .td-sml-figure {
     margin-bottom: 19px;
   }
 }
 @media (max-width: 767px) {
-  .td_smart_list_1 .td-slide-smart-list-figure {
+  .td_smart_list_1 .td-sml-figure {
     margin-left: -10px;
     margin-right: -10px;
   }
 }
-.td_smart_list_1 .td-slide-smart-list-figure img {
+.td_smart_list_1 .td-sml-figure img {
   display: block;
 }
 .td_smart_list_1 .td-sml-caption {
