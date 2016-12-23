@@ -251,7 +251,7 @@ $demo_cat_7_id =td_demo_category::add_category(array(
     'tdc_color' => ''
 ));
 $demo_cat_8_id =td_demo_category::add_category(array(
-    'category_name' => 'Photography',
+    'category_name' => 'Photo',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
