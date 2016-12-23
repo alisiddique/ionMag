@@ -10656,8 +10656,8 @@ input.search-submit:hover {
 .widget_search input[type=submit]:hover {
   background-color: transparent;
 }
-.widget_archive .current,
-.widget_archive .current a {
+.archive .widget_archive .current,
+.archive .widget_archive .current a {
   color: #42bdcd;
 }
 .widget_calendar {
