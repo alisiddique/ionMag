@@ -2501,7 +2501,7 @@ class td_config {
 			    'text' => 'Default Demo',
 			    'folder' => td_global::$get_template_directory . '/includes/demos/default/',
 			    'img' => td_global::$get_template_directory_uri . '/includes/demos/default/screenshot.png',
-			    'demo_url' => 'http://demo.wpion.com/ionmag/',
+			    'demo_url' => 'http://demo.tagdiv.com/ionmag/',
 			    'td_css_generator_demo' => false,
 			    'uses_custom_style_css' => false,
                 'required_plugins' => array()
