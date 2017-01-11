@@ -54,16 +54,27 @@ class td_block_image_box extends td_block {
 
 		// height
 		$box_height = '';
-		if(!empty($height)) {
-			$box_height = ' height: ' . $height . 'px';
+		if( !empty($height) ) {
+			//the user height value, verified for a 'px' matching
+			if ( strpos($height, 'px') !== false ) {
+				$box_height = ' height:  ' . $height;
+			} else {
+				$box_height = ' height: ' . $height . 'px';
+			}
 		}
 
 		// gap
 		$box_gap_padding = '';
 		$box_gap_margin = '';
-		if(isset($gap)) {
-			$box_gap_padding = 'padding-left: ' . $gap . 'px; padding-right: ' . $gap . 'px;';
-			$box_gap_margin = 'margin-left: -' . $gap . 'px; margin-right: -' . $gap . 'px;';
+		if( isset($gap) ) {
+			//the user gap value, verified for a 'px' matching
+			if ( strpos($gap, 'px') !== false ) {
+				$box_gap_padding = 'padding-left: ' . $gap . '; padding-right: ' . $gap;
+				$box_gap_margin = 'margin-left: -' . $gap . '; margin-right: -' . $gap;
+			} else {
+				$box_gap_padding = 'padding-left: ' . $gap . 'px; padding-right: ' . $gap . 'px;';
+				$box_gap_margin = 'margin-left: -' . $gap . 'px; margin-right: -' . $gap . 'px;';
+			}
 		}
 
 		// layout
