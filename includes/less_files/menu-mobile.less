@@ -92,6 +92,11 @@
   left: -1%;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 
+  /* tablet + desktop */
+  @media (min-width: @responsive_p_phone_max) {
+    display: none;
+  }
+
   // Error log
   .td_display_err {
     text-align: center;
