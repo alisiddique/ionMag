@@ -12,5 +12,5 @@ if (!defined('TD_DEPLOY_MODE')) {
 
 
 if (!defined('TD_DEPLOY_IS_PREMIUM')) {
-    define("TD_DEPLOY_IS_PREMIUM", true);
+    define("TD_DEPLOY_IS_PREMIUM", false);
 }
