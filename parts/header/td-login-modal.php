@@ -1,17 +1,19 @@
 <!-- LOGIN MODAL -->
 <?php
-//check if admin allow registration
-$users_can_register = get_option('users_can_register');
 
-//if admin permits registration
-$users_can_register_link = '';
-$users_can_register_form = '';
 
-if($users_can_register == 1){
+if (td_util::get_option('tds_login_sign_in_widget') == 'show') {
+
+    //check if admin allow registration
+    $users_can_register = get_option('users_can_register');
+
+
     //add the Register tab to the modal window if `Anyone can register` check
-    $users_can_register_link = '<a id="register-link">' . __td('Create an account', TD_THEME_NAME) . '</a>';
-
-    $users_can_register_form = '
+    $users_can_register_link = '';
+    $users_can_register_form = '';
+    if($users_can_register == 1){
+        $users_can_register_link = '<a id="register-link">' . __td('Create an account', TD_THEME_NAME) . '</a>';
+        $users_can_register_form = '
                 <div id="td-register-div" class="td-login-form-div td-display-none">
                     <div class="td-login-panel-title">' . __td('Create an account', TD_THEME_NAME) . '</div>
                     <div class="td-login-panel-descr">' . __td('Welcome! Register for an account', TD_THEME_NAME) .'</div>
@@ -21,9 +23,12 @@ if($users_can_register == 1){
                     <input type="button" name="register_button" id="register_button" class="wpb_button btn td-login-button" value="' . __td('Register', TD_THEME_NAME) . '">
                     <div class="td-login-info-text">' . __td('A password will be e-mailed to you.', TD_THEME_NAME) . '</div>
                 </div>';
-}
+    }
 
-echo '
+
+
+
+    echo '
                 <div  id="login-form" class="white-popup-block mfp-hide mfp-with-anim">
                     <div class="td-login-wrap">
                         <a href="#" class="td-back-button"><i class="td-icon-modal-back"></i></a>
@@ -51,4 +56,4 @@ echo '
                     </div>
                 </div>
                 ';
-?>
+}
