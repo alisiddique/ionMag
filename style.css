@@ -9850,6 +9850,7 @@ img.mfp-img {
   width: 100%;
   display: inline-block;
   position: relative;
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 15px;
   font-weight: 400;
@@ -10664,6 +10665,10 @@ input.search-submit:hover {
 .widget_search input[type=submit]:hover {
   background-color: transparent;
 }
+.archive .widget_archive .current,
+.archive .widget_archive .current a {
+  color: #42bdcd;
+}
 .widget_calendar {
   margin-bottom: 36px;
 }
@@ -11372,6 +11377,9 @@ input.search-submit:hover {
 }
 .td-sml-caption div {
   margin: 6px 0 0 0;
+}
+.td-sml-description p:first-child br:first-child {
+  display: none;
 }
 /*  ----------------------------------------------------------------------------
     Smart list 1

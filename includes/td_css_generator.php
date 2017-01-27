@@ -78,6 +78,8 @@ function td_css_generator() {
     .td_block_authors .td-authors-url a:hover,
     .widget .current-menu-item a,
     .td-tags span,
+    .archive .widget_archive .current,
+    .archive .widget_archive .current a,
     .widget_categories li:hover > a,
     .widget_search input[type=submit]:hover,
     .td-read-more:hover {

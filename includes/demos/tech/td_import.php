@@ -347,7 +347,7 @@ td_demo_menus::add_mega_menu(array(
 
 // mega menu one subcateg
 td_demo_menus::add_mega_menu(array(
-    'title' => 'Photography',
+    'title' => 'Photo',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_8_id
 ));

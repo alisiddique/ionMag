@@ -2475,16 +2475,21 @@ class td_config {
          */
         td_global::$default_google_fonts_list = array (
             '653' => array(
-                'css_style_id' => 'google_font_work_sans',
-                'url' => td_global::$http_or_https . '://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700'
+                '400',
+                '500',
+                '600',
+                '700'
             ),
             '582' => array(
-                'css_style_id' => 'google_font_source_sans_pro',
-                'url' => td_global::$http_or_https . '://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700'
+                '400',
+                '400italic',
+                '600',
+                '600italic',
+                '700'
             ),
             '182' => array(
-                'css_style_id' => 'google_font_droid_serif',
-                'url' => td_global::$http_or_https . '://fonts.googleapis.com/css?family=Droid+Serif:400,700'
+                '400',
+                '700',
             ),
         );
 
@@ -2501,7 +2506,7 @@ class td_config {
 			    'text' => 'Default Demo',
 			    'folder' => td_global::$get_template_directory . '/includes/demos/default/',
 			    'img' => td_global::$get_template_directory_uri . '/includes/demos/default/screenshot.png',
-			    'demo_url' => 'http://demo.wpion.com/ionmag/',
+			    'demo_url' => 'http://demo.tagdiv.com/ionmag/',
 			    'td_css_generator_demo' => false,
 			    'uses_custom_style_css' => false,
                 'required_plugins' => array()
@@ -2763,7 +2768,7 @@ class td_config {
 				<div class="td-supported-plugin">Font Awesome 4 Menus<span>- icon pack, supported in the theme menus</span></div>
 				<div class="td-supported-plugin">Jetpack  <span>- plugin with lots of features *it may slow down your site</span></div>
 				<div class="td-supported-plugin">WooCommerce <span>- eCommerce solution</span></div>
-				<div class="td-supported-plugin">WordPress SEO <span> - SEO plugin</span></div>
+				<div class="td-supported-plugin">WordPress (Yoast) SEO <span> - SEO plugin</span></div>
 				<div class="td-supported-plugin">Wp User Avatar <span> - Change users avatars</span></div>
 				<div class="td-supported-plugin">Slider Revolution <span> - responsive WordPress Slider Plugin</span></div>'
             );

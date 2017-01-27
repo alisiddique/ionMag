@@ -63,7 +63,7 @@ td_demo_misc::add_social_buttons(array(
     ads
  */
 td_demo_misc::clear_all_ads();
-td_demo_misc::add_ad_image('custom_ad_1', 'td_red_custom_1');
+td_demo_misc::add_ad_image('custom_ad_1', 'td_rec_custom_1');
 
 
 /*  ----------------------------------------------------------------------------
