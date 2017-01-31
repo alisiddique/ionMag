@@ -2787,12 +2787,14 @@ class td_config {
                     'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-composer.zip', // The plugin source
                     'required' => true, // If false, the plugin is only 'recommended' instead of required
                     'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                    'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                    'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/td-composer.png',
                     'text' => 'Required plugin - <a href="http://forum.wpion.com/tagdiv-composer-overview/" target="_blank">Read more</a>',
-                    'required_label' => 'required' //the text for required/recommended label - used also as a class for label bg color
+                    'required_label' => 'required', //the text for required/recommended label - used also as a class for label bg color
+
+	                'force_install' => true, // custom field used to force install the plugin
                 ),
                 array(
                     'name' => 'tagDiv Social Counter', // The plugin name
@@ -2800,12 +2802,14 @@ class td_config {
                     'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-social-counter.zip', // The plugin source
                     'required' => false, // If false, the plugin is only 'recommended' instead of required
                     'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                    'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                    'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/social.png',
                     'text' => 'Optional plugin - <a href="http://forum.wpion.com/social-counter/" target="_blank">Read more</a>',
-                    'required_label' => 'optional' //the text for required/recommended label - used also as a class for label bg color
+                    'required_label' => 'optional', //the text for required/recommended label - used also as a class for label bg color
+
+	                'force_install' => true, // custom field used to force install the plugin
                 ),
 
             );
@@ -2819,12 +2823,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-blocks-red-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-blocks.png',
                             'text' => '<strong>RED Premium Pack</strong> with 30 new blocks and 20 new modules crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         ),
                         array(
                             'name' => 'ionMag - Big Grids', // The plugin name
@@ -2832,12 +2838,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-grids-red-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-big-grids.png',
                             'text' => '<strong>RED Premium Pack</strong> with 19 new Big Grids crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         ),
                         array(
                             'name' => 'ionMag - Category Templates', // The plugin name
@@ -2845,12 +2853,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-categories-red-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-category.png',
                             'text' => '<strong>RED Premium Pack</strong> with 8 new Category Templates crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         ),
                         array(
                             'name' => 'ionMag - Header Styles', // The plugin name
@@ -2858,12 +2868,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-header-styles-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-headers.png',
                             'text' => '<strong>Premium Pack</strong> with 9 new Header Styles crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         ),
                         array(
                             'name' => 'ionMag - Post Templates', // The plugin name
@@ -2871,12 +2883,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-posts-red-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-posts.png',
                             'text' => '<strong>RED Premium Pack</strong> with 15 new Post Templates crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         ),
                         array(
                             'name' => 'ionMag - Smart Lists', // The plugin name
@@ -2884,12 +2898,14 @@ class td_config {
                             'source' => td_global::$get_template_directory_uri . '/includes/plugins/td-smart-lists-red-pack.zip', // The plugin source
                             'required' => false, // If false, the plugin is only 'recommended' instead of required
                             'version' => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-                            'force_activation' => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+                            'force_activation' => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-smart-lists.png',
                             'text' => '<strong>RED Premium Pack</strong> with 7 new Smart List Styles crafted for the ionMag theme',
-                            'required_label' => 'premium' //the text for required/recommended label - used also as a class for label bg color
+                            'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
+
+	                        'force_install' => true, // custom field used to force install the plugin
                         )
                     )
                 );
