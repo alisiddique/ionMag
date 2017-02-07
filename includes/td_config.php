@@ -920,85 +920,64 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-ads',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_ad_box.php',
-                "params" => array(
+	            "params" => array_merge(
+                    self::get_map_block_general_array(),
                     array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block',
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block',
-                    ),
-                    array(
-                        "param_name" => "",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "spot_id",
-                        "type" => "dropdown",
-                        "value" => array(
-                            '- Select ad -' => '',
-                            'Sidebar' => 'sidebar',
-                            'Custom ad 1' => 'custom_ad_1',
-                            'Custom ad 2' => 'custom_ad_2',
-                            'Custom ad 3' => 'custom_ad_3',
-                            'Custom ad 4' => 'custom_ad_4',
-                            'Custom ad 5' => 'custom_ad_5'
-                        ),
-                        "heading" => 'Use adspot from:',
-                        "description" => 'Choose the adspot from list',
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-	                array(
-		                "param_name" => "separator",
-		                "type" => "horizontal_separator",
-		                "value" => "",
-		                "class" => ""
-	                ),
-	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig'
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "spot_id",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            '- Select ad -' => '',
+	                            'Sidebar' => 'sidebar',
+	                            'Custom ad 1' => 'custom_ad_1',
+	                            'Custom ad 2' => 'custom_ad_2',
+	                            'Custom ad 3' => 'custom_ad_3',
+	                            'Custom ad 4' => 'custom_ad_4',
+	                            'Custom ad 5' => 'custom_ad_5'
+	                        ),
+	                        "heading" => 'Use adspot from:',
+	                        "description" => 'Choose the adspot from list',
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+		                array(
+	                        "param_name" => "spot_title",
+	                        "type" => "textfield",
+	                        "value" => "",
+	                        "heading" => 'Ad title:',
+	                        "description" => "Optional - a title for the Ad, like - Advertisement - if you leave it blank the block will not have a title",
+	                        "holder" => "div",
+	                        "class" => "",
+	                    ),
+		                array(
+			                "param_name" => "separator",
+			                "type" => "horizontal_separator",
+			                "value" => "",
+			                "class" => ""
+		                ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig'
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+                    )
                 )
             )
         );
