@@ -666,6 +666,42 @@ class td_config {
 
 
 
+	    /**
+         * block templates
+         */
+        td_api_block_template::add('td_block_template_1',
+            array (
+                'text' => 'Block Header 1 - Default',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-1.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_1.php',
+	            'params' => array(
+					// title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+					array(
+						"type" => "colorpicker",
+						"holder" => "div",
+						"class" => "",
+						"heading" => 'Title text color:',
+						"param_name" => "header_text_color",
+						"value" => '',
+						"description" => 'Optional - Choose a custom title text color for this header',
+						'td_type' => 'block_template',
+					)
+				)//end generic array
+            )
+        );
+
+
+
         /**
          * the blocks
          */
@@ -1837,17 +1873,6 @@ class td_config {
 			    )
 		    )
 	    );
-
-
-
-        /**
-         * block templates
-         */
-        td_api_block_template::add('td_block_template_1',
-            array (
-                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_1.php',
-            )
-        );
 
 
 
@@ -3415,51 +3440,67 @@ class td_config {
 
 
     /**
-     * This array is used only by blocks that have loops + title (it is merged with the array from get_map_filter_array)
-     * @return array
-     */
-    static function get_map_block_general_array() {
-        return array(
-            // title settings
-            array(
-                "param_name" => "custom_title",
-                "type" => "textfield",
-                "value" => "Block title",
-                "heading" => 'Block title',
-                "description" => "Custom title for this block",
-                "holder" => "div",
-                "class" => "tdc-textfield-extrabig"
-            ),
-            array(
-                "param_name" => "custom_url",
-                "type" => "textfield",
-                "value" => "",
-                "heading" => 'Title text url',
-                "description" => "Optional - Choose a custom title text color for this block",
-                "holder" => "div",
-                "class" => "tdc-textfield-extrabig"
-            ),
-            array(
-                "type" => "colorpicker",
-                "holder" => "div",
-                "class" => "",
-                "heading" => 'Title text color',
-                "param_name" => "header_text_color",
-                "value" => '',
-                "description" => 'Optional - Choose a custom title text color for this block'
-            ),
-            array(
-                "type" => "colorpicker",
-                "holder" => "div",
-                "class" => "",
-                "heading" => 'Title background color',
-                "param_name" => "header_color",
-                "value" => '',
-                "description" => 'Optional - Choose a custom title background color for this block'
-            ),
+	 * This array is used to add the custom_title and custom_url of the block, it also loads the atts from the current global td_block_template
+     * on visual composer we remove the block_template_id att in the UI @see td_vc_edit_form_fields_after_render
+	 * @return array
+	 */
+	static function get_map_block_general_array() {
+		$map_block_general_array = array();
 
-        );//end generic array
-    }
+		$td_block_template_id = td_options::get('tds_global_block_template', 'td_block_template_1');
+
+		foreach (td_api_block_template::get_all() as $block_template_id => $block_template_settings) {
+
+			if ($td_block_template_id === $block_template_id) {
+
+				$map_block_general_array[] = array(
+					"param_name" => "custom_title",
+					"type" => "textfield",
+					"value" => "Block title",
+					"heading" => 'Custom title for this block:',
+					"description" => "Optional - a title for this block, if you leave it blank the block will not have a title",
+					"holder" => "div",
+					"class" => "",
+				);
+				$map_block_general_array[] = array(
+					"param_name" => "custom_url",
+					"type" => "textfield",
+					"value" => "",
+					"heading" => 'Title url:',
+					"description" => "Optional - a custom url when the block title is clicked",
+					"holder" => "div",
+					"class" => "",
+				);
+
+				$map_block_general_array[] = array(
+					"param_name" => "block_template_id",
+					"type" => "dropdown",
+					"value" => td_util::get_block_template_ids(),
+					"heading" => 'Header template:',
+					"description" => "Header template used by the current block",
+					"holder" => "div",
+					"class" => "tdc-dropdown-big"
+				);
+
+				// add the block template atts
+				foreach ($block_template_settings['params'] as $block_template_setting) {
+					$map_block_general_array[] = $block_template_setting;
+				}
+
+				// Add the separator
+				$map_block_general_array[] = array(
+                    "param_name" => "separator",
+                    "type" => "horizontal_separator",
+                    "value" => "",
+                    "class" => ""
+                );
+
+				break;
+			}
+		}
+
+		return $map_block_general_array;
+	}
 
 
 
