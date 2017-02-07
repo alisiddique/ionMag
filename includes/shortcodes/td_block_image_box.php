@@ -14,22 +14,22 @@ class td_block_image_box extends td_block {
 				'style' => '',
 
 
-				'image_title_item0' => 'Custom title',
+				'image_title_item0' => '',
 				'custom_url_item0' => '#',
 				'open_in_new_window_item0' => '',
 				'image_item0' => '',
 
-				'image_title_item1' => 'Custom title',
+				'image_title_item1' => '',
 				'custom_url_item1' => '#',
 				'open_in_new_window_item1' => '',
 				'image_item1' => '',
 
-				'image_title_item2' => 'Custom title',
+				'image_title_item2' => '',
 				'custom_url_item2' => '#',
 				'open_in_new_window_item2' => '',
 				'image_item2' => '',
 
-				'image_title_item3' => 'Custom title',
+				'image_title_item3' => '',
 				'custom_url_item3' => '#',
 				'open_in_new_window_item3' => '',
 				'image_item3' => '',
