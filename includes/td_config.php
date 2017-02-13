@@ -11,7 +11,7 @@ define("TD_FEATURED_CAT", "Featured"); //featured cat name
 define("TD_FEATURED_CAT_SLUG", "featured"); //featured cat slug
 define("TD_THEME_OPTIONS_NAME", "td_012"); //where to store our options
 
-define("TD_AURORA_VERSION", "__td_aurora_deploy_version__");
+
 
 define("TD_THEME_WP_BOOSTER", "3.0"); //prevents multiple instances of the framework
 
