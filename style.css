@@ -2321,6 +2321,12 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   -o-transform: translate3d(-99%, 0, 0);
   left: -1%;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  /* tablet + desktop */
+}
+@media (min-width: 767px) {
+  #td-mobile-nav {
+    display: none;
+  }
 }
 #td-mobile-nav .td_display_err {
   text-align: center;
@@ -10113,7 +10119,7 @@ img.mfp-img {
   top: 93px;
   left: 0;
   right: 0;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   margin: 0 -40%;
   line-height: 1;
@@ -11507,6 +11513,7 @@ input.search-submit:hover {
 */
 .td-instagram-image {
   display: block;
+  width: 100%;
 }
 .td-instagram-element {
   position: relative;
