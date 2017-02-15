@@ -2513,8 +2513,24 @@ class td_config {
 			    'demo_url' => 'http://demo.tagdiv.com/ionmag/',
 			    'td_css_generator_demo' => false,
 			    'uses_custom_style_css' => false,
-                'required_plugins' => array()
+                'required_plugins' => array(),
+                'premium_demo' => "free"
 		    ),
+            'premium' => array(
+                'text' => 'Premium',
+                'folder' => td_global::$get_template_directory . '/includes/demos/premium/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/premium/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_premium/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
             'viral' => array(
                 'text' => 'Viral',
                 'folder' => td_global::$get_template_directory . '/includes/demos/viral/',
@@ -2527,7 +2543,8 @@ class td_config {
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
-                )
+                ),
+                'premium_demo' => "premium"
             ),
             'voyage' => array(
                 'text' => 'Voyage',
@@ -2541,7 +2558,8 @@ class td_config {
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
-                )
+                ),
+                'premium_demo' => "premium"
             ),
             'tech' => array(
                 'text' => 'Tech Portal',
@@ -2555,7 +2573,8 @@ class td_config {
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
-                )
+                ),
+                'premium_demo' => "premium"
             ),
             'cook_book' => array(
                 'text' => 'Cook Book',
@@ -2569,8 +2588,8 @@ class td_config {
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
-                )
-
+                ),
+                'premium_demo' => "premium"
             ),
 	    );
 
