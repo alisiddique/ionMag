@@ -2852,7 +2852,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-blocks.png',
-                            'text' => '<strong>RED Premium Pack</strong> with 30 new blocks and 20 new modules crafted for the ionMag theme',
+                            'text' => '<strong>RED Premium Pack</strong> - Create the right architecture to convey strong and engaging messages',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
@@ -2868,7 +2868,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-big-grids.png',
-                            'text' => '<strong>RED Premium Pack</strong> with 19 new Big Grids crafted for the ionMag theme',
+                            'text' => '<strong>RED Premium Pack</strong> - Discover an astonishing way to highlight your most important content',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
@@ -2884,7 +2884,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-category.png',
-                            'text' => '<strong>RED Premium Pack</strong> with 8 new Category Templates crafted for the ionMag theme',
+                            'text' => '<strong>RED Premium Pack</strong> - Experience the power of creativity and guide your visitors',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
@@ -2900,7 +2900,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-headers.png',
-                            'text' => '<strong>Premium Pack</strong> with 9 new Header Styles crafted for the ionMag theme',
+                            'text' => '<strong>Premium Pack</strong> - Build your online identity and brand your website effortless',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
@@ -2916,7 +2916,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-posts.png',
-                            'text' => '<strong>RED Premium Pack</strong> with 15 new Post Templates crafted for the ionMag theme',
+                            'text' => '<strong>RED Premium Pack</strong> - Enjoy this powerful storytelling tool crafted to impress your audience',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
@@ -2932,7 +2932,7 @@ class td_config {
                             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                             'external_url' => '', // If set, overrides default API URL and points to an external URL
                             'img' => td_global::$get_template_directory_uri . '/images/plugins/red-smart-lists.png',
-                            'text' => '<strong>RED Premium Pack</strong> with 7 new Smart List Styles crafted for the ionMag theme',
+                            'text' => '<strong>RED Premium Pack</strong> - Engage your visitors with amazingly special content templates',
                             'required_label' => 'premium', //the text for required/recommended label - used also as a class for label bg color
 
 	                        'td_activate' => true, // custom field used to activate the plugin
