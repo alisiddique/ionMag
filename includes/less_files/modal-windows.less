@@ -388,3 +388,14 @@ tagdiv animations
     }
   }
 }
+
+// fix password field - not secure issue on chrome
+#login_pass-mob,
+#login_pass {
+  display: none !important;
+}
+
+.td-login-show #login_pass-mob,
+.mfp-ready #login_pass {
+  display: block !important;
+}

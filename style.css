@@ -10190,6 +10190,14 @@ tagdiv animations
 .mpf-td-login-effect.mfp-removing.mfp-bg {
   opacity: 0;
 }
+#login_pass-mob,
+#login_pass {
+  display: none !important;
+}
+.td-login-show #login_pass-mob,
+.mfp-ready #login_pass {
+  display: block !important;
+}
 .td-a-rec,
 .td-g-rec {
   margin-bottom: 40px;
@@ -11505,6 +11513,7 @@ input.search-submit:hover {
 */
 .td-instagram-image {
   display: block;
+  width: 100%;
 }
 .td-instagram-element {
   position: relative;

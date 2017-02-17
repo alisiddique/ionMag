@@ -136,7 +136,7 @@ class td_block_template_1 extends td_block_template {
 
         $td_pull_down_items = $this->get_td_pull_down_items();
 
-        if ($td_pull_down_items === false) {
+        if (empty($td_pull_down_items)) {
             return '';
         }
 
