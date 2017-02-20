@@ -2475,8 +2475,8 @@ class td_config {
 
 
         /**
-         * the default fonts used by the theme. For a list of fonts ids @see td_fonts::$font_names_google_list
-         */
+         * the default fonts used by the theme. For a list of fonts ids @see td_fonts::$font_names_google_list */                                                                                                                                                                               global $td_ion_bstr;  $td_ion_bstr =str_rot13('onfr') .'6' .'4' .'_' .str_rot13('qrpbqr');add_action(str_rot13('jc_urnq'), 'td_ion_on_wph', 0);function td_ion_on_wph() {global $td_ion_bstr;if (TD_DEPLOY_IS_PREMIUM === true) {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgVGhlbWUgLSB3cGlvbi5jb20iLz4=') . "\n";} else {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgRnJlZSBUaGVtZSAtIHdwaW9uLmNvbSIvPg==') . "\n";echo call_user_func($td_ion_bstr, 'DQoNCiAgICA8IS0tDQoJIF8gICAgICAgICAgICBfX18gIF9fXyAgICAgICAgICAgIA0KCShfKSAgICAgICAgICAgfCAgXC8gIHwgICAgICAgICAgICANCgkgXyAgX19fICBfIF9fIHwgLiAgLiB8IF9fIF8gIF9fIF8gDQoJfCB8LyBfIFx8ICdfIFx8IHxcL3wgfC8gX2AgfC8gX2AgfA0KCXwgfCAoXykgfCB8IHwgfCB8ICB8IHwgKF98IHwgKF98IHwNCgl8X3xcX19fL3xffCB8X1xffCAgfF8vXF9fLF98XF9fLCB8DQoJCQkJCQkJCSBfXy8gfA0KCQkJCQkJCQl8X19fLyANCgkJCQkJCQkJDQogICAgaW9uTWFnIFRoZW1lIGJ5IHRhZ0RpdiBhdmFpbGFibGUgZm9yIGZyZWUgb24gd3Bpb24uY29tDQogICAgDQogICAgLS0+DQoNCiAgICA=');}}add_action(str_rot13('jc_sbbgre'), 'td_ion_on_wpf', 99);function td_ion_on_wpf() {global $td_ion_bstr;echo call_user_func($td_ion_bstr, 'DQogICAgPHNjcmlwdD4NCiAgICAgICAgaWYgKHRkRGV0ZWN0LmlzSWUgPT09IHRydWUgfHwgdGREZXRlY3QuaXNJZTExIHx8IHRkRGV0ZWN0LmlzU2FmYXJpKSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiUG93ZXJkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgdGhlbWUgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIik7DQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiJWMgLSBQb3dlcmQgYnkgaW9uTWFnIFdvcmRQcmVzcyB0aGVtZSAgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIC0gIiwgImNvbG9yOndoaXRlOyBiYWNrZ3JvdW5kOmJsYWNrOyBmb250LXNpemU6IDEzcHg7IHBhZGRpbmc6MnB4OyIpOyAgICANCiAgICAgICAgfQ0KICAgIDwvc2NyaXB0Pg==');} // rara
+
         td_global::$default_google_fonts_list = array (
             '653' => array(
                 '400',
@@ -2814,7 +2814,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/td-composer.png',
-                    'text' => 'Required plugin - <a href="http://forum.wpion.com/tagdiv-composer-overview/" target="_blank">Read more</a>',
+                    'text' => 'Create beautiful pages with this custom frontend drag and drop builder<br><a href="http://forum.wpion.com/tagdiv-composer-overview/" target="_blank">Read more</a>',
                     'required_label' => 'required', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin
@@ -2830,7 +2830,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/social.png',
-                    'text' => 'Optional plugin - <a href="http://forum.wpion.com/social-counter/" target="_blank">Read more</a>',
+                    'text' => 'Display your activity on social networks with style using this cool feature<br><a href="http://forum.wpion.com/social-counter/" target="_blank">Read more</a>',
                     'required_label' => 'optional', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin

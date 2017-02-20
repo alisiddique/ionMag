@@ -58,6 +58,16 @@ usage:
 .td-viral .td-header-style-pr-8 .td_mega_menu_sub_cats a {
   padding-left: 0;
 }
+.td-viral .td-header-style-pr-8 .td-affix .sf-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.td-viral .td-header-style-pr-8 .td-affix .sf-menu li {
+  display: inline-block;
+  float: none;
+}
 .td-viral .td-main-content .block-title:after {
   display: none;
 }
