@@ -581,6 +581,26 @@ figure.aligncenter {
   line-height: 26px;
   font-size: 14px;
 }
+.td-page-content embed,
+.td-post-content embed,
+.wpb_text_column embed,
+.td_block_text_with_title embed,
+.woocommerce #tab-description embed,
+.mce-content-body embed,
+.td-page-content iframe,
+.td-post-content iframe,
+.wpb_text_column iframe,
+.td_block_text_with_title iframe,
+.woocommerce #tab-description iframe,
+.mce-content-body iframe,
+.td-page-content object,
+.td-post-content object,
+.wpb_text_column object,
+.td_block_text_with_title object,
+.woocommerce #tab-description object,
+.mce-content-body object {
+  max-width: 100%;
+}
 .entry-title a:hover,
 .td-post-category:hover,
 .widget a:hover,
