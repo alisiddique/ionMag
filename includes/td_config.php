@@ -2516,12 +2516,12 @@ class td_config {
                 'required_plugins' => array(),
                 'premium_demo' => "free"
 		    ),
-            'premium' => array(
-                'text' => 'Premium',
-                'folder' => td_global::$get_template_directory . '/includes/demos/premium/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/premium/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_premium/',
-                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+            'premium_magazine' => array(
+                'text' => 'Premium Magazine',
+                'folder' => td_global::$get_template_directory . '/includes/demos/premium_magazine/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/premium_magazine/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_premium_magazine/',
+                'td_css_generator_demo' => false,                // must have a td_css_generator_demo.php in demo's folder
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
@@ -2532,7 +2532,7 @@ class td_config {
                 'premium_demo' => "premium"
             ),
             'viral' => array(
-                'text' => 'Viral',
+                'text' => 'Go Viral',
                 'folder' => td_global::$get_template_directory . '/includes/demos/viral/',
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/viral/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_viral/',

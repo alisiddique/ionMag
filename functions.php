@@ -21,3 +21,5 @@ require_once('includes/wp_booster/td_wp_booster_functions.php');
 
 require_once('includes/td_css_generator.php');
 require_once('includes/widgets/td_page_builder_widgets.php'); // widgets
+
+//td_demo_state::update_state("premium_magazine", 'full');

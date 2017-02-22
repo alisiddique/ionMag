@@ -25,9 +25,9 @@ $td_less_files = array (
 		'source' => 'includes/wp_booster/wp-admin/css/wp-admin.less',
 		'destination' => 'includes/wp_booster/wp-admin/css/wp-admin.css'
 	),
-	'premium' => array (
-		'source' => 'includes/demos/premium/demo_style.less',
-		'destination' => 'includes/demos/premium/demo_style.css'
+	'premium_magazine' => array (
+		'source' => 'includes/demos/premium_magazine/demo_style.less',
+		'destination' => 'includes/demos/premium_magazine/demo_style.css'
 	),
 	'viral' => array (
 		'source' => 'includes/demos/viral/demo_style.less',
