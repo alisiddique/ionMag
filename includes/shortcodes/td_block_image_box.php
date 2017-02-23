@@ -85,7 +85,7 @@ class td_block_image_box extends td_block {
 
 
 		if(!empty($display)) {
-			$additional_classes [] = 'td-box-horizontal';
+			$additional_classes [] = 'td-box-vertical';
 
 			if(isset($gap)) {
 				$box_space = ' margin-bottom: ' . $gap . 'px;';
