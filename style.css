@@ -5119,6 +5119,9 @@ body .dropcap3 {
 .td_block_inner_overflow {
   overflow: hidden;
 }
+.td_block_inner_overflow .td_module_wrap {
+  position: relative;
+}
 /*  ----------------------------------------------------------------------------
     infinite loader
 */
