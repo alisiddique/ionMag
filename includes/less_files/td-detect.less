@@ -210,3 +210,17 @@
     display: none;
   }
 }
+
+
+/*  ----------------------------------------------------------------------------
+    Chrome
+*/
+.td-md-is-chrome {
+  // fix repaint in chrome bug on load more
+  .td_block_inner_overflow {
+    .td_module_wrap,
+    .item-details {
+      position: relative;
+    }
+  }
+}
