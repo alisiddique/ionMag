@@ -1275,8 +1275,8 @@ class td_config {
                         "param_name" => "display",
                         "type" => "dropdown",
                         "value" => array(
-                            'Vertical' => '',
-                            'Horizontal' => 'horizontal'
+                            'Horizontal' => '',
+                            'Vertical' => 'vertical'
                         ),
                         "heading" => 'Layout',
                         "description" => "",
