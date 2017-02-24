@@ -22,6 +22,12 @@ class td_block_template_1 {
      * @return string CSS the rendered css and <style> block
      */
     function get_css() {
+
+        echo "<pre>";
+        print_r($this->template_data_array);
+        echo "</pre>";
+        die;
+
         $header_color = $this->template_data_array['atts']['header_color'];
         $header_text_color = $this->template_data_array['atts']['header_text_color'];
 
