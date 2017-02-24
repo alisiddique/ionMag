@@ -6097,6 +6097,104 @@ body .dropcap3 {
   background-color: #42bdcd;
   color: #fff !important;
 }
+.td-custom-menu-blocks {
+  *zoom: 1;
+}
+.td-custom-menu-blocks:before,
+.td-custom-menu-blocks:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+.td-custom-menu-blocks:after {
+  clear: both;
+}
+.td-custom-menu-blocks .td-custom-menu-list {
+  position: relative;
+  float: left;
+  width: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+.td-custom-menu-blocks .td-custom-menu-list:hover ul {
+  display: block;
+}
+.td-custom-menu-blocks .td-custom-menu-list > a {
+  position: relative;
+  display: block;
+  padding: 0 14px;
+  font-weight: 500;
+  line-height: 41px;
+  border: 1px solid #eaeaea;
+}
+.td-custom-menu-blocks .td-custom-menu-list > a:after {
+  content: '\e83d';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 14px;
+  font-family: 'wpion', sans-serif;
+  font-size: 13px;
+}
+.td-custom-menu-blocks .td-custom-menu-list > a:hover:after {
+  color: #000;
+}
+.td-custom-menu-blocks .td-custom-menu-list ul {
+  position: absolute;
+  top: 100%;
+  margin-top: -1px;
+  padding: 7px 0;
+  width: 100%;
+  background-color: #fff;
+  display: none;
+  border: 1px solid #eaeaea;
+  z-index: 1000;
+}
+.td-custom-menu-blocks .td-custom-menu-list ul li {
+  margin: 0;
+  width: 100%;
+  font-size: 13px;
+}
+.td-custom-menu-blocks .td-custom-menu-list ul .current-menu-item {
+  background-color: rgba(66, 189, 205, 0.05);
+}
+.td-custom-menu-blocks .td-custom-menu-list ul a {
+  display: block;
+  padding: 7px 14px;
+}
+.td-custom-menu-blocks .td-custom-menu-list ul span {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  padding-top: 6px;
+}
+.td-custom-menu-blocks .td-custom-menu-free {
+  /* tablet + desktop */
+}
+@media (min-width: 767px) {
+  .td-custom-menu-blocks .td-custom-menu-free {
+    width: 27%;
+  }
+}
+.td-custom-menu-blocks .td-custom-menu-premium {
+  float: right;
+  /* tablet + desktop */
+}
+@media (min-width: 767px) {
+  .td-custom-menu-blocks .td-custom-menu-premium {
+    width: 69%;
+  }
+}
+.td-custom-menu-blocks .td-custom-menu-premium ul {
+  column-count: 4;
+  column-gap: 0;
+}
+.td-custom-menu-blocks .td-custom-menu-premium ul li {
+  display: inline-block;
+}
+.td-custom-menu-blocks .td-custom-menu-hidden {
+  visibility: hidden;
+}
 /*
   Font for MX modules
 */
