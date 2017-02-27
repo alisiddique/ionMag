@@ -1279,6 +1279,11 @@
       margin-right: 35px;
       width: 22%;
     }
+
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      margin-bottom: 15px;
+    }
   }
 
   .td-custom-menu-premium {
@@ -1290,6 +1295,16 @@
     ul {
       column-count: 4;
       column-gap: 0;
+
+      /* responsive portrait tablet */
+      @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        column-count: 3;
+      }
+
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        column-count: 2;
+      }
 
       li {
         display: inline-block;
