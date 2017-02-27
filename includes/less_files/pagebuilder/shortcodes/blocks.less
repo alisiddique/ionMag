@@ -1198,13 +1198,14 @@
 
 // Blocks
 .td-custom-menu-blocks {
-  .clearfix();
+  text-align: center;
 
   .td-custom-menu-list {
     position: relative;
-    float: left;
+    display: inline-block;
     width: 100%;
     font-family: @font2;
+    text-align: left;
 
     &:hover {
       ul {
@@ -1251,10 +1252,11 @@
         margin: 0;
         width: 100%;
         font-size: 13px;
-      }
 
-      .current-menu-item {
-        background-color: rgba(66, 189, 205, 0.05);
+        &:hover,
+        &.current-menu-item {
+          background-color: rgba(66, 189, 205, 0.05);
+        }
       }
 
       a {
@@ -1274,16 +1276,15 @@
   .td-custom-menu-free {
     /* tablet + desktop */
     @media (min-width: @responsive_p_phone_max) {
-      width: 27%;
+      margin-right: 35px;
+      width: 22%;
     }
   }
 
   .td-custom-menu-premium {
-    float: right;
-
     /* tablet + desktop */
     @media (min-width: @responsive_p_phone_max) {
-      width: 69%;
+      width: 61%;
     }
 
     ul {
