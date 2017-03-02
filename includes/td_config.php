@@ -1669,6 +1669,17 @@ class td_config {
                         "param_name" => "instagram_images_per_row",
                         "type" => "dropdown",
                         "value" => array (
+	                        '- Default -' => '',
+                            '1' => 1,
+                            '2' => 2,
+                            '3' => 3,
+                            '4' => 4,
+                            '5' => 5,
+                            '6' => 6,
+                            '7' => 7,
+                            '8' => 8
+                        ),
+	                    "tdc_value" => array (
                             '1' => 1,
                             '2' => 2,
                             '3' => '',
@@ -1687,6 +1698,14 @@ class td_config {
                         "param_name" => "instagram_number_of_rows",
                         "type" => "dropdown",
                         "value" => array (
+	                        '- Default -' => '',
+                            '1' => 1,
+                            '2' => 2,
+                            '3' => 3,
+                            '4' => 4,
+                            '5' => 5
+                        ),
+	                    "tdc_value" => array (
                             '1' => '',
                             '2' => 2,
                             '3' => 3,
