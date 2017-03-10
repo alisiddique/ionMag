@@ -59,6 +59,11 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
                             <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty7"></a></div>
                             <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty4"></a></div>
                             <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty8"></a></div>
+                            <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty9"></a></div>
+                            <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty10"></a></div>
+                            <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty11"></a></div>
+                            <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty12"></a></div>
+
                             <div class="clearfix"></div>
                         </div>
                     </div>

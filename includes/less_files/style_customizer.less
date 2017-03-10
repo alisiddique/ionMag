@@ -240,228 +240,161 @@
       Sprite images position for each demo
 
   */
+
+  @td_popup_sprite_height: 100px;
+  @td_popup_sprite_height_m: 71px;
+
   .td-popup {
     background-image: url('demos_popup/demos-popup.png');
     background-repeat: no-repeat;
     display: block;
     margin-top: 3px;
     width: 140px;
-    height: 100px;
+    height: @td_popup_sprite_height;
 
     /* responsive laptop */
     @media (max-width: 1366px) {
-      height: 71px;
+      height: @td_popup_sprite_height_m;
       width: 100px;
-      background-size: 100px 1846px;
-
+      background-size: 100px 1278px;
     }
   }
 
 
-  .td-popup-animals {
+
+  // first the empty space
+  .td-popup-empty1 {
     background-position: 0 0;
-  }
-
-
-  .td-popup-black {
-    background-position: 0 -100px;
-    /* responsive laptop */
     @media (max-width: 1366px) {
-      background-position: 0 -71px;
+      background-position: 0 0;
     }
   }
 
-  .td-popup-blog {
-    background-position: 0 -200px;
-    /* responsive laptop */
+  .td-popup-empty2 {
+    background-position: 0 -2 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -142px;
+      background-position: 0 -2 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-blog_baby {
-    background-position: 0 -300px;
-    /* responsive laptop */
+  .td-popup-empty3 {
+    background-position: 0 -3 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -213px;
+      background-position: 0 -3 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-blog_cars {
-    background-position: 0 -400px;
-    /* responsive laptop */
+
+  .td-popup-empty4 {
+    background-position: 0 -4 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -284px;
+      background-position: 0 -4 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-blog_health {
-    background-position: 0 -500px;
-    /* responsive laptop */
+  .td-popup-empty5 {
+    background-position: 0 -5 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -355px;
+      background-position: 0 -5 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-blog_travel {
-    background-position: 0 -600px;
-    /* responsive laptop */
+  .td-popup-empty6 {
+    background-position: 0 -6 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -426px;
+      background-position: 0 -6 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-cafe {
-    background-position: 0 -700px;
-    /* responsive laptop */
+  .td-popup-empty7 {
+    background-position: 0 -7 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -497px;
+      background-position: 0 -7 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-cars {
-    background-position: 0 -800px;
-    /* responsive laptop */
+  .td-popup-empty8 {
+    background-position: 0 -8 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -568px;
+      background-position: 0 -8 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-college {
-    background-position: 0 -900px;
-    /* responsive laptop */
+
+  .td-popup-empty9 {
+    background-position: 0 -9 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -639px;
+      background-position: 0 -9 * @td_popup_sprite_height_m;
     }
   }
+
+  .td-popup-empty10 {
+    background-position: 0 -10 * @td_popup_sprite_height;
+    @media (max-width: 1366px) {
+      background-position: 0 -10 * @td_popup_sprite_height_m;
+    }
+  }
+
+  .td-popup-empty11 {
+    background-position: 0 -11 * @td_popup_sprite_height;
+    @media (max-width: 1366px) {
+      background-position: 0 -11 * @td_popup_sprite_height_m;
+    }
+  }
+
+  .td-popup-empty12 {
+    background-position: 0 -12 * @td_popup_sprite_height;
+    @media (max-width: 1366px) {
+      background-position: 0 -12 * @td_popup_sprite_height_m;
+    }
+  }
+
+
 
   .td-popup-default {
-    background-position: 0 -1000px;
+    background-position: 0 -13 * @td_popup_sprite_height;
     /* responsive laptop */
     @media (max-width: 1366px) {
-      background-position: 0 -710px;
+      background-position: 0 -13 * @td_popup_sprite_height;
     }
   }
-
-  .td-popup-fashion {
-    background-position: 0 -1100px;
-    /* responsive laptop */
+  .td-popup-premium_magazine {
+    background-position: 0 -14 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -781px;
+      background-position: 0 -14 * @td_popup_sprite_height_m;
     }
   }
-
-  .td-popup-health {
-    background-position: 0 -1200px;
-    /* responsive laptop */
+  .td-popup-viral {
+    background-position: 0 -15 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -852px;
+      background-position: 0 -15 * @td_popup_sprite_height_m;
     }
   }
-
-  .td-popup-local_news {
-    background-position: 0 -1300px;
-    /* responsive laptop */
+  .td-popup-voyage {
+    background-position: 0 -16 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -923;
+      background-position: 0 -16 * @td_popup_sprite_height_m;
     }
   }
-
-  .td-popup-magazine {
-    background-position: 0 -1400px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -994px;
-    }
-  }
-
-  .td-popup-medicine {
-    background-position: 0 -1500px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1065px;
-    }
-  }
-
-  .td-popup-politics {
-    background-position: 0 -1600px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1136px;
-    }
-  }
-
-  .td-popup-recipes {
-    background-position: 0 -1700px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1207px;
-    }
-  }
-
-  .td-popup-sport {
-    background-position: 0 -1800px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1278px;
-    }
-  }
-
   .td-popup-tech {
-    background-position: 0 -1900px;
-    /* responsive laptop */
+    background-position: 0 -17 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
-      background-position: 0 -1349px;
+      background-position: 0 -17 * @td_popup_sprite_height_m;
+    }
+  }
+.td-popup-cook_book {
+    background-position: 0 -18 * @td_popup_sprite_height;
+    @media (max-width: 1366px) {
+      background-position: 0 -18 * @td_popup_sprite_height_m;
     }
   }
 
-  .td-popup-travel {
-    background-position: 0 -2000px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1420px;
-    }
-  }
 
-  .td-popup-video {
-    background-position: 0 -2100px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1491px;
-    }
-  }
 
-  .td-popup-wedding {
-    background-position: 0 -2200px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1562px;
-    }
-  }
 
-  .td-popup-what {
-    background-position: 0 -2300px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1633px;
-    }
-  }
 
-  .td-popup-blog_beauty {
-    background-position: 0 -2400px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1704px;
-    }
-  }
 
-  .td-popup-empty1 {
-    background-position: 0 -2500px;
-    /* responsive laptop */
-    @media (max-width: 1366px) {
-      background-position: 0 -1775px;
-    }
-  }
+
 
 
 
