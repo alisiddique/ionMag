@@ -30,13 +30,13 @@ class td_block_big_grid_2 extends td_block {
             $buffy .= $this->get_block_css();
 
             $buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
-                $buffy .= $this->inner($this->td_query->posts); //inner content of the block
+                $buffy .= $this->inner($this->td_query->posts, $this->get_att('td_column_number')); //inner content of the block
             $buffy .= '</div>';
         $buffy .= '</div> <!-- ./block -->';
         return $buffy;
     }
 
-    function inner($posts) {
+    function inner($posts, $td_column_number = '') {
 
         $buffy = '';
 
