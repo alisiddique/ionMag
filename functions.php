@@ -38,7 +38,7 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
         <div id="td-theme-settings" class="td-live-theme-demos td-theme-settings-small">
             <div class="td-skin-body">
                 <div class="td-skin-wrap">
-                    <div class="td-skin-container td-skin-buy"><a target="_blank" href="http://themeforest.net/item/newspaper/9512331?ref=tagdiv">FREE DOWNLOAD NOW!</a></div>
+                    <div class="td-skin-container td-skin-buy"><a target="_blank" href="https://www.wpion.com/free-news-theme/">FREE DOWNLOAD NOW!</a></div>
                     <div class="td-skin-container td-skin-header">GET AN AWESOME START!</div>
                     <div class="td-skin-container td-skin-desc">The theme comes with the following demos. You can start your site using one of them or make your own design.</div>
                     <div class="td-skin-container td-skin-content">
