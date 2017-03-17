@@ -40,12 +40,18 @@ class td_block_big_grid_3 extends td_block {
 
         $buffy = '';
 
-            $td_block_layout = new td_block_layout();
+        $td_block_layout = new td_block_layout();
 
-            if (!empty($posts)) {
+        if (!empty($posts)) {
 
-                $td_count_posts = count($posts); // post count number
+            $td_count_posts = count($posts); // post count number
 
+            if ($td_column_number==1 || $td_column_number==2) {
+                $buffy .= '<div class="td-block-missing-settings">';
+                $buffy .= '<span>Big grid 3</span>';
+                $buffy .= 'Please move this shortcode on a full row in order for it to work.';
+                $buffy .= '</div>';
+            } else {
                 $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
 
                 $post_count = 0;
@@ -54,7 +60,7 @@ class td_block_big_grid_3 extends td_block {
 
                     $td_module_mx4 = new td_module_mx4($post);
                     $buffy .= $td_module_mx4->render($post_count);
-                    
+
                     $post_count++;
                 }
 
@@ -69,8 +75,9 @@ class td_block_big_grid_3 extends td_block {
                 $buffy .= '<div class="clearfix"></div>';
                 $buffy .= '</div>'; // close td-big-grid-wrapper
             }
+        }
 
-            $buffy .= $td_block_layout->close_all_tags();
+        $buffy .= $td_block_layout->close_all_tags();
         return $buffy;
     }
 }

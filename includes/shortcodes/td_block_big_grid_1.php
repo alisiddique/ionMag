@@ -46,36 +46,43 @@ class td_block_big_grid_1 extends td_block {
 
             $td_count_posts = count($posts); // post count number
 
-            $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
+            if ($td_column_number==1 || $td_column_number==2) {
+                $buffy .= '<div class="td-block-missing-settings">';
+                $buffy .= '<span>Big grid 1</span>';
+                $buffy .= 'Please move this shortcode on a full row in order for it to work.';
+                $buffy .= '</div>';
+            } else {
+                $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
 
-            $post_count = 0;
+                $post_count = 0;
 
-            foreach ($posts as $post) {
+                foreach ($posts as $post) {
 
-                if ($post_count == 0) {
-                    $td_module_mx3 = new td_module_mx3($post);
-                    $buffy .= $td_module_mx3->render($post_count);
+                    if ($post_count == 0) {
+                        $td_module_mx3 = new td_module_mx3($post);
+                        $buffy .= $td_module_mx3->render($post_count);
+
+                        $post_count++;
+                        continue;
+                    }
+
+                    $td_module_mx1 = new td_module_mx1($post);
+                    $buffy .= $td_module_mx1->render($post_count);
 
                     $post_count++;
-                    continue;
                 }
 
-                $td_module_mx1 = new td_module_mx1($post);
-                $buffy .= $td_module_mx1->render($post_count);
+                if ($post_count < self::POST_LIMIT) {
 
-                $post_count++;
-            }
+                    for ($i = $post_count; $i < self::POST_LIMIT; $i++) {
 
-            if ($post_count < self::POST_LIMIT) {
-
-                for ($i = $post_count; $i < self::POST_LIMIT; $i++) {
-
-                    $td_module_mx_empty = new td_module_mx_empty();
-                    $buffy .= $td_module_mx_empty->render($i, 'td_module_mx1'); // module used
+                        $td_module_mx_empty = new td_module_mx_empty();
+                        $buffy .= $td_module_mx_empty->render($i, 'td_module_mx1'); // module used
+                    }
                 }
+                $buffy .= '<div class="clearfix"></div>';
+                $buffy .= '</div>'; // close td-big-grid-wrapper
             }
-            $buffy .= '<div class="clearfix"></div>';
-            $buffy .= '</div>'; // close td-big-grid-wrapper
         }
 
         $buffy .= $td_block_layout->close_all_tags();
