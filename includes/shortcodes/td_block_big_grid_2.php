@@ -47,10 +47,7 @@ class td_block_big_grid_2 extends td_block {
             $td_count_posts = count($posts); // post count number
 
             if ($td_column_number==1 || $td_column_number==2) {
-                $buffy .= '<div class="td-block-missing-settings">';
-                $buffy .= '<span>Big grid 2</span>';
-                $buffy .= 'Please move this shortcode on a full row in order for it to work.';
-                $buffy .= '</div>';
+                $buffy .= td_util::get_block_error('Big grid 2', 'Please move this shortcode on a full row in order for it to work.');
             } else {
                 $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
 
