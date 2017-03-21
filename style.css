@@ -1,5 +1,5 @@
 /*
-Theme Name: 	IonMag
+Theme Name: 	ionMag
 Theme URI: 		http://wpion.com
 Description: 	Free Premium WordPress template, clean and easy to use.
 Version: 		__td_deploy_version__
@@ -7584,6 +7584,9 @@ body .dropcap3 {
 }
 .td-post-content:after {
   clear: both;
+}
+.td-post-content .fb-video {
+  margin-bottom: 24px;
 }
 /*  ----------------------------------------------------------------------------
     Source and Via
