@@ -30,13 +30,13 @@ class td_block_big_grid_2 extends td_block {
             $buffy .= $this->get_block_css();
 
             $buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
-                $buffy .= $this->inner($this->td_query->posts); //inner content of the block
+                $buffy .= $this->inner($this->td_query->posts, $this->get_att('td_column_number')); //inner content of the block
             $buffy .= '</div>';
         $buffy .= '</div> <!-- ./block -->';
         return $buffy;
     }
 
-    function inner($posts) {
+    function inner($posts, $td_column_number = '') {
 
         $buffy = '';
 
@@ -46,28 +46,32 @@ class td_block_big_grid_2 extends td_block {
 
             $td_count_posts = count($posts); // post count number
 
-            $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
+            if ($td_column_number==1 || $td_column_number==2) {
+                $buffy .= td_util::get_block_error('Big grid 2', 'Please move this shortcode on a full row in order for it to work.');
+            } else {
+                $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
 
-            $post_count = 0;
+                $post_count = 0;
 
-            foreach ($posts as $post) {
+                foreach ($posts as $post) {
 
-                $td_module_mx5 = new td_module_mx5($post);
-                $buffy .= $td_module_mx5->render($post_count);
+                    $td_module_mx5 = new td_module_mx5($post);
+                    $buffy .= $td_module_mx5->render($post_count);
 
-                $post_count++;
-            }
-
-            if ($post_count < self::POST_LIMIT) {
-
-                for ($i = $post_count; $i < self::POST_LIMIT; $i++) {
-
-                    $td_module_mx_empty = new td_module_mx_empty();
-                    $buffy .= $td_module_mx_empty->render($i, 'td_module_mx5'); // module used
+                    $post_count++;
                 }
+
+                if ($post_count < self::POST_LIMIT) {
+
+                    for ($i = $post_count; $i < self::POST_LIMIT; $i++) {
+
+                        $td_module_mx_empty = new td_module_mx_empty();
+                        $buffy .= $td_module_mx_empty->render($i, 'td_module_mx5'); // module used
+                    }
+                }
+                $buffy .= '<div class="clearfix"></div>';
+                $buffy .= '</div>'; // close td-big-grid-wrapper
             }
-            $buffy .= '<div class="clearfix"></div>';
-            $buffy .= '</div>'; // close td-big-grid-wrapper
         }
 
         $buffy .= $td_block_layout->close_all_tags();

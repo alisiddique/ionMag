@@ -30,22 +30,25 @@ class td_block_big_grid_3 extends td_block {
             $buffy .= $this->get_block_css();
 
             $buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
-                $buffy .= $this->inner($this->td_query->posts); //inner content of the block
+                $buffy .= $this->inner($this->td_query->posts, $this->get_att('td_column_number')); //inner content of the block
             $buffy .= '</div>';
         $buffy .= '</div> <!-- ./block -->';
         return $buffy;
     }
 
-    function inner($posts) {
+    function inner($posts, $td_column_number = '') {
 
         $buffy = '';
 
-            $td_block_layout = new td_block_layout();
+        $td_block_layout = new td_block_layout();
 
-            if (!empty($posts)) {
+        if (!empty($posts)) {
 
-                $td_count_posts = count($posts); // post count number
+            $td_count_posts = count($posts); // post count number
 
+            if ($td_column_number==1 || $td_column_number==2) {
+                $buffy .= td_util::get_block_error('Big grid 3', 'Please move this shortcode on a full row in order for it to work.');
+            } else {
                 $buffy .= '<div class="td-big-grid-wrapper td-posts-' . $td_count_posts . '">';
 
                 $post_count = 0;
@@ -54,7 +57,7 @@ class td_block_big_grid_3 extends td_block {
 
                     $td_module_mx4 = new td_module_mx4($post);
                     $buffy .= $td_module_mx4->render($post_count);
-                    
+
                     $post_count++;
                 }
 
@@ -69,8 +72,9 @@ class td_block_big_grid_3 extends td_block {
                 $buffy .= '<div class="clearfix"></div>';
                 $buffy .= '</div>'; // close td-big-grid-wrapper
             }
+        }
 
-            $buffy .= $td_block_layout->close_all_tags();
+        $buffy .= $td_block_layout->close_all_tags();
         return $buffy;
     }
 }
