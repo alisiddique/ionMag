@@ -2794,7 +2794,7 @@ jQuery().ready(function() {
         /**
          * moves the select up
          */
-        td_aj_search_move_prompt_up: function() {
+        move_prompt_up: function() {
             if (tdAjaxSearch._first_down_up === true) {
                 tdAjaxSearch._first_down_up = false;
                 if (tdAjaxSearch._current_selection_index === 0) {
@@ -5011,7 +5011,7 @@ var tdDemoMenu;
                     var cssSettings = {
                             'top': topValue,
                             'right': rightValue,
-                            'padding-right': paddingRightValue,
+                            //'padding-right': paddingRightValue,
                             'width': ''
                         },
                         dataWidthPreview = jQueryDisplayEl.data('width-preview');
@@ -5166,40 +5166,40 @@ var tdDemoMenu;
                 tdDemoMenu._moveScreenDemo( event );
             });
 
-            jQuery('.td-screen-demo').hover(
-                function (event) {
-                    //jQuery(this).show();
-                    jQuery(this).css('visibility', 'visible');
-
-                    tdDemoMenu._resetTdScreeDemoExtendWidth();
-                },
-                function (event) {
-
-                    // We are on mouseleave event, and because of this, if the main counters (the timer and the interval) are not finished, it means we
-                    // don't have any extended demo element, so it's okay to set its flag to false and hide the extended demo element and the previewer demo element (this element)
-
-                    // The main counters (the timer and the interval) are cleared immediately, because their final step can make extend demo visible
-
-                    // Clear any timeout, and we should have one, because we finished
-                    if (undefined !== tdDemoMenu.startTimeout) {
-                        window.clearTimeout(tdDemoMenu.startTimeout);
-                        tdDemoMenu.startTimeout = undefined;
-                    }
-
-                    // Clear any interval, and we should have one, because we finished
-                    if (undefined !== tdDemoMenu.startInterval) {
-                        window.clearInterval(tdDemoMenu.startInterval);
-                        tdDemoMenu.startInterval = undefined;
-                    }
-
-                    //jQuery(this).hide();
-                    jQuery(this).css('visibility', 'hidden');
-                    jQuery('.td-screen-demo-extend:first').hide();
-                }
-
-            ).mousemove(function(event) {
-                //tdDemoMenu._moveScreenDemo( event );
-            });
+            //jQuery('.td-screen-demo').hover(
+            //    function (event) {
+            //        //jQuery(this).show();
+            //        jQuery(this).css('visibility', 'visible');
+            //
+            //        tdDemoMenu._resetTdScreeDemoExtendWidth();
+            //    },
+            //    function (event) {
+            //
+            //        // We are on mouseleave event, and because of this, if the main counters (the timer and the interval) are not finished, it means we
+            //        // don't have any extended demo element, so it's okay to set its flag to false and hide the extended demo element and the previewer demo element (this element)
+            //
+            //        // The main counters (the timer and the interval) are cleared immediately, because their final step can make extend demo visible
+            //
+            //        // Clear any timeout, and we should have one, because we finished
+            //        if (undefined !== tdDemoMenu.startTimeout) {
+            //            window.clearTimeout(tdDemoMenu.startTimeout);
+            //            tdDemoMenu.startTimeout = undefined;
+            //        }
+            //
+            //        // Clear any interval, and we should have one, because we finished
+            //        if (undefined !== tdDemoMenu.startInterval) {
+            //            window.clearInterval(tdDemoMenu.startInterval);
+            //            tdDemoMenu.startInterval = undefined;
+            //        }
+            //
+            //        //jQuery(this).hide();
+            //        jQuery(this).css('visibility', 'hidden');
+            //        jQuery('.td-screen-demo-extend:first').hide();
+            //    }
+            //
+            //).mousemove(function(event) {
+            //    //tdDemoMenu._moveScreenDemo( event );
+            //});
 
             jQuery('.td-screen-demo-extend').hover(
                 function (event) {
@@ -8660,6 +8660,14 @@ var tdHomepageFull = {};
 
                         item.backstrItem = undefined;
                     }
+
+                    var existingClassName = document.body.className;
+
+                    existingClassName = existingClassName.replace(/td-boxed-layout/g, '');
+                    existingClassName = existingClassName.replace(/single_template_8/g, '');
+                    existingClassName = existingClassName.replace(/homepage-post/g, '');
+
+                    document.body.className = existingClassName;
                 }
             }
             return false;
@@ -10867,39 +10875,42 @@ var tdAnimationSprite = {};
             // get all strings containing 'td_animation_sprite'
             var regex = /(td_animation_sprite\S*)/gi;
 
-            // resultMatch is an array of matches, or null if there's no matching
-            var resultMatch = item.jqueryObj.attr( 'class' ).match( regex );
+            if ( 'undefined' !== typeof item.jqueryObj.attr( 'class' ) ) {
 
-            if ( null !== resultMatch ) {
+                // resultMatch is an array of matches, or null if there's no matching
+                var resultMatch = item.jqueryObj.attr( 'class' ).match( regex );
 
-                item.offsetTop = item.jqueryObj.offset().top;
-                item.offsetBottomToTop = item.offsetTop + item.jqueryObj.height();
+                if (null !== resultMatch) {
 
-                // the last matching is considered, because new css classes that matches, can be added before recomputing an item
-                item.animationSpriteClass = resultMatch[ resultMatch.length - 1 ];
+                    item.offsetTop = item.jqueryObj.offset().top;
+                    item.offsetBottomToTop = item.offsetTop + item.jqueryObj.height();
 
-                var sceneParams = item.animationSpriteClass.split( '-' );
+                    // the last matching is considered, because new css classes that matches, can be added before recomputing an item
+                    item.animationSpriteClass = resultMatch[resultMatch.length - 1];
 
-                if ( 7 === sceneParams.length ) {
+                    var sceneParams = item.animationSpriteClass.split('-');
 
-                    item.frames = parseInt( sceneParams[1] );
-                    item.frameWidth = parseInt( sceneParams[2] );
-                    item.velocity = parseInt( sceneParams[3] );
-                    item.loops = parseInt( sceneParams[4] );
+                    if (7 === sceneParams.length) {
 
-                    if ( 1 === parseInt( sceneParams[5] ) ) {
-                        item.reverse = true;
-                    } else {
-                        item.reverse = false;
+                        item.frames = parseInt(sceneParams[1]);
+                        item.frameWidth = parseInt(sceneParams[2]);
+                        item.velocity = parseInt(sceneParams[3]);
+                        item.loops = parseInt(sceneParams[4]);
+
+                        if (1 === parseInt(sceneParams[5])) {
+                            item.reverse = true;
+                        } else {
+                            item.reverse = false;
+                        }
+
+                        if (1 === parseInt(sceneParams[6])) {
+                            item.automatStart = true;
+                        } else {
+                            item.automatStart = false;
+                        }
+
+                        item._isInitialized = true;
                     }
-
-                    if ( 1 === parseInt( sceneParams[6] ) ) {
-                        item.automatStart = true;
-                    } else {
-                        item.automatStart = false;
-                    }
-
-                    item._isInitialized = true;
                 }
             }
         },
@@ -11065,7 +11076,6 @@ var tdAnimationSprite = {};
 
     for ( var i = 0; i < tdAnimationSpriteElements.length; i++ ) {
         var tdAnimationSpriteItem = new tdAnimationSprite.item();
-
 
         tdAnimationSpriteItem.jqueryObj = jQuery( tdAnimationSpriteElements[i] );
         tdAnimationSpriteItem.blockUid = tdAnimationSpriteItem.jqueryObj.data('td-block-uid');   // the block uid is used on the front end editor when we want to delete this item via it's blockuid

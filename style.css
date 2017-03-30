@@ -1,5 +1,5 @@
 /*
-Theme Name: 	IonMag
+Theme Name: 	ionMag
 Theme URI: 		http://wpion.com
 Description: 	Free Premium WordPress template, clean and easy to use.
 Version: 		__td_deploy_version__
@@ -4992,6 +4992,24 @@ body .dropcap3 {
 .td_module_mx2 .td-module-title:after {
   display: none;
 }
+.td-block-missing-settings {
+  font-size: 12px;
+  text-align: left;
+  padding: 18px;
+  background-color: #faf8fc;
+  border: 1px solid #eeecf0;
+}
+.td-block-missing-settings span {
+  background-color: #fe6c61;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+}
 /*  ----------------------------------------------------------------------------
     Block Wrap
 */
@@ -7566,6 +7584,9 @@ body .dropcap3 {
 }
 .td-post-content:after {
   clear: both;
+}
+.td-post-content .fb-video {
+  margin-bottom: 24px;
 }
 /*  ----------------------------------------------------------------------------
     Source and Via

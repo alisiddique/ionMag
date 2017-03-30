@@ -1093,14 +1093,14 @@ function td_css_generator() {
     }
 
     // read line-height for the main-menu to align the logo in menu
-    $td_menu_height = td_util::get_option('td_fonts');
+    $td_menu_height = td_options::get_array('td_fonts');
     if (!empty($td_menu_height['main_menu']['line_height'])) {
         $td_css_compiler->load_setting_raw('main-menu-height', $td_menu_height['main_menu']['line_height']);
     }
 
 
     // read line-height for the top-menu to align the social icons in top menu
-    $td_top_menu_height = td_util::get_option('td_fonts');
+    $td_top_menu_height = td_options::get_array('td_fonts');
     if (!empty($td_top_menu_height['top_menu']['line_height'])) {
         $td_css_compiler->load_setting_raw('top-menu-height', $td_top_menu_height['top_menu']['line_height']);
     }
