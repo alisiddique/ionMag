@@ -373,3 +373,222 @@
     display: block;
   }
 }
+/*  ----------------------------------------------------------------------------
+    WPML plugin
+*/
+.td-wpml {
+  // flag
+  .wpml-ls-menu-item .wpml-ls-flag {
+    vertical-align: middle;
+    top: -1px;
+    position: relative;
+    margin-right: 5px;
+  }
+  .sub-menu .wpml-ls-menu-item .wpml-ls-flag {
+    top: -2px;
+  }
+
+  // footer menu
+  .td-subfooter-menu {
+    .wpml-ls-item.menu-item-has-children {
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-top: 16px;
+
+        > a {
+          pointer-events: none;
+        }
+      }
+
+      .sub-menu {
+        position: absolute;
+        display: block;
+        bottom: 100%;
+        background-color: rgba(25, 25, 25, 0.95);
+        padding: 12px 20px;
+        margin: 0 -20px 10px;
+        visibility: hidden;
+        opacity: 0;
+        .transition(all 0.4s ease);
+        .transform(translate3d(0, -10px, 0));
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          right: 0;
+          left: 0;
+          margin: 10px 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 100%;
+          width: 0;
+          height: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          border-style: solid;
+          border-width: 6px 6px 0 6px;
+          border-color: rgba(25, 25, 25, 0.95) transparent transparent transparent;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          height: 30px;
+          background-color: transparent;
+          right: 0;
+        }
+
+        li {
+          display: block;
+          padding: 3px 0;
+          white-space: nowrap;
+
+          /* responsive portrait phone */
+          @media (max-width: @responsive_p_phone_max) {
+            padding: 6px 0;
+          }
+        }
+      }
+
+      &:hover {
+        .sub-menu {
+          visibility: visible;
+          opacity: 1;
+          .transform(translate3d(0, 0, 0));
+        }
+      }
+    }
+
+    .menu-item-first a {
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        margin-left: 16px;
+      }
+    }
+
+    .wpml-ls-first-item.menu-item-first {
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  // top menu
+  /* responsive portrait phone */
+  @media (max-width: @responsive_p_phone_max) {
+    .td-header-top-menu,
+    .td-header-sp-top-menu {
+      display: block !important;
+    }
+    .td-header-sp-top-menu {
+      width: 100%;
+    }
+    .td-header-top-menu {
+      background-color: #3c3c3c !important;
+      box-shadow: inset 0px -3px 3px -1px rgba(0, 0, 0, 0.2);
+    }
+    .td_ul_logout,
+    .td_ul_login,
+    .td-header-sp-top-widget,
+    .td-weather-top-widget {
+      display: none !important;
+    }
+    .td_data_time {
+      margin-right: 0;
+    }
+    .menu-top-container {
+      margin-right: 0;
+      float: right;
+
+      .top-header-menu {
+        > li {
+          display: none;
+
+          a {
+            margin-right: 0;
+          }
+        }
+        .wpml-ls-item {
+          display: inline-block;
+          margin-top: 0;
+        }
+      }
+
+      // sub-menu
+      .wpml-ls-item.menu-item-has-children {
+        position: static;
+        display: inline-block;
+        width: 100%;
+
+        > a {
+          pointer-events: none;
+        }
+
+        .sub-menu {
+          position: absolute;
+          display: block;
+          background-color: rgba(25, 25, 25, 0.95);
+          visibility: hidden;
+          opacity: 0;
+          .transition(all 0.4s ease);
+          .transform(translate3d(0, 10px, 0));
+          right: 0;
+          left: auto;
+          margin: 0;
+
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-style: solid;
+            border-width: 0 6px 6px 6px;
+            border-color: transparent transparent rgba(25, 25, 25, 0.95)
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+            right: 0;
+          }
+
+          li {
+            display: block;
+            padding: 3px 0;
+            white-space: nowrap;
+          }
+
+          a {
+            margin: 0 10px;
+            padding: 0;
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          .sub-menu {
+            visibility: visible;
+            opacity: 1;
+            .transform(translate3d(0, 0, 0));
+          }
+        }
+      }
+    }
+  }
+}

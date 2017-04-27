@@ -27,11 +27,11 @@ get_header();
                     </div>
 
                     <div class="td-404-sub-title">
-                        <?php _etd('Oops!', TD_THEME_NAME); ?>
+                        <?php _etd('Ooops... Error 404', TD_THEME_NAME); ?>
                     </div>
 
                     <div class="td-404-sub-sub-title">
-                        <?php _etd('Sorry, but the page you are looking for doesn’t exist. Please use search for help', ''); ?>
+                        <?php _etd('Sorry, but the page you are looking for doesn_t exist.', TD_THEME_NAME); ?>
                     </div>
 
                     <div class="search-page-wrap">

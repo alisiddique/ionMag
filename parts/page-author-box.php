@@ -21,14 +21,14 @@ global $part_cur_auth_obj;
     <div class="desc">
         <div class="td-author-counters">
             <span class="td-author-post-count">
-                <?php echo '<span class="count">' . count_user_posts($part_cur_auth_obj->ID) . '</span>' . __td('posts', TD_THEME_NAME);?>
+                <?php echo '<span class="count">' . count_user_posts($part_cur_auth_obj->ID) . '</span>' . __td('POSTS', TD_THEME_NAME);?>
             </span>
 
             <span class="td-author-comments-count">
                 <?php
                 $comment_count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) AS total FROM $wpdb->comments WHERE comment_approved = 1 AND user_id = %d", $part_cur_auth_obj->ID));
 
-                echo '<span class="count">' .  $comment_count . '</span>' . __td('comments', TD_THEME_NAME);
+                echo '<span class="count">' .  $comment_count . '</span>' . __td('COMMENTS', TD_THEME_NAME);
                 ?>
             </span>
 
