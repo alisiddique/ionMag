@@ -2231,7 +2231,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   top: 2px;
 }
 .td-ionmag-multicolumn-2 .sub-menu {
-  padding: 14px;
+  padding: 16px 0;
   -moz-column-count: 2;
   -webkit-column-count: 2;
   column-count: 2;
@@ -7587,6 +7587,9 @@ body .dropcap3 {
 }
 .td-post-content .fb-video {
   margin-bottom: 24px;
+}
+.td-post-content #fb-root + p {
+  margin: 0;
 }
 /*  ----------------------------------------------------------------------------
     Source and Via
