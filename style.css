@@ -862,6 +862,12 @@ img {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+body.td-ad-background-link {
+  cursor: pointer;
+}
+body.td-ad-background-link .td-container-wrap {
+  cursor: auto;
+}
 .td-header-logo-wrap {
   position: relative;
   padding: 24px 0;
@@ -9404,6 +9410,7 @@ body .dropcap3 {
   -moz-transition: all 500ms cubic-bezier(0.265, 0.365, 0.26, 0.865);
   -o-transition: all 500ms cubic-bezier(0.265, 0.365, 0.26, 0.865);
   transition: all 500ms cubic-bezier(0.265, 0.365, 0.26, 0.865);
+  cursor: auto;
   /* responsive portrait phone */
 }
 @media (max-width: 767px) {
