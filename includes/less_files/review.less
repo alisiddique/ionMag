@@ -181,3 +181,46 @@
 .td-review-final-star {
   margin-bottom: 5px;
 }
+//Star Review Mobile
+@media (max-width: @responsive_p_phone_max) {
+  .td-review-row-stars {
+    display: block;
+    width: 100%;
+    clear: both;
+    float: left;
+    border: 1px solid #ededed;
+    border-bottom: 0;
+    border-right: 0;
+
+    td {
+      float: left;
+      border: 0;
+    }
+
+    .td-review-desc {
+      width: 70%;
+      padding: 9px 14px;
+    }
+
+    .td-review-stars {
+      width: 30%;
+      text-align: right;
+    }
+
+    &:nth-last-of-type(2) {
+      border-bottom: 1px solid #ededed;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .td-review-row-stars {
+
+    .td-review-desc {
+      width: 55%;
+    }
+    .td-review-stars {
+      width: 45%;
+    }
+  }
+}
