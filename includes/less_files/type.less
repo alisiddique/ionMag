@@ -1007,11 +1007,167 @@ body {
   margin-bottom: 26px;
 }
 
-
-
 /*  ----------------------------------------------------------------------------
-    text highlighting
+    button
 */
+//Default - Global
+.td_btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  background-color: @td_theme_color;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+}
+
+.td_btn_sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+
+  &.td_round_btn {
+    border-radius: 3px; //round
+  }
+}
+
+.td_btn_md {
+  padding: 9px 12px;
+  font-size: 100%;
+  line-height: 20px;
+
+  &.td_round_btn {
+    border-radius: 4px; //round
+  }
+}
+
+.td_btn_lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+
+  &.td_round_btn {
+    border-radius: 6px; //round
+  }
+}
+
+// Default and round buttons
+.td_default_btn,
+.td_round_btn {
+  transition: background-color 0.1s ease;
+  -webkit-transition: background-color 0.1s ease;
+
+  &:hover {
+    background-color: #444;
+  }
+
+  &:active {
+    background-color: #000;
+  }
+}
+
+//Outlined button
+.td_outlined_btn {
+  border-width: 2px;
+  border-style: solid;
+  border-color: @td_theme_color;
+  border-radius: 4px;
+  color: @td_theme_color;
+  background-color: transparent;
+  transition: all 0.1s ease ;
+  -webkit-transition: all 0.1s ease;
+
+  &:hover {
+    background-color: @td_theme_color;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #444;
+    border-color: #444;
+  }
+}
+
+
+//Shadow button
+.td_shadow_btn {
+  top: 0;
+  -webkit-box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
+
+  transition: top 0.1s ease;
+  -webkit-transition: top 0.1s ease;
+
+  &:hover {
+    top: -3px;
+    -webkit-box-shadow: 0 6px 12px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 6px 12px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,0.25);
+  }
+
+  &:active {
+    background-color: #444;
+  }
+}
+
+
+//3d button
+.td_3D_btn {
+  top: 0;
+  transition: top 0.1s ease;
+  -webkit-transition: top 0.1s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 100%;
+    bottom: auto;
+    width: 100%;
+    height: 5px;
+    background-color: @td_theme_color;
+    z-index: 0;
+    transition: height 0.1s ease;
+    -webkit-transition: height 0.1s ease;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0,0,0,0.25);
+    z-index: 0;
+    transition: height 0.1s ease;
+    -webkit-transition: height 0.1s ease;
+  }
+
+  &:hover {
+    top: 5px;
+
+    &:before {
+      height: 0;
+    }
+
+    &:after {
+      height: 0;
+    }
+  }
+
+  &:active {
+    background-color: #444;
+  }
+}
+
+
+  /*  ----------------------------------------------------------------------------
+      text highlighting
+  */
 .td_text_highlight_0 {
   background-color: rgba(0, 0, 0, 0.77);
   padding: 2px 0 3px 0;
