@@ -121,8 +121,7 @@ function td_css_generator() {
     .td_shadow_btn,
     .td_default_btn,
     .td_round_btn, 
-    .td_outlined_btn:hover,
-    .td_3D_btn:before {
+    .td_outlined_btn:hover {
       background-color: @theme_color;
     }
     

@@ -1032,7 +1032,7 @@ body {
 
 .td_btn_md {
   padding: 9px 12px;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 20px;
 
   &.td_round_btn {
@@ -1083,11 +1083,10 @@ body {
   }
 
   &:active {
-    background-color: #444;
+    background-color: #444 !important;
     border-color: #444;
   }
 }
-
 
 //Shadow button
 .td_shadow_btn {
@@ -1096,7 +1095,6 @@ body {
   -webkit-box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
   -moz-box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
   box-shadow: 0 4px 7px 0 rgba(0,0,0,0.25);
-
   transition: top 0.1s ease;
   -webkit-transition: top 0.1s ease;
 
@@ -1108,10 +1106,9 @@ body {
   }
 
   &:active {
-    background-color: #444;
+    background-color: #444 !important;
   }
 }
-
 
 //3d button
 .td_3D_btn {
@@ -1119,21 +1116,6 @@ body {
   top: 0;
   transition: top 0.1s ease;
   -webkit-transition: top 0.1s ease;
-
-  &:before {
-    content: "";
-    position: absolute;
-    display: block;
-    left: 0;
-    top: 100%;
-    bottom: auto;
-    width: 100%;
-    height: 5px;
-    background-color: @td_theme_color;
-    z-index: 0;
-    transition: height 0.1s ease;
-    -webkit-transition: height 0.1s ease;
-  }
 
   &:after {
     content: "";
@@ -1162,7 +1144,7 @@ body {
   }
 
   &:active {
-    background-color: #444;
+    background-color: #444 !important;
   }
 }
 
