@@ -708,6 +708,7 @@ class td_config {
         td_api_block::add('td_block_1',
             array(
                 'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
                 "name" => 'Block 1',
                 "base" => 'td_block_1',
                 "class" => 'td_block_1',
@@ -728,6 +729,7 @@ class td_config {
         td_api_block::add('td_block_2',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 2',
                 "base" => 'td_block_2',
                 "class" => 'td_block_2',
@@ -748,6 +750,7 @@ class td_config {
         td_api_block::add('td_block_3',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 3',
                 "base" => 'td_block_3',
                 "class" => 'td_block_3',
@@ -768,6 +771,7 @@ class td_config {
         td_api_block::add('td_block_4',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 4',
                 "base" => 'td_block_4',
                 "class" => 'td_block_4',
@@ -788,6 +792,7 @@ class td_config {
         td_api_block::add('td_block_5',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 5',
                 "base" => 'td_block_5',
                 "class" => 'td_block_5',
@@ -808,6 +813,7 @@ class td_config {
         td_api_block::add('td_block_6',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 6',
                 "base" => 'td_block_6',
                 "class" => 'td_block_6',
@@ -828,6 +834,7 @@ class td_config {
         td_api_block::add('td_block_7',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 7',
                 "base" => 'td_block_7',
                 "class" => 'td_block_7',
@@ -848,6 +855,7 @@ class td_config {
         td_api_block::add('td_block_8',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Block 8',
                 "base" => 'td_block_8',
                 "class" => 'td_block_8',
@@ -868,6 +876,7 @@ class td_config {
         td_api_block::add('td_block_big_grid_1',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Big Grid 1',
                 "base" => 'td_block_big_grid_1',
                 "class" => 'td_block_big_grid_1',
@@ -883,6 +892,7 @@ class td_config {
         td_api_block::add('td_block_big_grid_2',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Big Grid 2',
                 "base" => 'td_block_big_grid_2',
                 "class" => 'td_block_big_grid_2',
@@ -898,6 +908,7 @@ class td_config {
         td_api_block::add('td_block_big_grid_3',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Big Grid 3',
                 "base" => 'td_block_big_grid_3',
                 "class" => 'td_block_big_grid_3',
@@ -913,6 +924,7 @@ class td_config {
         td_api_block::add('td_block_ad_box',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Ad box',
                 "base" => 'td_block_ad_box',
                 "class" => "",
@@ -985,6 +997,7 @@ class td_config {
         td_api_block::add('td_block_authors',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Authors box',
                 "base" => "td_block_authors",
                 "class" => "",
@@ -1092,6 +1105,7 @@ class td_config {
         td_api_block::add('td_block_author',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Author box',
                 "base" => "td_block_author",
                 "class" => "",
@@ -1199,6 +1213,7 @@ class td_config {
         td_api_block::add('td_block_image_box',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Image box',
                 "base" => "td_block_image_box",
                 "class" => "",
@@ -1511,6 +1526,7 @@ class td_config {
         td_api_block::add('td_block_popular_categories',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Popular category',
                 "base" => "td_block_popular_categories",
                 "class" => "td_block_popular_categories",
@@ -1601,6 +1617,7 @@ class td_config {
         td_api_block::add('td_block_instagram',
             array(
                 'map_in_visual_composer' => true,
+	            'map_in_td_composer' => true,
                 "name" => 'Instagram',
                 "base" => "td_block_instagram",
                 "class" => "",
@@ -1795,6 +1812,7 @@ class td_config {
 	    td_api_block::add('td_block_list_menu',
 		    array(
 			    'map_in_visual_composer' => true,
+			    'map_in_td_composer' => true,
 			    "name" => 'List Menu',
 			    "base" => "td_block_list_menu",
 			    "class" => "",
