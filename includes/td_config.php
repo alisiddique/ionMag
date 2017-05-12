@@ -3188,6 +3188,156 @@ class td_config {
                     'inline' => 'span'
                 ));
 
+            // Custom buttons in post Formats
+            td_api_tinymce_formats::add('td_btn',
+                array(
+                    'title' => 'Button'
+                ));
+            //Default button
+            td_api_tinymce_formats::add('td_default_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Default',
+                    'classes' => ' td_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_sm',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Small',
+                    'classes' => 'td_btn  td_btn_sm td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_md',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Normal',
+                    'classes' => 'td_btn td_btn_md td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_lg',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Large',
+                    'classes' => 'td_btn td_btn_lg td_default_btn',
+                    'inline' => 'span'
+                ));
+            //Round button
+            td_api_tinymce_formats::add('td_round_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Round',
+                    'classes' => 'td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_sm',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Small',
+                    'classes' => 'td_btn td_btn_sm td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_md',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Normal',
+                    'classes' => 'td_btn td_btn_md td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_lg',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Large',
+                    'classes' => 'td_btn td_btn_lg td_round_btn',
+                    'inline' => 'span'
+                ));
+            //Outlined button
+            td_api_tinymce_formats::add('td_outlined_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Outlined',
+                    'classes' => 'td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_sm',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Small',
+                    'classes' => 'td_btn td_btn_sm td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_md',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Normal',
+                    'classes' => 'td_btn td_btn_md td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_lg',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Large',
+                    'classes' => 'td_btn td_btn_lg td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            //Shadow button
+            td_api_tinymce_formats::add('td_shadow_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Shadow',
+                    'classes' => 'td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_sm',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Small',
+                    'classes' => 'td_btn td_btn_sm td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_md',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Normal',
+                    'classes' => 'td_btn td_btn_md td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_lg',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Large',
+                    'classes' => 'td_btn td_btn_lg td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            //3D button
+            td_api_tinymce_formats::add('td_3D_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => '3D',
+                    'classes' => 'td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_sm',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Small',
+                    'classes' => 'td_btn td_btn_sm td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_md',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Normal',
+                    'classes' => 'td_btn td_btn_md td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_lg',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Large',
+                    'classes' => 'td_btn td_btn_lg td_3D_btn',
+                    'inline' => 'span'
+                ));
 
             // highlighter
             td_api_tinymce_formats::add('td_text_highlight',

@@ -82,7 +82,8 @@ function td_css_generator() {
     .archive .widget_archive .current a,
     .widget_categories li:hover > a,
     .widget_search input[type=submit]:hover,
-    .td-read-more:hover {
+    .td-read-more:hover,
+     .td_outlined_btn {
       color: @theme_color;
     }
     
@@ -115,7 +116,12 @@ function td_css_generator() {
     .widget_calendar #today,
     .td_social_type:hover .td-sp:before,
     .td-smart-list-button:hover,
-    .td-category-header .entry-category a:hover {
+    .td-category-header .entry-category a:hover,
+    .td_3D_btn,
+    .td_shadow_btn,
+    .td_default_btn,
+    .td_round_btn, 
+    .td_outlined_btn:hover {
       background-color: @theme_color;
     }
     
@@ -128,7 +134,8 @@ function td_css_generator() {
     .td-theme-wrap .td_quote_box,
     .widget_calendar #today,
     .td-tags span,
-    .widget_categories li:hover > a span:before {
+    .widget_categories li:hover > a span:before,
+    .td_outlined_btn {
       border-color: @theme_color;
     }
     
