@@ -1167,6 +1167,76 @@
 
 
 /*  ----------------------------------------------------------------------------
+    Separators
+*/
+.td_block_separator {
+  width: 100%;
+  align-items: center;
+
+  span {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #EBEBEB;
+  }
+}
+
+.td_separator_align_left {
+  span {
+    margin-left: 0;
+  }
+}
+
+.td_separator_align_right {
+  span {
+    margin-right: 0;
+  }
+}
+
+.td_separator_dashed {
+  span {
+    border-top-style: dashed;
+  }
+}
+
+.td_separator_dotted {
+  span {
+    border-top-style: dotted;
+  }
+}
+
+.td_separator_double {
+  span {
+    height: 3px;
+    border-bottom: 1px solid #EBEBEB;
+  }
+}
+
+.td_separator_shadow {
+  >span {
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    border: 0;
+    color: #EBEBEB;
+
+    >span {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 13px;
+      width: 98%;
+      .border-radius(100%);
+    }
+  }
+}
+
+
+/*  ----------------------------------------------------------------------------
     Single image
 */
 .td_block_single_image {
