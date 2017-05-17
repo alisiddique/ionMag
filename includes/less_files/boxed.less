@@ -62,6 +62,23 @@ body {
   }
 }
 
+/*
+
+  Force full width
+
+*/
+// stretch container -------------
+.td_stretch_container {
+  width: 100% !important;
+
+  // menu affix
+  /* responsive desktop */
+  @media (min-width: 1141px) {
+    .td-header-menu-wrap.td-affix {
+      width: 100% !important;
+    }
+  }
+}
 
 // stretch content ---------------
 .td_stretch_content {
