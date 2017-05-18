@@ -1241,6 +1241,70 @@ class td_config {
             )
         );
 
+        td_api_block::add('td_block_weather',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'Weather',
+                "base" => "td_block_weather",
+                "class" => "",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td-weather',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_weather.php',
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
+                    array(
+                        array(
+                            "param_name" => "w_location",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "Location",
+                            "description" => '<a href="http://openweathermap.org/find" target="_blank">Find your location</a> - You can use "city name" or "city name,country code" (ex: London,uk). Note that the widget will autotranslate itself to the language from the theme panel only if a translation is available. <a href="http://bugs.openweathermap.org/projects/api/wiki/Api_2_5_weather" target="_blank">The available languages</a> (section 4.2)',
+                            "holder" => "div",
+                            "class" => "",
+                            'group' => 'Weather'
+                        ),
+                        array(
+                            "param_name" => "w_units",
+                            "type" => "dropdown",
+                            "value" => array (
+                                '- Celsius -' => '',
+                                'Fahrenheit' => 'imperial' ,
+                            ),
+                            "heading" => 'Units:',
+                            "holder" => "div",
+                            "class" => "tdc-dropdown-big",
+                            'group' => 'Weather',
+                        ),
+                        array(
+                            'param_name' => 'el_class',
+                            'type' => 'textfield',
+                            'value' => '',
+                            'heading' => 'Extra class',
+                            'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                            'class' => 'tdc-textfield-extrabig',
+                            'group' => ''
+                        ),
+                        array (
+                            'param_name' => 'css',
+                            'value' => '',
+                            'type' => 'css_editor',
+                            'heading' => 'Css',
+                            'group' => 'Design options',
+                        ),
+                        array (
+                            'param_name' => 'tdc_css',
+                            'value' => '',
+                            'type' => 'tdc_css_editor',
+                            'heading' => '',
+                            'group' => 'Design options',
+                        ),
+                    )
+                )
+            )
+        );
+
         td_api_block::add('td_block_image_box',
             array(
                 'map_in_visual_composer' => true,
