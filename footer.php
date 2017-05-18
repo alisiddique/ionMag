@@ -44,7 +44,7 @@
         ?>
     </div>
 
-    <div class="td-footer-outer-wrapper td-container-wrap">
+    <div class="td-footer-outer-wrapper td-container-wrap <?php echo td_util::get_option('td_full_footer'); ?>">
         <!-- Footer -->
         <?php
         if (td_util::get_option('tds_footer') != 'no') {
