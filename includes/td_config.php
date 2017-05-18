@@ -345,6 +345,22 @@ class td_config {
             )
         );
 
+        td_api_module::add('td_module_trending_now',
+            array(  // this module is for internal use only
+                'file' => td_global::$get_template_directory . '/includes/modules/td_module_trending_now.php',
+                'text' => 'Trending now module',
+                'img' => '',
+                'used_on_blocks' => '',
+                'excerpt_title' => 25,
+                'excerpt_content' => '',
+                'enabled_on_more_articles_box' => false,
+                'enabled_on_loops' => false,
+                'uses_columns' => false,                      // if the module uses columns on the page template + loop
+                'category_label' => false,
+                'class' => '',
+                'group' => '' // '' - main theme, 'mob' - mobile theme, 'woo' - woo theme
+            )
+        );
 
         td_api_module::add('td_module_single',
             array(  // this module is for internal use only
@@ -918,6 +934,21 @@ class td_config {
                 'icon' => 'icon-pagebuilder-td_block_big_grid_3',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_big_grid_3.php',
                 "params" => self::td_block_big_grid_params(),
+            )
+        );
+
+        td_api_block::add('td_block_trending_now',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'News ticker',
+                "base" => 'td_block_trending_now',
+                "class" => 'td_block_trending_now',
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td_block_trending_now',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_trending_now.php',
+                "params" => self::td_block_trending_now_params(),
             )
         );
 
@@ -3768,5 +3799,83 @@ class td_config {
         ));
 
         return $map_filter_array;
+    }
+
+    /**
+     * Map array for trending now
+     * @return array VC_MAP params
+     */
+    private static function td_block_trending_now_params() {
+        $map_block_array = self::get_map_filter_array();
+
+
+        $map_block_array= array_merge(
+            $map_block_array,
+            array(
+                array (
+                    'param_name' => 'css',
+                    'value' => '',
+                    'type' => 'css_editor',
+                    'heading' => 'Css',
+                    'group' => 'Design options',
+                ),
+                array (
+                    'param_name' => 'tdc_css',
+                    'value' => '',
+                    'type' => 'tdc_css_editor',
+                    'heading' => '',
+                    'group' => 'Design options',
+                ),
+            )
+        );
+
+
+        //move on the first position the new filter array - array_unshift is used to keep the 0 1 2 index. array_marge does not do that
+        array_unshift(
+
+            $map_block_array,
+
+            array(
+                "param_name" => "navigation",
+                "type" => "dropdown",
+                "value" => array('Auto' => '', 'Manual' => 'manual'),
+                "heading" => 'Navigation:',
+                "description" => "If set on `Auto` will set the `Trending Now` block to auto start rotating posts",
+                "holder" => "div",
+                "class" => "tdc-dropdown-big"
+            ),
+
+            array(
+                "param_name" => "style",
+                "type" => "dropdown",
+                "value" => array('Default' => '', 'Style 2' => 'style2'),
+                "heading" => 'Style:',
+                "description" => "Style of the `Trending Now` box",
+                "holder" => "div",
+                "class" => "tdc-dropdown-big"
+            ),
+
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => 'Title text color',
+                "param_name" => "header_text_color",
+                "value" => '',
+                "description" => 'Optional - Choose a custom title text color for this block'
+            ),
+
+            array(
+                "type" => "colorpicker",
+                "holder" => "div",
+                "class" => "",
+                "heading" => 'Title background color',
+                "param_name" => "header_color",
+                "value" => '',
+                "description" => 'Optional - Choose a custom title background color for this block'
+            )
+        );
+
+        return $map_block_array;
     }
 }
