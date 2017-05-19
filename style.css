@@ -12021,6 +12021,9 @@ input.search-submit:hover {
   margin: 0;
   float: left;
 }
+.td-social-boxed .td_social_type:hover .td-sp:before {
+  background-color: transparent !important;
+}
 .td-social-boxed .td_social_type span {
   display: block;
   width: 100%;
@@ -12039,9 +12042,6 @@ input.search-submit:hover {
   .td-social-boxed .td-sp {
     margin-top: 4px;
   }
-}
-.td-social-boxed:hover .td-sp:before {
-  background-color: transparent;
 }
 .td-social-boxed .td_social_info {
   margin-top: -2px;
@@ -12141,7 +12141,7 @@ input.search-submit:hover {
 }
 .td-social-style1 .td_social_button a,
 .td-social-style1 .td_social_button a:hover {
-  color: #fff;
+  color: #fff !important;
 }
 .td-social-style2 .td_social_type {
   border: 1px solid #ededed;
@@ -12214,42 +12214,6 @@ input.search-submit:hover {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-.td-social-style5 .td_social_type:hover .td-social-box,
-.td-social-style6 .td_social_type:hover .td-social-box {
-  background-color: #222;
-}
-.td-social-style5 .td_social_facebook .td-social-box,
-.td-social-style6 .td_social_facebook .td-social-box {
-  background-color: #516eab;
-}
-.td-social-style5 .td_social_rss .td-social-box,
-.td-social-style6 .td_social_rss .td-social-box {
-  background-color: #ff6600;
-}
-.td-social-style5 .td_social_soundcloud .td-social-box,
-.td-social-style6 .td_social_soundcloud .td-social-box {
-  background-color: #ff5419;
-}
-.td-social-style5 .td_social_twitter .td-social-box,
-.td-social-style6 .td_social_twitter .td-social-box {
-  background-color: #29c5f6;
-}
-.td-social-style5 .td_social_vimeo .td-social-box,
-.td-social-style6 .td_social_vimeo .td-social-box {
-  background-color: #006599;
-}
-.td-social-style5 .td_social_youtube .td-social-box,
-.td-social-style6 .td_social_youtube .td-social-box {
-  background-color: #e14e42;
-}
-.td-social-style5 .td_social_googleplus .td-social-box,
-.td-social-style6 .td_social_googleplus .td-social-box {
-  background-color: #eb4026;
-}
-.td-social-style5 .td_social_instagram .td-social-box,
-.td-social-style6 .td_social_instagram .td-social-box {
-  background-color: #417096;
-}
 .td-social-style5 .td-social-list,
 .td-social-style7 .td-social-list,
 .td-social-style8 .td-social-list,
@@ -12295,6 +12259,42 @@ input.search-submit:hover {
   .td-social-style10 .td_social_type .td-social-box {
     margin: 0 2px 4px;
   }
+}
+.td-social-style5 .td_social_type:hover .td-social-box,
+.td-social-style6 .td_social_type:hover .td-social-box {
+  background-color: #222;
+}
+.td-social-style5 .td_social_facebook .td-social-box,
+.td-social-style6 .td_social_facebook .td-social-box {
+  background-color: #516eab;
+}
+.td-social-style5 .td_social_rss .td-social-box,
+.td-social-style6 .td_social_rss .td-social-box {
+  background-color: #ff6600;
+}
+.td-social-style5 .td_social_soundcloud .td-social-box,
+.td-social-style6 .td_social_soundcloud .td-social-box {
+  background-color: #ff5419;
+}
+.td-social-style5 .td_social_twitter .td-social-box,
+.td-social-style6 .td_social_twitter .td-social-box {
+  background-color: #29c5f6;
+}
+.td-social-style5 .td_social_vimeo .td-social-box,
+.td-social-style6 .td_social_vimeo .td-social-box {
+  background-color: #006599;
+}
+.td-social-style5 .td_social_youtube .td-social-box,
+.td-social-style6 .td_social_youtube .td-social-box {
+  background-color: #e14e42;
+}
+.td-social-style5 .td_social_googleplus .td-social-box,
+.td-social-style6 .td_social_googleplus .td-social-box {
+  background-color: #eb4026;
+}
+.td-social-style5 .td_social_instagram .td-social-box,
+.td-social-style6 .td_social_instagram .td-social-box {
+  background-color: #417096;
 }
 .td-social-style7 .td_social_type .td-social-box {
   background-color: #222;
@@ -12367,7 +12367,7 @@ input.search-submit:hover {
 }
 .td-social-style9 .td_social_type:hover .td-sp:before,
 .td-social-style10 .td_social_type:hover .td-sp:before {
-  background-color: #222;
+  background-color: #222 !important;
 }
 .td-social-style9 .td_social_type .td-sp:before,
 .td-social-style10 .td_social_type .td-sp:before {
