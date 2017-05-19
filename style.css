@@ -14099,16 +14099,16 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
 */
 .td-weather-top-widget {
   display: inline-block;
-  margin-right: 32px;
+  margin-right: 36px;
 }
-.td-weather-top-widget .td-icons {
+.td-weather-top-widget .td-icon {
   background: none;
   vertical-align: middle;
   position: relative;
   top: -1px;
   margin-right: 2px;
 }
-.td-weather-top-widget .td-icons:before {
+.td-weather-top-widget .td-icon:before {
   font-size: 18px;
   display: block;
 }
