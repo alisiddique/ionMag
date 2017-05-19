@@ -12022,7 +12022,7 @@ input.search-submit:hover {
   float: left;
 }
 .td-social-boxed .td_social_type:hover .td-sp:before {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .td-social-boxed .td_social_type span {
   display: block;
@@ -12367,7 +12367,7 @@ input.search-submit:hover {
 }
 .td-social-style9 .td_social_type:hover .td-sp:before,
 .td-social-style10 .td_social_type:hover .td-sp:before {
-  background-color: #222 !important;
+  background-color: #222;
 }
 .td-social-style9 .td_social_type .td-sp:before,
 .td-social-style10 .td_social_type .td-sp:before {
