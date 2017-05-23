@@ -1709,6 +1709,156 @@ class td_config {
         );
 
 
+        td_api_block::add('td_block_exchange',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'Exchange',
+                "base" => "td_block_exchange",
+                "class" => "",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td-exchange',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_exchange.php',
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
+                    array(
+                        array(
+                            "param_name" => "e_base_currency",
+                            "type" => "dropdown",
+                            "value" => array (
+                                'EUR - Euro Member Countries (default)' => '',
+                                'AUD - Australian Dollar' => 'aud',
+                                'BGN - Bulgarian Lev' => 'bgn',
+                                'BRL - Brazilian Real' => 'brl',
+                                'CAD - Canadian Dollar' => 'cad',
+                                'CHF - Swiss Franc' => 'chf',
+                                'CNY - Chinese Yuan Renminbi' => 'cny',
+                                'CZK - Czech Republic Koruna' => 'czk',
+                                'DKK - Danish Krone' => 'dkk',
+                                'GBP - British Pound' => 'gbp',
+                                'HKD - Hong Kong Dollar' => 'hkd',
+                                'HRK - Croatian Kuna' => 'hrk',
+                                'HUF - Hungarian Forint' => 'huf',
+                                'IDR - Indonesian Rupiah' => 'idr',
+                                'ILS - Israeli Shekel' => 'ils',
+                                'INR - Indian Rupee' => 'inr',
+                                'JPY - Japanese Yen' => 'jpy',
+                                'KRW - Korean (South) Won' => 'krw',
+                                'MXN - Mexican Peso' => 'mxn',
+                                'MYR - Malaysian Ringgit' => 'myr',
+                                'NOK - Norwegian Krone' => 'nok',
+                                'NZD - New Zealand Dollar' => 'nzd',
+                                'PHP - Philippine Peso' => 'php',
+                                'PLN - Polish Zloty' => 'pln',
+                                'RON - Romanian (New) Leu' => 'ron',
+                                'RUB - Russian Ruble' => 'rub',
+                                'SEK - Swedish Krona' => 'sek',
+                                'SGD - Singapore Dollar' => 'sgd',
+                                'THB - Thai Baht' => 'thb',
+                                'TRY - Turkish Lira' => 'try',
+                                'USD - United States Dollar' => 'usd',
+                                'ZAR - South African Rand' => 'zar'
+                            ),
+                            "heading" => 'Base currency:',
+                            "holder" => "div",
+                            "class" => "",
+                            'group' => 'Exchange'
+                        ),
+                        array(
+                            "param_name" => "e_custom_rates",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "Rates",
+                            "description" => 'Add the rates you want to display, use a coma between the elements (ex. EUR, USD) If you leave it empty it will display all rates.
+	                        <ul class="td-exchange-table">
+	                            <li><span title="Euro Member Countries" class="td-flags td-flag-eur"></span>EUR</li>
+	                            <li><span title="Australian Dollar" class="td-flags td-flag-aud"></span>AUD</li>
+	                            <li><span title="Bulgarian Lev" class="td-flags td-flag-bgn"></span>BGN</li>
+	                            <li><span title="Brazilian Real" class="td-flags td-flag-brl"></span>BRL</li>
+	                            <li><span title="Canadian Dollar" class="td-flags td-flag-cad"></span>CAD</li>
+	                            <li><span title="Swiss Franc" class="td-flags td-flag-chf"></span>CHF</li>
+	                            <li><span title="Chinese Yuan Renminbi" class="td-flags td-flag-cny"></span>CNY</li>
+	                            <li><span title="Czech Republic Koruna" class="td-flags td-flag-czk"></span>CZK</li>
+	                            <li><span title="Danish Krone" class="td-flags td-flag-dkk"></span>DKK</li>
+	                            <li><span title="British Pound" class="td-flags td-flag-gbp"></span>GBP</li>
+	                            <li><span title="Hong Kong Dollar" class="td-flags td-flag-hkd"></span>HKD</li>
+	                            <li><span title="Croatian Kuna" class="td-flags td-flag-hrk"></span>HRK</li>
+	                            <li><span title="Hungarian Forint" class="td-flags td-flag-huf"></span>HUF</li>
+	                            <li><span title="Indonesian Rupiah" class="td-flags td-flag-idr"></span>IDR</li>
+	                            <li><span title="Israeli Shekel" class="td-flags td-flag-ils"></span>ILS</li>
+	                            <li><span title="Indian Rupee" class="td-flags td-flag-inr"></span>INR</li>
+	                            <li><span title="Japanese Yen" class="td-flags td-flag-jpy"></span>JPY</li>
+	                            <li><span title="Korean (South) Won" class="td-flags td-flag-krw"></span>KRW</li>
+	                            <li><span title="Mexican Peso" class="td-flags td-flag-mxn"></span>MXN</li>
+	                            <li><span title="Malaysian Ringgit" class="td-flags td-flag-myr"></span>MYR</li>
+	                            <li><span title="Norwegian Krone" class="td-flags td-flag-nok"></span>NOK</li>
+	                            <li><span title="New Zealand Dollar" class="td-flags td-flag-nzd"></span>NZD</li>
+	                            <li><span title="Philippine Peso" class="td-flags td-flag-php"></span>PHP</li>
+	                            <li><span title="Polish Zloty" class="td-flags td-flag-pln"></span>PLN</li>
+	                            <li><span title="Romanian New Leu" class="td-flags td-flag-ron"></span>RON</li>
+	                            <li><span title="Russian Ruble" class="td-flags td-flag-rub"></span>RUB</li>
+	                            <li><span title="Swedish Krona" class="td-flags td-flag-sek"></span>SEK</li>
+	                            <li><span title="Singapore Dollar" class="td-flags td-flag-sgd"></span>SGD</li>
+	                            <li><span title="Thai Baht" class="td-flags td-flag-thb"></span>THB</li>
+	                            <li><span title="Turkish Lira" class="td-flags td-flag-try"></span>TRY</li>
+	                            <li><span title="United States Dollar" class="td-flags td-flag-usd"></span>USD</li>
+	                            <li><span title="South African Rand" class="td-flags td-flag-zar"></span>ZAR</li>
+	                        </ul><div class="td-clearfix"></div>',
+                            "holder" => "div",
+                            "class" => "",
+                            'group' => 'Exchange'
+                        ),
+                        array(
+                            "param_name" => "e_rate_decimals",
+                            "type" => "dropdown",
+                            "value" => array (
+                                '- default -' => '',
+                                '1' => 1,
+                                '2' => 2,
+                                '3' => 3
+                            ),
+                            "tdc_value" => array (
+                                '1' => 1,
+                                '2' => 2,
+                                '3' => 3,
+                                '4' => '',
+                            ),
+                            "heading" => 'Rate decimals:',
+                            "description" => 'Set the number of decimals to be displayed for each rate. By default it will display 4 decimals (ex. 0.4322).',
+                            "holder" => "div",
+                            "class" => "tdc-dropdown-small",
+                            'group' => 'Exchange'
+                        ),
+                        array(
+                            'param_name' => 'el_class',
+                            'type' => 'textfield',
+                            'value' => '',
+                            'heading' => 'Extra class',
+                            'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                            'class' => 'tdc-textfield-extrabig',
+                            'group' => ''
+                        ),
+                        array (
+                            'param_name' => 'css',
+                            'value' => '',
+                            'type' => 'css_editor',
+                            'heading' => 'Css',
+                            'group' => 'Design options',
+                        ),
+                        array (
+                            'param_name' => 'tdc_css',
+                            'value' => '',
+                            'type' => 'tdc_css_editor',
+                            'heading' => '',
+                            'group' => 'Design options',
+                        ),
+                    )
+                )
+            )
+        );
+
+
         td_api_block::add('td_block_instagram',
             array(
                 'map_in_visual_composer' => true,

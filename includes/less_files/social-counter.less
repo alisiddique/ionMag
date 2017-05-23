@@ -136,6 +136,10 @@
     margin: 0;
     float: left;
 
+    &:hover .td-sp:before {
+      background-color: transparent;
+    }
+
     span {
       display: block;
       width: 100%;
@@ -156,10 +160,6 @@
     @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
       margin-top: 4px;
     }
-  }
-
-  &:hover .td-sp:before {
-    background-color: transparent;
   }
 
   .td_social_info {
@@ -276,7 +276,7 @@
     a {
       &,
       &:hover {
-        color: #fff;
+        color: #fff !important;
       }
     }
   }
@@ -363,40 +363,6 @@
 }
 
 
-// Styles 5 & 6
-.td-social-style5,
-.td-social-style6 {
-  .td_social_type:hover .td-social-box {
-    background-color: #222;
-  }
-
-  .td_social_facebook .td-social-box {
-    background-color: #516eab;
-  }
-  .td_social_rss .td-social-box {
-    background-color: #ff6600;
-  }
-  .td_social_soundcloud .td-social-box {
-    background-color: #ff5419;
-  }
-  .td_social_twitter .td-social-box {
-    background-color: #29c5f6;
-  }
-  .td_social_vimeo .td-social-box {
-    background-color: #006599;
-  }
-  .td_social_youtube .td-social-box {
-    background-color: #e14e42;
-  }
-  .td_social_googleplus .td-social-box {
-    background-color: #eb4026;
-  }
-  .td_social_instagram .td-social-box {
-    background-color: #417096;
-  }
-}
-
-
 // Styles 5 & 7 & 8
 .td-social-style5,
 .td-social-style7,
@@ -427,6 +393,40 @@
         margin: 0 2px 4px;
       }
     }
+  }
+}
+
+
+// Styles 5 & 6
+.td-social-style5,
+.td-social-style6 {
+  .td_social_type:hover .td-social-box {
+    background-color: #222;
+  }
+
+  .td_social_facebook .td-social-box {
+    background-color: #516eab;
+  }
+  .td_social_rss .td-social-box {
+    background-color: #ff6600;
+  }
+  .td_social_soundcloud .td-social-box {
+    background-color: #ff5419;
+  }
+  .td_social_twitter .td-social-box {
+    background-color: #29c5f6;
+  }
+  .td_social_vimeo .td-social-box {
+    background-color: #006599;
+  }
+  .td_social_youtube .td-social-box {
+    background-color: #e14e42;
+  }
+  .td_social_googleplus .td-social-box {
+    background-color: #eb4026;
+  }
+  .td_social_instagram .td-social-box {
+    background-color: #417096;
   }
 }
 
