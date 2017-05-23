@@ -40,6 +40,16 @@
 
 .tdc-row.stretch_row_content {
   width: 100% !important;
+
+  // this make the background full width on mobile
+  .td-pb-row:before {
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      width: 100vw !important;
+      left: 50% !important;
+      .transform(translateX(-50%));
+    }
+  }
 }
 
 .tdc-row.stretch_row_content_no_space {
@@ -48,6 +58,16 @@
   .td-pb-row {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  // this make the background full width on mobile
+  .td-pb-row:before {
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      width: 100vw !important;
+      left: 50% !important;
+      .transform(translateX(-50%));
+    }
   }
 }
 
