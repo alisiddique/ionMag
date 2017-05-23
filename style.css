@@ -2913,6 +2913,9 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   top: 0;
   width: 100%;
 }
+#td-mobile-nav .td-login-animation .td-login-inputs {
+  height: 40px;
+}
 #td-mobile-nav .td-login-hide {
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -10092,6 +10095,60 @@ body .dropcap3 {
 }
 .td-icon-whatsapp:before {
   content: "\f232";
+}
+.td-icon-rain-n:before {
+  content: "\e80e";
+}
+.td-icon-mist:before {
+  content: "\e81d";
+}
+.td-icon-scattered-clouds:before {
+  content: "\e83b";
+}
+.td-icon-shower-rain:before {
+  content: "\e83e";
+}
+.td-icon-snow:before {
+  content: "\e83f";
+}
+.td-icon-thunderstorm:before {
+  content: "\e840";
+}
+.td-icon-broken-clouds:before {
+  content: "\e841";
+}
+.td-icon-clear-sky-d:before {
+  content: "\e842";
+}
+.td-icon-clear-sky-n:before {
+  content: "\e843";
+}
+.td-icon-few-clouds-d:before {
+  content: "\e844";
+}
+.td-icon-few-clouds-n:before {
+  content: "\e845";
+}
+.td-icon-drop:before {
+  content: "\e846";
+}
+.td-icon-wind:before {
+  content: "\e847";
+}
+.td-icon-arrows-down:before {
+  content: "\e848";
+}
+.td-icon-arrows-up:before {
+  content: "\e849";
+}
+.td-icon-cloud:before {
+  content: "\e84a";
+}
+.td-icon-location:before {
+  content: "\e84b";
+}
+.td-icon-rain-d:before {
+  content: "\e80a";
 }
 .td-social-icon-wrap:hover .td-icon-font {
   -webkit-transition: color 0.3s;
