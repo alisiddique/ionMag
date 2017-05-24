@@ -717,6 +717,162 @@ class td_config {
         );
 
 
+        td_api_block_template::add('td_block_template_2',
+            array (
+                'text' => 'Block Header 2',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-2.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_2.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_3',
+            array (
+                'text' => 'Block Header 3',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-3.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_3.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_4',
+            array (
+                'text' => 'Block Header 4',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-4.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_4.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_5',
+            array (
+                'text' => 'Block Header 5',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-5.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_5.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_6',
+            array (
+                'text' => 'Block Header 6',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-6.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_6.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "attach_image",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => "Header background",
+                        "param_name" => "header_image",
+                        "value" => '',
+                        "description" => "Optional - Choose a custom background image for this header",
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+
 
         /**
          * the blocks
