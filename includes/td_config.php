@@ -1709,6 +1709,49 @@ class td_config {
         );
 
 
+        td_api_block::add('td_block_title',
+            array(
+                'map_in_visual_composer' => false,
+                'map_in_td_composer' => true,
+                "base" => "td_block_title",
+                'name' => __( 'Title', 'td_composer' ),
+                "class" => "",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-title',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_title.php',
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
+                    array(
+                        array(
+                            'param_name' => 'el_class',
+                            'type' => 'textfield',
+                            'value' => '',
+                            'heading' => 'Extra class',
+                            'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                            'class' => 'tdc-textfield-extrabig',
+                            'group' => ''
+                        ),
+                        array (
+                            'param_name' => 'css',
+                            'value' => '',
+                            'type' => 'css_editor',
+                            'heading' => 'Css',
+                            'group' => 'Design options',
+                        ),
+                        array (
+                            'param_name' => 'tdc_css',
+                            'value' => '',
+                            'type' => 'tdc_css_editor',
+                            'heading' => '',
+                            'group' => 'Design options',
+                        ),
+                    )
+                )
+            )
+        );
+
+
         td_api_block::add('td_block_exchange',
             array(
                 'map_in_visual_composer' => true,
