@@ -2913,6 +2913,9 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   top: 0;
   width: 100%;
 }
+#td-mobile-nav .td-login-animation .td-login-inputs {
+  height: 40px;
+}
 #td-mobile-nav .td-login-hide {
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
