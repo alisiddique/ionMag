@@ -49,12 +49,12 @@ class td_block_template_3 extends td_block_template {
             .td-footer-wrapper .$unique_block_class .td-post-category,
             .$unique_block_class .td-post-category:hover,
             .$unique_block_class .td-subcat-dropdown ul:after,
-            .$unique_block_class .block-title > * {
+            .$unique_block_class .td-block-title > * {
                 background-color: @header_color !important;
             }
 
             /* @header_text_color */
-            .$unique_block_class .block-title > * {
+            .$unique_block_class .td-block-title > * {
                 color: @header_text_color !important;
             }
         </style>
@@ -95,7 +95,7 @@ class td_block_template_3 extends td_block_template {
 
         // there is a custom title
         $buffy = '';
-        $buffy .= '<h4 class="block-title">';
+        $buffy .= '<h4 class="td-block-title">';
         if (!empty($custom_url)) {
             $buffy .= '<a href="' . esc_url($custom_url) . '" class="td-pulldown-size">' . esc_html($custom_title) . '</a>';
         } else {

@@ -21,8 +21,8 @@ class td_block_template_6 extends td_block_template {
         $raw_css = "
         <style>
             /* @header_text_color */
-            .$unique_block_class .block-title > *,
-            .$unique_block_class .block-title:before {
+            .$unique_block_class .td-block-title > *,
+            .$unique_block_class .td-block-title:before {
                 color: @header_text_color !important;
             }
 
@@ -30,7 +30,7 @@ class td_block_template_6 extends td_block_template {
             .$unique_block_class .td-block-title {
                 background-image: url('@header_image') !important;
             }
-            .$unique_block_class .block-title:before {
+            .$unique_block_class .td-block-title:before {
                 display: none !important;
             }
 
@@ -104,7 +104,7 @@ class td_block_template_6 extends td_block_template {
 
         // there is a custom title
         $buffy = '';
-        $buffy .= '<h4 class="block-title">';
+        $buffy .= '<h4 class="td-block-title">';
         if (!empty($custom_url)) {
             $buffy .= '<a href="' . esc_url($custom_url) . '">' . esc_html($custom_title) . '</a>';
         } else {
