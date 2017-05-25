@@ -20,6 +20,10 @@
   margin-bottom: 10px;
   font-size: 12px;
 
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
   &:hover {
     .td-sp:before {
       background-color: @td_theme_color;
@@ -143,7 +147,13 @@
     span {
       display: block;
       width: 100%;
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
+
+      /* responsive portrait tablet */
+      @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        line-height: 18px;
+      }
     }
   }
 
@@ -176,6 +186,7 @@
 
   .td_social_info_name {
     margin-top: -3px;
+    padding-bottom: 8px;
     font-size: 13px;
     font-weight: normal;
 
@@ -363,7 +374,7 @@
 }
 
 
-// Styles 5 & 7 & 8
+// Styles 5 & 7 & 8 & 9 & 10
 .td-social-style5,
 .td-social-style7,
 .td-social-style8,
@@ -375,23 +386,56 @@
 
     /* responsive portrait tablet */
     @media (max-width: @responsive_p_tablet_max) {
-      margin-left: -2px;
-      margin-right: -2px;
+      margin-left: -4px;
+      margin-right: -4px;
     }
   }
 
   .td_social_type {
+    margin-bottom: 16px;
+    /* responsive portrait tablet */
+    @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+      margin-bottom: 4px;
+    }
+
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      margin-bottom: 2px;
+    }
+
     .td-social-box {
-      margin: 0 8px 16px;
+      margin: 0 8px 0;
 
       /* responsive portrait tablet */
       @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
-        margin: 0 2px 4px;
+        margin: 0 4px 0;
+
+        .td-sp:before {
+          width: 50px;
+          height: 50px;
+          font-size: 18px;
+          line-height: 50px;
+        }
       }
       /* responsive portrait phone */
       @media (max-width: @responsive_p_phone_max) {
-        margin: 0 2px 4px;
+        margin: 0 2px 0;
       }
+    }
+  }
+}
+
+
+// Styles 5 & 6 & 7 & 8
+.td-social-style5,
+.td-social-style6,
+.td-social-style7,
+.td-social-style8 {
+  .td_social_type {
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      margin-bottom: 0;
     }
   }
 }
@@ -525,6 +569,13 @@
   .td_social_type {
     width: 25%;
 
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4),
+    &:nth-last-child(5) {
+      margin-bottom: 0;
+    }
+
     &:hover .td-sp:before {
       background-color: #222;
     }
@@ -542,6 +593,7 @@
 
   .td_social_info_name {
     margin-top: -3px;
+    padding-bottom: 0;
   }
 
   .td_social_facebook .td-sp:before {
