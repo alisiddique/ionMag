@@ -2272,6 +2272,9 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 .td-mega-menu .td_block_mega_menu .td-next-prev-wrap {
   margin-right: 22px;
 }
+.td-mega-grid {
+  overflow: hidden;
+}
 /*
   page in mega menu mega-menu-page
   */
