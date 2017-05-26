@@ -4,7 +4,7 @@
         <div class="td-main-content-wrap td-footer-instagram-container td-container-wrap <?php echo td_util::get_option('td_full_footer_instagram'); ?>">
             <?php
             //get the instagram id from the panel
-            $tds_footer_instagram_id = td_util::get_option('tds_footer_instagram_id');
+            $tds_footer_instagram_id = td_instagram::strip_instagram_user(td_util::get_option('tds_footer_instagram_id'));;
             ?>
 
             <div class="td-instagram-user">
