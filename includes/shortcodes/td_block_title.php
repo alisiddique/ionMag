@@ -31,7 +31,9 @@ class td_block_title extends td_block {
 		    //get the block js
 		    $buffy .= $this->get_block_css();
 
-            $buffy .= $this->get_block_title();
+            $buffy .= '<div class="td-block-title-wrap">';
+                $buffy .= $this->get_block_title();
+            $buffy .= '</div>';
             $buffy .= '<div class="td_mod_wrap">';
 
 	    $buffy .= '</div>';

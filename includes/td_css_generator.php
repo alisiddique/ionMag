@@ -117,6 +117,9 @@ function td_css_generator() {
     .widget_calendar #today,
     .td_social_type:hover .td-sp:before,
     .td-smart-list-button:hover,
+    .td-weather-information:before,
+    .td-weather-week:before,
+    .td_block_exchange .td-exchange-header:before,
     .td-category-header .entry-category a:hover,
     .td_3D_btn,
     .td_shadow_btn,
@@ -152,7 +155,8 @@ function td_css_generator() {
     /* @text_header_color */
     div .block-title label,
     div .block-title span,
-    div .block-title a {
+    div .block-title a,
+    div .td-trending-now-title {
       color: @text_header_color;
     }
     .block-title:after {
@@ -164,11 +168,26 @@ function td_css_generator() {
     /* @header_color */
     .block-title label,
     .block-title span,
-    .block-title a {
+    .block-title a,
+    .td-trending-now-title,
+    .td-weather-information:before,
+    .td-weather-week:before,
+    .td_block_exchange .td-exchange-header:before {
       background-color: @header_color;
+    }
+    .block-title label,
+    .block-title span,
+    .block-title a,
+    .td-trending-now-title,
+    .td-weather-information:before,
+    .td-weather-week:before {
+      color: #fff;
+    }
+    .block-title label,
+    .block-title span,
+    .block-title a {
       margin: 0;
       padding: 8px 10px;
-      color: #fff;
     }
     .block-title:after {
       display: none;
@@ -725,6 +744,8 @@ function td_css_generator() {
     
     /* @top_menu */
     .top-header-menu > li > a,
+    .td-weather-top-widget .td-weather-now .td-big-degrees,
+    .td-weather-top-widget .td-weather-header .td-weather-city,
     .top-header-menu .td-icon-logout,
     .td-header-sp-top-menu .td_data_time,
     .td-header-sp-top-widget .td-search-btns-wrap i,

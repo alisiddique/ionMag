@@ -36,7 +36,9 @@ class td_block_weather extends td_block {
 
 
 			//get the block title
-			$buffy .= $this->get_block_title();
+            $buffy .= '<div class="td-block-title-wrap">';
+                $buffy .= $this->get_block_title();
+            $buffy .= '</div>';
 			$buffy .= '<div id=' . $this->block_uid . ' class="td-weather-wrap td_block_inner td-column-' . $td_column_number . '">';
 				$buffy.= td_weather::render_generic($atts, $this->block_uid);
 			$buffy .= '</div>';

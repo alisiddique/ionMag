@@ -6809,7 +6809,7 @@ body .dropcap3 {
 */
 .td-trending-now-wrapper {
   padding: 0 34px;
-  height: 24px;
+  height: 25px;
   position: relative;
   transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -6829,6 +6829,7 @@ body .dropcap3 {
   .td-trending-now-wrapper {
     padding: 0;
     overflow: visible;
+    height: auto;
   }
 }
 .td-trending-now-wrapper .td-next-prev-wrap {
@@ -6856,12 +6857,11 @@ body .dropcap3 {
 .td-trending-now-title {
   float: left;
   background-color: #000;
-  font-family: 'wpion', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   color: #fff;
   padding: 0 10px;
-  line-height: 24px;
+  line-height: 25px;
   cursor: default;
   -webkit-user-select: none;
   /* Chrome/Safari */
@@ -6896,9 +6896,9 @@ body .dropcap3 {
   }
 }
 .td-trending-now-display-area .entry-title {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 25px;
   margin: 0;
   padding: 0;
   /* responsive portrait phone */
@@ -10031,7 +10031,9 @@ body .dropcap3 {
   font-style: normal;
 }
 [class^="td-icon-"]:before,
-[class*=" td-icon-"]:before {
+[class*=" td-icon-"]:before,
+[class^="td-icons"]:before,
+[class*=" td-icons"]:before {
   font-family: 'wpion' !important;
   speak: none;
   font-style: normal;
@@ -10048,6 +10050,12 @@ body .dropcap3 {
   line-height: 1;
   text-align: center;
   display: inline-block;
+}
+[class*="td-icons"] {
+  line-height: 1;
+  text-align: center;
+  display: inline-block;
+  cursor: default;
 }
 .td-icon-modal-back:before {
   content: "\e904";
@@ -10244,58 +10252,79 @@ body .dropcap3 {
 .td-icon-whatsapp:before {
   content: "\f232";
 }
-.td-icon-rain-n:before {
+.rain-d:before {
   content: "\e80e";
 }
-.td-icon-mist:before {
+.rain-n:before {
+  content: "\e80e";
+}
+.mist-d:before {
   content: "\e81d";
 }
-.td-icon-scattered-clouds:before {
+.mist-n:before {
+  content: "\e81d";
+}
+.scattered-clouds-d:before {
   content: "\e83b";
 }
-.td-icon-shower-rain:before {
+.scattered-clouds-n:before {
+  content: "\e83b";
+}
+.shower-rain-d:before {
   content: "\e83e";
 }
-.td-icon-snow:before {
+.shower-rain-n:before {
+  content: "\e83e";
+}
+.snow-d:before {
   content: "\e83f";
 }
-.td-icon-thunderstorm:before {
+.snow-n:before {
+  content: "\e83f";
+}
+.thunderstorm-d:before {
   content: "\e840";
 }
-.td-icon-broken-clouds:before {
+.thunderstorm-n:before {
+  content: "\e840";
+}
+.broken-clouds-d:before {
   content: "\e841";
 }
-.td-icon-clear-sky-d:before {
+.broken-clouds-n:before {
+  content: "\e841";
+}
+.clear-sky-d:before {
   content: "\e842";
 }
-.td-icon-clear-sky-n:before {
+.clear-sky-n:before {
   content: "\e843";
 }
-.td-icon-few-clouds-d:before {
+.few-clouds-d:before {
   content: "\e844";
 }
-.td-icon-few-clouds-n:before {
+.few-clouds-n:before {
   content: "\e845";
 }
-.td-icon-drop:before {
+.td-icons-drop:before {
   content: "\e846";
 }
-.td-icon-wind:before {
+.td-icons-wind:before {
   content: "\e847";
 }
-.td-icon-arrows-down:before {
+.td-icons-arrows-down:before {
   content: "\e848";
 }
-.td-icon-arrows-up:before {
+.td-icons-arrows-up:before {
   content: "\e849";
 }
-.td-icon-cloud:before {
+.td-icons-cloud:before {
   content: "\e84a";
 }
-.td-icon-location:before {
+.td-icons-location:before {
   content: "\e84b";
 }
-.td-icon-rain-d:before {
+.td-icons-rain-d:before {
   content: "\e80a";
 }
 .td-social-icon-wrap:hover .td-icon-font {
@@ -14320,14 +14349,14 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   display: inline-block;
   margin-right: 36px;
 }
-.td-weather-top-widget .td-icon {
+.td-weather-top-widget .td-icons {
   background: none;
   vertical-align: middle;
   position: relative;
   top: -1px;
   margin-right: 2px;
 }
-.td-weather-top-widget .td-icon:before {
+.td-weather-top-widget .td-icons:before {
   font-size: 18px;
   display: block;
 }
