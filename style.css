@@ -6590,6 +6590,15 @@ body .dropcap3 {
 /*  ----------------------------------------------------------------------------
     Single image
 */
+.td-stretch-content .td_block_single_image {
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-stretch-content .td_block_single_image {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+}
 .td_block_single_image a {
   display: block;
 }

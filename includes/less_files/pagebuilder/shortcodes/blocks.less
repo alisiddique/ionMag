@@ -1239,6 +1239,15 @@
 /*  ----------------------------------------------------------------------------
     Single image
 */
+.td-stretch-content {
+  .td_block_single_image {
+    /* responsive portrait phone */
+    @media (max-width: @responsive_p_phone_max) {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+  }
+}
 .td_block_single_image {
   a {
     display: block;
