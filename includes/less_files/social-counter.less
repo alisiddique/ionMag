@@ -135,7 +135,6 @@
 .td-social-boxed {
   .td_social_type {
     text-align: center;
-    color: #fff;
     width: 33.3333%;
     margin: 0;
     float: left;
@@ -330,15 +329,23 @@
   }
 }
 
+// Styles 3 & 4 & 8 & 9 & 10
+.td-social-style3,
+.td-social-style4,
+.td-social-style8,
+.td-social-style9,
+.td-social-style10 {
+  .td_social_type {
+    &:hover span {
+      color: #666;
+    }
+  }
+}
+
 
 // Styles 3 & 4
 .td-social-style3,
 .td-social-style4 {
-  .td_social_type {
-    &:hover .td-sp:before {
-      background-color: #222;
-    }
-  }
   .td_social_facebook .td-sp:before {
     background-color: #516eab;
   }
@@ -441,6 +448,16 @@
 }
 
 
+// Styles 5 & 6 & 7
+.td-social-style5,
+.td-social-style6,
+.td-social-style7 {
+  .td_social_type {
+    color: #fff;
+  }
+}
+
+
 // Styles 5 & 6
 .td-social-style5,
 .td-social-style6 {
@@ -482,38 +499,28 @@
   }
 
   .td_social_facebook:hover .td-social-box {
-    background-color: #516eab;
+    background-color: #516eab !important;
   }
   .td_social_rss:hover .td-social-box {
-    background-color: #ff6600;
+    background-color: #ff6600 !important;
   }
   .td_social_soundcloud:hover .td-social-box {
-    background-color: #ff5419;
+    background-color: #ff5419 !important;
   }
   .td_social_twitter:hover .td-social-box {
-    background-color: #29c5f6;
+    background-color: #29c5f6 !important;
   }
   .td_social_vimeo:hover .td-social-box {
-    background-color: #006599;
+    background-color: #006599 !important;
   }
   .td_social_youtube:hover .td-social-box {
-    background-color: #e14e42;
+    background-color: #e14e42 !important;
   }
   .td_social_googleplus:hover .td-social-box {
-    background-color: #eb4026;
+    background-color: #eb4026 !important;
   }
   .td_social_instagram:hover .td-social-box {
-    background-color: #417096;
-  }
-}
-
-
-// Style 8 & 9 & 10
-.td-social-style8,
-.td-social-style9,
-.td-social-style10 {
-  .td_social_type {
-    color: #000;
+    background-color: #417096 !important;
   }
 }
 
@@ -521,10 +528,6 @@
 // Style 8
 .td-social-style8 {
   .td_social_type {
-    &:hover .td-sp:before {
-      color: #222;
-    }
-
     .td-social-box {
       border: 1px solid #ededed;
     }
@@ -576,14 +579,35 @@
       margin-bottom: 0;
     }
 
-    &:hover .td-sp:before {
-      background-color: #222;
-    }
-
     .td-sp:before {
       width: 64px;
       height: 64px;
       line-height: 64px;
+    }
+
+    &.td_social_facebook .td-sp:before {
+      background-color: #516eab;
+    }
+    &.td_social_rss .td-sp:before {
+      background-color: #ff6600;
+    }
+    &.td_social_soundcloud .td-sp:before {
+      background-color: #ff5419;
+    }
+    &.td_social_twitter .td-sp:before {
+      background-color: #29c5f6;
+    }
+    &.td_social_vimeo .td-sp:before {
+      background-color: #006599;
+    }
+    &.td_social_youtube .td-sp:before {
+      background-color: #e14e42;
+    }
+    &.td_social_googleplus .td-sp:before {
+      background-color: #eb4026;
+    }
+    &.td_social_instagram .td-sp:before {
+      background-color: #417096;
     }
   }
 
@@ -594,31 +618,6 @@
   .td_social_info_name {
     margin-top: -3px;
     padding-bottom: 0;
-  }
-
-  .td_social_facebook .td-sp:before {
-    background-color: #516eab;
-  }
-  .td_social_rss .td-sp:before {
-    background-color: #ff6600;
-  }
-  .td_social_soundcloud .td-sp:before {
-    background-color: #ff5419;
-  }
-  .td_social_twitter .td-sp:before {
-    background-color: #29c5f6;
-  }
-  .td_social_vimeo .td-sp:before {
-    background-color: #006599;
-  }
-  .td_social_youtube .td-sp:before {
-    background-color: #e14e42;
-  }
-  .td_social_googleplus .td-sp:before {
-    background-color: #eb4026;
-  }
-  .td_social_instagram .td-sp:before {
-    background-color: #417096;
   }
 }
 

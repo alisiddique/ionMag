@@ -73,6 +73,7 @@ function td_css_generator() {
     .footer-email-wrap a,
     .td-sub-footer-copy i,
     .td-footer-outer-wrapper a:hover,
+    .td-footer-outer-wrapper .td_social_type .td_social_button a:hover,
     .td_block_authors .td_authors_wrap:hover .td-authors-name a,
     .td_block_authors .td_authors_wrap.td-active .td-authors-name a,
     .td_block_authors .td-authors-url a:hover,
@@ -592,6 +593,7 @@ function td_css_generator() {
     .td-footer-wrapper .rss-date,
     .td-footer-wrapper cite,
     .td-footer-outer-wrapper a,
+    .td-footer-outer-wrapper .td_social_type .td_social_button a,
     .footer-social-wrap .td-social-icon-wrap a,
     .footer-social-wrap .td-social-icon-wrap a span,
     .td-sub-footer-copy {
@@ -605,7 +607,10 @@ function td_css_generator() {
     .td-subfooter-menu:after {
       background-color: @footer_text_color;
     }
-    .td-footer-outer-wrapper .widget_categories li span:before {
+    .td-footer-outer-wrapper .widget_categories li span:before,
+    .td-footer-outer-wrapper .td-social-style2 .td_social_type,
+    .td-footer-outer-wrapper .td-social-style2 .td_social_type .td-sp:before,
+    .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box {
       border-color: @footer_text_color;
     }
 
