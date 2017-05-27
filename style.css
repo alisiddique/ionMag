@@ -5488,7 +5488,6 @@ body .dropcap3 {
   clear: both;
 }
 .block-title {
-  float: left;
   position: relative;
   padding: 0;
   font-family: 'Work Sans', sans-serif;
@@ -6269,7 +6268,6 @@ body .dropcap3 {
     Author block
 */
 .td_block_author .block-title {
-  float: none;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -7789,9 +7787,6 @@ body .dropcap3 {
   .td_block_big_grid_3 .td-posts-2 .td-big-grid-post-1 {
     margin-bottom: 0;
   }
-}
-.td_block_authors .block-title {
-  float: none;
 }
 .td_block_authors .td_authors_wrap {
   width: 100%;
@@ -9669,7 +9664,6 @@ body .dropcap3 {
 .td-review .block-title {
   display: inline-block;
   padding-top: 0;
-  float: none;
   margin-bottom: 20px;
   padding-bottom: 9px;
 }
@@ -11769,7 +11763,6 @@ tagdiv animations
   padding: 0 5px;
 }
 .widget .block-title {
-  float: none;
   margin-bottom: 11px;
   width: 100%;
 }
@@ -12091,7 +12084,6 @@ input.search-submit:hover {
   padding: 0;
 }
 .td_block_social_counter .block-title {
-  float: none;
   margin-bottom: 20px;
   width: 100%;
 }
