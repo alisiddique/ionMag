@@ -1,9 +1,9 @@
 <?php
 /**
  * this is the default block template
- * Class td_block_header_3
+ * Class td_block_header_13
  */
-class td_block_template_3 extends td_block_template {
+class td_block_template_13 extends td_block_template {
 
 
 
@@ -21,25 +21,36 @@ class td_block_template_3 extends td_block_template {
         $raw_css = "
         <style>
 
-            /* @header_color */
+            /* @button_color */
+            .$unique_block_class .td-pulldown-category {
+                color: @button_color !important;
+            }
+
+            /* @header_text_color */
+            .$unique_block_class .td-block-title > a,
+            .$unique_block_class .td-block-title > span {
+                color: @header_text_color !important;
+            }
+
+            /* @big_text_color */
+            .$unique_block_class .td-block-subtitle {
+                color: @big_text_color !important;
+            }
+
+            /* @accent_text_color */
             .$unique_block_class .td_module_wrap:hover .entry-title a,
-            .$unique_block_class .td-pulldown-filter-link:hover,
-            .$unique_block_class .td-subcat-item a:hover,
-            .$unique_block_class .td-subcat-item .td-cur-simple-item,
             .$unique_block_class .td_quote_on_blocks,
             .$unique_block_class .td-opacity-cat .td-post-category:hover,
             .$unique_block_class .td-opacity-read .td-read-more a:hover,
             .$unique_block_class .td-opacity-author .td-post-author-name a:hover,
-            .$unique_block_class .td-instagram-user a,
-            .$unique_block_class .td-subcat-dropdown:hover .td-subcat-more span,
-            .$unique_block_class .td-subcat-dropdown:hover .td-subcat-more i {
-                color: @header_color !important;
+            .$unique_block_class .td-instagram-user a {
+                color: @accent_text_color !important;
             }
 
             .$unique_block_class .td-next-prev-wrap a:hover,
             .$unique_block_class .td-load-more-wrap a:hover {
-                background-color: @header_color !important;
-                border-color: @header_color !important;
+                background-color: @accent_text_color !important;
+                border-color: @accent_text_color !important;
             }
 
             .$unique_block_class .td-read-more a,
@@ -47,22 +58,17 @@ class td_block_template_3 extends td_block_template {
             .$unique_block_class .td-weather-week:before,
             .$unique_block_class .td-exchange-header:before,
             .td-footer-wrapper .$unique_block_class .td-post-category,
-            .$unique_block_class .td-post-category:hover,
-            .$unique_block_class .td-subcat-dropdown ul:after,
-            .$unique_block_class .td-block-title > * {
-                background-color: @header_color !important;
-            }
-
-            /* @header_text_color */
-            .$unique_block_class .td-block-title > * {
-                color: @header_text_color !important;
+            .$unique_block_class .td-post-category:hover {
+                background-color: @accent_text_color !important;
             }
         </style>
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
-        $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
+        $td_css_compiler->load_setting_raw('button_color', $this->get_att('button_color'));
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
+        $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
+        $td_css_compiler->load_setting_raw('big_text_color', $this->get_att('big_text_color'));
 
         $compiled_style = $td_css_compiler->compile_css();
 
@@ -92,15 +98,25 @@ class td_block_template_3 extends td_block_template {
             $custom_title = 'Block title';
         }
 
+        // description text
+        $title_alignment = '';
+        $description_text = $this->get_att('big_title_text');
+        if (empty($description_text)) {
+            $title_alignment = ' td-title-align';
+        }
+
 
         // there is a custom title
         $buffy = '';
-        $buffy .= '<h4 class="td-block-title">';
+        $buffy .= '<h4 class="td-block-title' . $title_alignment . '">';
         if (!empty($custom_url)) {
-            $buffy .= '<a href="' . esc_url($custom_url) . '" class="td-pulldown-size">' . esc_html($custom_title) . '</a>';
+            $buffy .= '<a href="' . esc_url($custom_url) . '">' . esc_html($custom_title) . '</a>';
         } else {
-            $buffy .= '<span class="td-pulldown-size">' . esc_html($custom_title) . '</span>';
+            $buffy .= '<span>' . esc_html($custom_title) . '</span>';
         }
+
+        $buffy .= '<div class="td-block-subtitle">' . esc_html($description_text) . '</div>';
+
         $buffy .= '</h4>';
         return $buffy;
     }
@@ -111,32 +127,28 @@ class td_block_template_3 extends td_block_template {
      * @return string
      */
     function get_pull_down_filter() {
+
         $buffy = '';
 
-        $td_pull_down_items = $this->get_td_pull_down_items();
+        $custom_url = $this->get_att('custom_url');
+        $category_id = $this->get_att('category_id');
 
-        if (empty($td_pull_down_items)) {
+        if (empty($custom_url) && empty($category_id)) {
             return '';
         }
 
-        $buffy .= '<div class="td-wrapper-pulldown-filter">';
-        $buffy .= '<div class="td-pulldown-filter-display-option">';
-
-
-        //show the default display value
-        $buffy .= '<div id="td-pulldown-' . $this->get_block_uid() . '-val"><span>';
-        $buffy .=  $td_pull_down_items[0]['name'] . ' </span><i class="td-icon-down"></i>';
-        $buffy .= '</div>';
-
-        //builde the dropdown
-        $buffy .= '<ul class="td-pulldown-filter-list">';
-        foreach ($td_pull_down_items as $item) {
-            $buffy .= '<li class="td-pulldown-filter-item"><a class="td-pulldown-filter-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
+        // button text
+        $button_text = $this->get_att('button_text');
+        if (empty($button_text)) {
+            $button_text = 'Continue to the category';
         }
-        $buffy .= '</ul>';
 
-        $buffy .= '</div>';  // /.td-pulldown-filter-display-option
-        $buffy .= '</div>';
+        if (empty($custom_url)) {
+            $custom_url = get_category_link($category_id);
+        }
+
+        $buffy .= '<a href="' . esc_url($custom_url) . '" class="td-pulldown-category"><span>' . esc_html($button_text) . '</span><i class="td-icon-category"></i></a>';
+
 
         return $buffy;
     }
