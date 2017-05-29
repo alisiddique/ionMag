@@ -214,7 +214,8 @@ function td_css_generator() {
     /* TOP MENU TEXT COLOR */
     /* @top_menu_text_color */
     .td-header-top-menu,
-    .td-header-top-menu a {
+    .td-header-top-menu a,
+    .td-header-sp-top-widget .td-icon-search {
       color: @top_menu_text_color;
     }
     .td-header-top-menu:before,
@@ -230,6 +231,7 @@ function td_css_generator() {
     .td-header-top-menu .top-header-menu .current-menu-item > a,
     .td-header-top-menu .top-header-menu .current-menu-ancestor > a,
     .td-header-top-menu .top-header-menu .current-category-ancestor > a,
+    .td-header-sp-top-widget .td-icon-search:hover,
     .td-icon-search {
       color: @top_menu_text_hover_color;
     }
