@@ -12478,7 +12478,7 @@ input.search-submit:hover {
 }
 .td_social_type .td_social_button a {
   display: block;
-  padding: 1px 0 2px 15px;
+  padding: 1px 0 1px 15px;
   color: #000;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.08);
@@ -16188,6 +16188,9 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
 .td-md-is-ios .td-author-header .count {
   padding-top: 2px;
   padding-bottom: 3px;
+}
+.td-md-is-ios .td_social_type .td_social_button a {
+  padding-top: 2px;
 }
 .td-md-is-iemobile .td-post-views span {
   padding-bottom: 1px;
