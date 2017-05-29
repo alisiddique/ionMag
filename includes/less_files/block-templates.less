@@ -24,6 +24,7 @@
 
   .td-wrapper-pulldown-filter {
     bottom: 13px;
+    height: 23px;
   }
 }
 
@@ -198,10 +199,12 @@
   }
 
   .td-wrapper-pulldown-filter {
-    bottom: 26px;
+    height: 45px;
   }
 
   .td-pulldown-filter-display-option {
+    line-height: 45px;
+
     > div {
       padding-right: 7px;
     }
@@ -254,16 +257,25 @@
   }
 }
 
-// Block header 9 & 10 & 11
+// Block header 9 & 10 & 11 & 15
 .td_block_template_9,
 .td_block_template_10,
-.td_block_template_11 {
+.td_block_template_11,
+.td_block_template_15 {
   .td-block-title {
     position: relative;
     margin-top: 0;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
+  }
+}
+
+// Block header 9 & 10 & 11
+.td_block_template_9,
+.td_block_template_10,
+.td_block_template_11 {
+  .td-block-title {
     line-height: 32px;
 
     &:before {
@@ -279,13 +291,17 @@
       color: #000;
     }
   }
+}
 
+// Block header 9 & 10
+.td_block_template_9,
+.td_block_template_10 {
   .td-wrapper-pulldown-filter {
-    bottom: 19px;
+    height: 30px;
   }
 }
 
-// Block header 9 & 10 & 11
+// Block header 9 & 11
 .td_block_template_9,
 .td_block_template_11 {
   .td-block-title {
@@ -342,6 +358,14 @@
     &:before {
       top: 100%;
     }
+  }
+
+  .td-wrapper-pulldown-filter {
+    height: 37px;
+  }
+
+  .td-pulldown-filter-display-option {
+    line-height: 38px;
   }
 }
 
@@ -445,8 +469,8 @@
     }
 
     i {
-      font-size: 10px;
-      margin-left: 10px;
+      font-size: 9px;
+      margin-left: 9px;
     }
 
     &:hover {
@@ -515,12 +539,11 @@
   }
 
   .td-wrapper-pulldown-filter {
-    bottom: 19px;
+    height: 39px;
   }
 
   .td-pulldown-filter-display-option {
-    height: 100%;
-    display: table;
+    line-height: 39px;
     color: #ddd;
 
     &:hover {
@@ -534,5 +557,52 @@
     > div {
       padding-right: 10px;
     }
+  }
+}
+
+// Block header 15
+.td_block_template_15 {
+  .td-block-title {
+    margin-bottom: 20px;
+    line-height: 44px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: @td_theme_color;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #ededed;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    > * {
+      margin: 0 18px;
+    }
+  }
+
+  .td-wrapper-pulldown-filter {
+    bottom: 19px;
+    height: 43px;
+  }
+
+  .td-pulldown-filter-display-option {
+    line-height: 44px;
   }
 }
