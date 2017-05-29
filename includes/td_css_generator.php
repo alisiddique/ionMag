@@ -629,6 +629,7 @@ function td_css_generator() {
       background-color: @footer_text_color;
     }
     .td-footer-outer-wrapper .widget_categories li span:before,
+    .td-footer-outer-wrapper .td_social_type .td_social_button a,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type .td-sp:before,
     .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box {
