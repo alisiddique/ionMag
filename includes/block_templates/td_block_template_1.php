@@ -80,7 +80,10 @@ class td_block_template_1 extends td_block_template {
             }
             .$unique_block_class .td_module_wrap .td-post-category:hover,
             .$unique_block_class .entry-title:after,
-            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before {
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before,
+            .$unique_block_class .td-weather-information:before,
+            .$unique_block_class .td-weather-week:before,
+            .$unique_block_class .td-exchange-header:before {
                 background-color: @header_color;
             }
 
