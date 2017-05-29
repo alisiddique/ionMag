@@ -8,6 +8,28 @@
   .td-g-rec-id-footer_top {
     display: block;
   }
+
+  // live demos down arrow fix
+  .td-live-theme-demos {
+    .td-skin-scroll {
+      .transition(all 0.4s cubic-bezier(.55,0,.1,1) 0s);
+      left: auto;
+      right: -118px;
+
+      @media (max-width: 1366px) {
+        right: -78px;
+      }
+    }
+  }
+  .td-theme-settings-small {
+    .td-skin-scroll {
+      right: 118px;
+
+      @media (max-width: 1366px) {
+        right: 78px;
+      }
+    }
+  }
 }
 
 

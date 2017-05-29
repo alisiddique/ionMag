@@ -872,6 +872,394 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_7',
+            array (
+                'text' => 'Block Header 7',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-7.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_7.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "attach_image",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => "Header pattern",
+                        "param_name" => "header_image",
+                        "value" => '',
+                        "description" => "Optional - Choose a custom background image for this header",
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_8',
+            array (
+                'text' => 'Block Header 8',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-8.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_8.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_9',
+            array (
+                'text' => 'Block Header 9',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-9.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_9.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_10',
+            array (
+                'text' => 'Block Header 10',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-10.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_10.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_11',
+            array (
+                'text' => 'Block Header 11',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-11.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_11.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_12',
+            array (
+                'text' => 'Block Header 12',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-12.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_12.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Continue button text:',
+                        "param_name" => "button_text",
+                        "value" => '',
+                        "description" => 'To enable the continue button, choose a category from Filter or write a custom Title URL',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Continue button color:',
+                        "param_name" => "button_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom text color for the continue button',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_13',
+            array (
+                'text' => 'Block Header 13',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-13.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_13.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Big title:',
+                        "param_name" => "big_title_text",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom big title text for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Big title text color:',
+                        "param_name" => "big_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom color for the big title',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Continue button text:',
+                        "param_name" => "button_text",
+                        "value" => '',
+                        "description" => 'To enable the continue button, choose a category from Filter or write a custom Title URL',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Continue button color:',
+                        "param_name" => "button_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom text color for the continue button',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_14',
+            array (
+                'text' => 'Block Header 14',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-14.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_14.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**

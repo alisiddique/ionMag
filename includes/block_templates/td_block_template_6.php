@@ -123,36 +123,28 @@ class td_block_template_6 extends td_block_template {
         $buffy = '';
 
         $td_pull_down_items = $this->get_td_pull_down_items();
+
         if (empty($td_pull_down_items)) {
             return '';
         }
 
-        //generate unique id for this pull down filter control
-        $pull_down_wrapper_id = "td_pulldown_" . $this->get_block_uid();
+        $buffy .= '<div class="td-wrapper-pulldown-filter">';
+        $buffy .= '<div class="td-pulldown-filter-display-option">';
 
-        // wrapper
-        $buffy .= '<div class="td-pulldown-syle-3 td-subcat-filter" id="' . $pull_down_wrapper_id . '">';
 
-        // subcategory list
-        $buffy .= '<ul class="td-subcat-list" id="' . $pull_down_wrapper_id . '_list">';
+        //show the default display value
+        $buffy .= '<div id="td-pulldown-' . $this->get_block_uid() . '-val"><span>';
+        $buffy .=  $td_pull_down_items[0]['name'] . ' </span><i class="td-icon-down"></i>';
+        $buffy .= '</div>';
+
+        //builde the dropdown
+        $buffy .= '<ul class="td-pulldown-filter-list">';
         foreach ($td_pull_down_items as $item) {
-            $buffy .= '<li class="td-subcat-item"><a class="td-subcat-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
+            $buffy .= '<li class="td-pulldown-filter-item"><a class="td-pulldown-filter-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
         }
         $buffy .= '</ul>';
 
-
-        // subcategory dropdown list
-        $buffy .= '<div class="td-subcat-dropdown">';
-        $buffy .= '<div class="td-subcat-more" aria-haspopup="true"><span>' . __td('More', TD_THEME_NAME) . '</span><i class="td-icon-read-down"></i></div>';
-
-        // the dropdown list
-        $buffy .= '<ul class="td-pulldown-filter-list">';
-
-
-
-        $buffy .= '</ul>';
-
-        $buffy .= '</div>';
+        $buffy .= '</div>';  // /.td-pulldown-filter-display-option
         $buffy .= '</div>';
 
         return $buffy;
