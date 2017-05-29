@@ -2564,14 +2564,6 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   position: relative;
   top: 2px;
 }
-.td_stretch_content .td-header-main-menu .td-search-btns-wrap {
-  /* responsive landscape tablet */
-}
-@media (min-width: 1140px) {
-  .td_stretch_content .td-header-main-menu .td-search-btns-wrap {
-    padding-right: 12px;
-  }
-}
 .td-ionmag-multicolumn-2 .sub-menu {
   padding: 16px 0;
   -moz-column-count: 2;
