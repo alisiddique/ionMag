@@ -15,7 +15,7 @@ Header style 2
                 <?php locate_template('parts/header/ads.php', true); ?>
             </div>
             <div class="td-header-sp-logo">
-                <?php locate_template('parts/header/logo-h1.php', true);?>
+                <?php locate_template('parts/header/logo-text.php', true);?>
             </div>
         </div>
     </div>
