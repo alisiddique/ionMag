@@ -1,9 +1,10 @@
 <?php
 /**
  * this is the default block template
- * Class td_block_header_1
+ * Class td_block_header_15
  */
-class td_block_template_1 extends td_block_template {
+class td_block_template_15 extends td_block_template {
+
 
 
     /**
@@ -12,87 +13,72 @@ class td_block_template_1 extends td_block_template {
      */
     function get_css() {
 
+
         // $unique_block_class - the unique class that is on the block. use this to target the specific instance via css
         $unique_block_class =  $this->get_unique_block_class();
 
         // the css that will be compiled by the block, <style> - will be removed by the compiler
         $raw_css = "
         <style>
-
             /* @header_text_color */
-            .$unique_block_class .td_module_wrap:hover .entry-title a,
-            .$unique_block_class .td-load-more-wrap a:hover,
-        	.$unique_block_class .td_quote_on_blocks,
-        	.$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
-        	.$unique_block_class .td-wrapper-pulldown-filter a.td-pulldown-filter-link:hover,
-        	.$unique_block_class .td-wrapper-pulldown-filter a.td-cur-simple-item,
-            div.$unique_block_class .block-title span,
-            div.$unique_block_class .block-title a,
-            .$unique_block_class .td-module-comments a:hover,
-            .$unique_block_class .td-next-prev-wrap a:hover,
-            .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
-            .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
-            .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td-instagram-user a {
-                color: @header_text_color;
-            }
-            .$unique_block_class .td_module_wrap .td-post-category:hover,
-            .$unique_block_class .block-title:after,
-            .$unique_block_class .entry-title:after,
-            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before {
-                background-color: @header_text_color;
+            .$unique_block_class .td-block-title > *,
+            .$unique_block_class .td-pulldown-filter-display-option,
+            .$unique_block_class .td-pulldown-filter-display-option i {
+                color: @header_text_color !important;
             }
 
             /* @header_color */
-            .$unique_block_class .block-title span,
-            .$unique_block_class .block-title a {
-                background-color: @header_color;
-                margin: 0;
-                padding: 8px 10px;
-                color: #fff;
-            }
-            .$unique_block_class .block-title:after {
-                display: none;
-            }
-            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list {
-                margin-top: -2px;
-            }
-            .$unique_block_class .block-title {
-                font-size: 13px;
-                font-weight: 500;
-                margin-bottom: 22px;
-            }
-            .$unique_block_class .td_module_wrap:hover .entry-title a,
-            .$unique_block_class .td-load-more-wrap a:hover,
-        	.$unique_block_class .td_quote_on_blocks,
-        	.$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
-        	.$unique_block_class .td-wrapper-pulldown-filter a.td-pulldown-filter-link:hover,
-        	.$unique_block_class .td-wrapper-pulldown-filter a.td-cur-simple-item,
-            .$unique_block_class .td-module-comments a:hover,
-            .$unique_block_class .td-next-prev-wrap a:hover,
-            .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
-            .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
-            .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td-instagram-user a {
-                color: @header_color;
-            }
-            .$unique_block_class .td_module_wrap .td-post-category:hover,
-            .$unique_block_class .entry-title:after,
-            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before,
-            .$unique_block_class .td-weather-information:before,
-            .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before {
-                background-color: @header_color;
+            .$unique_block_class .td-block-title {
+                background-color: @header_color !important;
             }
 
+            /* @border_color */
+            .$unique_block_class .td-block-title:after {
+                border-color: @border_color !important;
+            }
+
+            /* @top_border_color */
+            .$unique_block_class .td-block-title:before {
+                background-color: @top_border_color !important;
+            }
+
+            /* @accent_text_color */
+            .$unique_block_class .td_module_wrap:hover .entry-title a,
+            .$unique_block_class .td_quote_on_blocks,
+            .$unique_block_class .td-opacity-cat .td-post-category:hover,
+            .$unique_block_class .td-opacity-read .td-read-more a:hover,
+            .$unique_block_class .td-opacity-author .td-post-author-name a:hover,
+            .$unique_block_class .td-instagram-user a,
+            .$unique_block_class .td-pulldown-filter-item .td-cur-simple-item,
+            .$unique_block_class .td-pulldown-filter-link:hover,
+            .$unique_block_class .td-pulldown-filter-display-option:hover,
+            .$unique_block_class .td-pulldown-filter-display-option:hover i {
+                color: @accent_text_color !important;
+            }
+
+            .$unique_block_class .td-next-prev-wrap a:hover,
+            .$unique_block_class .td-load-more-wrap a:hover {
+                background-color: @accent_text_color !important;
+                border-color: @accent_text_color !important;
+            }
+
+            .$unique_block_class .td-read-more a,
+            .$unique_block_class .td-weather-information:before,
+            .$unique_block_class .td-weather-week:before,
+            .$unique_block_class .td-exchange-header:before,
+            .td-footer-wrapper .$unique_block_class .td-post-category,
+            .$unique_block_class .td-post-category:hover {
+                background-color: @accent_text_color !important;
+            }
         </style>
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
         $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
+        $td_css_compiler->load_setting_raw('border_color', $this->get_att('border_color'));
+        $td_css_compiler->load_setting_raw('top_border_color', $this->get_att('top_border_color'));
+        $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
 
         $compiled_style = $td_css_compiler->compile_css();
 
@@ -100,16 +86,21 @@ class td_block_template_1 extends td_block_template {
         return $compiled_style;
     }
 
+
     /**
      * renders the block title
      * @return string HTML
      */
     function get_block_title() {
+
         $custom_title = $this->get_att('custom_title');
         $custom_url = $this->get_att('custom_url');
 
+
+
         if (empty($custom_title)) {
-            if ($this->get_td_pull_down_items() === false) {
+            $td_pull_down_items = $this->get_td_pull_down_items();
+            if (empty($td_pull_down_items)) {
                 //no title selected and we don't have pulldown items
                 return '';
             }
@@ -117,9 +108,10 @@ class td_block_template_1 extends td_block_template {
             $custom_title = 'Block title';
         }
 
+
         // there is a custom title
         $buffy = '';
-        $buffy .= '<h4 class="block-title">';
+        $buffy .= '<h4 class="td-block-title">';
         if (!empty($custom_url)) {
             $buffy .= '<a href="' . esc_url($custom_url) . '">' . esc_html($custom_title) . '</a>';
         } else {

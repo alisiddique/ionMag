@@ -1260,6 +1260,169 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_15',
+            array (
+                'text' => 'Block Header 15',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-15.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_15.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Top border color:',
+                        "param_name" => "top_border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom top border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_16',
+            array (
+                'text' => 'Block Header 16',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-16.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_16.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_17',
+            array (
+                'text' => 'Block Header 17',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-17.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_17.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border top color:',
+                        "param_name" => "top_border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom top border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border bottom color:',
+                        "param_name" => "bottom_border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom bottom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**
@@ -2850,12 +3013,12 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR HEADER AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_phone' => array(
-					    'desc' => '<p>Google adsense requiers that you do not use big header ads on mobiles!</p>',
+					    'desc' => '<p>Google Adsense requiers that you do not use big header ads on mobiles!</p>',
 				    ),
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
@@ -2871,10 +3034,10 @@ class td_config {
 				    'ad_field_notice' => 'To show the ads on the sidebar, please drag the "[taDiv] Ad box" widget to the desired sidebar.',
 				    'ad_field_code' => array(
 					    'title' => 'YOUR SIDEBAR AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -2888,9 +3051,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE TOP AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -2904,9 +3067,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE INLINE AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 			    )
 		    )
 	    );
@@ -2918,9 +3081,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE BOTTOM AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )

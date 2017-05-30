@@ -156,6 +156,9 @@ function td_css_generator() {
     div .block-title label,
     div .block-title span,
     div .block-title a,
+    div .td-block-title label,
+    div .td-block-title span,
+    div .td-block-title a,
     div .td-trending-now-title {
       color: @text_header_color;
     }
@@ -629,6 +632,7 @@ function td_css_generator() {
       background-color: @footer_text_color;
     }
     .td-footer-outer-wrapper .widget_categories li span:before,
+    .td-footer-outer-wrapper .td_social_type .td_social_button a,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type .td-sp:before,
     .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box {
@@ -794,6 +798,9 @@ function td_css_generator() {
     
     
     /* @blocks_title */
+    .td-block-title > label,
+    .td-block-title > span,
+    .td-block-title > a,
     .block-title > label,
     .block-title > span,
     .block-title > a,
