@@ -16,10 +16,6 @@
     margin-bottom: 16px;
     text-transform: uppercase;
     line-height: 26px;
-
-    > * {
-      color: #000;
-    }
   }
 
   .td-wrapper-pulldown-filter {
@@ -257,11 +253,12 @@
   }
 }
 
-// Block header 9 & 10 & 11 & 15
+// Block header 9 & 10 & 11 & 15 & 16
 .td_block_template_9,
 .td_block_template_10,
 .td_block_template_11,
-.td_block_template_15 {
+.td_block_template_15,
+.td_block_template_16 {
   .td-block-title {
     position: relative;
     margin-top: 0;
@@ -560,11 +557,27 @@
   }
 }
 
+// Block headers 15 & 16
+.td_block_template_15,
+.td_block_template_16 {
+  .td-block-title {
+    line-height: 44px;
+  }
+
+  .td-wrapper-pulldown-filter {
+    bottom: 19px;
+    height: 43px;
+  }
+
+  .td-pulldown-filter-display-option {
+    line-height: 44px;
+  }
+}
+
 // Block header 15
 .td_block_template_15 {
   .td-block-title {
     margin-bottom: 20px;
-    line-height: 44px;
     overflow: hidden;
     text-align: center;
     background-color: #fff;
@@ -596,13 +609,93 @@
       margin: 0 18px;
     }
   }
+}
+
+// Block header 16
+.td_block_template_16 {
+  .td-block-title {
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      background-color: #ddd;
+    }
+
+    &:before {
+      bottom: 4px;
+    }
+    &:after {
+      bottom: 0;
+    }
+  }
+}
+
+// Block header 17
+.td_block_template_17 {
+  .td-block-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 3px 3px 20px;
+    padding: 12px 0 11px;
+    line-height: 1;
+    position: relative;
+    text-align: center;
+    border: 1px solid #111;
+    background-color: #fff;
+    top: -3px;
+    .transform(translateZ(0));
+
+    &:before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 4px;
+      left: -4px;
+      right: -4px;
+      border: 1px solid #111;
+      background-color: #111;
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: -1;
+    }
+
+    > * {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 3px auto 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 8px 0 8px;
+        border-color: #111 transparent transparent transparent;
+      }
+    }
+  }
 
   .td-wrapper-pulldown-filter {
-    bottom: 19px;
-    height: 43px;
+    height: 40px;
   }
 
   .td-pulldown-filter-display-option {
-    line-height: 44px;
+    line-height: 40px;
   }
 }
