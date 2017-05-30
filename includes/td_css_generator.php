@@ -156,6 +156,9 @@ function td_css_generator() {
     div .block-title label,
     div .block-title span,
     div .block-title a,
+    div .td-block-title label,
+    div .td-block-title span,
+    div .td-block-title a,
     div .td-trending-now-title {
       color: @text_header_color;
     }
@@ -795,6 +798,9 @@ function td_css_generator() {
     
     
     /* @blocks_title */
+    .td-block-title > label,
+    .td-block-title > span,
+    .td-block-title > a,
     .block-title > label,
     .block-title > span,
     .block-title > a,

@@ -1321,6 +1321,108 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_16',
+            array (
+                'text' => 'Block Header 16',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-16.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_16.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border color:',
+                        "param_name" => "border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
+        td_api_block_template::add('td_block_template_17',
+            array (
+                'text' => 'Block Header 17',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-17.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_17.php',
+                'params' => array(
+                    // title settings
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title text color:',
+                        "param_name" => "header_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title background color:',
+                        "param_name" => "header_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom background color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border top color:',
+                        "param_name" => "top_border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom top border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Border bottom color:',
+                        "param_name" => "bottom_border_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom bottom border color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**
