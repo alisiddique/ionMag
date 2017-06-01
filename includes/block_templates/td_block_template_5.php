@@ -42,10 +42,7 @@ class td_block_template_5 extends td_block_template {
                 border-color: @header_color !important;
             }
 
-            .$unique_block_class .td-block-title > * {
-                border-color: @header_color !important;
-            }
-
+            .$unique_block_class .td-block-title:after,
             .$unique_block_class .td-read-more a,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
