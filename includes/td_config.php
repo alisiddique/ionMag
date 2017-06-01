@@ -3013,12 +3013,12 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR HEADER AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_phone' => array(
-					    'desc' => '<p>Google adsense requiers that you do not use big header ads on mobiles!</p>',
+					    'desc' => '<p>Google Adsense requiers that you do not use big header ads on mobiles!</p>',
 				    ),
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
@@ -3034,10 +3034,10 @@ class td_config {
 				    'ad_field_notice' => 'To show the ads on the sidebar, please drag the "[taDiv] Ad box" widget to the desired sidebar.',
 				    'ad_field_code' => array(
 					    'title' => 'YOUR SIDEBAR AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3051,9 +3051,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE TOP AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3067,9 +3067,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE INLINE AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 			    )
 		    )
 	    );
@@ -3081,9 +3081,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE BOTTOM AD',
-					    'desc' => 'Paste your ad code here. Google adsense will be made responsive automatically. <br><br> To add non adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>google ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )

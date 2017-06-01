@@ -3,7 +3,7 @@
 License: GPL V3
 
 **Official site:** [ionMag free news theme](https://www.wpion.com/free-news-theme/)<br>
-**Current release:** [Download now](http://cdn.tagdiv.com/wp-content/uploads/2016/10/IonMag.zip) 
+**Current release:** [Download now](https://www.wpion.com/download-free-news-theme/) 
 
 #### What's this?
 A GPL WordPress theme for blogs, magazines and more. The theme is based on our wp_booster framework and uses tagDiv Composer for live frontend editing.
