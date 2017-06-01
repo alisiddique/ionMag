@@ -14285,9 +14285,6 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   -ms-user-select: none;
   user-select: none;
 }
-.td-weather-header {
-  padding-left: 10px;
-}
 .td-weather-city {
   font-size: 20px;
   font-weight: bold;
@@ -14304,7 +14301,7 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
 .td-location-icon {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   font-size: 22px;
   opacity: 0.6;
   z-index: 1;
@@ -14384,7 +14381,7 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   vertical-align: top;
 }
 .td-weather-now .td-weather-unit {
-  font-size: 16px;
+  font-size: 18px;
   position: relative;
   top: -4px;
   font-weight: 400;
@@ -14417,7 +14414,7 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   color: #b3b3b3;
 }
 .td-weather-degrees-wrap .td-small-degrees {
-  font-size: 12px;
+  font-size: 13px;
 }
 .td-weather-degrees-wrap .td-circle {
   font-size: 18px;
@@ -14426,7 +14423,7 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   top: 3px;
 }
 .td-weather-information {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   padding: 5px 0;
   display: inline-block;
@@ -14497,11 +14494,11 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
 .td-weather-days .td-day-3,
 .td-weather-days .td-day-4 {
   margin-bottom: 8px;
-  font-size: 11px;
+  font-size: 12px;
   opacity: 0.5;
 }
 .td-weather-days .td-day-degrees {
-  font-size: 20px;
+  font-size: 21px;
   position: relative;
   left: 4px;
   line-height: 14px;
@@ -14755,7 +14752,7 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
 }
 .td_block_weather .td-column-2 .td-weather-now .td-big-degrees,
 .td_block_weather .td-column-3 .td-weather-now .td-big-degrees {
-  font-size: 32px;
+  font-size: 36px;
 }
 .td_block_weather .td-column-2 .td-weather-degrees-wrap,
 .td_block_weather .td-column-3 .td-weather-degrees-wrap {
@@ -16405,7 +16402,4 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
   bottom: 0;
   left: 0;
   right: 0;
-}
-.td-pb-row {
-  position: relative;
 }
