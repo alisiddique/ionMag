@@ -442,8 +442,8 @@
 // Block header 12
 .td_block_template_12 {
   .td-block-title {
-    margin-top: 0;
-    margin-bottom: 22px;
+    margin-top: -2px;
+    margin-bottom: 16px;
     line-height: 26px;
     letter-spacing: -0.6px;
 
@@ -466,10 +466,10 @@
 // Block header 13
 .td_block_template_13 {
   .td-block-title {
-    margin-bottom: 26px;
     line-height: 26px !important;
     letter-spacing: -0.6px;
-    margin-top: 36px;
+    margin-top: 31px;
+    margin-bottom: 26px;
     .transform(translateZ(0));
 
     /* responsive portrait tablet + phone */
@@ -514,7 +514,7 @@
     font-weight: 600;
     position: absolute;
     right: 0;
-    bottom: -15px;
+    bottom: -13px;
     top: 0;
     margin: auto 0;
     display: table;
@@ -568,10 +568,16 @@
   }
 
   .td-title-align {
-    margin-top: 0 !important;
+    margin-top: -2px !important;
+    margin-bottom: 16px;
+
     > a,
     > span {
       margin-left: 0 !important;
+    }
+
+    & + .td-pulldown-category {
+      bottom: 10px;
     }
   }
 }

@@ -8199,8 +8199,8 @@ body .dropcap3 {
   font-weight: 700;
 }
 .td_block_template_12 .td-block-title {
-  margin-top: 0;
-  margin-bottom: 22px;
+  margin-top: -2px;
+  margin-bottom: 16px;
   line-height: 26px;
   letter-spacing: -0.6px;
   /* responsive portrait tablet + phone */
@@ -8218,10 +8218,10 @@ body .dropcap3 {
   bottom: 13px;
 }
 .td_block_template_13 .td-block-title {
-  margin-bottom: 26px;
   line-height: 26px !important;
   letter-spacing: -0.6px;
-  margin-top: 36px;
+  margin-top: 31px;
+  margin-bottom: 26px;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -8270,7 +8270,7 @@ body .dropcap3 {
   font-weight: 600;
   position: absolute;
   right: 0;
-  bottom: -15px;
+  bottom: -13px;
   top: 0;
   margin: auto 0;
   display: table;
@@ -8328,11 +8328,15 @@ body .dropcap3 {
   }
 }
 .td_block_template_13 .td-title-align {
-  margin-top: 0 !important;
+  margin-top: -2px !important;
+  margin-bottom: 16px;
 }
 .td_block_template_13 .td-title-align > a,
 .td_block_template_13 .td-title-align > span {
   margin-left: 0 !important;
+}
+.td_block_template_13 .td-title-align + .td-pulldown-category {
+  bottom: 10px;
 }
 .td_block_template_14 .td-block-title {
   background-color: #111;
