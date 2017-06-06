@@ -367,7 +367,7 @@ function td_css_generator() {
         background-color: @mega_menu_background;
     }
     /* @mega_menu_color */
-    .td-theme-wrap .td-mega-span .entry-title a,
+    .td-theme-wrap .td_module_mega_menu .entry-title a,
     .td-theme-wrap .td_mega_menu_sub_cats a,
     .td-theme-wrap .td-mega-span .td-item-details > span,
     .td-theme-wrap .td-mega-span .td-item-details > div {
@@ -384,8 +384,8 @@ function td_css_generator() {
         background-color: @mega_menu_subcategories_border;
     }
     /* @mega_menu_accent_color */
-    .td-theme-wrap .td_module_mega_menu:hover .entry-title a,
-    .td-theme-wrap .sf-menu .td_mega_menu_sub_cats .cur-sub-cat {
+    .td-theme-wrap .td_module_mega_menu:hover .td-item-details .entry-title a,
+    .td-theme-wrap .td_mega_menu_sub_cats .block-mega-child-cats .cur-sub-cat {
         color: @mega_menu_accent_color;
     }
     .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
