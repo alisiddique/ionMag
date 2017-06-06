@@ -35,6 +35,16 @@ echo td_panel_generator::ajax_box('Main menu', array(
 ?>
 
 
+<!-- MEGA MENU -->
+<?php
+echo td_panel_generator::ajax_box('Mega menu', array(
+        'td_ajax_calling_file' => basename(__FILE__),
+        'td_ajax_box_id' => 'td_mega_menu'
+    )
+);
+?>
+
+
 <!-- MOBILE MENU -->
 <?php
 echo td_panel_generator::ajax_box('Mobile menu / Mobile search', array(

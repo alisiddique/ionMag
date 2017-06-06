@@ -3003,7 +3003,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_3',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-3.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_3.php',
                 'text' => 'Style 3'
 
@@ -3012,7 +3012,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_4',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-4.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_4.php',
                 'text' => 'Style 4'
 
@@ -3021,7 +3021,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_5',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-5.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_5.php',
                 'text' => 'Style 5'
 
@@ -3030,7 +3030,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_6',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-6.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_6.php',
                 'text' => 'Style 6'
 
@@ -3039,7 +3039,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_7',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-7.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_7.php',
                 'text' => 'Style 7'
 
@@ -3048,7 +3048,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_8',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-8.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_8.php',
                 'text' => 'Style 8'
 
@@ -3057,7 +3057,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_9',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-9.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_9.php',
                 'text' => 'Style 9'
 
@@ -3066,7 +3066,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_10',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-10.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_10.php',
                 'text' => 'Style 10'
 
@@ -3075,7 +3075,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_11',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-11.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_11.php',
                 'text' => 'Style 11'
 
@@ -3084,7 +3084,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_12',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-12.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_12.php',
                 'text' => 'Style 12'
 
@@ -3093,7 +3093,7 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_13',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-13.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_13.php',
                 'text' => 'Style 13'
 
@@ -3102,9 +3102,27 @@ class td_config {
 
         td_api_footer_template::add('td_footer_template_14',
             array(
-                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-2.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-14.png',
                 'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_14.php',
                 'text' => 'Style 14'
+
+            )
+        );
+
+        td_api_footer_template::add('td_footer_template_15',
+            array(
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-15.png',
+                'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_15.php',
+                'text' => 'Style 15'
+
+            )
+        );
+
+        td_api_footer_template::add('td_footer_template_16',
+            array(
+                'img' => td_global::$get_template_directory_uri . '/images/panel/footer_templates/icon-footer-16.png',
+                'file' => td_global::$get_template_directory . '/parts/footer/td_footer_template_16.php',
+                'text' => 'Style 16'
 
             )
         );

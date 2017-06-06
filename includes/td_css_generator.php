@@ -70,7 +70,7 @@ function td_css_generator() {
     .td-mega-menu-page .wpb_content_element ul li a :hover,
     .td-smart-list-dropdown-wrap .td-smart-list-button:hover,
     .td-instagram-user a,
-    .footer-email-wrap a,
+    .footer-text-wrap .footer-email-wrap a,
     .td-sub-footer-copy i,
     .td-footer-outer-wrapper a:hover,
     .td-footer-outer-wrapper .td_social_type .td_social_button a:hover,
@@ -357,6 +357,39 @@ function td_css_generator() {
           opacity: 1;
           display: block;
         }
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* MEGA MENU COLORS */
+    /* @mega_menu_background */
+    .td-theme-wrap .td-mega-menu ul {
+        background-color: @mega_menu_background;
+    }
+    /* @mega_menu_color */
+    .td-theme-wrap .td_module_mega_menu .entry-title a,
+    .td-theme-wrap .td_mega_menu_sub_cats a,
+    .td-theme-wrap .td-mega-span .td-item-details > span,
+    .td-theme-wrap .td-mega-span .td-item-details > div {
+        color: @mega_menu_color;
+    }
+    @media (min-width: 1141px) {
+        .td_stretch_content .td_block_mega_menu:before {
+            background-color: @mega_menu_subcategories_background;
+        }
+    }
+    /* @mega_menu_subcategories_border */
+    .td-theme-wrap .td-mega-menu ul:after,
+    .td-theme-wrap .td_mega_menu_sub_cats .mega-menu-cat-all:before {
+        background-color: @mega_menu_subcategories_border;
+    }
+    /* @mega_menu_accent_color */
+    .td-theme-wrap .td_module_mega_menu:hover .td-item-details .entry-title a,
+    .td-theme-wrap .td_mega_menu_sub_cats .block-mega-child-cats .cur-sub-cat {
+        color: @mega_menu_accent_color;
+    }
+    .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
+        border-color: @mega_menu_accent_color;
     }
 
 
@@ -670,7 +703,8 @@ function td_css_generator() {
     .td-footer-outer-wrapper .td_social_type .td_social_button a,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type .td-sp:before,
-    .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box {
+    .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box,
+    .td-social-style-2 .td-icon-font:after {
       border-color: @footer_text_color;
     }
 
@@ -1204,6 +1238,13 @@ function td_css_generator() {
     $td_css_compiler->load_setting('submenu_hover_color');
     $td_css_compiler->load_setting('menu_text_color');
     $td_css_compiler->load_setting('menu_border_color');
+
+    // meag menu
+    $td_css_compiler->load_setting('mega_menu_background');
+    $td_css_compiler->load_setting('mega_menu_color');
+    $td_css_compiler->load_setting('mega_menu_next_color');
+    $td_css_compiler->load_setting('mega_menu_subcategories_border');
+    $td_css_compiler->load_setting('mega_menu_accent_color');
 
     // mobile menu
     $td_css_compiler->load_setting('mobile_menu_color');
