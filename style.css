@@ -16652,6 +16652,27 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.tdc-element .tdc-block-empty {
+  height: 50px;
+  border: 1px solid #ebebeb;
+  font-size: 13px;
+  line-height: 50px;
+  color: #666;
+}
+.tdc-element .tdc-block-empty:before {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.tdc-element .tdc-block-empty.td_block_authors {
+  outline: none;
+}
+.tdc-element .tdc-block-empty.td_block_authors:before {
+  content: 'No author';
+}
 .td-element-style {
   position: absolute;
   z-index: 0;

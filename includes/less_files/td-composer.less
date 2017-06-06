@@ -55,6 +55,36 @@
   }
 }
 
+// block empty info text
+.tdc-element .tdc-block-empty {
+  // general
+  & {
+    height: 50px;
+    border: 1px solid #ebebeb;
+    font-size: 13px;
+    line-height: 50px;
+    color: #666;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  // Authors box
+  &.td_block_authors {
+    outline: none;
+
+    &:before {
+      content: 'No author';
+    }
+  }
+}
+
 
 // used for background images on row/column/blocks
 .td-element-style {
