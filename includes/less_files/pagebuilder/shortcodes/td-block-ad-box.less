@@ -278,6 +278,7 @@
 }
 .td-g-rec-id-sidebar {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 
@@ -363,10 +364,19 @@
     @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
         margin-bottom: 30px;
     }
+  }
+}
 
-    /* responsive portrait phone */
-    @media (max-width: @responsive_p_phone_max) {
-      margin-bottom: 0;
-    }
+// custom ad
+.td-g-rec-id-custom_ad_1,
+.td-g-rec-id-custom_ad_2,
+.td-g-rec-id-custom_ad_3,
+.td-g-rec-id-custom_ad_4,
+.td-g-rec-id-custom_ad_5 {
+  margin-bottom: 40px;
+
+  /* responsive portrait tablet */
+  @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+      margin-bottom: 30px;
   }
 }
