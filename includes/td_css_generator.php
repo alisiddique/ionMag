@@ -70,7 +70,7 @@ function td_css_generator() {
     .td-mega-menu-page .wpb_content_element ul li a :hover,
     .td-smart-list-dropdown-wrap .td-smart-list-button:hover,
     .td-instagram-user a,
-    .footer-email-wrap a,
+    .footer-text-wrap .footer-email-wrap a,
     .td-sub-footer-copy i,
     .td-footer-outer-wrapper a:hover,
     .td-footer-outer-wrapper .td_social_type .td_social_button a:hover,
@@ -703,7 +703,8 @@ function td_css_generator() {
     .td-footer-outer-wrapper .td_social_type .td_social_button a,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type,
     .td-footer-outer-wrapper .td-social-style2 .td_social_type .td-sp:before,
-    .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box {
+    .td-footer-outer-wrapper .td-social-style8 .td_social_type .td-social-box,
+    .td-social-style-2 .td-icon-font:after {
       border-color: @footer_text_color;
     }
 
