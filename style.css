@@ -16595,6 +16595,34 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
 .td-pb-span8 [class*="td-spot-id-custom_ad"] .tdc-placeholder-title {
   width: 100%;
 }
+.tdc-missing-external-shortcode,
+.td-block-missing-settings,
+.tdc_external_shortcode {
+  background-color: transparent;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #eeecf0;
+  color: black;
+}
+.tdc-missing-external-shortcode span,
+.td-block-missing-settings span,
+.tdc_external_shortcode span {
+  background-color: #ec4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 3px 8px 4px;
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+  margin-right: 10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
 .td-element-style {
   position: absolute;
   z-index: 0;
