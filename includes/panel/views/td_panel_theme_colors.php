@@ -45,6 +45,16 @@ echo td_panel_generator::ajax_box('Mega menu', array(
 ?>
 
 
+<!-- LIVE SEARCH -->
+<?php
+echo td_panel_generator::ajax_box('Live search', array(
+        'td_ajax_calling_file' => basename(__FILE__),
+        'td_ajax_box_id' => 'td_live_search'
+    )
+);
+?>
+
+
 <!-- MOBILE MENU -->
 <?php
 echo td_panel_generator::ajax_box('Mobile menu / Mobile search', array(
