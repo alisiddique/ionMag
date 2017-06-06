@@ -361,6 +361,39 @@ function td_css_generator() {
 
 
     /* ------------------------------------------------------ */
+    /* MEGA MENU COLORS */
+    /* @mega_menu_background */
+    .td-theme-wrap .td-mega-menu ul {
+        background-color: @mega_menu_background;
+    }
+    /* @mega_menu_color */
+    .td-theme-wrap .td-mega-span .entry-title a,
+    .td-theme-wrap .td_mega_menu_sub_cats a,
+    .td-theme-wrap .td-mega-span .td-item-details > span,
+    .td-theme-wrap .td-mega-span .td-item-details > div {
+        color: @mega_menu_color;
+    }
+    @media (min-width: 1141px) {
+        .td_stretch_content .td_block_mega_menu:before {
+            background-color: @mega_menu_subcategories_background;
+        }
+    }
+    /* @mega_menu_subcategories_border */
+    .td-theme-wrap .td-mega-menu ul:after,
+    .td-theme-wrap .td_mega_menu_sub_cats .mega-menu-cat-all:before {
+        background-color: @mega_menu_subcategories_border;
+    }
+    /* @mega_menu_accent_color */
+    .td-theme-wrap .td_module_mega_menu:hover .entry-title a,
+    .td-theme-wrap .sf-menu .td_mega_menu_sub_cats .cur-sub-cat {
+        color: @mega_menu_accent_color;
+    }
+    .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
+        border-color: @mega_menu_accent_color;
+    }
+
+
+    /* ------------------------------------------------------ */
     /* MOBILE MENU / MOBILE SEARCH COLORS */
     /* @mobile_menu_color */
     @media (max-width: 767px) {
@@ -1204,6 +1237,13 @@ function td_css_generator() {
     $td_css_compiler->load_setting('submenu_hover_color');
     $td_css_compiler->load_setting('menu_text_color');
     $td_css_compiler->load_setting('menu_border_color');
+
+    // meag menu
+    $td_css_compiler->load_setting('mega_menu_background');
+    $td_css_compiler->load_setting('mega_menu_color');
+    $td_css_compiler->load_setting('mega_menu_next_color');
+    $td_css_compiler->load_setting('mega_menu_subcategories_border');
+    $td_css_compiler->load_setting('mega_menu_accent_color');
 
     // mobile menu
     $td_css_compiler->load_setting('mobile_menu_color');
