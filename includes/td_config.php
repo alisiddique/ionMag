@@ -1697,7 +1697,7 @@ class td_config {
 	                        "heading" => 'Ad title:',
 	                        "description" => "Optional - a title for the Ad, like - Advertisement - if you leave it blank the block will not have a title",
 	                        "holder" => "div",
-	                        "class" => "",
+	                        "class" => "tdc-textfield-big",
 	                    ),
 		                array(
 			                "param_name" => "separator",

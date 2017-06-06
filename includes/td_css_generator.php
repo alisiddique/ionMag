@@ -378,9 +378,12 @@ function td_css_generator() {
             background-color: @mega_menu_subcategories_background;
         }
     }
-    /* @mega_menu_subcategories_border */
-    .td-theme-wrap .td-mega-menu ul:after,
     .td-theme-wrap .td_mega_menu_sub_cats .mega-menu-cat-all:before {
+        background-color: @mega_menu_subcategories_border;
+        opacity: 0.2;
+    }
+    /* @mega_menu_subcategories_border */
+    .td-theme-wrap .td-mega-menu ul:after {
         background-color: @mega_menu_subcategories_border;
     }
     /* @mega_menu_accent_color */
@@ -389,7 +392,54 @@ function td_css_generator() {
         color: @mega_menu_accent_color;
     }
     .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
-        border-color: @mega_menu_accent_color;
+        background-color: @mega_menu_accent_color;
+    }
+
+
+    /* ------------------------------------------------------ */
+    /* LIVE SEARCH COLORS */
+    /* @live_search_background */
+    .td-theme-wrap .td-header-menu-search .td-search-box-wrap,
+    .td-theme-wrap #td-header-search {
+        background-color: @live_search_background;
+    }
+    /* @live_search_border_color */
+    .td-theme-wrap .header-search-wrap .td-aj-search-results,
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search #td-header-search,
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn {
+        border-color: @live_search_border_color !important;
+    }
+    .td-theme-wrap .td-header-menu-search .td-search-box-wrap,
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .td-aj-search-results {
+        -webkit-box-shadow: inset 0 0 1px 0 @live_search_border_color;
+        -moz-box-shadow: inset 0 0 1px 0 @live_search_border_color;
+        box-shadow: inset 0 0 1px 0 @live_search_border_color;
+    }
+    /* @live_search_text_color */
+    .td-theme-wrap .td-aj-search-results .td-module-title a,
+    .td-theme-wrap .td-aj-search-results .td-post-date,
+    .td-theme-wrap #td-header-search,
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn,
+    .td-theme-wrap .td-header-menu-search .result-msg a {
+        color: @live_search_text_color;
+    }
+    .td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,
+    .td-theme-wrap .header-search-wrap .result-msg a:hover,
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn:hover {
+        color: #42bdcd;
+    }
+    /* @live_search_button_text_color */
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn {
+        color: @live_search_button_text_color;
+    }
+    /* @live_search_accent_color */
+    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn:hover,
+    .td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,
+    .td-theme-wrap .td-header-menu-search .result-msg a {
+        color: @live_search_accent_color !important;
+    }
+    .td-theme-wrap .td-aj-search-results .td_module_wrap .td-post-category:hover {
+        background-color: @live_search_accent_color;
     }
 
 
@@ -1245,6 +1295,14 @@ function td_css_generator() {
     $td_css_compiler->load_setting('mega_menu_next_color');
     $td_css_compiler->load_setting('mega_menu_subcategories_border');
     $td_css_compiler->load_setting('mega_menu_accent_color');
+
+    // live search
+    $td_css_compiler->load_setting('live_search_background');
+    $td_css_compiler->load_setting('live_search_border_color');
+    $td_css_compiler->load_setting('live_search_text_color');
+    $td_css_compiler->load_setting('live_search_date_color');
+    $td_css_compiler->load_setting('live_search_button_text_color');
+    $td_css_compiler->load_setting('live_search_accent_color');
 
     // mobile menu
     $td_css_compiler->load_setting('mobile_menu_color');
