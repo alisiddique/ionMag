@@ -378,9 +378,12 @@ function td_css_generator() {
             background-color: @mega_menu_subcategories_background;
         }
     }
-    /* @mega_menu_subcategories_border */
-    .td-theme-wrap .td-mega-menu ul:after,
     .td-theme-wrap .td_mega_menu_sub_cats .mega-menu-cat-all:before {
+        background-color: @mega_menu_subcategories_border;
+        opacity: 0.2;
+    }
+    /* @mega_menu_subcategories_border */
+    .td-theme-wrap .td-mega-menu ul:after {
         background-color: @mega_menu_subcategories_border;
     }
     /* @mega_menu_accent_color */
@@ -389,7 +392,7 @@ function td_css_generator() {
         color: @mega_menu_accent_color;
     }
     .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
-        border-color: @mega_menu_accent_color;
+        background-color: @mega_menu_accent_color;
     }
 
 

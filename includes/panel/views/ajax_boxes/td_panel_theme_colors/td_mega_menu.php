@@ -49,20 +49,3 @@
         ?>
     </div>
 </div>
-
-<!-- Mega menu left subcategories section border color -->
-<div class="td-box-row">
-    <div class="td-box-description">
-        <span class="td-box-title">SUBCATEGORIES SECTION BORDER COLOR</span>
-        <p>Mega menu subcategories section border color</p>
-    </div>
-    <div class="td-box-control-full">
-        <?php
-        echo td_panel_generator::color_picker(array(
-            'ds' => 'td_option',
-            'option_id' => 'tds_mega_menu_subcategories_border',
-            'default_color' => '#f2f2f2'
-        ));
-        ?>
-    </div>
-</div>
