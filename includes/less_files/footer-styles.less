@@ -75,6 +75,10 @@
 
     &:last-child {
       margin-right: 0;
+
+      .td-icon-font {
+        margin-right: 0;
+      }
     }
   }
 
@@ -113,6 +117,37 @@
     /* responsive portrait tablet */
     @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
         font-size: 12px;
+    }
+  }
+}
+
+// footer extra column
+.td-footer-extra-column {
+  text-align: left;
+  margin-top: 44px;
+  margin-bottom: 20px;
+
+  /* responsive portrait phone */
+  @media (max-width: @responsive_p_phone_max) {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-text-wrap {
+    width: auto;
+    margin: 16px auto;
+  }
+
+  .footer-email-wrap {
+    margin-top: 21px;
+  }
+
+  .td-social-style-2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    &:after {
+      display: none;
     }
   }
 }
