@@ -39,12 +39,13 @@ class td_block_instagram extends td_block {
 
 		    // For tagDiv composer add a placeholder element
 	        if ((td_util::tdc_is_live_editor_iframe() || td_util::tdc_is_live_editor_ajax()) && '' === $this->atts['instagram_id']) {
-		        $buffy .= '<div class="td-block-missing-settings">Instagram block <strong>Instagram ID</strong> is empty. Configure this block and enter a valid Instagram id.</div>';
+		        $buffy .= td_util::get_block_error('Instagram', '<strong>Instagram ID</strong> is empty. Configure this block and enter a valid Instagram id.' );
+	        } else {
+			    $buffy .= '<div id=' . $this->block_uid . ' class="td-instagram-wrap">';
+	                $buffy.= td_instagram::render_generic($atts);
+	            $buffy .= '</div>';
 	        }
 
-            $buffy .= '<div id=' . $this->block_uid . ' class="td-instagram-wrap">';
-                $buffy.= td_instagram::render_generic($atts);
-            $buffy .= '</div>';
         $buffy .= '</div> <!-- ./block -->';
         return $buffy;
     }
