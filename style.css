@@ -6374,6 +6374,10 @@ body .dropcap3 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.td_block_image_box .td-custom-image.td-no-img-custom-url a {
+  pointer-events: none;
+  cursor: default;
+}
 .td_block_image_box .td-custom-image img {
   vertical-align: top;
 }

@@ -1,11 +1,12 @@
 <?php
 class td_block_image_box extends td_block {
 
+	private $atts = array(); //the atts used for rendering the current block
 
 	function render($atts, $content = null) {
 		parent::render($atts);
 
-		extract(shortcode_atts(
+		$this->atts = shortcode_atts(
 			array(
 				'height' => '',
 				'gap' => '',
@@ -34,26 +35,24 @@ class td_block_image_box extends td_block {
 				'open_in_new_window_item3' => '',
 				'image_item3' => '',
 
-			), $atts));
-
-		$ref_var = 'image_item';
+			), $atts);
 
 		$items = array();
 		for ($i = 0; $i < 4; $i++ ) {
-			if ( ! empty( ${$ref_var . $i})) {
+			if ( ! empty( $this->atts['image_item' . $i] ) ) {
 				$items[] = array(
-					'image_title' => ${'image_title_item' . $i},
-					'custom_url' => ${'custom_url_item' . $i},
-					'open_in_new_window' => ${'open_in_new_window_item' . $i},
-					'image' => ${'image_item' . $i}
+					'image_title' => $this->atts['image_title_item' . $i],
+					'custom_url' => $this->atts['custom_url_item' . $i],
+					'open_in_new_window' => $this->atts['open_in_new_window_item' . $i],
+					'image' => $this->atts['image_item' . $i],
 				);
 			}
 		}
 
-
-
 		// height
 		$box_height = '';
+		$height = $this->atts['height'];
+
 		if( !empty($height) ) {
 			//the user height value, verified for a 'px' matching
 			if ( strpos($height, 'px') !== false ) {
@@ -66,7 +65,11 @@ class td_block_image_box extends td_block {
 		// gap
 		$box_gap_padding = '';
 		$box_gap_margin = '';
-		if( isset($gap) ) {
+
+		if( !empty($this->atts['gap']) ) {
+
+			$gap = $this->atts['gap'];
+
 			//the user gap value, verified for a 'px' matching
 			if ( strpos($gap, 'px') !== false ) {
 				$box_gap_padding = 'padding-left: ' . $gap . '; padding-right: ' . $gap;
@@ -84,22 +87,26 @@ class td_block_image_box extends td_block {
 		$additional_classes = array();
 
 
-		if(!empty($display)) {
+		if(!empty($this->atts['display'])) {
 			$additional_classes [] = 'td-box-vertical';
 
-			if(isset($gap)) {
-				$box_space = ' margin-bottom: ' . $gap . 'px;';
+			if(!empty($gap)) {
+				if ( strpos($gap, 'px') !== false ) {
+					$box_space = ' margin-bottom: ' . $gap . ';';
+				} else {
+					$box_space = ' margin-bottom: ' . $gap . 'px;';
+				}
 			}
 		}
 
 		// alignment
-		if(!empty($alignment)) {
-			$additional_classes [] = 'td-image-box-' . $atts['alignment'];
+		if(!empty($this->atts['alignment'])) {
+			$additional_classes [] = 'td-image-box-' . $this->atts['alignment'];
 		}
 
 		// style
-		if(!empty($atts['style'])) {
-			$additional_classes [] = 'td-image-box-' . $atts['style'];
+		if(!empty($this->atts['style'])) {
+			$additional_classes [] = 'td-image-box-' . $this->atts['style'];
 		}
 
 		$buffy = '';
@@ -113,126 +120,65 @@ class td_block_image_box extends td_block {
 			$buffy .= $this->get_block_title();
 		$buffy .= '</div>';
 
-
 		switch(count($items)) {
-			case 1:
-				$buffy .= '<div class="td-image-box-row td-big-image" style="' . $box_gap_margin . '">';
-					$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding .  $box_space . '">';
-					foreach($items as $item) {
-
-						$target = '';
-
-						if ( '' !== $item[ 'open_in_new_window' ] ) {
-							$target = ' target="_blank" ';
-						}
-
-						$buffy .= '<div class="td-custom">';
-							$buffy .= '<div class="td-custom-image">';
-							$buffy .= '<a style="background-image: url(\'' . wp_get_attachment_url($item[ 'image' ]) . '\');' . $box_height . '" href="' . $item[ 'custom_url' ] . '" ' . $target . ' rel="bookmark" title="' . $item[ 'image_title' ] . '"></a>';
-							$buffy .= '</div>';
-							$buffy .= '<div class="td-custom-title">';
-							$buffy .= '<h3 class="entry-title"><a href="' . $item[ 'custom_url' ] . '">' . $item[ 'image_title' ] . '</a></h3>';
-							$buffy .= '</div>';
-						$buffy .= '</div>';
-					}
-					$buffy .= '</div>';
-				$buffy .= '</div>';
-				break;
-
-			case 2:
-				$buffy .= '<div class="td-image-box-row td-medium-image" style="' . $box_gap_margin . '">';
-					foreach($items as $item) {
-						$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding . $box_space . '">';
-
-							$target = '';
-
-							if ( '' !== $item[ 'open_in_new_window' ] ) {
-								$target = ' target="_blank" ';
-							}
-
-							$buffy .= '<div class="td-custom">';
-								$buffy .= '<div class="td-custom-image">';
-								$buffy .= '<a style="background-image: url(\'' . wp_get_attachment_url($item[ 'image' ]) . '\');' . $box_height . '" href="' . $item[ 'custom_url' ] . '" ' . $target . ' rel="bookmark" title="' . $item[ 'image_title' ] . '"></a>';
-								$buffy .= '</div>';
-								$buffy .= '<div class="td-custom-title">';
-								$buffy .= '<h3 class="entry-title"><a href="' . $item[ 'custom_url' ] . '">' . $item[ 'image_title' ] . '</a></h3>';
-								$buffy .= '</div>';
-							$buffy .= '</div>';
-						$buffy .= '</div>';
-					}
-				$buffy .= '</div>';
-				break;
-
-			case 3:
-				$buffy .= '<div class="td-image-box-row td-small-image" style="' . $box_gap_margin . '">';
-					foreach($items as $item) {
-						$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding . $box_space . '">';
-
-							$target = '';
-
-							if ( '' !== $item[ 'open_in_new_window' ] ) {
-								$target = ' target="_blank" ';
-							}
-
-							$buffy .= '<div class="td-custom">';
-								$buffy .= '<div class="td-custom-image">';
-								$buffy .= '<a style="background-image: url(\'' . wp_get_attachment_url($item[ 'image' ]) . '\');' . $box_height . '" href="' . $item[ 'custom_url' ] . '" ' . $target . ' rel="bookmark" title="' . $item[ 'image_title' ] . '"></a>';
-								$buffy .= '</div>';
-								$buffy .= '<div class="td-custom-title">';
-								$buffy .= '<h3 class="entry-title"><a href="' . $item[ 'custom_url' ] . '">' . $item[ 'image_title' ] . '</a></h3>';
-								$buffy .= '</div>';
-							$buffy .= '</div>';
-						$buffy .= '</div>';
-					}
-				$buffy .= '</div>';
-				break;
-
-			case 4:
-				$buffy .= '<div class="td-image-box-row td-tiny-image" style="' . $box_gap_margin . '">';
-					foreach($items as $item) {
-						$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding . $box_space . '">';
-
-							$target = '';
-
-							if ( '' !== $item[ 'open_in_new_window' ] ) {
-								$target = ' target="_blank" ';
-							}
-
-							$buffy .= '<div class="td-custom">';
-								$buffy .= '<div class="td-custom-image">';
-								$buffy .= '<a style="background-image: url(\'' . wp_get_attachment_url($item[ 'image' ]) . '\');' . $box_height . '" href="' . $item[ 'custom_url' ] . '" ' . $target . ' rel="bookmark" title="' . $item[ 'image_title' ] . '"></a>';
-								$buffy .= '</div>';
-								$buffy .= '<div class="td-custom-title">';
-								$buffy .= '<h3 class="entry-title"><a href="' . $item[ 'custom_url' ] . '">' . $item[ 'image_title' ] . '</a></h3>';
-								$buffy .= '</div>';
-							$buffy .= '</div>';
-						$buffy .= '</div>';
-					}
-				$buffy .= '</div>';
-				break;
-
-			default:
-				$buffy .= '<div class="td-image-box-row td-small-image" style="' . $box_gap_margin . '">';
-
-					$index = 0;
-					while($index < 3) {
-						$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding . $box_space . '">';
-							$buffy .= '<div class="td-custom">';
-								$buffy .= '<div class="td-custom-image">';
-								$buffy .= '<a style="background-image: url(\'' . get_template_directory_uri() . '/images/no-thumb/td_640x400.png\');' . $box_height . '" href="#" rel="bookmark" title="Custom title"></a>';
-								$buffy .= '</div>';
-								$buffy .= '<div class="td-custom-title">';
-								$buffy .= '<h3 class="entry-title"><a href="#">Custom title</a></h3>';
-								$buffy .= '</div>';
-							$buffy .= '</div>';
-						$buffy .= '</div>';
-
-						$index++;
-					}
-				$buffy .= '</div>';
-				break;
+			case 1: $css_class = 'td-big-image'; break;
+			case 2: $css_class = 'td-medium-image'; break;
+			case 3: $css_class = 'td-small-image'; break;
+			case 4: $css_class = 'td-tiny-image'; break;
 		}
 
+		if ( isset($css_class) ) {
+
+			$buffy .= '<div class="td-image-box-row ' . $css_class . '" style="' . $box_gap_margin . '">';
+			foreach($items as $item) {
+
+				$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding .  $box_space . '">';
+
+				$target = '';
+				$no_custom_url = '';
+
+				if ( '' !== $item[ 'open_in_new_window' ] ) {
+					$target = ' target="_blank" ';
+				}
+
+				if ( '#' == $item[ 'custom_url' ] ) {
+					$no_custom_url = ' td-no-img-custom-url';
+				}
+
+					$buffy .= '<div class="td-custom">';
+						$buffy .= '<div class="td-custom-image' . $no_custom_url . '">';
+							$buffy .= '<a style="background-image: url(\'' . wp_get_attachment_url($item[ 'image' ]) . '\');' . $box_height . '" href="' . $item[ 'custom_url' ] . '" ' . $target . ' rel="bookmark" title="' . $item[ 'image_title' ] . '"></a>';
+						$buffy .= '</div>';
+						$buffy .= '<div class="td-custom-title">';
+							$buffy .= '<h3 class="entry-title"><a href="' . $item[ 'custom_url' ] . '">' . $item[ 'image_title' ] . '</a></h3>';
+						$buffy .= '</div>';
+					$buffy .= '</div>';
+
+				$buffy .= '</div>';
+			}
+			$buffy .= '</div>';
+
+		} else {
+
+			$buffy .= '<div class="td-image-box-row td-small-image" style="' . $box_gap_margin . '">';
+
+			$index = 0;
+			while($index < 3) {
+				$buffy .= '<div class="td-image-box-span" style="' . $box_gap_padding . $box_space . '">';
+					$buffy .= '<div class="td-custom">';
+						$buffy .= '<div class="td-custom-image td-no-img-custom-url">';
+							$buffy .= '<a href="#" rel="bookmark" title="Custom title"></a>';
+						$buffy .= '</div>';
+						$buffy .= '<div class="td-custom-title">';
+							$buffy .= '<h3 class="entry-title"><a href="#">Custom title</a></h3>';
+						$buffy .= '</div>';
+					$buffy .= '</div>';
+				$buffy .= '</div>';
+
+				$index++;
+			}
+			$buffy .= '</div>';
+		}
 
 		$buffy .= '</div>';
 
