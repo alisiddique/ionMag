@@ -285,6 +285,209 @@
 }
 
 
+
+
+.td-subcat-item {
+  list-style-type: none;
+
+  a {
+    color: #666;
+
+    &:hover {
+      color: @td_theme_color;
+    }
+  }
+}
+
+.td-subcat-dropdown {
+  color: #666;
+
+  i {
+    margin-left: 10px;
+    font-size: 9px;
+  }
+}
+
+
+.td-subcat-filter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  opacity: 0;
+  z-index: 2;
+  line-height: 30px; // this will fix the alignment when is without dropdown
+  text-align: right;
+
+  ul {
+    margin: 0;
+  }
+
+  .td-display-filter {
+    display: none !important;
+  }
+
+  // Category list
+  .td-subcat-list {
+    display: inline-block;
+    margin: 0;
+    line-height: 1;
+
+    .td-subcat-item {
+      display: inline-block;
+      line-height: 1;
+      margin-left: 30px;
+    }
+
+    a {
+      font-size: 13px;
+      color: #444;
+      line-height: 1;
+
+      &:hover {
+        color: @td_theme_color;
+      }
+    }
+  }
+
+
+
+  // Category dropdown
+  .td-subcat-dropdown {
+    display: inline-block;
+    text-align: right;
+    line-height: 30px;
+
+    // menu dropdown
+    &:hover {
+      .td-subcat-more {
+
+        span, i {
+          color: #fff;
+        }
+      }
+
+      ul {
+        display: block;
+      }
+    }
+
+    .td-subcat-more {
+      cursor: pointer;
+      margin-left: 15px;
+      padding-left: 15px;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        margin-top: 2px;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+      }
+
+
+      i {
+        font-size: 9px;
+        color: #777;
+        margin-left: 8px;
+        margin-right: 12px;
+      }
+    }
+
+    ul {
+      position: absolute;
+      display: none;
+      top: 100%;
+      right: 0;
+      padding: 11px 0;
+      margin: -1px 0 0 0;
+      min-width: 141px;
+      background-color: rgba(255, 255, 255, 0.94);
+      .box-shadow(inset 0 0 1px 0 rgba(0, 0, 0, 0.3));
+      z-index: 99;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: @td_theme_color;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    a {
+      font-size: 13px;
+      color: #444;
+      white-space: nowrap;
+      display: block;
+      line-height: 23px;
+      padding: 0 20px;
+
+      &:hover {
+        color: @td_theme_color;
+      }
+    }
+
+    li {
+      margin-left: 0;
+    }
+
+    span {
+      font-size: 13px;
+      color: #444;
+      line-height: 1;
+    }
+  }
+}
+
+.td-js-loaded .td-subcat-filter {
+  opacity: 1;
+  .transition(opacity 0.3s);
+}
+
+// Style 3
+.td-pulldown-syle-3 {
+  top: 0;
+
+  .td-subcat-dropdown {
+    ul {
+      margin-top: -1px;
+    }
+
+    &:hover .td-subcat-more {
+      background-color: transparent !important;
+
+      span,
+      i {
+        color: @td_theme_color;
+      }
+    }
+
+    .td-subcat-more {
+      margin-left: 9px;
+      margin-bottom: 8px; // this align the dropdown list
+    }
+  }
+
+  .td-subcat-list {
+    .td-subcat-item {
+      margin-left: 24px;
+    }
+  }
+}
+
+
+
 /*  ----------------------------------------------------------------------------
     Quote on Blocks
 */
@@ -1666,151 +1869,4 @@
   @media (max-width: @responsive_p_phone_max) {
     padding-bottom: 3px;
   }
-}
-
-
-
-/*  ----------------------------------------------------------------------------
-    Block category filter
-*/
-.td-subcat-filter {
-  //display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: auto 0;
-  opacity: 0;
-  z-index: 2;
-  line-height: 30px; // this will fix the alignment when is without dropdown
-  text-align: right;
-
-  ul {
-    margin: 0;
-  }
-
-  .td-display-filter {
-    display: none !important;
-  }
-
-  // Category list
-  .td-subcat-list {
-    display: inline-block;
-    line-height: 1;
-
-    .td-subcat-item {
-      display: inline-block;
-      line-height: 1;
-      margin-left: 30px;
-    }
-
-    a {
-      font-family: @font3;
-      font-size: 13px;
-      color: #777;
-      line-height: 1;
-
-      &:hover {
-        color: @td_theme_color;
-      }
-    }
-  }
-
-  // Category dropdown
-  .td-subcat-dropdown {
-    display: inline-block;
-    text-align: right;
-    line-height: 30px;
-    position: relative;
-
-    // menu dropdown
-    &:hover {
-      .td-subcat-more {
-
-        span, i {
-          color: #fff;
-        }
-      }
-
-      ul {
-        display: block;
-      }
-    }
-
-    .td-subcat-more {
-      cursor: pointer;
-      margin-left: 15px;
-      padding-left: 15px;
-      -moz-user-select: none;
-      -webkit-user-select: none;
-      -ms-user-select: none;
-      display: inline-block;
-
-      &:before {
-        content: '';
-        width: 70px;
-        height: 100%;
-        position: absolute;
-        margin-top: 2px;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        opacity: 0;
-      }
-
-
-      i {
-        font-size: 9px;
-        color: #777;
-        margin-left: 12px;
-        margin-right: 12px;
-      }
-    }
-
-    ul {
-      list-style: none;
-      position: absolute;
-      right: 0;
-      top: 100%;
-      padding: 6px 0 8px 0;
-      background-color: rgb(255, 255, 255);
-      background-color: rgba(255, 255, 255, 0.95);
-      z-index: 999;
-      border-width: 0 1px 1px 1px;
-      //border-color: @td_grid_border_color;
-      border-color: #000;
-      border-style: solid;
-      display: none;
-    }
-
-    a {
-      font-family: @font3;
-      font-size: 13px;
-      color: #777;
-      white-space: nowrap;
-      display: block;
-      line-height: 26px;
-      padding-left: 21px;
-      padding-right: 15px;
-
-      &:hover {
-        color: @td_theme_color;
-      }
-    }
-
-    li {
-      margin-left: 0;
-    }
-
-    span {
-      font-family: @font3;
-      font-size: 13px;
-      color: #777;
-      line-height: 1;
-    }
-  }
-}
-
-.td-js-loaded .td-subcat-filter {
-  opacity: 1;
-  .transition(opacity 0.3s);
 }
