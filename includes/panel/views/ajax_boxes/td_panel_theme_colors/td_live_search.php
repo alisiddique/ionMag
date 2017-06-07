@@ -49,23 +49,6 @@
     </div>
 </div>
 
-<!-- Live search button text color -->
-<div class="td-box-row">
-    <div class="td-box-description">
-        <span class="td-box-title">LIVE SEARCH BUTTON TEXT COLOR</span>
-        <p>Select live search background/text color</p>
-    </div>
-    <div class="td-box-control-full">
-        <?php
-        echo td_panel_generator::color_picker(array(
-            'ds' => 'td_option',
-            'option_id' => 'tds_live_search_button_text_color',
-            'default_color' => '#000000'
-        ));
-        ?>
-    </div>
-</div>
-
 <!-- Live search accent color -->
 <div class="td-box-row">
     <div class="td-box-description">

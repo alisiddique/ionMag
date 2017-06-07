@@ -428,10 +428,6 @@ function td_css_generator() {
     .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn:hover {
         color: #42bdcd;
     }
-    /* @live_search_button_text_color */
-    .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn {
-        color: @live_search_button_text_color;
-    }
     /* @live_search_accent_color */
     .td-theme-wrap .td-header-menu-search .td-drop-down-search .btn:hover,
     .td-theme-wrap .td-aj-search-results .td_module_wrap:hover .entry-title a,

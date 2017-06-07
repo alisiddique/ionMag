@@ -1698,7 +1698,7 @@ body.td-ad-background-link .td-container-wrap {
   border: 1px solid #ededed;
 }
 .td-header-wrap .td-drop-down-search .td-aj-cur-element {
-  background-color: #f5f5f5;
+  background-color: rgba(128, 128, 128, 0.1);
 }
 .td-header-wrap .td-drop-down-search:after {
   position: absolute;
