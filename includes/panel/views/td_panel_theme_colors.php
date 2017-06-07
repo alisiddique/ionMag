@@ -35,6 +35,16 @@ echo td_panel_generator::ajax_box('Main menu', array(
 ?>
 
 
+<!-- SUB MENU -->
+<?php
+echo td_panel_generator::ajax_box('Sub menu', array(
+        'td_ajax_calling_file' => basename(__FILE__),
+        'td_ajax_box_id' => 'td_sub_menu'
+    )
+);
+?>
+
+
 <!-- MEGA MENU -->
 <?php
 echo td_panel_generator::ajax_box('Mega menu', array(
