@@ -2784,72 +2784,54 @@ class td_config {
 			    "category" => 'Blocks',
 			    'icon' => 'icon-pagebuilder-td_block_list_menu',
 			    'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_list_menu.php',
-			    'params' => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-				    array(
-					    "param_name" => "menu_id",
-					    "type" => "dropdown",
-					    "value" => $td_block_list_menus,
-					    "heading" => 'Use items from:',
-					    "description" => "",
-					    "holder" => "div",
-					    "class" => "tdc-dropdown-big",
-				    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        'param_name' => 'el_class',
-                        'type' => 'textfield',
-                        'value' => '',
-                        'heading' => 'Extra class',
-                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-                        'class' => 'tdc-textfield-extrabig',
-                        'group' => ''
-                    ),
-                    array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-				    array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+			    'params' => array_merge(
+	                td_config::get_map_block_general_array(),
+	                array(
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+	                    array(
+						    "param_name" => "menu_id",
+						    "type" => "dropdown",
+						    "value" => $td_block_list_menus,
+						    "heading" => 'Use items from:',
+						    "description" => "",
+						    "holder" => "div",
+						    "class" => "tdc-dropdown-big",
+					    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+	                    array(
+	                        'param_name' => 'el_class',
+	                        'type' => 'textfield',
+	                        'value' => '',
+	                        'heading' => 'Extra class',
+	                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+	                        'class' => 'tdc-textfield-extrabig',
+	                        'group' => ''
+	                    ),
+	                    array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+					    array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
 			    )
 		    )
 	    );
