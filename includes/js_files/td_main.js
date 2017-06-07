@@ -54,7 +54,46 @@ if (tdUtil.getBackendVar('tds_smart_sidebar') == 'enabled' && tdDetect.isIos ===
 
 
 
+/**
+ * pulldown lists
+ *
+ */
 
+jQuery(window).load( function() {
+
+// block subcategory ajax filters!
+    jQuery('.td-subcat-filter').each(function (index, element) {
+        var jquery_object_container = jQuery(element);
+        var horizontal_jquery_obj = jquery_object_container.find('.td-subcat-list:first');
+
+        var pulldown_item_obj = new tdPullDown.item();
+        pulldown_item_obj.blockUid = jquery_object_container.parent().parent().data('td-block-uid'); // get the block UID
+        pulldown_item_obj.horizontal_jquery_obj = horizontal_jquery_obj;
+        pulldown_item_obj.vertical_jquery_obj = jquery_object_container.find('.td-subcat-dropdown:first');
+        pulldown_item_obj.horizontal_element_css_class = 'td-subcat-item';
+        pulldown_item_obj.container_jquery_obj = horizontal_jquery_obj.closest('.td-block-title-wrap');
+
+        // '.td-pulldown-size' are the elements excluded
+        pulldown_item_obj.excluded_jquery_elements = [pulldown_item_obj.container_jquery_obj.find('.td-pulldown-size')];
+        tdPullDown.add_item(pulldown_item_obj);
+    });
+
+
+// on category pages
+    jQuery('.td-category-siblings').each(function (index, element) {
+        var jquery_object_container = jQuery(element);
+        var horizontal_jquery_obj = jquery_object_container.find('.td-category:first');
+
+        var pulldown_item_obj = new tdPullDown.item();
+        pulldown_item_obj.horizontal_jquery_obj = horizontal_jquery_obj;
+        pulldown_item_obj.vertical_jquery_obj = jquery_object_container.find('.td-subcat-dropdown:first');
+        pulldown_item_obj.horizontal_element_css_class = 'entry-category';
+        pulldown_item_obj.container_jquery_obj = horizontal_jquery_obj.parents('.td-category-siblings:first');
+        tdPullDown.add_item(pulldown_item_obj);
+
+    });
+
+});
 
 
 
@@ -126,6 +165,10 @@ jQuery(window).ready(function() {
 
     // load animation stack
     tdAnimationStack.ready_init();
+
+
+    //initialize menu
+    tdMenu.init();
 });
 
 

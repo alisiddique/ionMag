@@ -299,7 +299,6 @@ function td_css_generator() {
 
     /* ------------------------------------------------------ */
     /* Main Menu Colors */
-    
     /* MENU BACKGROUND COLOR */
     /* @menu_color */
     .td-theme-wrap .td-header-menu-wrap {
@@ -331,11 +330,11 @@ function td_css_generator() {
     .sf-menu > .current-menu-item > a,
     .sf-menu > .current-menu-ancestor > a,
     .sf-menu > .current-category-ancestor > a,
-    .sf-menu ul .td-menu-item > a:hover,
-    .sf-menu ul .sfHover > a,
-    .sf-menu ul .current-menu-ancestor > a,
-    .sf-menu ul .current-category-ancestor > a,
-    .sf-menu ul .current-menu-item > a,
+    .td-theme-wrap .sf-menu ul .td-menu-item > a:hover,
+    .td-theme-wrap .sf-menu ul .sfHover > a,
+    .td-theme-wrap .sf-menu ul .current-menu-ancestor > a,
+    .td-theme-wrap .sf-menu ul .current-category-ancestor > a,
+    .td-theme-wrap .sf-menu ul .current-menu-item > a,
     .td_mega_menu_sub_cats .cur-sub-cat,
     .td_module_mega_menu:hover .entry-title a,
     .td-header-main-menu .td-search-btns-wrap:hover .td-icon-search {
@@ -357,6 +356,42 @@ function td_css_generator() {
           opacity: 1;
           display: block;
         }
+    }
+    
+
+    /* ------------------------------------------------------ */
+    /* Sub Menu Colors */
+    /* @sub_menu_background */
+    .td-theme-wrap .sf-menu .td-normal-menu ul {
+        background-color: @sub_menu_background;
+    }
+
+    /* @sub_menu_text_color */
+    .td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a {
+        color: @sub_menu_text_color;
+    }
+
+    /* @sub_menu_hover_color */
+    .td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a:hover,
+    .td-theme-wrap .sf-menu .td-normal-menu .sfHover > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-item > a {
+        color: @sub_menu_hover_color;
+    }
+
+    /* @sub_menu_hover_background */
+    .td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a:hover,
+    .td-theme-wrap .sf-menu .td-normal-menu .sfHover > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-item > a {
+        background-color: @sub_menu_hover_background;
+    }
+
+    /* @sub_menu_border_color */
+    .td-theme-wrap .sf-menu ul:after {
+        background-color: @sub_menu_border_color;
     }
 
 
@@ -1284,6 +1319,13 @@ function td_css_generator() {
     $td_css_compiler->load_setting('submenu_hover_color');
     $td_css_compiler->load_setting('menu_text_color');
     $td_css_compiler->load_setting('menu_border_color');
+
+    // sub menu
+    $td_css_compiler->load_setting('sub_menu_background');
+    $td_css_compiler->load_setting('sub_menu_text_color');
+    $td_css_compiler->load_setting('sub_menu_hover_color');
+    $td_css_compiler->load_setting('sub_menu_hover_background');
+    $td_css_compiler->load_setting('sub_menu_border_color');
 
     // meag menu
     $td_css_compiler->load_setting('mega_menu_background');

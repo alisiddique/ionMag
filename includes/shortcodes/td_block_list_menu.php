@@ -21,11 +21,6 @@ class td_block_list_menu extends td_block {
 				'menu_id' => ''
 			), $atts);
 
-		// For tagDiv composer add a placeholder element
-		if ((td_util::tdc_is_live_editor_iframe() || td_util::tdc_is_live_editor_ajax()) && empty($this->atts['menu_id'])) {
-			return  '<div class="td_block_wrap td_block_list_menu" ' . $this->get_block_html_atts() . '><div class="tdc-placeholder-title"></div></div>';
-		}
-
 		$buffy = ''; //output buffer
 
 
@@ -41,6 +36,17 @@ class td_block_list_menu extends td_block {
 		$buffy .= '<div class="td-block-title-wrap">';
 			$buffy .= $this->get_block_title(); //get the block title
 		$buffy .= '</div>';
+
+		// For tagDiv composer add a placeholder element
+		if (empty($this->atts['menu_id'])) {
+			$buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
+			$buffy .= td_util::get_block_error('List Menu', 'Render failed - please select a menu' );
+			$buffy .= '</div>';
+
+			$buffy .= '</div> <!-- ./block -->';
+
+			return $buffy;
+		}
 
 		$buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
 

@@ -103,7 +103,7 @@ class td_config {
             'tdAjaxCount' =>            '/includes/wp_booster/js_dev/tdAjaxCount.js',
             'tdVideoPlaylist' =>        '/includes/wp_booster/js_dev/tdVideoPlaylist.js',
             'td_slide' =>               '/includes/wp_booster/js_dev/td_slide.js',
-            //'tdPullDown' =>             '/includes/wp_booster/js_dev/tdPullDown.js',
+            'tdPullDown' =>             '/includes/wp_booster/js_dev/tdPullDown.js',
 
             //'td_main' =>              '/includes/js_files/td_main.js',
             'td_fps' =>                 '/includes/js_files/td_fps.js',
@@ -1423,6 +1423,96 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_18',
+            array (
+                'text' => 'Block Header 18',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-17.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_18.php',
+                'params' => array(
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color A:',
+                        "param_name" => "header_text_color_a",
+                        "value" => '#06d3d5',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color B:',
+                        "param_name" => "header_text_color_b",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Speech bubble text:',
+                        "param_name" => "speech_bubble_text",
+                        "value" => '',
+                        "description" => 'Optional - Custom text for the speech bubble',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Speech bubble color:',
+                        "param_name" => "speech_bubble_color",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Speech bubble background color',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Subtitle text:',
+                        "param_name" => "subtitle_text",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom subtitle text for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle text color:',
+                        "param_name" => "subtitle_text_color",
+                        "value" => '#808080',
+                        "description" => 'Optional - Choose a custom color for the subtitle text',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle text color:',
+                        "param_name" => "subtitle_border_color",
+                        "value" => '#e3e3e3',
+                        "description" => 'Optional - Choose a custom color for the subtitle border',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**
@@ -2620,156 +2710,125 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td-instagram',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_instagram.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "instagram_id",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Instagram ID",
-                        "description" => 'Enter the ID as it appears after the instagram url (ex. http://www.instagram.com/myID)',
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big"
-                    ),
-                    array(
-                        "param_name" => "instagram_header",
-                        "type" => "dropdown",
-                        "value" => array (
-                            'On' => '',
-                            'Off' => 'off'
-                        ),
-                        "heading" => "Instagram Header",
-                        "description" => 'Display or hide the Instagram header section (default: On)',
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-small"
-                    ),
-                    array(
-                        "param_name" => "instagram_images_per_row",
-                        "type" => "dropdown",
-                        "value" => array (
-	                        '- Default -' => '',
-                            '1' => 1,
-                            '2' => 2,
-                            '3' => 3,
-                            '4' => 4,
-                            '5' => 5,
-                            '6' => 6,
-                            '7' => 7,
-                            '8' => 8
-                        ),
-	                    "tdc_value" => array (
-                            '1' => 1,
-                            '2' => 2,
-                            '3' => '',
-                            '4' => 4,
-                            '5' => 5,
-                            '6' => 6,
-                            '7' => 7,
-                            '8' => 8
-                        ),
-                        "heading" => 'Images per row',
-                        "description" => 'Set the number of images displayed on each row (default is 3)',
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-small"
-                    ),
-                    array(
-                        "param_name" => "instagram_number_of_rows",
-                        "type" => "dropdown",
-                        "value" => array (
-	                        '- Default -' => '',
-                            '1' => 1,
-                            '2' => 2,
-                            '3' => 3,
-                            '4' => 4,
-                            '5' => 5
-                        ),
-	                    "tdc_value" => array (
-                            '1' => '',
-                            '2' => 2,
-                            '3' => 3,
-                            '4' => 4,
-                            '5' => 5
-                        ),
-                        "heading" => 'Number of rows',
-                        "description" => 'Set on how many rows to display the images (default is 1)',
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-small"
-                    ),
-                    array(
-                        "param_name" => "instagram_margin",
-                        "type" => "dropdown",
-                        "value" => array (
-                            'No gap' => '',
-                            '2 px' => 2,
-                            '5 px' => 5
-                        ),
-                        "heading" => "Image gap",
-                        "description" => 'Set a gap between images (default: No gap)',
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big"
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" =>
+	                array_merge(
+                    self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig'
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "instagram_id",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Instagram ID",
+	                        "description" => 'Enter the ID as it appears after the instagram url (ex. http://www.instagram.com/myID)',
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big"
+	                    ),
+	                    array(
+	                        "param_name" => "instagram_header",
+	                        "type" => "dropdown",
+	                        "value" => array (
+	                            'On' => '',
+	                            'Off' => 'off'
+	                        ),
+	                        "heading" => "Instagram Header",
+	                        "description" => 'Display or hide the Instagram header section (default: On)',
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-small"
+	                    ),
+	                    array(
+	                        "param_name" => "instagram_images_per_row",
+	                        "type" => "dropdown",
+	                        "value" => array (
+		                        '- Default -' => '',
+	                            '1' => 1,
+	                            '2' => 2,
+	                            '3' => 3,
+	                            '4' => 4,
+	                            '5' => 5,
+	                            '6' => 6,
+	                            '7' => 7,
+	                            '8' => 8
+	                        ),
+		                    "tdc_value" => array (
+	                            '1' => 1,
+	                            '2' => 2,
+	                            '3' => '',
+	                            '4' => 4,
+	                            '5' => 5,
+	                            '6' => 6,
+	                            '7' => 7,
+	                            '8' => 8
+	                        ),
+	                        "heading" => 'Images per row',
+	                        "description" => 'Set the number of images displayed on each row (default is 3)',
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-small"
+	                    ),
+	                    array(
+	                        "param_name" => "instagram_number_of_rows",
+	                        "type" => "dropdown",
+	                        "value" => array (
+		                        '- Default -' => '',
+	                            '1' => 1,
+	                            '2' => 2,
+	                            '3' => 3,
+	                            '4' => 4,
+	                            '5' => 5
+	                        ),
+		                    "tdc_value" => array (
+	                            '1' => '',
+	                            '2' => 2,
+	                            '3' => 3,
+	                            '4' => 4,
+	                            '5' => 5
+	                        ),
+	                        "heading" => 'Number of rows',
+	                        "description" => 'Set on how many rows to display the images (default is 1)',
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-small"
+	                    ),
+	                    array(
+	                        "param_name" => "instagram_margin",
+	                        "type" => "dropdown",
+	                        "value" => array (
+	                            'No gap' => '',
+	                            '2 px' => 2,
+	                            '5 px' => 5
+	                        ),
+	                        "heading" => "Image gap",
+	                        "description" => 'Set a gap between images (default: No gap)',
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big"
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig'
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2815,72 +2874,54 @@ class td_config {
 			    "category" => 'Blocks',
 			    'icon' => 'icon-pagebuilder-td_block_list_menu',
 			    'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_list_menu.php',
-			    'params' => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-				    array(
-					    "param_name" => "menu_id",
-					    "type" => "dropdown",
-					    "value" => $td_block_list_menus,
-					    "heading" => 'Use items from:',
-					    "description" => "",
-					    "holder" => "div",
-					    "class" => "tdc-dropdown-big",
-				    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        'param_name' => 'el_class',
-                        'type' => 'textfield',
-                        'value' => '',
-                        'heading' => 'Extra class',
-                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-                        'class' => 'tdc-textfield-extrabig',
-                        'group' => ''
-                    ),
-                    array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-				    array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+			    'params' => array_merge(
+	                td_config::get_map_block_general_array(),
+	                array(
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+	                    array(
+						    "param_name" => "menu_id",
+						    "type" => "dropdown",
+						    "value" => $td_block_list_menus,
+						    "heading" => 'Use items from:',
+						    "description" => "",
+						    "holder" => "div",
+						    "class" => "tdc-dropdown-big",
+					    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+	                    array(
+	                        'param_name' => 'el_class',
+	                        'type' => 'textfield',
+	                        'value' => '',
+	                        'heading' => 'Extra class',
+	                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+	                        'class' => 'tdc-textfield-extrabig',
+	                        'group' => ''
+	                    ),
+	                    array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+					    array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
 			    )
 		    )
 	    );
