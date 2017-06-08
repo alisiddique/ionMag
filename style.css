@@ -15464,6 +15464,93 @@ body .td-live-theme-demos-old.td-theme-settings-small .td-skin-header {
   font-family: 'Work Sans', sans-serif;
   font-weight: 600;
 }
+/* general */
+.td-pinterest-main {
+  column-count: 1;
+  column-gap: 0;
+}
+.td-pinterest-main .td-pinterest-element {
+  display: block;
+}
+.td-pinterest-main .td-pinterest-element img {
+  display: block;
+  border-bottom: 0 solid transparent;
+}
+.td-pinterest-gap-2 {
+  column-gap: 2px;
+}
+.td-pinterest-gap-2 .td-pinterest-element img {
+  border-bottom-width: 2px;
+}
+.td-pinterest-gap-5 {
+  column-gap: 5px;
+}
+.td-pinterest-gap-5 .td-pinterest-element img {
+  border-bottom-width: 5px;
+}
+.td-pinterest-gap-10 {
+  column-gap: 10px;
+}
+.td-pinterest-gap-10 .td-pinterest-element img {
+  border-bottom-width: 10px;
+}
+.td_block_pinterest .td-pinterest-header {
+  margin-bottom: 26px;
+  font-family: 'Work Sans', sans-serif;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-profile-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 60px;
+  overflow: hidden;
+  margin-right: 12px;
+  float: left;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-user-meta {
+  padding-top: 2px;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-user-meta a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-user-meta .td-pinterest-user {
+  max-width: 50%;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #363636;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-user-meta .td-pinterest-board {
+  max-width: 25%;
+  font-size: 12px;
+  color: #8e8e8e;
+  line-height: 24px;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-followers {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 15px;
+  position: relative;
+  top: -15px;
+}
+.td_block_pinterest .td-pinterest-header .td-pinterest-followers span {
+  font-weight: 600;
+}
+.td_block_pinterest .td-column-1 .td-pinterest-profile-image {
+  margin-top: 10px;
+}
+.td_block_pinterest .td-column-1 .td-pinterest-user-meta .td-pinterest-board {
+  max-width: 35%;
+  line-height: 12px;
+}
+.td_block_pinterest .td-column-1 .td-pinterest-user-meta a {
+  display: block;
+}
+.td_block_pinterest .td-column-1 .td-pinterest-followers {
+  top: -2px;
+}
 .td_block_exchange {
   /* Header - Base Currency */
   /* 1 Column Title Overflow */
