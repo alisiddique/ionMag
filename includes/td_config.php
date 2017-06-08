@@ -2298,7 +2298,7 @@ class td_config {
                         "group" => 'Images'
                     ),
 	                array(
-                        "param_name" => "open_in_new_window_item4",
+                        "param_name" => "open_in_new_window_item3",
                         "type" => "checkbox",
                         "value" => '',
                         "heading" => "Open in new window",
