@@ -11,10 +11,21 @@
 
 .td-subcat-filter {
   margin-top: -8px;
-  //margin-bottom: 5px;
   text-align: center;
 }
 
+
+
+// Block headers 2 & 3 & 4 & 5
+.td_block_template_2,
+.td_block_template_3,
+.td_block_template_4,
+.td_block_template_5 {
+  .td-subcat-list,
+  .td-subcat-more {
+    vertical-align: baseline;
+  }
+}
 
 
 // Block header 2
@@ -26,13 +37,17 @@
     line-height: 26px;
   }
 
-  .td-wrapper-pulldown-filter {
-    bottom: 13px;
-    height: 26px;
+  .td-subcat-filter {
+    bottom: 11px;
   }
+}
 
-  .td-pulldown-filter-display-option {
-    line-height: 26px;
+// Block headers 3 & 4 & 5
+.td_block_template_3,
+.td_block_template_4,
+.td_block_template_5 {
+  .td-subcat-filter {
+    bottom: 21px;
   }
 }
 
@@ -53,10 +68,6 @@
       padding: 3px 10px;
       color: #fff;
     }
-  }
-
-  .td-wrapper-pulldown-filter {
-    bottom: 19px;
   }
 }
 
@@ -106,15 +117,6 @@
       width: 4px;
       height: 100%;
     }
-  }
-
-  .td-subcat-filter,
-  .td-subcat-dropdown {
-    line-height: 30px;
-  }
-
-  .td-wrapper-pulldown-filter {
-    bottom: 19px;
   }
 }
 
@@ -294,15 +296,6 @@
     > * {
       color: #000;
     }
-  }
-
-  .td-subcat-filter {
-    bottom: 20px;
-  }
-
-  .td-subcat-list,
-  .td-subcat-more {
-    vertical-align: text-top;
   }
 }
 
@@ -563,9 +556,10 @@
 }
 
 
-// Block headers 14 & 15
+// Block headers 14 & 15 & 17
 .td_block_template_14,
-.td_block_template_15 {
+.td_block_template_15,
+.td_block_template_17 {
   .td-pulldown-filter-display-option {
     > div {
       padding-right: 10px;
@@ -624,7 +618,8 @@
 
 // Block headers 15 & 16
 .td_block_template_15,
-.td_block_template_16 {
+.td_block_template_16,
+.td_block_template_17 {
   .td-block-title {
     line-height: 44px;
   }
@@ -699,6 +694,10 @@
       bottom: 0;
     }
   }
+
+  .td-subcat-filter {
+    line-height: 40px;
+  }
 }
 
 // Block header 17
@@ -711,7 +710,6 @@
     line-height: 1;
     position: relative;
     text-align: center;
-    border: 1px solid #111;
     background-color: #fff;
     top: -3px;
     .transform(translateZ(0));
@@ -723,7 +721,6 @@
       top: 4px;
       left: -4px;
       right: -4px;
-      border: 1px solid #111;
       background-color: #111;
       z-index: -1;
     }
@@ -736,6 +733,7 @@
       width: 100%;
       height: 100%;
       background-color: #fff;
+      border: 1px solid #111;
       z-index: -1;
     }
 
@@ -756,12 +754,8 @@
     }
   }
 
-  .td-wrapper-pulldown-filter {
-    height: 40px;
-  }
-
   .td-pulldown-filter-display-option {
-    line-height: 40px;
+    line-height: 39px;
   }
 }
 
