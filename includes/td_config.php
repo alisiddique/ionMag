@@ -1423,6 +1423,96 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_18',
+            array (
+                'text' => 'Block Header 18',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-18.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_18.php',
+                'params' => array(
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color A:',
+                        "param_name" => "header_text_color_a",
+                        "value" => '#06d3d5',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color B:',
+                        "param_name" => "header_text_color_b",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Speech bubble text:',
+                        "param_name" => "speech_bubble_text",
+                        "value" => '',
+                        "description" => 'Optional - Custom text for the speech bubble',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Speech bubble color:',
+                        "param_name" => "speech_bubble_color",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Speech bubble background color',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-extrabig",
+                        "heading" => 'Subtitle text:',
+                        "param_name" => "subtitle_text",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom subtitle text for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle text color:',
+                        "param_name" => "subtitle_text_color",
+                        "value" => '#808080',
+                        "description" => 'Optional - Choose a custom color for the subtitle text',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle border color:',
+                        "param_name" => "subtitle_border_color",
+                        "value" => '#e3e3e3',
+                        "description" => 'Optional - Choose a custom color for the subtitle border',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**

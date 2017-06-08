@@ -380,6 +380,15 @@ function td_css_generator() {
         color: @sub_menu_hover_color;
     }
 
+    /* @sub_menu_hover_background */
+    .td-theme-wrap .sf-menu .td-normal-menu .td-menu-item > a:hover,
+    .td-theme-wrap .sf-menu .td-normal-menu .sfHover > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-category-ancestor > a,
+    .td-theme-wrap .sf-menu .td-normal-menu .current-menu-item > a {
+        background-color: @sub_menu_hover_background;
+    }
+
     /* @sub_menu_border_color */
     .td-theme-wrap .sf-menu ul:after {
         background-color: @sub_menu_border_color;
@@ -1315,6 +1324,7 @@ function td_css_generator() {
     $td_css_compiler->load_setting('sub_menu_background');
     $td_css_compiler->load_setting('sub_menu_text_color');
     $td_css_compiler->load_setting('sub_menu_hover_color');
+    $td_css_compiler->load_setting('sub_menu_hover_background');
     $td_css_compiler->load_setting('sub_menu_border_color');
 
     // meag menu
