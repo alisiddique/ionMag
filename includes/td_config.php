@@ -1426,7 +1426,7 @@ class td_config {
         td_api_block_template::add('td_block_template_18',
             array (
                 'text' => 'Block Header 18',
-                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-17.png',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-18.png',
                 'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_18.php',
                 'params' => array(
                     array(
@@ -1472,7 +1472,7 @@ class td_config {
                     array(
                         "type" => "textfield",
                         "holder" => "div",
-                        "class" => "tdc-textfield-big",
+                        "class" => "tdc-textfield-extrabig",
                         "heading" => 'Subtitle text:',
                         "param_name" => "subtitle_text",
                         "value" => '',
