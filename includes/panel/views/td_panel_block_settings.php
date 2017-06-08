@@ -1,3 +1,36 @@
+<!-- Global block template -->
+<?php echo td_panel_generator::box_start('Global Block Header Template', true); ?>
+
+
+<!-- text -->
+<div class="td-box-row">
+    <div class="td-box-description td-box-full">
+        <p>This header template will be applied to the whole site. The theme will also try to adjust the default widgets to look in the same style
+            with the block template selected here.</p>
+    </div>
+    <div class="td-box-row-margin-bottom"></div>
+</div>
+
+<!-- GLOBAL BLOCK TEMPLATE SELECT -->
+<div class="td-box-row">
+    <div class="td-box-description">
+        <span class="td-box-title">BLOCK HEADER TEMPLATE</span>
+        <p>You can overwrite the template on each block and widget.</p>
+    </div>
+    <div class="td-box-control-full">
+        <?php
+        echo td_panel_generator::visual_select_o(array(
+            'ds' => 'td_option',
+            'option_id' => 'tds_global_block_template',
+            'values' => td_api_block_template::_helper_generate_block_templates()
+        ));
+        ?>
+    </div>
+</div>
+<?php echo td_panel_generator::box_end();?>
+
+
+
 <!-- Thumbs on Modules/Blocks -->
 <?php
     echo td_panel_generator::ajax_box('Thumbs on Modules/Blocks', array(

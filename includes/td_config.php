@@ -1423,6 +1423,96 @@ class td_config {
             )
         );
 
+        td_api_block_template::add('td_block_template_18',
+            array (
+                'text' => 'Block Header 18',
+                'img' => td_global::$get_template_directory_uri . '/images/panel/block_templates/icon-block-header-18.png',
+                'file' => td_global::$get_template_directory . '/includes/block_templates/td_block_template_18.php',
+                'params' => array(
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color A:',
+                        "param_name" => "header_text_color_a",
+                        "value" => '#06d3d5',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Title gradient color B:',
+                        "param_name" => "header_text_color_b",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Choose a custom title gradient color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-big",
+                        "heading" => 'Speech bubble text:',
+                        "param_name" => "speech_bubble_text",
+                        "value" => '',
+                        "description" => 'Optional - Custom text for the speech bubble',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Speech bubble color:',
+                        "param_name" => "speech_bubble_color",
+                        "value" => '#2a81cb',
+                        "description" => 'Optional - Speech bubble background color',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "textfield",
+                        "holder" => "div",
+                        "class" => "tdc-textfield-extrabig",
+                        "heading" => 'Subtitle text:',
+                        "param_name" => "subtitle_text",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom subtitle text for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle text color:',
+                        "param_name" => "subtitle_text_color",
+                        "value" => '#808080',
+                        "description" => 'Optional - Choose a custom color for the subtitle text',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Subtitle border color:',
+                        "param_name" => "subtitle_border_color",
+                        "value" => '#e3e3e3',
+                        "description" => 'Optional - Choose a custom color for the subtitle border',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
+                    )
+                )//end generic array
+            )
+        );
+
 
 
         /**
@@ -2724,21 +2814,143 @@ class td_config {
 			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
 			                'class' => 'tdc-textfield-extrabig'
 		                ),
-		                array (
+		                array(
 	                        'param_name' => 'css',
 	                        'value' => '',
 	                        'type' => 'css_editor',
 	                        'heading' => 'Css',
 	                        'group' => 'Design options',
 	                    ),
-		                array (
+		                array(
 			                'param_name' => 'tdc_css',
 			                'value' => '',
 			                'type' => 'tdc_css_editor',
 			                'heading' => '',
 			                'group' => 'Design options',
-			            ),
+			            )
 	                )
+                )
+            )
+        );
+
+        td_api_block::add('td_block_pinterest',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'Pinterest',
+                "base" => "td_block_pinterest",
+                "class" => "",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td-pinterest',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_pinterest.php',
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
+                    array(
+                        array(
+                            "param_name" => "pinterest_id",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "pinterest_id/board_name",
+                            "description" => 'Enter the pinterest board ID as it appears after the pinterest.com url ( <em>ex. http://www.pinterest.com/ username/board</em> and your board id will be <b>username/board</b> )',
+                            "holder" => "div",
+                            "class" => "",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            "param_name" => "pinterest_header",
+                            "type" => "dropdown",
+                            "value" => array (
+                                'On' => '',
+                                'Off' => 'off'
+                            ),
+                            "heading" => "Pinterest header",
+                            "description" => 'Display or hide the Pinterest header section (default: On)',
+                            "holder" => "div",
+                            "class" => "tdc-dropdown-small",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            "param_name" => "pins_limit",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "Board pins limit",
+                            "description" => 'The Pinterest board block will display the first 25 board pins by default. This is also the maximum pins that can be displayed. You can set a limit below 25.',
+                            "holder" => "div",
+                            "class" => "tdc-textfield-small",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            "param_name" => "pinterest_number_of_columns",
+                            "type" => "dropdown",
+                            "value" => array (
+                                '- Default -' => '',
+                                '1' => 1,
+                                '2' => 2,
+                                '3' => 3,
+                                '4' => 4,
+                                '5' => 5,
+                                '6' => 6,
+                                '7' => 7,
+                                '8' => 8,
+                                '9' => 9,
+                                '10' => 10,
+                            ),
+                            "heading" => 'Number of columns:',
+                            "description" => 'Set on how many columns to display the board pins (default is 1)',
+                            "holder" => "div",
+                            "class" => "tdc-dropdown-big",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            "param_name" => "pinterest_col_gap",
+                            "type" => "dropdown",
+                            "value" => array (
+                                'No gap' => '',
+                                '2 px' => 2,
+                                '5 px' => 5,
+                                '10 px' => 10,
+
+                            ),
+                            "heading" => "Image gap",
+                            "description" => 'Set a gap between images (default: No gap)',
+                            "holder" => "div",
+                            "class" => "tdc-dropdown-big",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            "param_name" => "pinterest_board_height",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "Pinterest board height",
+                            "description" => 'Enter the Pinterest board height in pixels ( ex. 400 ). Leave blank to display the board widget at full height!',
+                            "holder" => "div",
+                            "class" => "tdc-textfield-small",
+                            'group' => 'Pinterest'
+                        ),
+                        array(
+                            'param_name' => 'el_class',
+                            'type' => 'textfield',
+                            'value' => '',
+                            'heading' => 'Extra class',
+                            'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                            'class' => 'tdc-textfield-extrabig',
+                        ),
+                        array(
+                            'param_name' => 'css',
+                            'value' => '',
+                            'type' => 'css_editor',
+                            'heading' => 'Css',
+                            'group' => 'Design options',
+                        ),
+                        array(
+                            'param_name' => 'tdc_css',
+                            'value' => '',
+                            'type' => 'tdc_css_editor',
+                            'heading' => '',
+                            'group' => 'Design options',
+                        )
+                    )
                 )
             )
         );
