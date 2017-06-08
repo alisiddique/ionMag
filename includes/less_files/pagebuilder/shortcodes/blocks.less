@@ -361,9 +361,9 @@
     // menu dropdown
     &:hover {
       .td-subcat-more {
-
-        span, i {
-          color: #fff;
+        span,
+        i {
+          color: @td_theme_color;
         }
       }
 
@@ -464,15 +464,6 @@
       margin-top: -1px;
     }
 
-    &:hover .td-subcat-more {
-      background-color: transparent !important;
-
-      span,
-      i {
-        color: @td_theme_color;
-      }
-    }
-
     .td-subcat-more {
       margin-left: 9px;
       margin-bottom: 8px; // this align the dropdown list
@@ -486,6 +477,12 @@
   }
 }
 
+// Style 2
+.td-pulldown-syle-2 {
+  .td-subcat-dropdown {
+    line-height: 1;
+  }
+}
 
 
 /*  ----------------------------------------------------------------------------

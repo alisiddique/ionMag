@@ -11,7 +11,7 @@
 
 .td-subcat-filter {
   margin-top: -8px;
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
   text-align: center;
 }
 
@@ -154,10 +154,10 @@
   }
 
   .td-subcat-filter {
+    display: table;
     line-height: 40px;
     position: relative;
-    text-align: center;
-    margin: -24px 0 0;
+    margin: -24px auto 0;
 
     .td-subcat-more {
       margin-bottom: 10px !important;
@@ -181,7 +181,7 @@
     margin-top: 0;
     margin-bottom: 20px;
     line-height: 45px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
     padding: 0;
@@ -209,7 +209,7 @@
   }
 
   .td-subcat-filter {
-    bottom: 16px;
+    bottom: 20px;
     line-height: 45px;
   }
 }
@@ -295,13 +295,14 @@
       color: #000;
     }
   }
-}
 
-// Block header 9 & 10
-.td_block_template_9,
-.td_block_template_10 {
-  .td-wrapper-pulldown-filter {
-    height: 32px;
+  .td-subcat-filter {
+    bottom: 20px;
+  }
+
+  .td-subcat-list,
+  .td-subcat-more {
+    vertical-align: text-top;
   }
 }
 
@@ -338,8 +339,16 @@
     }
   }
 
-  .td-pulldown-filter-display-option {
-    line-height: 33px;
+  .td-subcat-filter {
+    line-height: 32px;
+
+    .td-pulldown-filter-list {
+      margin-top: -2px;
+
+      &:before {
+        height: 2px;
+      }
+    }
   }
 }
 
@@ -353,12 +362,16 @@
     }
   }
 
-  .td-pulldown-filter-display-option {
-    line-height: 32px;
-  }
+  .td-subcat-filter {
+    line-height: 33px;
 
-  .td-pulldown-filter-list:before {
-    height: 3px;
+    .td-pulldown-filter-list {
+      margin-top: -3px;
+
+      &:before {
+        height: 3px;
+      }
+    }
   }
 }
 
@@ -380,12 +393,16 @@
     }
   }
 
-  .td-wrapper-pulldown-filter {
-    height: 37px;
-  }
-
-  .td-pulldown-filter-display-option {
+  .td-subcat-filter {
     line-height: 38px;
+
+    .td-pulldown-filter-list {
+      margin-top: -2px;
+
+      &:before {
+        height: 2px;
+      }
+    }
   }
 }
 
@@ -395,6 +412,53 @@
   .td-block-title {
     font-size: 26px;
     font-weight: 700;
+  }
+
+  .td-subcat-filter {
+    line-height: 1;
+    display: table;
+  }
+
+  .td-subcat-dropdown .td-subcat-more {
+    margin-bottom: 8px !important;
+    margin-top: 7px;
+  }
+
+  .td-pulldown-category {
+    font-family: @font1;
+    font-size: 14px;
+    line-height: 26px !important;
+    color: #444;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    top: 0;
+    margin: auto 0;
+    display: table;
+
+    span {
+      display: inline-block;
+      .transition(transform 0.5s ease);
+
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        display: none;
+      }
+    }
+
+    i {
+      font-size: 9px;
+      margin-left: 9px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+
+      span {
+        .transform(translate3d(-6px, 0, 0));
+      }
+    }
   }
 }
 
@@ -455,51 +519,8 @@
     }
   }
 
-  .td-subcat-filter {
-    line-height: 1;
-    display: table;
-  }
-
-  .td-subcat-dropdown .td-subcat-more {
-    margin-bottom: 8px !important;
-    margin-top: 7px;
-  }
-
   .td-pulldown-category {
-    font-family: @font1;
-    font-size: 14px;
-    line-height: 26px !important;
-    color: #444;
-    font-weight: 600;
-    position: absolute;
-    right: 0;
     bottom: -13px;
-    top: 0;
-    margin: auto 0;
-    display: table;
-
-    span {
-      display: inline-block;
-      .transition(transform 0.5s ease);
-
-      /* responsive portrait phone */
-      @media (max-width: @responsive_p_phone_max) {
-        display: none;
-      }
-    }
-
-    i {
-      font-size: 9px;
-      margin-left: 9px;
-    }
-
-    &:hover {
-      opacity: 0.9;
-
-      span {
-        .transform(translate3d(-6px, 0, 0));
-      }
-    }
   }
 
   .td-block-subtitle {
@@ -542,6 +563,17 @@
 }
 
 
+// Block headers 14 & 15
+.td_block_template_14,
+.td_block_template_15 {
+  .td-pulldown-filter-display-option {
+    > div {
+      padding-right: 10px;
+    }
+  }
+}
+
+
 // Block header 14
 .td_block_template_14 {
   .td-block-title {
@@ -566,6 +598,14 @@
 
   .td-wrapper-pulldown-filter {
     height: 39px;
+
+    .td-pulldown-filter-list {
+      margin-top: 0;
+
+      &:before {
+        display: none;
+      }
+    }
   }
 
   .td-pulldown-filter-display-option {
@@ -578,10 +618,6 @@
       i {
         color: #ddd;
       }
-    }
-
-    > div {
-      padding-right: 10px;
     }
   }
 }
