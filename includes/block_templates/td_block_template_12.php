@@ -109,32 +109,28 @@ class td_block_template_12 extends td_block_template {
      * @return string
      */
     function get_pull_down_filter() {
+
         $buffy = '';
 
-        $td_pull_down_items = $this->get_td_pull_down_items();
+        $custom_url = $this->get_att('custom_url');
+        $category_id = $this->get_att('category_id');
 
-        if (empty($td_pull_down_items)) {
+        if (empty($custom_url) && empty($category_id)) {
             return '';
         }
 
-        $buffy .= '<div class="td-wrapper-pulldown-filter">';
-        $buffy .= '<div class="td-pulldown-filter-display-option">';
-
-
-        //show the default display value
-        $buffy .= '<div id="td-pulldown-' . $this->get_block_uid() . '-val"><span>';
-        $buffy .=  $td_pull_down_items[0]['name'] . ' </span><i class="td-icon-down"></i>';
-        $buffy .= '</div>';
-
-        //builde the dropdown
-        $buffy .= '<ul class="td-pulldown-filter-list">';
-        foreach ($td_pull_down_items as $item) {
-            $buffy .= '<li class="td-pulldown-filter-item"><a class="td-pulldown-filter-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
+        // button text
+        $button_text = $this->get_att('button_text');
+        if (empty($button_text)) {
+            $button_text = 'Continue to the category';
         }
-        $buffy .= '</ul>';
 
-        $buffy .= '</div>';  // /.td-pulldown-filter-display-option
-        $buffy .= '</div>';
+        if (empty($custom_url)) {
+            $custom_url = get_category_link($category_id);
+        }
+
+        $buffy .= '<a href="' . esc_url($custom_url) . '" class="td-pulldown-category"><span>' . esc_html($button_text) . '</span><i class="td-icon-category"></i></a>';
+
 
         return $buffy;
     }
