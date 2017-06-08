@@ -1493,7 +1493,7 @@ class td_config {
                         "type" => "colorpicker",
                         "holder" => "div",
                         "class" => "",
-                        "heading" => 'Subtitle text color:',
+                        "heading" => 'Subtitle border color:',
                         "param_name" => "subtitle_border_color",
                         "value" => '#e3e3e3',
                         "description" => 'Optional - Choose a custom color for the subtitle border',
