@@ -407,6 +407,35 @@ input.search-submit {
 
 // text
 .widget_text {
+
+  ul {
+    margin-bottom: 21px;
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+      line-height: 24px;
+    }
+  }
+
+  ol {
+    margin-bottom: 21px;
+
+    li {
+      list-style-type: decimal;
+      margin: 0 0 0 21px;
+      line-height: 24px;
+    }
+  }
+
+  a {
+    color: @td_theme_color;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
   .block-title {
     margin-bottom: 13px;
   }
@@ -453,5 +482,21 @@ input.search-submit {
 .widget_tag_cloud {
   .tagcloud {
     padding: 0;
+  }
+}
+
+//video widget
+.widget_media_video {
+  .wp-video {
+    margin-bottom: 0;
+  }
+}
+
+// new widgets from WP 4.8 - video/audio/image
+.widget_media_video,
+.widget_media_audio,
+.widget_media_image {
+  .block-title {
+    margin-bottom: 16px;
   }
 }
