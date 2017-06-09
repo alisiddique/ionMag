@@ -21,10 +21,14 @@ class td_block_template_2 extends td_block_template {
         $raw_css = "
         <style>
             /* @header_text_color */
+            div.$unique_block_class .td-block-title * {
+                color: @header_text_color;
+            }
+        
+            /* @accent_text_color */
             .$unique_block_class .td_module_wrap:hover .entry-title a,
             .$unique_block_class .td-load-more-wrap a:hover,
             .$unique_block_class .td_quote_on_blocks,
-            div.$unique_block_class .td-block-title *,
             .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more span,
             .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more i,
             .$unique_block_class .td-subcat-filter .td-subcat-list a:hover,
@@ -36,7 +40,7 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
             .$unique_block_class .td-authors-url a:hover,
             .$unique_block_class .td-instagram-user a {
-                color: @header_text_color;
+                color: @accent_text_color;
             }
             
             .$unique_block_class .td_module_wrap .td-post-category:hover,
@@ -45,13 +49,14 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
             .$unique_block_class .td-exchange-header:before {
-                background-color: @header_text_color;
+                background-color: @accent_text_color;
             }
         </style>
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
+        $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
 
         $compiled_style = $td_css_compiler->compile_css();
 

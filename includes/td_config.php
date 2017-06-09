@@ -733,6 +733,16 @@ class td_config {
                         "value" => '',
                         "description" => 'Optional - Choose a custom title text color for this header',
                         'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
                     )
                 )//end generic array
             )
@@ -763,6 +773,16 @@ class td_config {
                         "param_name" => "header_text_color",
                         "value" => '',
                         "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
                         'td_type' => 'block_template',
                     )
                 )//end generic array
@@ -795,6 +815,16 @@ class td_config {
                         "value" => '',
                         "description" => 'Optional - Choose a custom title text color for this header',
                         'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
+                        'td_type' => 'block_template',
                     )
                 )//end generic array
             )
@@ -825,6 +855,16 @@ class td_config {
                         "param_name" => "header_text_color",
                         "value" => '',
                         "description" => 'Optional - Choose a custom title text color for this header',
+                        'td_type' => 'block_template',
+                    ),
+                    array(
+                        "type" => "colorpicker",
+                        "holder" => "div",
+                        "class" => "",
+                        "heading" => 'Accent hover color:',
+                        "param_name" => "accent_text_color",
+                        "value" => '',
+                        "description" => 'Optional - Choose a custom accent hover color for this block',
                         'td_type' => 'block_template',
                     )
                 )//end generic array
