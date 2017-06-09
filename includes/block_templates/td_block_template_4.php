@@ -138,7 +138,7 @@ class td_block_template_4 extends td_block_template {
 
         // subcategory dropdown list
         $buffy .= '<div class="td-subcat-dropdown">';
-        $buffy .= '<div class="td-subcat-more" aria-haspopup="true"><span>' . __td('More', TD_THEME_NAME) . '</span><i class="td-icon-read-down"></i></div>';
+        $buffy .= '<div class="td-subcat-more" aria-haspopup="true"><span>' . __td('More', TD_THEME_NAME) . '</span><i class="td-icon-down"></i></div>';
 
         // the dropdown list
         $buffy .= '<ul class="td-pulldown-filter-list">';
