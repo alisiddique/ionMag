@@ -215,6 +215,10 @@
   .td-subcat-filter {
     bottom: 20px;
     line-height: 45px;
+
+    .td-subcat-more {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -553,6 +557,30 @@
 
     & + .td-pulldown-category {
       bottom: 10px;
+    }
+  }
+}
+// 1 column
+.td-pb-span4 {
+  .td_block_template_13 {
+    .td-pulldown-category span {
+      /* responsive portrait tablet */
+      @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        display: none;
+      }
+    }
+    .td-block-subtitle {
+      /* responsive > phone */
+      @media (min-width: @responsive_p_tablet_min) {
+        display: none;
+      }
+    }
+    .td-block-title {
+      margin-top: -2px !important;
+      margin-bottom: 16px;
+      * > {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -914,28 +942,21 @@
 
 */
 .td-footer-wrapper div {
-
-  .td-subcat-list a,
-  .td-subcat-dropdown span {
+  .td-block-title > * {
     color: #fff;
   }
 
-  .td-subcat-dropdown span {
+  .td-subcat-list a,
+  .td-subcat-dropdown span,
+  .td-subcat-dropdown i {
+    color: #fff;
     .opacity(0.6);
-  }
-
-  // header 2
-  .td_block_template_2 {
-    .td-block-title > * {
-      color: #fff;
-    }
   }
 
   // header 3
   .td_block_template_3 {
     .td-block-title > * {
       background-color: #000;
-      color: #fff;
     }
   }
 
@@ -944,7 +965,6 @@
     .td-block-title {
       > * {
         background-color: #000;
-        color: #fff;
 
         &:before {
           border-color: #000 transparent transparent transparent;
@@ -953,22 +973,11 @@
     }
   }
 
-  // header 5
-  .td_block_template_5 {
-    .td-block-title > * {
-      color: #fff;
-    }
-  }
-
   // header 6
   .td_block_template_6 {
     .td-block-title {
       &:after {
         font-size: 6px;
-        color: #fff;
-      }
-
-      > * {
         color: #fff;
       }
     }
@@ -980,7 +989,6 @@
       background-color: transparent;
 
       > * {
-        color: #fff;
         background-color: #222;
       }
     }
@@ -989,20 +997,19 @@
   // header 8
   .td_block_template_8 {
     .td-block-title > * {
-      color: #fff;
-
       &:before {
         background-color: #333;
       }
+    }
+
+    .td-wrapper-pulldown-filter {
+      background-color: #222;
     }
   }
 
   // header 9
   .td_block_template_9 {
     .td-block-title {
-      > * {
-        color: #fff;
-      }
 
       &:before {
         background-color: #333;
@@ -1013,9 +1020,6 @@
   // header 10
   .td_block_template_10 {
     .td-block-title {
-      > * {
-        color: #fff;
-      }
       &:before {
         background-color: #333;
       }
@@ -1025,9 +1029,6 @@
   // header 11
   .td_block_template_11 {
     .td-block-title {
-      > * {
-        color: #fff;
-      }
       &:before,
       &:after {
         background-color: #333;
@@ -1037,9 +1038,6 @@
 
   // header 12
   .td_block_template_12 {
-    .td-block-title > * {
-      color: #fff;
-    }
     .td-pulldown-category {
       color: #999;
     }
@@ -1047,17 +1045,8 @@
 
   // header 13
   .td_block_template_13 {
-    .td-block-title {
-      > a,
-      > span {
-        color: #fff;
-      }
-    }
     .td-block-subtitle {
       opacity: 0.1;
-    }
-    .td-pulldown-category {
-      color: #999;
     }
   }
 
@@ -1066,9 +1055,6 @@
     .td-block-title {
       background-color: transparent;
 
-      > * {
-        color: #fff;
-      }
       &:after {
         border-color: #333;
       }
@@ -1078,10 +1064,6 @@
   // header 16
   .td_block_template_16 {
     .td-block-title {
-      > * {
-        color: #fff;
-      }
-
       &:before,
       &:after {
         background-color: #333;
@@ -1096,15 +1078,18 @@
       background-color: #222;
 
       > * {
-        color: #fff;
+        &:after {
+          border-color: #333 transparent transparent transparent;
+        }
       }
 
       &:before {
-        border-color: #333;
         background-color: #333;
       }
+
       &:after {
-        border-color: #333 transparent transparent transparent;
+        background-color: #222;
+        border-color: #333;
       }
     }
   }
