@@ -21,7 +21,7 @@
   &,
   .td-related-left,
   .td-related-right {
-    line-height: inherit !important;
+    //line-height: inherit !important;
   }
 
   .td-cur-simple-item:after {
@@ -133,11 +133,30 @@
       color: @td_theme_color;
     }
   }
+
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 38px;
+      }
+    }
+  }
 }
 .global-block-template-7 {
   .td-related-title {
     .td-cur-simple-item {
       color: @td_theme_color;
+    }
+  }
+
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 34px;
+        right: 11px;
+      }
     }
   }
 }
@@ -154,6 +173,17 @@
     }
     .td-cur-simple-item {
       color: @td_theme_color;
+    }
+  }
+}
+.global-block-template-9,
+.global-block-template-10 {
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 28px;
+      }
     }
   }
 }
@@ -188,6 +218,10 @@
   }
 }
 .global-block-template-11 {
+  .td_block_related_posts {
+    padding-top: 31px;
+  }
+
   .td-related-title {
     a {
       margin-right: 20px;
@@ -198,6 +232,15 @@
     }
     .td-cur-simple-item {
       color: @td_theme_color;
+    }
+  }
+
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 41px;
+      }
     }
   }
 }
@@ -233,12 +276,20 @@
     }
   }
 }
+.global-block-template-13 {
+  .td_block_related_posts {
+    .td-related-title {
+      margin-top: -2px;
+      margin-bottom: 16px;
+    }
+  }
+}
 .global-block-template-14,
 .global-block-template-15 {
   .td-related-title {
     a {
       margin: 0 12px !important;
-      font-size: 14px;
+      font-size: 16px;
       /* responsive portrait phone */
       @media (max-width: @responsive_p_phone_max) {
         margin: 0 8px !important;
@@ -246,6 +297,18 @@
     }
     .td-cur-simple-item {
       color: @td_theme_color;
+    }
+  }
+}
+
+.global-block-template-15 {
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 35px;
+        right: 11px;
+      }
     }
   }
 }
