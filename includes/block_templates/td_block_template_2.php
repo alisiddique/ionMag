@@ -22,7 +22,7 @@ class td_block_template_2 extends td_block_template {
         <style>
             /* @header_text_color */
             div.$unique_block_class .td-block-title * {
-                color: @header_text_color;
+                color: @header_text_color !important;
             }
         
             /* @accent_text_color */
@@ -40,7 +40,7 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
             .$unique_block_class .td-authors-url a:hover,
             .$unique_block_class .td-instagram-user a {
-                color: @accent_text_color;
+                color: @accent_text_color !important;
             }
             
             .$unique_block_class .td_module_wrap .td-post-category:hover,
@@ -49,7 +49,7 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
             .$unique_block_class .td-exchange-header:before {
-                background-color: @accent_text_color;
+                background-color: @accent_text_color !important;
             }
         </style>
     ";

@@ -759,7 +759,6 @@ function td_css_generator() {
     /* FOOTER TEXT COLOR */
     /* @footer_text_color */
     .td-footer-wrapper,
-    .td-footer-wrapper .td-pulldown-filter-display-option span,
     .td-footer-wrapper .block-title a,
     .td-footer-wrapper .block-title span,
     .td-footer-wrapper .block-title label,
@@ -793,7 +792,18 @@ function td_css_generator() {
     /* @footer_widget_text_color */
     .td-footer-wrapper .block-title a,
     .td-footer-wrapper .block-title span,
-    .td-footer-wrapper .block-title label {
+    .td-footer-wrapper .block-title label,
+    .td-footer-wrapper .td_block_wrap .td-block-title label,
+    .td-footer-wrapper .td_block_wrap .td-block-title span,
+    .td-footer-wrapper .td_block_wrap .td-block-title a,
+    .td-footer-wrapper .td_block_template_6 .td-block-title:after,
+    .td-footer-wrapper div .td_block_template_6 .td-block-title:after,
+    .td-footer-wrapper .td_block_template_13 .td-block-title > span,
+    .td-footer-wrapper .td_block_template_13 .td-block-title > a,
+    .td-footer-wrapper .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option,
+    .td-footer-wrapper .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i,
+    .td-footer-wrapper .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
+    .td-footer-wrapper .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i {
       color: @footer_widget_text_color;
     }
     
