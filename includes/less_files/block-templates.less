@@ -289,7 +289,28 @@
   .td-related-title {
     .td-cur-simple-item {
       &:hover {
+        color: #fff !important;
+      }
+    }
+  }
+  .td_block_related_posts {
+    .td-next-prev-wrap {
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_phone_max) {
+        top: 32px;
+        right: 11px;
+      }
+
+      a {
         color: #fff;
+
+        &:hover {
+          color: @td_theme_color;
+        }
+      }
+
+      .td-ajax-next-page:before {
+        background-color: #fff;
       }
     }
   }

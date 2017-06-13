@@ -8279,7 +8279,25 @@ body .dropcap3 {
   }
 }
 .global-block-template-14 .td-related-title .td-cur-simple-item:hover {
+  color: #fff !important;
+}
+.global-block-template-14 .td_block_related_posts .td-next-prev-wrap {
+  /* tablet + desktop */
+}
+@media (min-width: 767px) {
+  .global-block-template-14 .td_block_related_posts .td-next-prev-wrap {
+    top: 32px;
+    right: 11px;
+  }
+}
+.global-block-template-14 .td_block_related_posts .td-next-prev-wrap a {
   color: #fff;
+}
+.global-block-template-14 .td_block_related_posts .td-next-prev-wrap a:hover {
+  color: #42bdcd;
+}
+.global-block-template-14 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page:before {
+  background-color: #fff;
 }
 .global-block-template-15 .td_block_related_posts .td-next-prev-wrap {
   /* tablet + desktop */

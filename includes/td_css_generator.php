@@ -89,7 +89,8 @@ function td_css_generator() {
     .widget_categories li:hover > a,
     .widget_search input[type=submit]:hover,
     .td-read-more:hover,
-    .td_outlined_btn {
+    .td_outlined_btn,
+    .global-block-template-14 .td_block_related_posts .td-next-prev-wrap a:hover {
       color: @theme_color;
     }
     
