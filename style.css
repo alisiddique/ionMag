@@ -8050,54 +8050,15 @@ body .dropcap3 {
   margin-top: -8px;
   text-align: center;
 }
+.td-related-title .td-cur-simple-item,
+.td-related-title a:hover {
+  color: #42bdcd !important;
+}
+.td-related-title .td-cur-simple-item:hover {
+  color: #000 !important;
+}
 .td-related-title .td-cur-simple-item:after {
   display: none;
-}
-.global-block-template-1 .td-related-title .td-cur-simple-item,
-.global-block-template-2 .td-related-title .td-cur-simple-item,
-.global-block-template-5 .td-related-title .td-cur-simple-item,
-.global-block-template-6 .td-related-title .td-cur-simple-item,
-.global-block-template-7 .td-related-title .td-cur-simple-item,
-.global-block-template-8 .td-related-title .td-cur-simple-item,
-.global-block-template-9 .td-related-title .td-cur-simple-item,
-.global-block-template-10 .td-related-title .td-cur-simple-item,
-.global-block-template-11 .td-related-title .td-cur-simple-item,
-.global-block-template-12 .td-related-title .td-cur-simple-item,
-.global-block-template-13 .td-related-title .td-cur-simple-item,
-.global-block-template-15 .td-related-title .td-cur-simple-item,
-.global-block-template-16 .td-related-title .td-cur-simple-item,
-.global-block-template-17 .td-related-title .td-cur-simple-item,
-.global-block-template-1 .td-related-title a:hover,
-.global-block-template-2 .td-related-title a:hover,
-.global-block-template-5 .td-related-title a:hover,
-.global-block-template-6 .td-related-title a:hover,
-.global-block-template-7 .td-related-title a:hover,
-.global-block-template-8 .td-related-title a:hover,
-.global-block-template-9 .td-related-title a:hover,
-.global-block-template-10 .td-related-title a:hover,
-.global-block-template-11 .td-related-title a:hover,
-.global-block-template-12 .td-related-title a:hover,
-.global-block-template-13 .td-related-title a:hover,
-.global-block-template-15 .td-related-title a:hover,
-.global-block-template-16 .td-related-title a:hover,
-.global-block-template-17 .td-related-title a:hover {
-  color: #42bdcd;
-}
-.global-block-template-1 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-2 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-5 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-6 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-7 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-8 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-9 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-10 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-11 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-12 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-13 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-15 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-16 .td-related-title .td-cur-simple-item:hover,
-.global-block-template-17 .td-related-title .td-cur-simple-item:hover {
-  color: #000;
 }
 .global-block-template-1 .td-related-title .td-cur-simple-item:after {
   display: block;
@@ -8124,22 +8085,16 @@ body .dropcap3 {
     font-size: 15px;
   }
 }
-.global-block-template-2 .td-related-title .td-cur-simple-item {
-  color: #42bdcd;
-}
 .global-block-template-3 .td-related-title .td-cur-simple-item,
 .global-block-template-4 .td-related-title .td-cur-simple-item,
 .global-block-template-3 .td-related-title a:hover,
 .global-block-template-4 .td-related-title a:hover {
   background-color: #42bdcd;
+  color: #fff !important;
 }
 .global-block-template-3 .td-related-title .td-cur-simple-item:hover,
 .global-block-template-4 .td-related-title .td-cur-simple-item:hover {
   background-color: #000;
-}
-.global-block-template-3 .td-related-title .td-cur-simple-item:hover:before,
-.global-block-template-4 .td-related-title .td-cur-simple-item:hover:before {
-  border-color: #000 transparent transparent transparent !important;
 }
 .global-block-template-3 .td-related-title a {
   margin-right: 10px;
@@ -8161,13 +8116,19 @@ body .dropcap3 {
   }
 }
 .global-block-template-4 .td-related-title a:before {
-  border-color: transparent !important;
+  border-color: transparent;
 }
 .global-block-template-4 .td-related-title .td-cur-simple-item {
   background-color: #42bdcd;
 }
 .global-block-template-4 .td-related-title .td-cur-simple-item:before {
-  border-color: #42bdcd transparent transparent transparent !important;
+  border-color: #42bdcd transparent transparent transparent;
+}
+.global-block-template-4 .td-related-title .td-cur-simple-item:hover {
+  background-color: #000;
+}
+.global-block-template-4 .td-related-title .td-cur-simple-item:hover:before {
+  border-color: #000 transparent transparent transparent;
 }
 .global-block-template-5 .td-related-title a {
   /* responsive portrait phone */
@@ -8316,10 +8277,6 @@ body .dropcap3 {
   .global-block-template-15 .td-related-title a {
     margin: 0 8px !important;
   }
-}
-.global-block-template-14 .td-related-title .td-cur-simple-item,
-.global-block-template-14 .td-related-title a:hover {
-  color: #42bdcd;
 }
 .global-block-template-14 .td-related-title .td-cur-simple-item:hover {
   color: #fff;

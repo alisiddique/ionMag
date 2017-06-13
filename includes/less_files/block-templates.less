@@ -18,34 +18,16 @@
 
 // Related section on post template
 .td-related-title {
-  .td-cur-simple-item:after {
-    display: none;
+  .td-cur-simple-item,
+  a:hover {
+    color: @td_theme_color !important;
   }
-}
-
-.global-block-template-1,
-.global-block-template-2,
-.global-block-template-5,
-.global-block-template-6,
-.global-block-template-7,
-.global-block-template-8,
-.global-block-template-9,
-.global-block-template-10,
-.global-block-template-11,
-.global-block-template-12,
-.global-block-template-13,
-.global-block-template-15,
-.global-block-template-16,
-.global-block-template-17 {
-  .td-related-title {
-    .td-cur-simple-item,
-    a:hover {
-      color: @td_theme_color;
+  .td-cur-simple-item {
+    &:hover {
+      color: #000 !important;
     }
-    .td-cur-simple-item {
-      &:hover {
-        color: #000;
-      }
+    &:after {
+      display: none;
     }
   }
 }
@@ -80,9 +62,6 @@
         font-size: 15px;
       }
     }
-    .td-cur-simple-item {
-      color: @td_theme_color;
-    }
   }
 }
 .global-block-template-3,
@@ -91,14 +70,11 @@
     .td-cur-simple-item,
     a:hover {
       background-color: @td_theme_color;
+      color: #fff !important;
     }
     .td-cur-simple-item {
       &:hover {
         background-color: #000;
-
-        &:before {
-          border-color: #000 transparent transparent transparent !important;
-        }
       }
     }
   }
@@ -124,13 +100,22 @@
         font-size: 15px;
       }
       &:before {
-        border-color: transparent !important;
+        border-color: transparent;
       }
     }
     .td-cur-simple-item {
       background-color: @td_theme_color;
+
       &:before {
-        border-color: @td_theme_color transparent transparent transparent !important;
+        border-color: @td_theme_color transparent transparent transparent;
+      }
+
+      &:hover {
+        background-color: #000;
+
+        &:before {
+          border-color: #000 transparent transparent transparent;
+        }
       }
     }
   }
@@ -302,10 +287,6 @@
 }
 .global-block-template-14 {
   .td-related-title {
-    .td-cur-simple-item,
-    a:hover {
-      color: @td_theme_color;
-    }
     .td-cur-simple-item {
       &:hover {
         color: #fff;

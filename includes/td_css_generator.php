@@ -89,13 +89,13 @@ function td_css_generator() {
     .widget_categories li:hover > a,
     .widget_search input[type=submit]:hover,
     .td-read-more:hover,
-     .td_outlined_btn {
+    .td_outlined_btn {
       color: @theme_color;
     }
     
-    .td-post-comments a:hover,
     .td-related-title a:hover,
     .td-related-title .td-cur-simple-item,
+    .td-post-comments a:hover,
     .td_mod_related_posts:hover .entry-title > a {
       color: @theme_color !important;   
     }
@@ -111,6 +111,10 @@ function td_css_generator() {
     .td_block_template_5 .td-block-title:after,
     .td_block_template_9 .td-block-title:after,
     .td_block_template_15 .td-block-title:before,
+    .global-block-template-3 .td-related-title .td-cur-simple-item,
+    .global-block-template-3 .td-related-title a:hover,
+    .global-block-template-4 .td-related-title .td-cur-simple-item,
+    .global-block-template-4 .td-related-title a:hover,
     .td-a-rec-id-sidebar .td-adspot-title:after,
     .td-g-rec-id-sidebar .td-adspot-title:after,
     .single-post .page-nav > div,
@@ -152,6 +156,10 @@ function td_css_generator() {
       border-color: @theme_color;
     }
     
+    .global-block-template-4 .td-related-title .td-cur-simple-item:before {
+        border-color: @theme_color transparent transparent transparent;
+    }
+    
     
     /* BACKGROUND COLOR */
     /* @site_background_color */
@@ -176,11 +184,24 @@ function td_css_generator() {
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i,
-    div .td-trending-now-title {
+    div .td-trending-now-title{
       color: @text_header_color;
+    }
+    .td_block_wrap .td-related-title .td-cur-simple-item:hover {
+      color: @text_header_color !important;
     }
     .block-title:after {
       background-color: @text_header_color;
+    }
+    .td_block_wrap .td-related-title .td-cur-simple-item,
+    .td-related-title a:hover {
+      color: @theme_color !important;
+    }
+    .global-block-template-3 .td-related-title .td-cur-simple-item,
+    .global-block-template-3 .td-related-title a:hover,
+    .global-block-template-4 .td-related-title .td-cur-simple-item,
+    .global-block-template-4 .td-related-title a:hover {
+      color: @text_header_color !important;
     }
 
     
