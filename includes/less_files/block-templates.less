@@ -991,6 +991,29 @@
 }
 
 
+// Block headers 14 & 15 & 17
+.td_block_template_14,
+.td_block_template_15,
+.td_block_template_17 {
+  .td-pulldown-filter-display-option {
+    height: 100%;
+    display: table;
+
+    > div {
+      vertical-align: middle;
+      display: table-cell;
+      padding: 0 10px 0 0;
+    }
+  }
+
+  .td-pulldown-filter-list {
+    .td-pulldown-filter-link {
+      padding: 0 29px;
+    }
+  }
+}
+
+
 // Block header 14
 .td_block_template_14 {
   .td-block-title {
@@ -998,7 +1021,7 @@
     margin-top: 0;
     margin-bottom: 20px;
     padding: 11px 0 12px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1;
     position: relative;
@@ -1016,23 +1039,8 @@
   .td-pulldown-filter-display-option:before {
     display: none;
   }
-  .td-wrapper-pulldown-filter {
-    height: 39px;
-
-    .td-pulldown-filter-link {
-      padding: 0 29px;
-    }
-  }
-  .td-pulldown-filter-list {
-    padding: 14px 0;
-
-    &:before {
-      background-color: #000;
-    }
-  }
 
   .td-pulldown-filter-display-option {
-    line-height: 39px;
     color: #ddd;
 
     &:hover {
@@ -1043,34 +1051,25 @@
       }
     }
   }
-}
 
-// Block headers 15 & 16
-.td_block_template_15,
-.td_block_template_16,
-.td_block_template_17 {
-  .td-block-title {
-    line-height: 44px;
-  }
+  .td-pulldown-filter-list {
+    margin-top: 0;
 
-  .td-wrapper-pulldown-filter {
-    bottom: 19px;
-    height: 43px;
-  }
-
-  .td-pulldown-filter-display-option {
-    line-height: 43px;
-    height: 100%;
-    display: table;
+    &:before {
+      display: none;
+    }
   }
 }
+
 
 // Block header 15
 .td_block_template_15 {
   .td-block-title {
     margin-bottom: 20px;
+    padding: 13px 0 12px;
     overflow: hidden;
     text-align: center;
+    line-height: 1;
     background-color: #fff;
 
     &:before {
@@ -1107,6 +1106,7 @@
   .td-block-title {
     margin-bottom: 20px;
     overflow: hidden;
+    line-height: 44px;
 
     &:before,
     &:after {
@@ -1126,10 +1126,22 @@
     }
   }
 
+  .td-wrapper-pulldown-filter {
+    bottom: 19px;
+    height: 43px;
+  }
+
+  .td-pulldown-filter-display-option {
+    line-height: 43px;
+    height: 100%;
+    display: table;
+  }
+
   .td-subcat-filter {
     line-height: 40px;
   }
 }
+
 
 // Block header 17
 .td_block_template_17 {
@@ -1185,8 +1197,12 @@
     }
   }
 
-  .td-pulldown-filter-display-option {
-    line-height: 39px;
+  .td-pulldown-filter-list {
+    margin-top: 1px;
+
+    &:before {
+      display: none;
+    }
   }
 }
 

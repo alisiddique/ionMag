@@ -5627,7 +5627,6 @@ body .dropcap3 {
   font-size: 13px;
   color: #666;
   text-align: right;
-  height: 30px;
 }
 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option {
   display: inline-block;
@@ -5636,7 +5635,6 @@ body .dropcap3 {
   padding-left: 13px;
   cursor: pointer;
   white-space: nowrap;
-  line-height: 30px;
 }
 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i {
   font-size: 12px;
@@ -8853,12 +8851,30 @@ body .dropcap3 {
 .td_block_template_17 .td-pulldown-filter-display-option > div {
   padding-right: 10px;
 }
+.td_block_template_14 .td-pulldown-filter-display-option,
+.td_block_template_15 .td-pulldown-filter-display-option,
+.td_block_template_17 .td-pulldown-filter-display-option {
+  height: 100%;
+  display: table;
+}
+.td_block_template_14 .td-pulldown-filter-display-option > div,
+.td_block_template_15 .td-pulldown-filter-display-option > div,
+.td_block_template_17 .td-pulldown-filter-display-option > div {
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0 10px 0 0;
+}
+.td_block_template_14 .td-pulldown-filter-list .td-pulldown-filter-link,
+.td_block_template_15 .td-pulldown-filter-list .td-pulldown-filter-link,
+.td_block_template_17 .td-pulldown-filter-list .td-pulldown-filter-link {
+  padding: 0 29px;
+}
 .td_block_template_14 .td-block-title {
   background-color: #111;
   margin-top: 0;
   margin-bottom: 20px;
   padding: 11px 0 12px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1;
   position: relative;
@@ -8874,20 +8890,7 @@ body .dropcap3 {
 .td_block_template_14 .td-pulldown-filter-display-option:before {
   display: none;
 }
-.td_block_template_14 .td-wrapper-pulldown-filter {
-  height: 39px;
-}
-.td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-link {
-  padding: 0 29px;
-}
-.td_block_template_14 .td-pulldown-filter-list {
-  padding: 14px 0;
-}
-.td_block_template_14 .td-pulldown-filter-list:before {
-  background-color: #000;
-}
 .td_block_template_14 .td-pulldown-filter-display-option {
-  line-height: 39px;
   color: #ddd;
 }
 .td_block_template_14 .td-pulldown-filter-display-option:hover {
@@ -8896,28 +8899,18 @@ body .dropcap3 {
 .td_block_template_14 .td-pulldown-filter-display-option:hover i {
   color: #ddd;
 }
-.td_block_template_15 .td-block-title,
-.td_block_template_16 .td-block-title,
-.td_block_template_17 .td-block-title {
-  line-height: 44px;
+.td_block_template_14 .td-pulldown-filter-list {
+  margin-top: 0;
 }
-.td_block_template_15 .td-wrapper-pulldown-filter,
-.td_block_template_16 .td-wrapper-pulldown-filter,
-.td_block_template_17 .td-wrapper-pulldown-filter {
-  bottom: 19px;
-  height: 43px;
-}
-.td_block_template_15 .td-pulldown-filter-display-option,
-.td_block_template_16 .td-pulldown-filter-display-option,
-.td_block_template_17 .td-pulldown-filter-display-option {
-  line-height: 43px;
-  height: 100%;
-  display: table;
+.td_block_template_14 .td-pulldown-filter-list:before {
+  display: none;
 }
 .td_block_template_15 .td-block-title {
   margin-bottom: 20px;
+  padding: 13px 0 12px;
   overflow: hidden;
   text-align: center;
+  line-height: 1;
   background-color: #fff;
 }
 .td_block_template_15 .td-block-title:before {
@@ -8947,6 +8940,7 @@ body .dropcap3 {
 .td_block_template_16 .td-block-title {
   margin-bottom: 20px;
   overflow: hidden;
+  line-height: 44px;
 }
 .td_block_template_16 .td-block-title:before,
 .td_block_template_16 .td-block-title:after {
@@ -8962,6 +8956,15 @@ body .dropcap3 {
 }
 .td_block_template_16 .td-block-title:after {
   bottom: 0;
+}
+.td_block_template_16 .td-wrapper-pulldown-filter {
+  bottom: 19px;
+  height: 43px;
+}
+.td_block_template_16 .td-pulldown-filter-display-option {
+  line-height: 43px;
+  height: 100%;
+  display: table;
 }
 .td_block_template_16 .td-subcat-filter {
   line-height: 40px;
@@ -9016,8 +9019,11 @@ body .dropcap3 {
   border-width: 8px 8px 0 8px;
   border-color: #111 transparent transparent transparent;
 }
-.td_block_template_17 .td-pulldown-filter-display-option {
-  line-height: 39px;
+.td_block_template_17 .td-pulldown-filter-list {
+  margin-top: 1px;
+}
+.td_block_template_17 .td-pulldown-filter-list:before {
+  display: none;
 }
 .td_block_template_18 {
   padding-top: 20px;
