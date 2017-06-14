@@ -37,6 +37,9 @@ class td_block_template_14 extends td_block_template {
             .$unique_block_class .td-block-title {
                 border-color: @border_color !important;
             }
+            .$unique_block_class.td_block_template_14 .td-pulldown-filter-list:before {
+                background-color: @border_color !important;
+            }
             
             /* @accent_text_color */
             .$unique_block_class .td_module_wrap:hover .entry-title a,
