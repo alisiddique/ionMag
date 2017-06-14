@@ -1789,6 +1789,142 @@ class td_config {
             )
         );
 
+        td_api_block::add('td_block_video_youtube',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'Video Playlist',
+                "base" => "td_block_video_youtube",
+                "class" => "td_block_video_playlist_youtube",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td-youtube',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_video_youtube.php',
+                "params" => array(
+                    array(
+                        "param_name" => "playlist_title",
+                        "type" => "textfield",
+                        "value" => "",
+                        //"heading" => __("Optional - custom title for this block:", TD_THEME_NAME),
+                        "heading" => "Optional - custom title for this block:",
+                        "description" => "",
+                        "holder" => "div",
+                        "class" => "",
+                    ),
+                    array(
+                        "param_name" => "playlist_yt",
+                        "type" => "textfield",
+                        "value" => "",
+                        //"heading" => __("Optional - custom title for this block:", TD_THEME_NAME),
+                        "heading" => "List of youtube id's separated by comma (ex: NRuE38Bl5Mo, 1ZgoluYjuZM, 0K-0vkFfUmY):",
+                        "description" => "",
+                        "holder" => "div",
+                        "class" => "",
+                    ),
+                    array(
+                        "param_name" => "playlist_auto_play",
+                        "type" => "dropdown",
+                        "value" => array('OFF' => '0', 'ON' => '1'),
+                        //"heading" => __("Select playlist type:", TD_THEME_NAME),
+                        "heading" => "Autoplay ON / OFF:",
+                        "description" => "Autoplay does not work on mobile devices (android, windows phone, iOS)",
+                        "holder" => "div",
+                        "class" => "tdc-dropdown-small",
+                    ),
+                    array(
+                        'param_name' => 'el_class',
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => 'Extra class',
+                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                        'class' => 'tdc-textfield-extrabig',
+                    ),
+                    array (
+                        'param_name' => 'css',
+                        'value' => '',
+                        'type' => 'css_editor',
+                        'heading' => 'Css',
+                        'group' => 'Design options',
+                    ),
+                    array (
+                        'param_name' => 'tdc_css',
+                        'value' => '',
+                        'type' => 'tdc_css_editor',
+                        'heading' => '',
+                        'group' => 'Design options',
+                    ),
+                )
+            )
+        );
+
+        td_api_block::add('td_block_video_vimeo',
+            array(
+                'map_in_visual_composer' => true,
+                'map_in_td_composer' => true,
+                "name" => 'Video Playlist',
+                "base" => "td_block_video_vimeo",
+                "class" => "td_block_video_playlist_vimeo",
+                "controls" => "full",
+                "category" => 'Blocks',
+                'icon' => 'icon-pagebuilder-td-vimeo',
+                'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_video_vimeo.php',
+                "params" => array(
+                    array(
+                        "param_name" => "playlist_title",
+                        "type" => "textfield",
+                        "value" => "",
+                        //"heading" => __("Optional - custom title for this block:", TD_THEME_NAME),
+                        "heading" => "Optional - custom title for this block:",
+                        "description" => "",
+                        "holder" => "div",
+                        "class" => "",
+                    ),
+                    array(
+                        "param_name" => "playlist_v",
+                        "type" => "textfield",
+                        "value" => "",
+                        //"heading" => __("Optional - custom title for this block:", TD_THEME_NAME),
+                        "heading" => "List of vimeo id's separated by comma (ex: 100888579,  84062802, 57863017):",
+                        "description" => "",
+                        "holder" => "div",
+                        "class" => "",
+                    ),
+                    array(
+                        "param_name" => "playlist_auto_play",
+                        "type" => "dropdown",
+                        "value" => array('OFF' => '0', 'ON' => '1'),
+                        //"heading" => __("Select playlist type:", TD_THEME_NAME),
+                        "heading" => "Autoplay ON / OFF:",
+                        "description" => "",
+                        "holder" => "div",
+                        "class" => "tdc-dropdown-small",
+                    ),
+                    array(
+                        'param_name' => 'el_class',
+                        'type' => 'textfield',
+                        'value' => '',
+                        'heading' => 'Extra class',
+                        'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+                        'class' => 'tdc-textfield-extrabig',
+                    ),
+                    array (
+                        'param_name' => 'css',
+                        'value' => '',
+                        'type' => 'css_editor',
+                        'heading' => 'Css',
+                        'group' => 'Design options',
+                    ),
+                    array (
+                        'param_name' => 'tdc_css',
+                        'value' => '',
+                        'type' => 'tdc_css_editor',
+                        'heading' => '',
+                        'group' => 'Design options',
+                    ),
+                )
+            )
+        );
+
         td_api_block::add('td_block_ad_box',
             array(
                 'map_in_visual_composer' => true,
