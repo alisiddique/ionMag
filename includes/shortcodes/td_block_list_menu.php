@@ -64,15 +64,16 @@ class td_block_list_menu extends td_block {
 
 		$td_block_layout = new td_block_layout();
 		if (!empty($posts)) {
-			$buffy .= '<ul>';
+            ob_start();
 
-			_wp_menu_item_classes_by_context( $posts );
+            $td_menu_instance = td_menu::get_instance();
+            remove_filter( 'wp_nav_menu_objects', array($td_menu_instance, 'hook_wp_nav_menu_objects') );
 
-			foreach ($posts as $post) {
-				$buffy .= '<li class="' . join( ' ', $post->classes ) . '"><a href="' . $post->url . '">' . $post->title . '</a></li>';
-			}
+            wp_nav_menu( array( 'menu' => $menu_id ) );
 
-			$buffy .= '</ul>';
+            add_filter( 'wp_nav_menu_objects', array($td_menu_instance, 'hook_wp_nav_menu_objects'),  10, 2 );
+
+            $buffy .= ob_get_clean();
 		}
 		$buffy .= $td_block_layout->close_all_tags();
 		return $buffy;
