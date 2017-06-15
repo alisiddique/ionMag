@@ -646,17 +646,21 @@
   }
 
   .td-wrapper-pulldown-filter {
-    bottom: 12px;
     background-color: #fff;
   }
 
   .td-pulldown-filter-display-option {
+    height: 100%;
+    display: table;
+
     &:before {
       display: none;
     }
 
     > div {
-      padding-left: 8px;
+      vertical-align: middle;
+      display: table-cell;
+      padding: 0 0 0 8px;
     }
   }
 }
