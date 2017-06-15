@@ -165,10 +165,6 @@ jQuery(window).ready(function() {
 
     // load animation stack
     tdAnimationStack.ready_init();
-
-
-    //initialize menu
-    tdMenu.init();
 });
 
 
