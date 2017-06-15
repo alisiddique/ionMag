@@ -24,34 +24,36 @@ class td_block_template_12 extends td_block_template {
             .$unique_block_class .td-pulldown-category {
                 color: @button_color !important;
             }
-
+        
             /* @header_text_color */
-            .$unique_block_class .td-block-title > * {
+            div.$unique_block_class .td-block-title * {
                 color: @header_text_color !important;
             }
-
+            
             /* @accent_text_color */
             .$unique_block_class .td_module_wrap:hover .entry-title a,
+            .$unique_block_class .td-load-more-wrap a:hover,
             .$unique_block_class .td_quote_on_blocks,
-            .$unique_block_class .td-opacity-cat .td-post-category:hover,
-            .$unique_block_class .td-opacity-read .td-read-more a:hover,
-            .$unique_block_class .td-opacity-author .td-post-author-name a:hover,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more span,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more i,
+            .$unique_block_class .td-subcat-filter .td-subcat-list a:hover,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown a:hover,
+            .$unique_block_class .td-module-comments a:hover,
+            .$unique_block_class .td-next-prev-wrap a:hover,
+            .$unique_block_class .td-authors-url a:hover,
+            .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
+            .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
+            .$unique_block_class .td-authors-url a:hover,
             .$unique_block_class .td-instagram-user a {
                 color: @accent_text_color !important;
             }
-
-            .$unique_block_class .td-next-prev-wrap a:hover,
-            .$unique_block_class .td-load-more-wrap a:hover {
-                background-color: @accent_text_color !important;
-                border-color: @accent_text_color !important;
-            }
-
-            .$unique_block_class .td-read-more a,
+            
+            .$unique_block_class .td_module_wrap .td-post-category:hover,
+            .$unique_block_class .entry-title:after,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown ul:before,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before,
-            .td-footer-wrapper .$unique_block_class .td-post-category,
-            .$unique_block_class .td-post-category:hover {
+            .$unique_block_class .td-exchange-header:before {
                 background-color: @accent_text_color !important;
             }
         </style>

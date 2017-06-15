@@ -21,41 +21,42 @@ class td_block_template_2 extends td_block_template {
         $raw_css = "
         <style>
             /* @header_text_color */
-            .$unique_block_class .td-block-title > *,
-            .$unique_block_class .td_module_wrap:hover .entry-title a,
-            .$unique_block_class .td-pulldown-filter-link:hover,
-            .$unique_block_class .td-subcat-item a:hover,
-            .$unique_block_class .td-cur-simple-item,
-            .$unique_block_class .td_quote_on_blocks,
-            .$unique_block_class .td-opacity-cat .td-post-category:hover,
-            .$unique_block_class .td-opacity-read .td-read-more a:hover,
-            .$unique_block_class .td-opacity-author .td-post-author-name a:hover,
-            .$unique_block_class .td-instagram-user a,
-            .$unique_block_class .td-subcat-dropdown:hover .td-subcat-more span,
-            .$unique_block_class .td-subcat-dropdown:hover .td-subcat-more i {
+            div.$unique_block_class .td-block-title * {
                 color: @header_text_color !important;
             }
-
+        
+            /* @accent_text_color */
+            .$unique_block_class .td_module_wrap:hover .entry-title a,
+            .$unique_block_class .td-load-more-wrap a:hover,
+            .$unique_block_class .td_quote_on_blocks,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more span,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more i,
+            .$unique_block_class .td-subcat-filter .td-subcat-list a:hover,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown a:hover,
+            .$unique_block_class .td-module-comments a:hover,
             .$unique_block_class .td-next-prev-wrap a:hover,
-            .$unique_block_class .td-load-more-wrap a:hover {
-                background-color: @header_text_color !important;
-                border-color: @header_text_color !important;
+            .$unique_block_class .td-authors-url a:hover,
+            .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
+            .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
+            .$unique_block_class .td-authors-url a:hover,
+            .$unique_block_class .td-instagram-user a {
+                color: @accent_text_color !important;
             }
-
-            .$unique_block_class .td-read-more a,
+            
+            .$unique_block_class .td_module_wrap .td-post-category:hover,
+            .$unique_block_class .entry-title:after,
+            .$unique_block_class .td-subcat-filter .td-subcat-dropdown ul:before,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before,
-            .td-footer-wrapper .$unique_block_class .td-post-category,
-            .$unique_block_class .td-post-category:hover,
-            .$unique_block_class .td-subcat-dropdown ul:after {
-                background-color: @header_text_color !important;
+            .$unique_block_class .td-exchange-header:before {
+                background-color: @accent_text_color !important;
             }
         </style>
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
+        $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
 
         $compiled_style = $td_css_compiler->compile_css();
 
@@ -107,28 +108,36 @@ class td_block_template_2 extends td_block_template {
         $buffy = '';
 
         $td_pull_down_items = $this->get_td_pull_down_items();
-
         if (empty($td_pull_down_items)) {
             return '';
         }
 
-        $buffy .= '<div class="td-wrapper-pulldown-filter">';
-        $buffy .= '<div class="td-pulldown-filter-display-option">';
+        //generate unique id for this pull down filter control
+        $pull_down_wrapper_id = "td_pulldown_" . $this->get_block_uid();
 
+        // wrapper
+        $buffy .= '<div class="td-pulldown-syle-2 td-subcat-filter" id="' . $pull_down_wrapper_id . '">';
 
-        //show the default display value
-        $buffy .= '<div id="td-pulldown-' . $this->get_block_uid() . '-val"><span>';
-        $buffy .=  $td_pull_down_items[0]['name'] . ' </span><i class="td-icon-down"></i>';
-        $buffy .= '</div>';
-
-        //builde the dropdown
-        $buffy .= '<ul class="td-pulldown-filter-list">';
+        // subcategory list
+        $buffy .= '<ul class="td-subcat-list" id="' . $pull_down_wrapper_id . '_list">';
         foreach ($td_pull_down_items as $item) {
-            $buffy .= '<li class="td-pulldown-filter-item"><a class="td-pulldown-filter-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
+            $buffy .= '<li class="td-subcat-item"><a class="td-subcat-link" id="' . td_global::td_generate_unique_id() . '" data-td_filter_value="' . $item['id'] . '" data-td_block_id="' . $this->get_block_uid() . '" href="#">' . $item['name'] . '</a></li>';
         }
         $buffy .= '</ul>';
 
-        $buffy .= '</div>';  // /.td-pulldown-filter-display-option
+
+        // subcategory dropdown list
+        $buffy .= '<div class="td-subcat-dropdown">';
+        $buffy .= '<div class="td-subcat-more" aria-haspopup="true"><span>' . __td('More', TD_THEME_NAME) . '</span><i class="td-icon-down"></i></div>';
+
+        // the dropdown list
+        $buffy .= '<ul class="td-pulldown-filter-list">';
+
+
+
+        $buffy .= '</ul>';
+
+        $buffy .= '</div>';
         $buffy .= '</div>';
 
         return $buffy;

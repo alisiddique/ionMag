@@ -22,9 +22,9 @@ class td_block_template_14 extends td_block_template {
         <style>
 
             /* @header_text_color */
-            .$unique_block_class .td-block-title > *,
-            .$unique_block_class .td-pulldown-filter-display-option,
-            .$unique_block_class .td-pulldown-filter-display-option i {
+            div.$unique_block_class .td-block-title *,
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option,
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i {
                 color: @header_text_color !important;
             }
 
@@ -37,33 +37,33 @@ class td_block_template_14 extends td_block_template {
             .$unique_block_class .td-block-title {
                 border-color: @border_color !important;
             }
-
+            .$unique_block_class.td_block_template_14 .td-pulldown-filter-list:before {
+                background-color: @border_color !important;
+            }
+            
             /* @accent_text_color */
             .$unique_block_class .td_module_wrap:hover .entry-title a,
+            .$unique_block_class .td-load-more-wrap a:hover,
             .$unique_block_class .td_quote_on_blocks,
-            .$unique_block_class .td-opacity-cat .td-post-category:hover,
-            .$unique_block_class .td-opacity-read .td-read-more a:hover,
-            .$unique_block_class .td-opacity-author .td-post-author-name a:hover,
-            .$unique_block_class .td-instagram-user a,
-            .$unique_block_class .td-pulldown-filter-item .td-cur-simple-item,
-            .$unique_block_class .td-pulldown-filter-link:hover,
-            .$unique_block_class .td-pulldown-filter-display-option:hover,
-            .$unique_block_class .td-pulldown-filter-display-option:hover i {
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i,
+        	.$unique_block_class .td-wrapper-pulldown-filter a.td-pulldown-filter-link:hover,
+        	.$unique_block_class .td-wrapper-pulldown-filter a.td-cur-simple-item,
+            .$unique_block_class .td-module-comments a:hover,
+            .$unique_block_class .td-next-prev-wrap a:hover,
+            .$unique_block_class .td-authors-url a:hover,
+            .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
+            .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
+            .$unique_block_class .td-authors-url a:hover,
+            .$unique_block_class .td-instagram-user a {
                 color: @accent_text_color !important;
             }
-
-            .$unique_block_class .td-next-prev-wrap a:hover,
-            .$unique_block_class .td-load-more-wrap a:hover {
-                background-color: @accent_text_color !important;
-                border-color: @accent_text_color !important;
-            }
-
-            .$unique_block_class .td-read-more a,
+            
+            .$unique_block_class .td_module_wrap .td-post-category:hover,
+            .$unique_block_class .entry-title:after,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before,
-            .td-footer-wrapper .$unique_block_class .td-post-category,
-            .$unique_block_class .td-post-category:hover {
+            .$unique_block_class .td-exchange-header:before {
                 background-color: @accent_text_color !important;
             }
         </style>
