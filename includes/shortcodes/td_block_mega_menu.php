@@ -82,7 +82,7 @@ class td_block_mega_menu extends td_block {
         $buffy .= '</div>';
 
 
-        //$buffy .= $this->get_block_pagination();
+        $buffy .= $this->get_block_pagination();
         //get the ajax pagination for this block
 
         $buffy .= '<div class="clearfix"></div>';
