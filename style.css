@@ -10367,18 +10367,21 @@ body .dropcap3 {
   font-size: 14px;
   line-height: 21px;
   font-weight: 600;
-  padding: 16px 20px 14px;
+  padding: 16px 20px;
   width: 80%;
   /* responsive portrait phone */
 }
 @media (max-width: 767px) {
   .td-gallery-title {
     width: 65%;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 16px;
   }
 }
 /* controls wrapper */
 .td-gallery-controls-wrapper {
-  height: 33px;
+  height: 28px;
   margin: auto !important;
   position: absolute;
   right: 0;
@@ -10389,20 +10392,32 @@ body .dropcap3 {
   display: inline-block;
   margin-right: 7px;
   font-style: italic;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  position: relative;
-  top: -8px;
+  vertical-align: middle;
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-gallery-slide-count {
+    margin-right: 0;
+  }
 }
 .td-gallery-slide-prev-next-but {
   display: inline-block;
   margin-right: 12px;
-  position: relative;
+  vertical-align: middle;
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-gallery-slide-prev-next-but {
+    margin-right: 8px;
+  }
 }
 .td-gallery-slide-prev-next-but .td-icon-left,
 .td-gallery-slide-prev-next-but .td-icon-right {
-  font-size: 30px;
-  padding: 1px 8px;
+  font-size: 16px;
+  padding: 0 4px;
+  /* responsive portrait phone */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -10410,13 +10425,25 @@ body .dropcap3 {
   -ms-user-select: none;
   user-select: none;
 }
+@media (max-width: 767px) {
+  .td-gallery-slide-prev-next-but .td-icon-left,
+  .td-gallery-slide-prev-next-but .td-icon-right {
+    padding: 0 6px;
+  }
+}
+.td-gallery-slide-prev-next-but .td-icon-left:before {
+  content: '\e80c';
+}
+.td-gallery-slide-prev-next-but .td-icon-right:before {
+  content: '\e80d';
+}
 .td-gallery-slide-copywrite {
   float: right;
   padding: 4px 6px;
   text-align: left;
   font-style: italic;
   line-height: 1;
-  font-size: 11px;
+  font-size: 12px;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -10425,6 +10452,7 @@ body .dropcap3 {
   background-size: cover !important;
 }
 .td-doubleSlider-1 {
+  overflow: hidden;
   width: auto;
   height: 580px;
   /* responsive portrait tablet */
@@ -10437,7 +10465,7 @@ body .dropcap3 {
 }
 @media (max-width: 767px) {
   .td-doubleSlider-1 {
-    height: 180px;
+    height: 260px;
   }
 }
 .td-doubleSlider-1 .td-slide-galery-figure {
@@ -10463,7 +10491,7 @@ body .dropcap3 {
 @media (max-width: 767px) {
   .td-doubleSlider-1 .td-slide-galery-figure {
     width: 100%;
-    height: 180px;
+    height: 260px;
   }
 }
 .td-doubleSlider-1 .td-slide-item img {
@@ -10512,10 +10540,6 @@ body .dropcap3 {
 }
 .td-doubleSlider-1 .td-slide-item .td-slide-caption.td-gallery-slide-content {
   width: 100%;
-  /*span {
-          padding: 7px 6px 7px 17px;
-          display: inline-block;
-        }*/
 }
 .td-slide-on-2-columns .td-gallery-title {
   width: 73%;
@@ -10538,11 +10562,11 @@ body .dropcap3 {
 }
 @media (max-width: 767px) {
   .td-slide-on-2-columns .td-doubleSlider-1 {
-    height: 180px;
+    height: 260px;
   }
 }
 .td-slide-on-2-columns .td-doubleSlider-1 .td-slide-galery-figure {
-  width: 696px;
+  width: 640px;
   height: 420px;
   /* responsive portrait tablet */
   /* responsive portrait tablet */
@@ -10555,14 +10579,14 @@ body .dropcap3 {
 }
 @media (min-width: 768px) and (max-width: 1018px) {
   .td-slide-on-2-columns .td-doubleSlider-1 .td-slide-galery-figure {
-    width: 484px;
+    width: 480px;
     height: 320px;
   }
 }
 @media (max-width: 767px) {
   .td-slide-on-2-columns .td-doubleSlider-1 .td-slide-galery-figure {
     width: 100%;
-    height: 180px;
+    height: 260px;
   }
 }
 .td-slide-on-2-columns .td-button {
@@ -10573,6 +10597,7 @@ body .dropcap3 {
   height: 80px !important;
   width: 100%;
   background-color: #111;
+  visibility: hidden;
   /* responsive portrait phone */
   /* if there are not sufficient sliders to fill the td-doubleSlider-2, then move -how many sliders do we have- in the center of td-doubleSlider-2 */
 }
@@ -10589,17 +10614,21 @@ body .dropcap3 {
 .td-doubleSlider-2 .td-button {
   top: -10px;
   display: inline-block;
-}
-.td-doubleSlider-2 .td-button:hover {
-  cursor: pointer;
-}
-.td-doubleSlider-2 .td-button {
+  width: 80px !important;
+  height: 60px;
+  background-size: cover !important;
+  background-position: center !important;
   /* responsive landscape tablet */
 }
 @media (min-width: 768px) and (max-width: 1018px) {
   .td-doubleSlider-2 .td-button {
     top: -9px !important;
+    width: 56px !important;
+    height: 58px;
   }
+}
+.td-doubleSlider-2 .td-button:hover {
+  cursor: pointer;
 }
 .td-doubleSlider-2 .td-button .td-border {
   height: 60px;
@@ -10623,6 +10652,9 @@ body .dropcap3 {
   position: relative;
   top: -15px;
   margin: 0 2px 0 3px;
+}
+.td-js-loaded .td-doubleSlider-2 {
+  visibility: visible;
 }
 /*  ----------------------------------------------------------------------------
     Fix gallery on td_module_15 in homepage loop - on 3 columns
