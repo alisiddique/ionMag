@@ -14015,51 +14015,6 @@ input.search-submit:hover {
   height: 42px;
   background-position: -20px -612px;
 }
-.td-sp-facebook {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -20px;
-}
-.td-sp-pinterest {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -72px;
-}
-.td-sp-rss {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -124px;
-}
-.td-sp-soundcloud {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -176px;
-}
-.td-sp-instagram {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -228px;
-}
-.td-sp-googleplus {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -280px;
-}
-.td-sp-vimeo {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -332px;
-}
-.td-sp-youtube {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -384px;
-}
-.td-sp-twitter {
-  width: 32px;
-  height: 32px;
-  background-position: -20px -436px;
-}
 .td_block_social_counter .block-title {
   margin-bottom: 20px;
   width: 100%;
@@ -14094,6 +14049,7 @@ input.search-submit:hover {
 }
 .td_social_type .td-sp {
   position: relative;
+  background: none;
   vertical-align: top;
   margin-right: 20px;
 }
