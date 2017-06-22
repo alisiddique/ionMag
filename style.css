@@ -12682,6 +12682,9 @@ img.mfp-img {
   .mfp-img-mobile img.mfp-img {
     padding: 0;
   }
+  .mfp-img-mobile .mfp-figure:before {
+    bottom: 0;
+  }
   .mfp-img-mobile .mfp-figure:after {
     top: 0;
     bottom: 0;
