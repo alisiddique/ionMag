@@ -8397,6 +8397,23 @@ body .dropcap3 {
 .global-block-template-5 .td-related-title a:last-child {
   border: none;
 }
+.global-block-template-6 .td_block_related_posts .td-next-prev-wrap,
+.global-block-template-15 .td_block_related_posts .td-next-prev-wrap,
+.global-block-template-17 .td_block_related_posts .td-next-prev-wrap {
+  /* responsive portrait tablet */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .global-block-template-6 .td_block_related_posts .td-next-prev-wrap .td-ajax-prev-page,
+  .global-block-template-15 .td_block_related_posts .td-next-prev-wrap .td-ajax-prev-page,
+  .global-block-template-17 .td_block_related_posts .td-next-prev-wrap .td-ajax-prev-page {
+    padding-right: 10px;
+  }
+  .global-block-template-6 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page,
+  .global-block-template-15 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page,
+  .global-block-template-17 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page {
+    padding-left: 12px;
+  }
+}
 .global-block-template-6 .td-related-title a {
   padding: 0 10px;
   /* responsive portrait phone */
@@ -8551,20 +8568,6 @@ body .dropcap3 {
 }
 .global-block-template-14 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page:before {
   background-color: #fff;
-}
-.global-block-template-15 .td_block_related_posts .td-next-prev-wrap,
-.global-block-template-17 .td_block_related_posts .td-next-prev-wrap {
-  /* responsive portrait tablet */
-}
-@media (min-width: 768px) and (max-width: 1018px) {
-  .global-block-template-15 .td_block_related_posts .td-next-prev-wrap .td-ajax-prev-page,
-  .global-block-template-17 .td_block_related_posts .td-next-prev-wrap .td-ajax-prev-page {
-    padding-right: 10px;
-  }
-  .global-block-template-15 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page,
-  .global-block-template-17 .td_block_related_posts .td-next-prev-wrap .td-ajax-next-page {
-    padding-left: 12px;
-  }
 }
 .global-block-template-15 .td_block_related_posts .td-next-prev-wrap {
   /* tablet + desktop */
