@@ -24,9 +24,6 @@
     color: @td_theme_color !important;
   }
   .td-cur-simple-item {
-    &:hover {
-      color: #000 !important;
-    }
     &:after {
       display: none;
     }
@@ -73,11 +70,6 @@
       background-color: @td_theme_color;
       color: #fff !important;
     }
-    .td-cur-simple-item {
-      &:hover {
-        background-color: #000;
-      }
-    }
   }
 }
 .global-block-template-3 {
@@ -109,14 +101,6 @@
 
       &:before {
         border-color: @td_theme_color transparent transparent transparent;
-      }
-
-      &:hover {
-        background-color: #000;
-
-        &:before {
-          border-color: #000 transparent transparent transparent;
-        }
       }
     }
   }
@@ -287,13 +271,6 @@
   }
 }
 .global-block-template-14 {
-  .td-related-title {
-    .td-cur-simple-item {
-      &:hover {
-        color: #fff !important;
-      }
-    }
-  }
   .td_block_related_posts {
     .td-next-prev-wrap {
       /* tablet + desktop */
@@ -379,8 +356,7 @@
       font-size: 32px;
       margin-bottom: 5px;
 
-      a,
-      .td-cur-simple-item:hover {
+      a {
         background: #000;
       }
 

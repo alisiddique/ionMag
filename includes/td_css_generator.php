@@ -188,9 +188,6 @@ function td_css_generator() {
     div .td-trending-now-title{
       color: @text_header_color;
     }
-    .td_block_wrap .td-related-title .td-cur-simple-item:hover {
-      color: @text_header_color !important;
-    }
     .block-title:after {
       background-color: @text_header_color;
     }

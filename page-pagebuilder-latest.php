@@ -104,15 +104,28 @@ if (!empty($post->ID)) {
             <?php
             // set the $cur_single_template_sidebar_pos - for gallery and video playlist
             td_global::$cur_single_template_sidebar_pos = $loop_sidebar_position;
+
+            // The main content header style is from 'tds_global_block_template'
+            $global_block_template_id = td_options::get('tds_global_block_template', 'td_block_template_1');
+            $global_block_template_instance = new $global_block_template_id(
+                array(
+                    'atts' => array(
+                        'custom_title' => $td_list_custom_title,
+                    ),
+                )
+            );
+
+            $main_content_title = '<div class="td-block-title-wrap">' . $global_block_template_instance->get_block_title() . '</div>';
+
             //the default template
             switch ($loop_sidebar_position) {
                 default: //sidebar right
                     ?>
                         <div class="td-pb-span8 td-main-content" role="main">
-                            <div class="td-ss-main-content">
-                                <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) { ?>
-                                    <div class="td-block-title-wrap"><h4 class="block-title"><span><?php echo $td_list_custom_title?></span></h4></div>
-                                <?php }
+                            <div class="td-ss-main-content <?php echo $global_block_template_id ?>">
+                                <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) {
+                                    echo $main_content_title;
+                                }
 
 
                                 //query_posts(td_data_source::metabox_to_args($td_homepage_loop_filter, $paged));
@@ -134,10 +147,10 @@ if (!empty($post->ID)) {
                 case 'sidebar_left':
                     ?>
                     <div class="td-pb-span8 td-main-content <?php echo $td_sidebar_position; ?>-content" role="main">
-                        <div class="td-ss-main-content">
-                            <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) { ?>
-                            <div class="td-block-title-wrap"><h4 class="block-title"><span><?php echo $td_list_custom_title?></span></h4></div>
-                            <?php }
+                        <div class="td-ss-main-content <?php echo $global_block_template_id ?>">
+                            <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) {
+                                echo $main_content_title;
+                            }
 
                             //query_posts(td_data_source::metabox_to_args($td_homepage_loop_filter, $paged));
                             query_posts(td_data_source::metabox_to_args($td_homepage_loop, $paged));
@@ -160,10 +173,10 @@ if (!empty($post->ID)) {
                     td_global::$load_featured_img_from_template = 'full';
                     ?>
                     <div class="td-pb-span12 td-main-content" role="main">
-                        <div class="td-ss-main-content">
-                            <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) { ?>
-                            <div class="td-block-title-wrap"><h4 class="block-title"><span><?php echo $td_list_custom_title?></span></h4></div>
-                            <?php }
+                        <div class="td-ss-main-content <?php echo $global_block_template_id ?>">
+                            <?php if ((empty($paged) or $paged < 2) and $list_custom_title_show === true) {
+                                echo $main_content_title;
+                            }
 
                             //query_posts(td_data_source::metabox_to_args($td_homepage_loop_filter, $paged));
                             query_posts(td_data_source::metabox_to_args($td_homepage_loop, $paged));
