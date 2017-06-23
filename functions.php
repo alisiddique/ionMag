@@ -24,9 +24,50 @@ require_once('includes/widgets/td_page_builder_widgets.php'); // widgets
 
 //td_demo_state::update_state("premium_magazine", 'full');
 
+/* ----------------------------------------------------------------------------
+ * Woo Commerce
+ */
 
+// breadcrumb
+add_filter('woocommerce_breadcrumb_defaults', 'td_woocommerce_breadcrumbs');
+function td_woocommerce_breadcrumbs() {
+    return array(
+        'delimiter' => ' <i class="td-icon-right td-bread-sep"></i> ',
+        'wrap_before' => '<div class="entry-crumbs" itemprop="breadcrumb">',
+        'wrap_after' => '</div>',
+        'before' => '',
+        'after' => '',
+        'home' => _x('Home', 'breadcrumb', 'woocommerce'),
+    );
+}
 
+// use own pagination
+if (!function_exists('woocommerce_pagination')) {
+    // pagination
+    function woocommerce_pagination() {
+        echo td_page_generator::get_pagination();
+    }
+}
 
+// Override theme default specification for product 3 per row
+add_filter('loop_shop_columns', 'td_wc_loop_shop_columns', 1, 10);
+function td_wc_loop_shop_columns($number_columns) {
+    return 4;
+}
+
+// Number of product per page 8
+add_filter('loop_shop_per_page', create_function('$cols', 'return 8;'));
+
+if (!function_exists('woocommerce_output_related_products')) {
+    // Number of related products
+    function woocommerce_output_related_products() {
+        woocommerce_related_products(array(
+            'posts_per_page' => 4,
+            'columns' => 4,
+            'orderby' => 'rand',
+        )); // Display 4 products in rows of 1
+    }
+}
 
 /**
  * tdStyleCustomizer.js is required
