@@ -222,9 +222,6 @@ function td_css_generator() {
     div .td-trending-now-title{
       color: @text_header_color;
     }
-    .td_block_wrap .td-related-title .td-cur-simple-item:hover {
-      color: @text_header_color !important;
-    }
     .block-title:after {
       background-color: @text_header_color;
     }
@@ -479,7 +476,8 @@ function td_css_generator() {
     }
     /* @mega_menu_accent_color */
     .td-theme-wrap .td_module_mega_menu:hover .td-item-details .entry-title a,
-    .td-theme-wrap .td_mega_menu_sub_cats .block-mega-child-cats .cur-sub-cat {
+    .td-theme-wrap .td_mega_menu_sub_cats .block-mega-child-cats .cur-sub-cat,
+    .td-theme-wrap .td_block_mega_menu .td-next-prev-wrap a:hover {
         color: @mega_menu_accent_color;
     }
     .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover {
