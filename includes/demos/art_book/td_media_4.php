@@ -1,8 +1,8 @@
 <?php
 
-// post photos
-td_demo_media::add_image_to_media_gallery('td_pic_p1',                  "http://demo_content.tagdiv.com/ion_mag/viral/p1.jpg");
-td_demo_media::add_image_to_media_gallery('td_pic_p2',                  "http://demo_content.tagdiv.com/ion_mag/viral/p2.jpg");
-td_demo_media::add_image_to_media_gallery('td_pic_p3',                  "http://demo_content.tagdiv.com/ion_mag/viral/p3.jpg");
-td_demo_media::add_image_to_media_gallery('td_pic_p4',                  "http://demo_content.tagdiv.com/ion_mag/viral/p4.jpg");
+//logo
+td_demo_media::add_image_to_media_gallery('td_pic_p3',                  "http://demo_content.tagdiv.com/ion_mag/art_book/p3.jpg");
+td_demo_media::add_image_to_media_gallery('td_logo_header',             'http://demo_content.tagdiv.com/ion_mag/art_book/logo-header.png');
+td_demo_media::add_image_to_media_gallery('td_logo_header_retina',      'http://demo_content.tagdiv.com/ion_mag/art_book/logo-header@2x.png');
 
+td_demo_media::add_image_to_media_gallery('td_author_photo',            "http://demo_content.tagdiv.com/ion_mag/art_book/author-photo.jpg");

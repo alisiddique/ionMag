@@ -60,6 +60,22 @@ usage:
 .td-art-book .entry-title:after {
   display: none;
 }
+.td-art-book .td_module_4 .entry-title {
+  /* responsive portrait tablet */
+  /* responsive portrait phone */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-art-book .td_module_4 .entry-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .td-art-book .td_module_4 .entry-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
 .td-art-book .td_module_4 .td-post-category-wrap {
   bottom: 20px;
   text-align: left;
@@ -69,10 +85,6 @@ usage:
   .td-art-book .td_module_4 .td-post-category-wrap {
     bottom: 0;
   }
-}
-.td-art-book .td_block_rd_6 .td-excerpt {
-  font-size: 16px;
-  line-height: 26px;
 }
 .td-art-book .td_block_rd_11.td-column-3 .td-read-more {
   display: inline-block;
@@ -96,8 +108,13 @@ usage:
   display: none;
 }
 .td-art-book .td_block_big_grid_rd_bg_fl_5 {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  /* responsive tablet + desktop */
+}
+@media (min-width: 767px) {
+  .td-art-book .td_block_big_grid_rd_bg_fl_5 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 .td-art-book .td_block_big_grid_rd_bg_fl_5 .td-big-grid-post {
   border-width: 0 !important;
@@ -110,10 +127,28 @@ usage:
 .td-art-book .td-photography-intro .td-block-title > * {
   font-size: 32px;
   font-weight: 700;
+  /* responsive portrait tablet */
+  /* responsive portrait phone */
+}
+@media (min-width: 768px) and (max-width: 1018px) {
+  .td-art-book .td-photography-intro .td-block-title > * {
+    font-size: 27px;
+  }
+}
+@media (max-width: 767px) {
+  .td-art-book .td-photography-intro .td-block-title > * {
+    font-size: 25px;
+  }
 }
 .td-art-book .td-post-template-rd-10 .td-category a {
   background-color: transparent;
   padding: 0;
+  /* responsive portrait phone */
+}
+@media (max-width: 767px) {
+  .td-art-book .td-post-template-rd-10 .td-category a {
+    font-size: 15px;
+  }
 }
 .td-art-book .td-post-template-rd-10 .td_block_related_posts .td-block-title {
   margin-bottom: 22px;
