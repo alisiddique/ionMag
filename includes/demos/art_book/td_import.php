@@ -55,6 +55,38 @@ td_demo_misc::clear_all_ads();
 //default sidebar
 td_demo_widgets::remove_widgets_from_sidebar('default');
 
+//footer 1 sidebar
+td_demo_widgets::remove_widgets_from_sidebar('footer-1');
+td_demo_widgets::add_widget_to_sidebar('footer-1', 'td_block_popular_categories_widget',
+    array (
+        'custom_title'  => "Popular Topics",
+        'limit' => 5,
+    )
+);
+
+//footer 2 sidebar
+td_demo_widgets::remove_widgets_from_sidebar('footer-2');
+td_demo_widgets::add_widget_to_sidebar('footer-2', 'td_block_rd_10_widget',
+    array (
+        'custom_title'  => "Popular Exhibits",
+        'limit' => 6,
+        'sort' => 'featured',
+    )
+);
+
+//footer 3 sidebar
+td_demo_widgets::remove_widgets_from_sidebar('footer-3');
+td_demo_widgets::add_widget_to_sidebar('footer-3', 'td_block_social_counter_widget',
+    array (
+        'custom_title'  => "Follow Us",
+        'facebook' => "TagDiv",
+        'twitter' => "tagDivOfficial",
+        'youtube' => "tagdiv",
+        'instagram' => "nikon_photography_",
+        'style' => "style1",
+    )
+);
+
 
 /*  ---------------------------------------------------------------------------
     categories
@@ -221,6 +253,12 @@ td_demo_content::add_post(array(
     'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_7_id),
     'featured_image_td_id' => 'td_pic_8'
+));
+td_demo_content::add_post(array(
+    'title' => 'Robert Frank As A Young Artist',
+    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_2'
 ));
 
 

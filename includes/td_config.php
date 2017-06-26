@@ -4099,7 +4099,7 @@ class td_config {
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
                 ),
-                'premium_demo' => "premium"
+                'premium_demo' => "free"
             ),
 	    );
 
