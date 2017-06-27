@@ -1,7 +1,13 @@
 @import "../../less_files/variables.less";
 @import "../../less_files/mixin.less";
 
-/* Viral demo */
+/* Auto zone demo */
+//&.td-md-is-firefox {
+//  .td-auto-zone .td-auto-zone-cover-posts {
+//    display: flex;
+//  }
+//}
+
 .td-auto-zone {
 
   .sf-menu > li {
@@ -23,6 +29,43 @@
       &:after {
         display: none;
       }
+
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        > * {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &.td_block_widget {
+      .td-block-title > * {
+        font-size: 22px;
+        line-height: 20px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .td-auto-zone-cover-img {
+    a:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: -moz-linear-gradient(top,  rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%); /* W3C */
+      .opacity(0.9);
     }
   }
 
@@ -52,8 +95,68 @@
         text-transform: uppercase;
         color: #000;
 
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          font-size: 11px;
+          line-height: 13px;
+        }
+
         &:hover {
           color: @td_theme_color;
+        }
+      }
+    }
+  }
+
+  .td_block_big_grid_rd_bg_fl_2 {
+    /* responsive tablet + desktop */
+    @media (min-width: @responsive_p_phone_max) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .td-big-grid-post {
+      border-width: 0 !important;
+
+      .td-module-thumb a:last-child:before {
+        .opacity(0.9);
+      }
+
+      .td-big-grid-meta .entry-title {
+        font-family: Montserrat;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .td_ajax_load_more {
+    padding: 14px 28px;
+    .box-shadow(none);
+    border: 3px dashed #EBEBEB;
+
+    i {
+      display: none;
+    }
+  }
+
+  .td-post-template-rd-5 {
+    .td_block_related_posts {
+      .td-related-title > * {
+        font-size: 22px;
+        line-height: 20px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          font-size: 18px;
+        }
+      }
+
+      .td-next-prev-wrap {
+        top: 26px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          top: 0;
         }
       }
     }
