@@ -77,3 +77,5 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
         <?php
     }
 }
+
+//td_demo_state::update_state("blog_beauty", 'full');
