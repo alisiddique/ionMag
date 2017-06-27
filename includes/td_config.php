@@ -4012,12 +4012,27 @@ class td_config {
                 'required_plugins' => array(),
                 'premium_demo' => "free"
 		    ),
+            'blog_beauty' => array(
+                'text' => 'Beauty Blog',
+                'folder' => td_global::$get_template_directory . '/includes/demos/blog_beauty/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/blog_beauty/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_blog_beauty/',
+                'td_css_generator_demo' => false,               // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
             'premium_magazine' => array(
                 'text' => 'Premium Magazine',
                 'folder' => td_global::$get_template_directory . '/includes/demos/premium_magazine/',
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/premium_magazine/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_premium_magazine/',
-                'td_css_generator_demo' => false,                // must have a td_css_generator_demo.php in demo's folder
+                'td_css_generator_demo' => false,               // must have a td_css_generator_demo.php in demo's folder
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
