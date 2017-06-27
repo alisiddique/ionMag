@@ -24,13 +24,7 @@ $td_demo_header_menu_id = td_demo_menus::create_menu('td-demo-header-menu', 'hea
 td_demo_misc::update_logo(array(
     'normal' => 'td_logo_header',
     'retina' => 'td_logo_header_retina',
-    'mobile' => 'td_logo_header'
-));
-
-//footer
-td_demo_misc::update_footer_logo(array(
-    'normal' => 'td_logo_header',
-    'retina' => 'td_logo_header_retina'
+    'mobile' => 'td_logo_mobile'
 ));
 
 /*  ----------------------------------------------------------------------------
@@ -55,8 +49,7 @@ td_demo_misc::add_social_buttons(array(
     ads
  */
 td_demo_misc::clear_all_ads();
-td_demo_misc::add_ad_image('custom_ad_1', 'td_what_post_ad');
-td_demo_misc::add_ad_image('sidebar', 'td_what_sidebar_ad');
+td_demo_misc::add_ad_image('custom_ad_1', 'td_rec_custom');
 
 
 /*  ----------------------------------------------------------------------------
@@ -65,24 +58,26 @@ td_demo_misc::add_ad_image('sidebar', 'td_what_sidebar_ad');
 //default sidebar
 td_demo_widgets::remove_widgets_from_sidebar('default');
 
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_popular_categories_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_social_counter_widget',
     array (
-        'custom_title' => 'POPULAR CATEGORIES',
-        'limit' => '6'
+        'custom_title'  => "Follow us",
+        'facebook'     => "tagdiv",
+        'instagram'     => "tagDiv",
+        'youtube'       => "tagDiv",
+        'style'         => "style4 td-social-colored",
     )
 );
 
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_6_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_3_widget',
     array (
-        'custom_title' => 'MUST READ',
+        'custom_title' => 'Recent posts',
         'limit' => '5'
     )
 );
 
-td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_popular_categories_widget',
     array (
-        'spot_title' => '',
-        'spot_id' => 'sidebar'
+        'custom_title' => 'Popular categories',
     )
 );
 
@@ -91,7 +86,7 @@ td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
     categories
 */
 $demo_cat_1_id =td_demo_category::add_category(array(
-    'category_name' => 'Funny',
+    'category_name' => 'Car News',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -101,64 +96,75 @@ $demo_cat_1_id =td_demo_category::add_category(array(
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
-    $demo_cat_2_id =td_demo_category::add_category(array(
-        'category_name' => 'Animals',
-        'parent_id' => $demo_cat_1_id,
-        'category_template' => '',
-        'top_posts_style' => '',
-        'description' => '',
-        'background_td_pic_id' => '',
-        'sidebar_id' => '',
-        'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-        'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    ));
-    $demo_cat_3_id =td_demo_category::add_category(array(
-        'category_name' => 'Moments',
-        'parent_id' => $demo_cat_1_id,
-        'category_template' => '',
-        'top_posts_style' => '',
-        'description' => '',
-        'background_td_pic_id' => '',
-        'sidebar_id' => '',
-        'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-        'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    ));
-    $demo_cat_4_id =td_demo_category::add_category(array(
-        'category_name' => 'Accidents',
-        'parent_id' => $demo_cat_1_id,
-        'category_template' => '',
-        'top_posts_style' => '',
-        'description' => '',
-        'background_td_pic_id' => '',
-        'sidebar_id' => '',
-        'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-        'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    ));
-    $demo_cat_5_id =td_demo_category::add_category(array(
-        'category_name' => 'GIFs',
-        'parent_id' => $demo_cat_1_id,
-        'category_template' => '',
-        'top_posts_style' => '',
-        'description' => '',
-        'background_td_pic_id' => '',
-        'sidebar_id' => '',
-        'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-        'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    ));
-    $demo_cat_6_id =td_demo_category::add_category(array(
-        'category_name' => 'People',
-        'parent_id' => $demo_cat_1_id,
-        'category_template' => '',
-        'top_posts_style' => '',
-        'description' => '',
-        'background_td_pic_id' => '',
-        'sidebar_id' => '',
-        'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-        'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-    ));
-
+$demo_cat_2_id =td_demo_category::add_category(array(
+    'category_name' => 'Auto Shows',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_3_id =td_demo_category::add_category(array(
+    'category_name' => 'Classic auto_zone',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_4_id =td_demo_category::add_category(array(
+    'category_name' => 'First Drive',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_5_id =td_demo_category::add_category(array(
+    'category_name' => 'Future auto_zone',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_6_id =td_demo_category::add_category(array(
+    'category_name' => 'Motorsports',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
 $demo_cat_7_id =td_demo_category::add_category(array(
-    'category_name' => 'Entertainment',
+    'category_name' => 'Technology',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+
+$demo_cat_8_id =td_demo_category::add_category(array(
+    'category_name' => 'Deals',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -168,8 +174,8 @@ $demo_cat_7_id =td_demo_category::add_category(array(
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
-$demo_cat_8_id =td_demo_category::add_category(array(
-    'category_name' => 'Fails',
+$demo_cat_9_id =td_demo_category::add_category(array(
+    'category_name' => 'Reviews',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -180,8 +186,8 @@ $demo_cat_8_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_category_td_grid_style' => '2'
 ));
-$demo_cat_9_id =td_demo_category::add_category(array(
-    'category_name' => 'Hot',
+$demo_cat_10_id =td_demo_category::add_category(array(
+    'category_name' => 'Tests',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -192,8 +198,8 @@ $demo_cat_9_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     'tdc_category_td_grid_style' => ''
 ));
-$demo_cat_10_id =td_demo_category::add_category(array(
-    'category_name' => 'Geeky',
+$demo_cat_11_id =td_demo_category::add_category(array(
+    'category_name' => 'Life',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -203,8 +209,8 @@ $demo_cat_10_id =td_demo_category::add_category(array(
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
-$demo_cat_11_id =td_demo_category::add_category(array(
-    'category_name' => 'Buzz',
+$demo_cat_12_id =td_demo_category::add_category(array(
+    'category_name' => 'Tuning',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -222,11 +228,9 @@ $demo_cat_11_id =td_demo_category::add_category(array(
 //homepage
 $td_homepage_id = td_demo_content::add_page(array(
     'title' => 'Home',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/homepage.txt',
-    'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php
-    'td_layout' => 'td_module_rd_6',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/homepage.txt',
+    'template' => 'page.php',   // the page template full file name with .php
     'homepage' => true,
-    'limit' => '5'
 ));
 
 /*  ----------------------------------------------------------------------------
@@ -244,450 +248,603 @@ td_demo_menus::add_page(array(
 
 // mega menu multiple subcateg
 td_demo_menus::add_mega_menu(array(
-    'title' => 'Funny',
+    'title' => 'Car News',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_1_id
 ));
 
 // mega menu one subcateg
 td_demo_menus::add_mega_menu(array(
-	'title' => 'Entertainment',
-	'add_to_menu_id' => $td_demo_header_menu_id,
-	'category_id' => $demo_cat_7_id
-));
-
-td_demo_menus::add_mega_menu(array(
-    'title' => 'Fails',
+    'title' => 'Deals',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_8_id
 ));
 
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Reviews',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_9_id
+));
+
 // add a subcategory to the sub-menu
 $parent_submenu_id = td_demo_menus::add_link(array(
-    'title' => 'More',
+    'title' => 'See More',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'url' => '#',
     'parent_id' => ''
 ));
 
 td_demo_menus::add_category(array(
-    'title' => 'Hot',
-    'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_9_id,
-    'parent_id' => $parent_submenu_id
-));
-
-td_demo_menus::add_category(array(
-    'title' => 'Geeky',
+    'title' => 'Tests',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_10_id,
     'parent_id' => $parent_submenu_id
 ));
-
 td_demo_menus::add_category(array(
-    'title' => 'Buzz',
+    'title' => 'Life',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_11_id,
     'parent_id' => $parent_submenu_id
 ));
+td_demo_menus::add_category(array(
+    'title' => 'Tuning',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_12_id,
+    'parent_id' => $parent_submenu_id
+));
+
+
 
 /*  ---------------------------------------------------------------------------
     posts
 */
-// posts in featured category
-
+// post in featured category
 td_demo_content::add_post(array(
-    'title' => '7 More Reasons Why A Cat Is The Perfect Best Friend',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
-    'featured_image_td_id' => 'td_pic_1'
+    'title' => 'The Best Superauto_zone of All Times',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_11_id),
+    'featured_image_td_id' => 'td_pic_1',
+    'template' => 'single_template_5',
+    'smart_list' => 'td_smart_list_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Things You Think About Your Friends But Never Say',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
-    'featured_image_td_id' => 'td_pic_2'
+    'title' => 'Hottest New auto_zone at Detroit',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_2',
+    'template' => 'single_template_5',
+    'smart_list' => 'td_smart_list_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'People Whose Selfie Addiction Knows No Bounds',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
+    'title' => 'TVR Stages a More Credible Comeback',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_3_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
-
-/* ------------------------------------------------------------------ */
-// posts in multiple categories
-
 td_demo_content::add_post(array(
-    'title' => 'Obama\'s Presidential To-Do List Still Has a Lot Left',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_1'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'When the Dishes Finally Get Done',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_2'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'If 6 Disney Movies Were 50% More Realistic',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_3'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'The 5 Stages of Someone Holding Your Phone',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
+    'title' => '2016 Hyundai Sonata Hybrid',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_4_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'When You Have to Smile for the Customer',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_5'
+    'title' => 'Top 5 Motorsport Games of 2015',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_5',
+    'template' => 'single_template_5',
+    'smart_list' => 'td_smart_list_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'The Secret Truth Every Dog Knows',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
+    'title' => '2015 Lexus GX460 Luxury',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_4_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Insanely Stupid Movie Ideas That Somehow Still Got Made',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
+    'title' => 'Dodge Unveils 2015 Charger Pursuit',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_7'
 ));
 
+
+//  ----------------------------------------------------------------------------
 td_demo_content::add_post(array(
-    'title' => 'Acts of Petty Rebellion We All Commit On the Internet',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_8'
+    'title' => "Best auto_zone of 2016",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
+    'featured_image_td_id' => 'td_pic_5',
+    'smart_list' => 'td_smart_list_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'If Disney Couples Met Online',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_9'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Donald Trump Marketing Cohen’s New Movie',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_10'
-));
-
-/* ------------------------------------------------------------------ */
-// posts in one category
-/* ------------------------------------------------------------------ */
-
-td_demo_content::add_post(array(
-    'title' => 'The Weirdest Places Ashes have been Scattered',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_1'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'The Next Wave of Superheroes Has Arrived',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_2'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Watch Awesome Kate Middleton Go Skiing',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_11_id),
+    'title' => "BFGoodrich Unveils G-Force Tires",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Silicon Valley Stunned by Slashed Investments',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_11_id),
-    'featured_image_td_id' => 'td_pic_4'
-));
-
-/* ------------------------------------------------------------------ */
-
-td_demo_content::add_post(array(
-    'title' => 'Samsung thinks foldable phones are the new flip phones',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_10_id),
-    'featured_image_td_id' => 'td_pic_8'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Facebook buys black market passwords to keep your account safe',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_10_id),
-    'featured_image_td_id' => 'td_pic_9'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'How AI could help save the humble sea cow',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_10_id),
-    'featured_image_td_id' => 'td_pic_10'
-));
-
-td_demo_content::add_post(array(
-    'title' => '#Calexit secession movement trends on Twitter',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_10_id),
-    'featured_image_td_id' => 'td_pic_1'
-));
-
-/* ------------------------------------------------------------------ */
-
-td_demo_content::add_post(array(
-    'title' => 'Dreaming About Mandarin Oriental’s Moroccan Magic',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_9_id),
-    'featured_image_td_id' => 'td_pic_2'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Discover Oscar’s 2016 Best Beauty Looks',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_9_id),
-    'featured_image_td_id' => 'td_pic_3'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'How Nancy Reagan Gave Glamour to the White House',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_9_id),
-    'featured_image_td_id' => 'td_pic_4'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Find Out What Makes a Style Disrupter',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_9_id),
+    'title' => "New Car Financing",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_5'
 ));
-
-/* ------------------------------------------------------------------ */
-
 td_demo_content::add_post(array(
-    'title' => 'Merry-go-round. Heavy on the ROUND',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_8_id),
-    'featured_image_td_id' => 'td_pic_6'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'Somebody actually made a Butter Bot',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_8_id),
+    'title' => "Mansory Lamborghini Aventador",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_7'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Alternate Side Parking in Effect',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_8_id),
-    'featured_image_td_id' => 'td_pic_8'
-));
-
-td_demo_content::add_post(array(
-    'title' => 'There’s No Escape Now',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_8_id),
+    'title' => "10 Best Car Deals of the Month",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_9'
 ));
 
-/* ------------------------------------------------------------------ */
 
-td_demo_content::add_post(array(
-    'title' => 'What If DC Let Marvel Help Develop Their Movies',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
-    'featured_image_td_id' => 'td_pic_10'
-));
 
+//  ----------------------------------------------------------------------------
+//  Mix Categories
 td_demo_content::add_post(array(
-    'title' => 'Westworld Has Gone From Mostly Intriguing To Mostly Frustrating',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
+    'title' => "Fiat Sells Off Ferrari",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_1'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Four Doctor Who Stories You Should Watch During The Break',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
+    'title' => "Car Deals from Top US Brokers",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Fantastic Beasts and Where to Find Them',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
+    'title' => 'Tesla Reportedly Loses $4,000 on Each Model S',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
-
-/* ------------------------------------------------------------------ */
-
 td_demo_content::add_post(array(
-    'title' => 'Aged To Perfection',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
+    'title' => "Junkyard All-You-Can-Carry Sale",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'A Place Where Grandkids Belong',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
+    'title' => "Crazy ABT Audi RS3 Reaches Over 430hp",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_5'
 ));
 
+
+//  ----------------------------------------------------------------------------
+//
 td_demo_content::add_post(array(
-    'title' => 'Three Dumb ER Stories You’re Allowed To Laugh At',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
+    'title' => "Limited Production Aventador",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Military Lesson: Never Volunteer',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
+    'title' => "Alfa Romeo Giulia Sounds Great",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_7'
 ));
-
-/* ------------------------------------------------------------------ */
-
 td_demo_content::add_post(array(
-    'title' => 'FOD\'s Guide to GIFs: The Clapping GIFS',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
+    'title' => "There’s Nothing Funny About Toyota’s Fuel Leaks",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_8'
 ));
-
 td_demo_content::add_post(array(
-    'title' => '21 Best GIFs Of The Week',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
+    'title' => "Hackers Seize Control of a Tesla Model S",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_9'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Adding Unnecessary Explosions to GIFs is the Only Meme Ever Worth Caring About',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
+    'title' => "Modify Your New Mercedes-Benz C-Class",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_10'
 ));
 
+//  ----------------------------------------------------------------------------
 td_demo_content::add_post(array(
-    'title' => '15 Viral GIFs Right Now',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
+    'title' => "auto_zone in Miniature Swarm Greater Boston Area",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_1'
 ));
-
-/* ------------------------------------------------------------------ */
-
 td_demo_content::add_post(array(
-    'title' => 'Car Crashed On Church Roof',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
+    'title' => "Get Ready for Diesel Cadillacs",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
-
 td_demo_content::add_post(array(
-    'title' => '4 Weird Car Crash Stories You Would Wonder If It Really Happened',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
+    'title' => "All But 2 Buick Models Built Overseas",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Texting While Walking Isn\'t Funny Anymore',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
+    'title' => 'Fia Action for Road Safety',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Top 100 Funny Insurance Claims',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
+    'title' => "Dodge Launches ‘Don’t Touch My Dart’ Campaign",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_5'
 ));
 
-/* ------------------------------------------------------------------ */
-
+//  ----------------------------------------------------------------------------
 td_demo_content::add_post(array(
-    'title' => '28 Hilarious Real-Life Teacher Stories',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
+    'title' => "Volkswagen Beetle R-Line",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
-
 td_demo_content::add_post(array(
-    'title' => '9 Weird, But Funny Moments Every Couple Has In A Relationship',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
+    'title' => "2016 Porsche Boxster Spyder",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+td_demo_content::add_post(array(
+    'title' => 'Land Rover Range Rover Sport’s New Diesel V-6',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+td_demo_content::add_post(array(
+    'title' => "Jaguar Crossover “F-Pace”",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => "2016 GMC Terrain",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "Ford Testing Right Hand Drive Mustang",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => "New Chevrolet Spark",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => "2017 Ford Raptor Dominates an Off-Road Trail",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+td_demo_content::add_post(array(
+    'title' => "2016 Chevrolet Malibu",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => "Alfa Romeo 4C Coupe",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Audi R8 on a Country Road',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => "2015 Chevrolet Camaro ZL1 Coupe",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_7'
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'The Five Funniest Moments in Australian History',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
+    'title' => "Mercedes AMG C63 S Sedan",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_8'
 ));
-
 td_demo_content::add_post(array(
-    'title' => '15 Legit Funny Moments From An Otherwise Boring Super Bowl',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
+    'title' => 'Chevy Silverado Midnight Edition',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_9'
 ));
 
-/* ------------------------------------------------------------------ */
-
+//  ----------------------------------------------------------------------------
 td_demo_content::add_post(array(
-    'title' => 'Top Ten Funniest Animal Stories Of The Year',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
+    'title' => 'Volkswagen Golf SportWagen TDI',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_10'
 ));
-
 td_demo_content::add_post(array(
-    'title' => 'Cat Or Dog? This Wild-eyed Cutie Has Us All Confused',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
+    'title' => "Chevrolet Corvette Stingray Review Notes",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_1'
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Meet Willie The Yorkie, The Dog With The Best Hair On The Internet',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
+    'title' => "’70s F1 auto_zone Will Star at Goodwood",
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => 'Could Your Child Win a Season’s Racing?',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+//-------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Octane’s Goodwood Festival of Speed',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => 'Motorsport Goes to the Movies',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+td_demo_content::add_post(array(
+    'title' => 'BRMs Go Back to Blyton',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => 'All the Best Bits of Goodwood Motorsport',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+td_demo_content::add_post(array(
+    'title' => 'LaFerrari, McLaren P1, and Porsche 918 On-Track',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Mercedes-Benz Plans GLE Hybrid to Debut in New York',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => 'Two New Scion Models Confirmed for the New York Auto Show',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => 'Aston Martin DBX Concept: Gorgeous Electric Sports-Car',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => 'Acura to Bring Updated RDX to 2015 Chicago Auto Show',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
-
 td_demo_content::add_post(array(
-    'title' => '12 Baby Animal Pictures That Will Make You Go ‘Aww’',
-    'file' => td_global::$get_template_directory . '/includes/demos/viral/pages/post_default.txt',
+    'title' => 'The Superest Superauto_zone from Geneva',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'The 66th IAA auto_zone Shows “Mobility Connects”',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => 'Hudson Italia Emerges from Garage after 40 Years',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+td_demo_content::add_post(array(
+    'title' => 'Monterey Auctions See $393 Million in Sales',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => 'What Next for the Barn Finds?',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+td_demo_content::add_post(array(
+    'title' => 'Knobbly Lives Again',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Holyrood Concours of Elegance',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => '400-hp BMW Diesel Just Around the Corner',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => 'Land Rover Recreates 1948 Production Line',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => 'The Lexus Hoverboard is Here and it’s Real',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Volkswagen e-Golf SEL Premium',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+td_demo_content::add_post(array(
+    'title' => '605 HP Audi R8 Plus Dials the Power',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => 'Tesla’s Prototype Model S Charger is a Freaky Robot',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+td_demo_content::add_post(array(
+    'title' => 'VW’s New Turbo 1.4',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => 'The Bloodhound Supersonic Car',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Cadillac CT6: You Can’t Call It Fat',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+td_demo_content::add_post(array(
+    'title' => 'Buick Enclave Tuscan Edition',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => '2015 Lexus GX460 Luxury',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => '2016 Hyundai Sonata Hybrid',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => 'Roush Stage 3 Mustang',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => '2016 Lincoln MKX',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+td_demo_content::add_post(array(
+    'title' => 'Land Rover Discovery Sport: Simply Unstoppable!',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => 'Tesla Model S Convertible',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+td_demo_content::add_post(array(
+    'title' => '2017 Mercedes-AMG C63 Coupe Revealed',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => 'Bond’s New Aston Points to the DB’s Future',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+//-------------------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Lamborghini Huracan LP610-4',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+td_demo_content::add_post(array(
+    'title' => 'Dodge Unveils 2015 Charger Pursuit',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => '2016 Mercedes CLS Coupe',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => 'Lincoln Continental Concept Headed for Production',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => '2016 Camaro Starts at $26.695',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => 'Ford GT Spotted on Detroit Highway',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
