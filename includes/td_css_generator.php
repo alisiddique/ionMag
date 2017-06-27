@@ -97,7 +97,19 @@ function td_css_generator() {
     .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
     .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
     .woocommerce-account .woocommerce-MyAccount-navigation a:hover,
-     .woocommerce a.added_to_cart:hover{
+    .woocommerce a.added_to_cart:hover,
+    #bbpress-forums li.bbp-header .bbp-reply-content span a:hover,
+    #bbpress-forums .bbp-forum-freshness a:hover,
+    #bbpress-forums .bbp-topic-freshness a:hover,
+    #bbpress-forums .bbp-forums-list li a:hover,
+    #bbpress-forums .bbp-forum-title:hover,
+    #bbpress-forums .bbp-topic-permalink:hover,
+    #bbpress-forums .bbp-topic-started-by a:hover,
+    #bbpress-forums .bbp-topic-started-in a:hover,
+    #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,
+    .widget_display_replies .bbp-author-name,
+    .widget_display_topics .bbp-author-name {
       color: @theme_color;
     }
     
@@ -162,7 +174,11 @@ function td_css_generator() {
     .woocommerce-page .woocommerce a.button:hover,
     .woocommerce-account div.woocommerce .button:hover,
     .td-footer-wrapper .widget_product_search input[type=\"submit\"]:hover,
-    .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover {
+    .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover, 
+    #bbpress-forums button:hover,
+    .bbp_widget_login .button:hover,
+    #bbpress-forums .bbp-pagination .current,
+    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
       background-color: @theme_color;
     }
     
@@ -191,7 +207,8 @@ function td_css_generator() {
     .widget_calendar #today,
     .td-tags span,
     .widget_categories li:hover > a span:before,
-    .td_outlined_btn {
+    .td_outlined_btn,
+     #bbpress-forums .bbp-pagination .current {
       border-color: @theme_color;
     }
     
@@ -1241,13 +1258,15 @@ function td_css_generator() {
     
     /* @page_title */
     .td-page-title,
-    .td-category-header .entry-title {
+    .td-category-header .entry-title,
+    .woocommerce-page .page-title {
     	@page_title
     }
     /* @page_content */
     .td-page-content,
     .td-page-content p,
-    .td-page-content .td_block_text_with_title {
+    .td-page-content .td_block_text_with_title,
+    .woocommerce-page .page-description > p {
     	@page_content
     }
     /* @page_h1 */
@@ -1291,7 +1310,9 @@ function td_css_generator() {
     
     /* @breadcrumb */
     .entry-crumbs a,
-    .entry-crumbs span  {
+    .entry-crumbs span,
+    #bbpress-forums .bbp-breadcrumb a,
+    #bbpress-forums .bbp-breadcrumb .bbp-breadcrumb-current {
     	@breadcrumb
     }
     /* @pagination */
@@ -1320,7 +1341,8 @@ function td_css_generator() {
     .widget_display_topics a,
     .widget_display_views a,
     .widget_display_stats,
-    .widget_categories li span {
+    .widget_categories li span,
+    .woocommerce .product-categories a {
     	@default_widgets
     }
     /* @default_buttons */
@@ -1334,10 +1356,71 @@ function td_css_generator() {
 		@default_buttons
 	}
 	
+	/* @woocommerce_products */
+	.woocommerce .product a .woocommerce-loop-product__title,
+	.woocommerce .widget.woocommerce .product_list_widget a,
+	.woocommerce-cart .woocommerce .product-name a {
+		@woocommerce_products
+	}
+	/* @woocommerce_product_title */
+	.woocommerce .product .summary .product_title {
+		@woocommerce_product_title
+	}
+	
 	
 	/* @body_text */
     body, p {
     	@body_text
+    }
+    
+    /* @bbpress_header */
+    #bbpress-forums .bbp-header .bbp-forums,
+    #bbpress-forums .bbp-header .bbp-topics,
+    #bbpress-forums .bbp-header {
+    	@bbpress_header
+    }
+    /* @bbpress_titles */
+    #bbpress-forums .hentry .bbp-forum-title,
+    #bbpress-forums .hentry .bbp-topic-permalink {
+    	@bbpress_titles
+    }
+    /* @bbpress_subcategories */
+    #bbpress-forums .bbp-forums-list li {
+    	@bbpress_subcategories
+    }
+    /* @bbpress_description */
+    #bbpress-forums .bbp-forum-info .bbp-forum-content {
+    	@bbpress_description
+    }
+    /* @bbpress_author */
+    #bbpress-forums div.bbp-forum-author a.bbp-author-name,
+    #bbpress-forums div.bbp-topic-author a.bbp-author-name,
+    #bbpress-forums div.bbp-reply-author a.bbp-author-name,
+    #bbpress-forums div.bbp-search-author a.bbp-author-name,
+    #bbpress-forums .bbp-forum-freshness .bbp-author-name,
+    #bbpress-forums .bbp-topic-freshness a:last-child {
+    	@bbpress_author
+    }
+    /* @bbpress_replies */
+    #bbpress-forums .hentry .bbp-topic-content p,
+    #bbpress-forums .hentry .bbp-reply-content p {
+    	@bbpress_replies
+    }
+    /* @bbpress_notices */
+    #bbpress-forums div.bbp-template-notice p {
+    	@bbpress_notices
+    }
+    /* @bbpress_pagination */
+    #bbpress-forums .bbp-pagination-count,
+    #bbpress-forums .page-numbers {
+    	@bbpress_pagination
+    }
+    /* @bbpress_topic */
+    #bbpress-forums .bbp-topic-started-by,
+    #bbpress-forums .bbp-topic-started-by a,
+    #bbpress-forums .bbp-topic-started-in,
+    #bbpress-forums .bbp-topic-started-in a {
+    	@bbpress_topic
     }
 
     </style>
