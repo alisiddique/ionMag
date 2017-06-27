@@ -21,6 +21,10 @@ $td_less_files = array (
 		'source' => 'includes/less_files/editor-style.less',
 		'destination' => 'editor-style.css'
 	),
+	'woocommerce' => array (
+		'source' => 'includes/less_files/woocommerce/main.less',
+		'destination' => 'style-woocommerce.css'
+	),
 	'wp-admin.css' => array (
 		'source' => 'includes/wp_booster/wp-admin/css/wp-admin.less',
 		'destination' => 'includes/wp_booster/wp-admin/css/wp-admin.css'
@@ -48,6 +52,10 @@ $td_less_files = array (
 	'cook_book' => array (
 		'source' => 'includes/demos/cook_book/demo_style.less',
 		'destination' => 'includes/demos/cook_book/demo_style.css'
+	),
+	'art_book' => array (
+		'source' => 'includes/demos/art_book/demo_style.less',
+		'destination' => 'includes/demos/art_book/demo_style.css'
 	),
 );
 
