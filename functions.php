@@ -119,4 +119,4 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
     }
 }
 
-//td_demo_state::update_state("art_book", 'full');
+//td_demo_state::update_state("auto_zone", 'full');

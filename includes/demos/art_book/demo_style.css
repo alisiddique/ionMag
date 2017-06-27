@@ -226,3 +226,6 @@ usage:
 .td-art-book .td-footer-template-10 .td_block_rd_10 .td-item-details {
   display: none;
 }
+.td-art-book #td-theme-settings .td-skin-buy a {
+  background-color: #1680d3;
+}

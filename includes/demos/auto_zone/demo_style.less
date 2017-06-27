@@ -1,0 +1,76 @@
+@import "../../less_files/variables.less";
+@import "../../less_files/mixin.less";
+
+/* Viral demo */
+.td-auto-zone {
+
+  .sf-menu > li {
+    > a {
+      padding-right: 50px;
+    }
+
+    &:last-child {
+      > a {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .td_block_template_6 {
+    .td-block-title {
+      padding: 4px 0 6px;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .td_module_2 {
+    padding-top: 20px;
+
+    .td-post-category-wrap {
+      bottom: 100%;
+      width: auto;
+      text-align: left;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: @td_theme_color;
+      }
+
+      a {
+        background-color: transparent;
+        padding: 0 0 6px;
+        font-size: 13px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: #000;
+
+        &:hover {
+          color: @td_theme_color;
+        }
+      }
+    }
+  }
+
+  .td-footer-template-14 {
+    padding: 18px 0;
+
+    .footer-social-wrap {
+      .td-icon-font {
+        margin-right: 0;
+      }
+
+      .td-social-name {
+        display: none;
+      }
+    }
+  }
+
+}
