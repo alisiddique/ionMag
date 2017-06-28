@@ -1,6 +1,27 @@
 // general
-.td-header-logo-wrap {
+.td-header-wrap {
   position: relative;
+  background-color: #fff;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center bottom;
+  }
+
+  .td-container-wrap {
+    //background-color: transparent;
+  }
+}
+
+.td-header-logo-wrap {
+  //position: relative;
   padding: 24px 0;
 
   /* responsive portrait tablet */
