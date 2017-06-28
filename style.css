@@ -997,6 +997,7 @@ body.td-ad-background-link .td-container-wrap {
 .td-header-menu-wrap-full {
   z-index: 9998;
   position: relative;
+  background-color: transparent;
 }
 .td-header-rec-wrap .td-a-rec,
 .td-header-rec-wrap .td-g-rec {

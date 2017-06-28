@@ -555,7 +555,7 @@ function td_css_generator() {
     /* MOBILE MENU / MOBILE SEARCH COLORS */
     /* @mobile_menu_color */
     @media (max-width: 767px) {
-        .td-header-wrap .td-header-main-menu {
+        .td-header-wrap .td-header-menu-wrap {
             background-color: @mobile_menu_color !important;
         }
     }
