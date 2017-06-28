@@ -301,19 +301,19 @@ td_demo_menus::add_category(array(
 // post in featured category
 td_demo_content::add_post(array(
     'title' => 'The Best Superauto_zone of All Times',
-    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_11_id),
     'featured_image_td_id' => 'td_pic_1',
     'template' => 'single_template_5',
-    'smart_list' => 'td_smart_list_6'
+    'post_default' => 'td_post_default_6'
 ));
 td_demo_content::add_post(array(
     'title' => 'Hottest New auto_zone at Detroit',
-    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_2',
     'template' => 'single_template_5',
-    'smart_list' => 'td_smart_list_6'
+    'post_default' => 'td_post_default_6'
 ));
 td_demo_content::add_post(array(
     'title' => 'TVR Stages a More Credible Comeback',
@@ -329,11 +329,11 @@ td_demo_content::add_post(array(
 ));
 td_demo_content::add_post(array(
     'title' => 'Top 5 Motorsport Games of 2015',
-    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_5',
     'template' => 'single_template_5',
-    'smart_list' => 'td_smart_list_6'
+    'post_default' => 'td_post_default_6'
 ));
 td_demo_content::add_post(array(
     'title' => '2015 Lexus GX460 Luxury',
@@ -352,10 +352,10 @@ td_demo_content::add_post(array(
 //  ----------------------------------------------------------------------------
 td_demo_content::add_post(array(
     'title' => "Best auto_zone of 2016",
-    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/smart_list.txt',
+    'file' => td_global::$get_template_directory . '/includes/demos/auto_zone/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_5',
-    'smart_list' => 'td_smart_list_6'
+    'post_default' => 'td_post_default_6'
 ));
 td_demo_content::add_post(array(
     'title' => "BFGoodrich Unveils G-Force Tires",
