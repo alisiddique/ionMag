@@ -18530,6 +18530,28 @@ body.td-animation-stack-type2 .post a.td-sml-link-to-image > img {
     right: 78px;
   }
 }
+.ie8 .td_block_template_18 .td-block-title > span,
+.ie9 .td_block_template_18 .td-block-title > span,
+.ie10 .td_block_template_18 .td-block-title > span,
+.ie11 .td_block_template_18 .td-block-title > span,
+.ie8 .td_block_template_18 .td-block-title > a,
+.ie9 .td_block_template_18 .td-block-title > a,
+.ie10 .td_block_template_18 .td-block-title > a,
+.ie11 .td_block_template_18 .td-block-title > a {
+  background: none;
+  color: #000;
+}
+.ie8 .global-block-template-18 .td_block_related_posts .td-related-title .td-cur-simple-item,
+.ie9 .global-block-template-18 .td_block_related_posts .td-related-title .td-cur-simple-item,
+.ie10 .global-block-template-18 .td_block_related_posts .td-related-title .td-cur-simple-item,
+.ie11 .global-block-template-18 .td_block_related_posts .td-related-title .td-cur-simple-item,
+.ie8 .global-block-template-18 .td_block_related_posts .td-related-title a:hover,
+.ie9 .global-block-template-18 .td_block_related_posts .td-related-title a:hover,
+.ie10 .global-block-template-18 .td_block_related_posts .td-related-title a:hover,
+.ie11 .global-block-template-18 .td_block_related_posts .td-related-title a:hover {
+  background: none;
+  color: #42bdcd;
+}
 .ie8 .td-menu-background,
 .ie9 .td-menu-background,
 .ie8 #td-mobile-nav,

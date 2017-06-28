@@ -240,7 +240,7 @@ function td_css_generator() {
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i,
-    div .td-trending-now-title{
+    div .td-trending-now-title {
       color: @text_header_color;
     }
     .block-title:after {
