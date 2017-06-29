@@ -393,6 +393,7 @@ function td_css_generator() {
     /* MENU TEXT COLOR */
     /* @menu_text_color */
     .sf-menu > li > a,
+    .td-header-menu-social .td-social-icon-wrap a,
     .td-header-menu-search #td-header-search-button .td-icon-search {
       color: @menu_text_color;
     }
@@ -1032,6 +1033,7 @@ function td_css_generator() {
     }
     /* @main_menu */
     .td-theme-wrap .sf-menu > li > a,
+    .td-header-menu-social .td-social-icon-wrap i,
     .td-theme-wrap .td-header-menu-search #td-header-search-button .td-icon-search {
         @main_menu
     }
