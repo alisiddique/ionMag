@@ -6,7 +6,7 @@
 define("TD_THEME_NAME", "ionMag");
 define("TD_THEME_VERSION", "__td_deploy_version__");
 define("TD_THEME_DEMO_URL", "http://demo.wpion.com/" . strtolower(TD_THEME_NAME));
-define("TD_THEME_DEMO_DOC_URL", 'http://forum.wpion.com/installing-demo/');  //the url to the demo documentation
+define("TD_THEME_DEMO_DOC_URL", 'https://www.wpion.com/members/installing-demo/');  //the url to the demo documentation
 define("TD_FEATURED_CAT", "Featured"); //featured cat name
 define("TD_FEATURED_CAT_SLUG", "featured"); //featured cat slug
 define("TD_THEME_OPTIONS_NAME", "td_012"); //where to store our options
@@ -3477,10 +3477,10 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR HEADER AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a>',
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_phone' => array(
 					    'desc' => '<p>Google Adsense requiers that you do not use big header ads on mobiles!</p>',
 				    ),
@@ -3498,10 +3498,10 @@ class td_config {
 				    'ad_field_notice' => 'To show the ads on the sidebar, please drag the "[taDiv] Ad box" widget to the desired sidebar.',
 				    'ad_field_code' => array(
 					    'title' => 'YOUR SIDEBAR AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3515,9 +3515,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE TOP AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3531,9 +3531,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE INLINE AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 			    )
 		    )
 	    );
@@ -3545,9 +3545,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE BOTTOM AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -4307,13 +4307,13 @@ class td_config {
             td_api_text::set('welcome_support_forum', '
             <h2>Support forum</h2>
             <p>We offer outstanding support through our forum. To get support first you need to register (create an account) and open a thread in the ' . TD_THEME_NAME . ' Section.</p>
-            <a class="button button-primary" href="http://forum.wpion.com/" target="_blank">Open forum</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/" target="_blank">Open forum</a>'
             );
 
             td_api_text::set('welcome_docs', '
             <h2>Docs and learning</h2>
             <p>Our online documentation will give you important information about the theme. This is a exceptional resource to start discovering the theme’s true potential.</p>
-            <a class="button button-primary" href="http://forum.wpion.com/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
             );
 
             td_api_text::set('welcome_video_tutorials', '
@@ -4335,7 +4335,8 @@ class td_config {
 				<div class="td-supported-plugin">Slider Revolution <span> - responsive WordPress Slider Plugin</span></div>'
             );
 
-            td_api_text::set('panel_existing_content_url', '<a href="http://forum.wpion.com/using-the-theme-with-existing-content/" target="_blank">read more</a>');
+            td_api_text::set('panel_existing_content_url', '<a href="https://www.wpion.com/members/using-the-theme-with-existing-content/" target="_blank">read more</a>');
+            td_api_text::set('panel_excerpt_modules_blocks_docs_url', '<a href="https://www.wpion.com/members/theme-modules-blocks/" target="_blank">here</a>');
 
 
 
@@ -4353,7 +4354,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/td-composer.png',
-                    'text' => 'Create beautiful pages with this custom frontend drag and drop builder<br><a href="http://forum.wpion.com/tagdiv-composer-overview/" target="_blank">Read more</a>',
+                    'text' => 'Create beautiful pages with this custom frontend drag and drop builder<br><a href="https://www.wpion.com/members/tagdiv-composer-overview/" target="_blank">Read more</a>',
                     'required_label' => 'required', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin
@@ -4369,7 +4370,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/social.png',
-                    'text' => 'Display your activity on social networks with style using this cool feature<br><a href="http://forum.wpion.com/social-counter/" target="_blank">Read more</a>',
+                    'text' => 'Display your activity on social networks with style using this cool feature<br><a href="https://www.wpion.com/members/social-counter/" target="_blank">Read more</a>',
                     'required_label' => 'optional', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin
