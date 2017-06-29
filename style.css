@@ -980,6 +980,8 @@ body.td-ad-background-link .td-container-wrap {
   background-position: center bottom;
 }
 .td-header-logo-wrap {
+  position: relative;
+  background-color: transparent;
   padding: 24px 0;
   /* responsive portrait tablet */
   /* responsive portrait phone */
