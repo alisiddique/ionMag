@@ -33,7 +33,7 @@ class td_block_trending_now extends td_block {
 
             $buffy .= '<div id=' . $this->block_uid . ' class="td_block_inner">';
 
-                $buffy .= $this->inner($this->td_query->posts, '' , $atts);  //inner content of the block
+                $buffy .= $this->inner($this->td_query->posts, $this->get_att('td_column_number'), $atts);  //inner content of the block
 
             $buffy .= '</div>';
 
@@ -56,9 +56,12 @@ class td_block_trending_now extends td_block {
 
         if (!empty($posts)) {
 
-            $buffy .= $td_block_layout->open_row();
+            if ($td_column_number==1) {
+                $buffy .= td_util::get_block_error('News ticker', 'Please move this shortcode on a 2/3 or 3/3 row in order for it to work.');
+            } else {
+                $buffy .= $td_block_layout->open_row();
 
-            $buffy .= '<div class="td-trending-now-wrapper" id="' . $this->block_uid . '" data-start="' . esc_attr($navigation) . '">';
+                $buffy .= '<div class="td-trending-now-wrapper" id="' . $this->block_uid . '" data-start="' . esc_attr($navigation) . '">';
                 $buffy .= '<div class="td-trending-now-title">' . __td('Trending Now', TD_THEME_NAME) . '</div><div class="td-trending-now-display-area">';
 
                 foreach ($posts as $post_count => $post) {
@@ -71,21 +74,22 @@ class td_block_trending_now extends td_block {
                 $buffy .= '</div>';
 
                 $buffy .= '<div class="td-next-prev-wrap">';
-                    $buffy .= '<a href="#"
-                                  class="td-ajax-prev-page td-trending-now-nav-left"
-                                  data-block-id="' . $this->block_uid . '"
-                                  data-moving="left"
-                                  data-control-start="' . $navigation . '"><i class="td-icon-menu-left"></i></a>';
+                $buffy .= '<a href="#"
+                                      class="td-ajax-prev-page td-trending-now-nav-left"
+                                      data-block-id="' . $this->block_uid . '"
+                                      data-moving="left"
+                                      data-control-start="' . $navigation . '"><i class="td-icon-menu-left"></i></a>';
 
-                    $buffy .= '<a href="#"
-                                  class="td-ajax-next-page td-trending-now-nav-right"
-                                  data-block-id="' . $this->block_uid . '"
-                                  data-moving="right"
-                                  data-control-start="' . $navigation . '"><i class="td-icon-menu-right"></i></a>';
+                $buffy .= '<a href="#"
+                                      class="td-ajax-next-page td-trending-now-nav-right"
+                                      data-block-id="' . $this->block_uid . '"
+                                      data-moving="right"
+                                      data-control-start="' . $navigation . '"><i class="td-icon-menu-right"></i></a>';
                 $buffy .= '</div>';
-            $buffy .= '</div>';
+                $buffy .= '</div>';
 
-            $buffy .= $td_block_layout->close_row();
+                $buffy .= $td_block_layout->close_row();
+            }
         }
 
         $buffy .= $td_block_layout->close_all_tags();
