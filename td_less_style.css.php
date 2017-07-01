@@ -65,6 +65,10 @@ $td_less_files = array (
 		'source' => 'includes/demos/auto_zone/demo_style.less',
 		'destination' => 'includes/demos/auto_zone/demo_style.css'
 	),
+	'bookshelf' => array (
+		'source' => 'includes/demos/bookshelf/demo_style.less',
+		'destination' => 'includes/demos/bookshelf/demo_style.css'
+	),
 );
 
 
