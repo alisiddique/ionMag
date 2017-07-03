@@ -4145,7 +4145,7 @@ class td_config {
                 'premium_demo' => "premium"
             ),
             'bookshelf' => array(
-                'text' => 'bookshelf',
+                'text' => 'Bookshelf',
                 'folder' => td_global::$get_template_directory . '/includes/demos/bookshelf/',
                 'img' => td_global::$get_template_directory_uri . '/includes/demos/bookshelf/screenshot.png',
                 'demo_url' => 'http://demo.tagdiv.com/ionmag_bookshelf/',
@@ -4153,6 +4153,7 @@ class td_config {
                 'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
                 ),

@@ -34,6 +34,20 @@ usage:
 @all_span_selector - is the begining of the span selector
  */
 /* Bookshelf demo */
+.td-bookshelf .td-header-style-pr-6 .sf-menu > li.current-menu-item > a:after,
+.td-bookshelf .td-header-style-pr-6 .sf-menu > li > a:hover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  height: 4px;
+  background-color: #fff;
+}
+.td-bookshelf .td-header-style-pr-6 .sf-menu > li:last-child.current-menu-item > a:after,
+.td-bookshelf .td-header-style-pr-6 .sf-menu > li:last-child > a:hover:after {
+  width: 100%;
+}
 .td-bookshelf .td-bookshelf-cover .td-custom-image a {
   /* responsive portrait phone */
 }
