@@ -631,6 +631,20 @@ class td_config {
             )
         );
 
+	    td_api_thumb::add('td_980x580',
+            array(
+                'name' => 'td_980x580',
+                'width' => 980,
+                'height' => 580,
+                'crop' => array('center', 'top'),
+                'post_format_icon_size' => 'normal',
+                'used_on' => array(
+                    'Slide - 3 column'
+                ),
+                'no_image_path' => td_global::$get_template_directory_uri,
+            )
+        );
+
         td_api_thumb::add('td_980x0',
             array(
                 'name' => 'td_980x0',
