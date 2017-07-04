@@ -3640,6 +3640,421 @@ class td_config {
 	    );
 
 
+
+	    td_api_tinymce_formats::add('td_tinymce_item_1',
+                array(
+                    'title' => 'Text padding'
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_1',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => 'text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-0',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_2',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-4',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_3',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-1',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_4',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text ⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-3',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_5',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢ text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-6',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_6',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢ text ⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-2',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_7',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢⇢ text ⇠⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-5',
+                    'wrapper' => true,
+                ));
+
+
+            td_api_tinymce_formats::add('td_tinymce_item_3',
+                array(
+                    'title' => 'Arrow list',
+                    'selector' => 'ul',
+                    'classes' => 'td-arrow-list'
+                ));
+
+
+            td_api_tinymce_formats::add('td_blockquote',
+                array(
+                    'title' => 'Quotes'
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_1',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote td_quote_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_2',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote td_quote_right',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_3',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box center',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_center',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_4',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_5',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_right',
+                    'wrapper' => true,
+                ));
+
+
+            td_api_tinymce_formats::add('td_blockquote_6',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote center',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_center',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_7',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_8',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_right',
+                    'wrapper' => true,
+                ));
+
+
+            // two columns text
+            td_api_tinymce_formats::add('td_text_columns',
+                array(
+                    'title' => 'Text columns'
+                ));
+            td_api_tinymce_formats::add('td_text_columns_0',
+                array(
+                    'parent_id' => 'td_text_columns',
+                    'title' => 'two columns',
+                    'block' => 'div',
+                    'classes' => 'td_text_columns_two_cols',
+                    'wrapper' => true,
+                ));
+
+            // dropcap
+            td_api_tinymce_formats::add('td_dropcap',
+                array(
+                    'title' => 'Dropcaps'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_0',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Box',
+                    'classes' => 'dropcap',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_1',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Circle',
+                    'classes' => 'dropcap dropcap1',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_2',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Regular',
+                    'classes' => 'dropcap dropcap2',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_3',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Bold',
+                    'classes' => 'dropcap dropcap3',
+                    'inline' => 'span'
+                ));
+
+            // Custom buttons in post Formats
+            td_api_tinymce_formats::add('td_btn',
+                array(
+                    'title' => 'Button'
+                ));
+            //Default button
+            td_api_tinymce_formats::add('td_default_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Default',
+                    'classes' => ' td_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_sm',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Small',
+                    'classes' => 'td_btn  td_btn_sm td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_md',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Normal',
+                    'classes' => 'td_btn td_btn_md td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_lg',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Large',
+                    'classes' => 'td_btn td_btn_lg td_default_btn',
+                    'inline' => 'span'
+                ));
+            //Round button
+            td_api_tinymce_formats::add('td_round_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Round',
+                    'classes' => 'td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_sm',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Small',
+                    'classes' => 'td_btn td_btn_sm td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_md',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Normal',
+                    'classes' => 'td_btn td_btn_md td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_lg',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Large',
+                    'classes' => 'td_btn td_btn_lg td_round_btn',
+                    'inline' => 'span'
+                ));
+            //Outlined button
+            td_api_tinymce_formats::add('td_outlined_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Outlined',
+                    'classes' => 'td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_sm',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Small',
+                    'classes' => 'td_btn td_btn_sm td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_md',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Normal',
+                    'classes' => 'td_btn td_btn_md td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_lg',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Large',
+                    'classes' => 'td_btn td_btn_lg td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            //Shadow button
+            td_api_tinymce_formats::add('td_shadow_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Shadow',
+                    'classes' => 'td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_sm',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Small',
+                    'classes' => 'td_btn td_btn_sm td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_md',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Normal',
+                    'classes' => 'td_btn td_btn_md td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_lg',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Large',
+                    'classes' => 'td_btn td_btn_lg td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            //3D button
+            td_api_tinymce_formats::add('td_3D_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => '3D',
+                    'classes' => 'td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_sm',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Small',
+                    'classes' => 'td_btn td_btn_sm td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_md',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Normal',
+                    'classes' => 'td_btn td_btn_md td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_lg',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Large',
+                    'classes' => 'td_btn td_btn_lg td_3D_btn',
+                    'inline' => 'span'
+                ));
+
+            // highlighter
+            td_api_tinymce_formats::add('td_text_highlight',
+                array(
+                    'title' => 'Text highlighting'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_0',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Black censured',
+                    'classes' => 'td_text_highlight_0',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_red',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Red marker',
+                    'classes' => 'td_text_highlight_marker_red td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_blue',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Blue marker',
+                    'classes' => 'td_text_highlight_marker_blue td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_green',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Green marker',
+                    'classes' => 'td_text_highlight_marker_green td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_yellow',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Yellow marker',
+                    'classes' => 'td_text_highlight_marker_yellow td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_pink',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Pink marker',
+                    'classes' => 'td_text_highlight_marker_pink td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+
+            // clear elements
+            td_api_tinymce_formats::add('td_clear_elements',
+                array(
+                    'title' => 'Clear element',
+                    'selector' => 'a,p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img,code,blockquote',
+                    'styles' => array(
+                        'clear' => 'both'
+                    )
+                ));
+
+
         /**
          * set the custom css fields for the panel @see td_panel_custom_css.php
          * and also for the wp_footer hook @see td_bottom_code()
