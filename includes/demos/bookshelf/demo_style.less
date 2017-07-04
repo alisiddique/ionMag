@@ -4,36 +4,33 @@
 /* Bookshelf demo */
 .td-bookshelf {
 
-  //.td-photography-wide-row {
-  //  margin-left: -40px !important;
-  //  margin-right: -40px !important;
-  //  padding-left: 20px;
-  //  padding-right: 20px;
-  //}
-  //
-  //.td_block_template_12 {
-  //  .td-pulldown-category {
-  //    color: #888;
-  //  }
-  //}
-  //
-  //.entry-title {
-  //  margin-bottom: 0;
-  //
-  //  &:after {
-  //    display: none;
-  //  }
-  //}
-  //
-  //.td_block_author {
-  //  .td-author-name {
-  //    margin-bottom: 0;
-  //
-  //    &:after {
-  //      display: none;
-  //    }
-  //  }
-  //}
+  .td-header-style-pr-6 {
+    .sf-menu {
+      > li {
+        &.current-menu-item > a,
+        > a:hover {
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(~'100% - 30px');
+            height: 4px;
+            background-color: #fff;
+          }
+        }
+
+        &:last-child {
+          &.current-menu-item > a,
+          > a:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 
   .td-bookshelf-cover {
     .td-custom-image a {

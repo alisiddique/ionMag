@@ -10629,7 +10629,7 @@ body .dropcap3 {
   }
 }
 .td-doubleSlider-1 .td-slide-galery-figure {
-  width: 1068px;
+  width: 980px;
   height: 580px;
   text-align: center;
   position: relative;
@@ -10644,7 +10644,7 @@ body .dropcap3 {
 }
 @media (min-width: 768px) and (max-width: 1018px) {
   .td-doubleSlider-1 .td-slide-galery-figure {
-    width: 740px;
+    width: 732px;
     height: 420px;
   }
 }
@@ -10820,7 +10820,7 @@ body .dropcap3 {
     Fix gallery on td_module_15 in homepage loop - on 3 columns
 */
 .td-pb-span12 .td-slide-on-2-columns .td-slide-galery-figure {
-  width: 1068px;
+  width: 980px;
 }
 /*  ----------------------------------------------------------------------------
     Fix gallery on post with VC in text widget

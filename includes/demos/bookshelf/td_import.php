@@ -17,6 +17,10 @@ $td_demo_header_menu_id = td_demo_menus::create_menu('td-demo-header-menu', 'hea
 /*  ----------------------------------------------------------------------------
     background - leave empty if you want to make sure that there is NO background on the demo - td_demo_misc::update_background('');
  */
+td_demo_misc::update_background('');
+// mobile background
+td_demo_misc::update_background_mobile('td_pic_10');
+
 
 /*  ----------------------------------------------------------------------------
     logo
@@ -24,22 +28,29 @@ $td_demo_header_menu_id = td_demo_menus::create_menu('td-demo-header-menu', 'hea
 td_demo_misc::update_logo(array(
     'normal' => 'td_logo_header',
     'retina' => 'td_logo_header_retina',
-    'mobile' => 'td_logo_header'
+));
+
+//footer
+td_demo_misc::update_footer_logo(array(
+    'normal' => 'td_logo_footer',
+    'retina' => 'td_logo_footer_retina'
 ));
 
 /*  ----------------------------------------------------------------------------
     footer text
 */
+td_demo_misc::update_footer_text('IonMag is the best free WordPress theme for blog, news, newspaper, magazine and publishing websites, designed to help you build the website of your dreams without any effort and coding skills.');
+
 
 
 /*  ----------------------------------------------------------------------------
     socials
 */
-
 td_demo_misc::add_social_buttons(array(
     'facebook' => '#',
-    'twitter' => '#',
     'instagram' => '#',
+    'twitter' => '#',
+    'youtube' => '#'
 ));
 
 
@@ -47,6 +58,8 @@ td_demo_misc::add_social_buttons(array(
     ads
  */
 td_demo_misc::clear_all_ads();
+td_demo_misc::add_ad_image('sidebar', 'td_rec_sidebar');
+td_demo_misc::add_ad_image('custom_ad_1', 'td_rec_custom');
 
 
 /*  ----------------------------------------------------------------------------
@@ -54,45 +67,38 @@ td_demo_misc::clear_all_ads();
  */
 //default sidebar
 td_demo_widgets::remove_widgets_from_sidebar('default');
-
-//footer 1 sidebar
-td_demo_widgets::remove_widgets_from_sidebar('footer-1');
-td_demo_widgets::add_widget_to_sidebar('footer-1', 'td_block_popular_categories_widget',
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_social_counter_widget',
     array (
-        'custom_title'  => "Popular Topics",
-        'limit' => 5,
-    )
-);
-
-//footer 2 sidebar
-td_demo_widgets::remove_widgets_from_sidebar('footer-2');
-td_demo_widgets::add_widget_to_sidebar('footer-2', 'td_block_rd_10_widget',
-    array (
-        'custom_title'  => "Popular Exhibits",
-        'limit' => 6,
-        'sort' => 'featured',
-    )
-);
-
-//footer 3 sidebar
-td_demo_widgets::remove_widgets_from_sidebar('footer-3');
-td_demo_widgets::add_widget_to_sidebar('footer-3', 'td_block_social_counter_widget',
-    array (
-        'custom_title'  => "Follow Us",
-        'facebook' => "TagDiv",
+        'custom_title'  => "Keep in touch",
+        'block_template_id' => 'td_block_template_2',
+        'facebook' => "tagDiv",
         'twitter' => "tagDivOfficial",
         'youtube' => "tagdiv",
-        'instagram' => "nikon_photography_",
-        'style' => "style1",
+        'style' => "style6 td-social-boxed",
     )
 );
+td_demo_widgets::remove_widgets_from_sidebar('default');
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_ad_box_widget',
+    array (
+        'spot_id' => 'sidebar'
+    )
+);
+td_demo_widgets::add_widget_to_sidebar('default', 'td_block_3_widget',
+    array (
+        'custom_title' => 'Trending',
+        'block_template_id' => 'td_block_template_2',
+        'sort' => 'random_posts',
+        'limit' => '4',
+    )
+);
+
 
 
 /*  ---------------------------------------------------------------------------
     categories
 */
 $demo_cat_1_id =td_demo_category::add_category(array(
-    'category_name' => 'Collections',
+    'category_name' => 'Reviews',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -103,7 +109,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
 $demo_cat_2_id =td_demo_category::add_category(array(
-    'category_name' => 'Digital Art',
+    'category_name' => 'Adventure',
     'parent_id' => $demo_cat_1_id,
     'category_template' => '',
     'top_posts_style' => '',
@@ -114,7 +120,7 @@ $demo_cat_2_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
 $demo_cat_3_id =td_demo_category::add_category(array(
-    'category_name' => 'Traditional Art',
+    'category_name' => 'Childen\'s Books',
     'parent_id' => $demo_cat_1_id,
     'category_template' => '',
     'top_posts_style' => '',
@@ -125,7 +131,7 @@ $demo_cat_3_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
 $demo_cat_4_id =td_demo_category::add_category(array(
-    'category_name' => 'Photography',
+    'category_name' => 'Fiction',
     'parent_id' => $demo_cat_1_id,
     'category_template' => '',
     'top_posts_style' => '',
@@ -136,7 +142,18 @@ $demo_cat_4_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
 $demo_cat_5_id =td_demo_category::add_category(array(
-    'category_name' => 'Motion Graphics',
+    'category_name' => 'Mystery',
+    'parent_id' => $demo_cat_1_id,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_6_id =td_demo_category::add_category(array(
+    'category_name' => "Romance",
     'parent_id' => $demo_cat_1_id,
     'category_template' => '',
     'top_posts_style' => '',
@@ -147,19 +164,8 @@ $demo_cat_5_id =td_demo_category::add_category(array(
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
 
-$demo_cat_6_id =td_demo_category::add_category(array(
-    'category_name' => 'Daily Inspirations',
-    'parent_id' => 0,
-    'category_template' => '',
-    'top_posts_style' => '',
-    'description' => '',
-    'background_td_pic_id' => '',
-    'sidebar_id' => '',
-    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
-    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
-));
 $demo_cat_7_id =td_demo_category::add_category(array(
-    'category_name' => 'Interviews',
+    'category_name' => 'Authors',
     'parent_id' => 0,
     'category_template' => '',
     'top_posts_style' => '',
@@ -169,20 +175,51 @@ $demo_cat_7_id =td_demo_category::add_category(array(
     'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
     'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
 ));
+$demo_cat_8_id =td_demo_category::add_category(array(
+    'category_name' => 'Book Trends',
+    'parent_id' => 0,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_9_id =td_demo_category::add_category(array(
+    'category_name' => 'Resources',
+    'parent_id' => 0,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+$demo_cat_10_id =td_demo_category::add_category(array(
+    'category_name' => 'Industry News',
+    'parent_id' => 0,
+    'category_template' => '',
+    'top_posts_style' => '',
+    'description' => '',
+    'background_td_pic_id' => '',
+    'sidebar_id' => '',
+    'tdc_layout' => '', //THE MODULE ID 1 2 3 NO NAME JUST ID
+    'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
+));
+
 
 /*  ----------------------------------------------------------------------------
     pages
  */
-
 //homepage
 $td_homepage_id = td_demo_content::add_page(array(
     'title' => 'Home',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/homepage.txt',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/homepage.txt',
     'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php
     'td_layout' => '',
-    'limit' => 9,
-    'sidebar_position' => 'no_sidebar',
-    'homepage' => true,
+    'homepage' => true
 ));
 
 /*  ----------------------------------------------------------------------------
@@ -200,7 +237,7 @@ td_demo_menus::add_page(array(
 
 // mega menu multiple subcateg
 td_demo_menus::add_mega_menu(array(
-    'title' => 'Collections',
+    'title' => 'Reviews',
     'add_to_menu_id' => $td_demo_header_menu_id,
     'category_id' => $demo_cat_1_id
 ));
@@ -208,135 +245,136 @@ td_demo_menus::add_mega_menu(array(
 
 // mega menu one subcateg
 td_demo_menus::add_mega_menu(array(
-    'title' => 'Daily Inspirations',
+    'title' => 'Authors',
     'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_6_id
+    'category_id' => $demo_cat_7_id
+));
+
+
+// mega menu one subcateg
+td_demo_menus::add_mega_menu(array(
+    'title' => 'Book Trends',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_8_id
 ));
 
 // add a category to the menu
 td_demo_menus::add_category(array(
-    'title' => 'Interviews',
+    'title' => 'Resources',
     'add_to_menu_id' => $td_demo_header_menu_id,
-    'category_id' => $demo_cat_7_id
+    'category_id' => $demo_cat_9_id
 ));
+
+// add a category to the menu
+td_demo_menus::add_category(array(
+    'title' => 'Industry News',
+    'add_to_menu_id' => $td_demo_header_menu_id,
+    'category_id' => $demo_cat_10_id
+));
+
+
 
 /*  ---------------------------------------------------------------------------
     posts
 */
 // post in featured category
 td_demo_content::add_post(array(
-    'title' => 'Motion Graphics by murAta Yuzi',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_5_id),
+    'title' => 'The Revenge of Analog: Real Things and Why They Matter',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
 td_demo_content::add_post(array(
-    'title' => 'The Work from Christian Orrillo',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_2_id),
+    'title' => 'All the Things We Leave Behind',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_7'
+
 ));
 td_demo_content::add_post(array(
-    'title' => 'Cinematic Tokyo by Stijn Hoekstra',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_4_id),
+    'title' => 'Are You an Echo? The Lost Poetry of Misuzu Kaneko',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
 td_demo_content::add_post(array(
-    'title' => 'Oil Painting Portraits by Yunior Hurtado',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => 'Simple Things Makes Me Happy',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_3_id),
     'featured_image_td_id' => 'td_pic_1'
 ));
 td_demo_content::add_post(array(
-    'title' => 'Robert Frank As A Young Artist',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_7_id),
-    'featured_image_td_id' => 'td_pic_8'
-));
-td_demo_content::add_post(array(
-    'title' => 'Robert Frank As A Young Artist',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_7_id),
+    'title' => 'Dining Down Memory Lane',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT), $demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
 
 
 //  ----------------------------------------------------------------------------
-
+td_demo_content::add_post(array(
+    'title' => "Things I Like – My Favourites",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => "The Glamour Gift Guide",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => "Best Ingredients To Have For Cooking",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_12'
+));
+td_demo_content::add_post(array(
+    'title' => "Reading In The Morning?",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => "Back To Basics",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
 
 
 
 //  ----------------------------------------------------------------------------
 //  Mix Cat
 td_demo_content::add_post(array(
-    'title' => "Landspace Collection Vol. 1",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "Saleem Haddad: ‘I put everything into this novel and it was a relief’",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_1'
-));
-td_demo_content::add_post(array(
-    'title' => 'GRVTY Series by Daniel Garay Arango',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
-    'featured_image_td_id' => 'td_pic_4'
-));
-td_demo_content::add_post(array(
-    'title' => "Member Spotlight: Pily Clix",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
-    'featured_image_td_id' => 'td_pic_7'
-));
-td_demo_content::add_post(array(
-    'title' => "The Realistic Art of Mike Dargas",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
-    'featured_image_td_id' => 'td_pic_2'
-));
-td_demo_content::add_post(array(
-    'title' => "A Look Inside Nike LunarEpic Flyknit Summer",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
-    'featured_image_td_id' => 'td_pic_5'
-));
-td_demo_content::add_post(array(
-    'title' => 'Ursula von Rydingsvard On Sculpture',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
     'featured_image_td_id' => 'td_pic_8'
 ));
-
-
-//  ----------------------------------------------------------------------------
-//
 td_demo_content::add_post(array(
-    'title' => "Stunning Digital Paintings by Giulio Rossi",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_3'
-));
-td_demo_content::add_post(array(
-    'title' => "Brasserie in Four Seasons Hotel Kyoto",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
-    'featured_image_td_id' => 'td_pic_6'
-));
-td_demo_content::add_post(array(
-    'title' => "A Sketchbook That Feels Like Time Travel",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
+    'title' => 'The Hidden Keys',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_9'
 ));
 td_demo_content::add_post(array(
-    'title' => 'The Art of Kevin Peterson',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
+    'title' => "Bit Rot: stories + essays",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_7'
 ));
 td_demo_content::add_post(array(
-    'title' => "Animations by Louis Ansa",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
+    'title' => "The Couple Next Door",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_11'
+));
+td_demo_content::add_post(array(
+    'title' => "All the World a Poem",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_10'
 ));
 
@@ -344,122 +382,257 @@ td_demo_content::add_post(array(
 //  ----------------------------------------------------------------------------
 //
 td_demo_content::add_post(array(
-    'title' => "Daido Moriyama On The Essence of Photography",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
-    'featured_image_td_id' => 'td_pic_5'
-));
-td_demo_content::add_post(array(
-    'title' => "The Dark Knight Trilogy by Krzysztof",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_8'
-));
-td_demo_content::add_post(array(
-    'title' => "Architectural Photography by Andrei Tudoran",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
-    'featured_image_td_id' => 'td_pic_6'
-));
-td_demo_content::add_post(array(
-    'title' => 'Years of Daily Urban Sketchbook Journaling',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
-    'featured_image_td_id' => 'td_pic_9'
-));
-td_demo_content::add_post(array(
-    'title' => "Janet Delaney On Hand-Painted Signs",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
-    'featured_image_td_id' => 'td_pic_4'
-));
-
-
-//  ----------------------------------------------------------------------------
-//
-td_demo_content::add_post(array(
-    'title' => "Motion Design Inspiration by Tyler Bowers",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "A Snow Garden and Other Stories review – pictures of lives, broken and whole",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_5_id),
     'featured_image_td_id' => 'td_pic_1'
 ));
 td_demo_content::add_post(array(
-    'title' => "Katharina Fritsch’s Giant Animal Sculptures",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_7_id),
-    'featured_image_td_id' => 'td_pic_4'
-));
-td_demo_content::add_post(array(
-    'title' => 'Baugasm Everyday Poster Series',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_7'
-));
-td_demo_content::add_post(array(
-    'title' => "Smile Inducing Portrait Photography",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_4_id),
-    'featured_image_td_id' => 'td_pic_10'
-));
-td_demo_content::add_post(array(
-    'title' => "Member Spotlight: Val Myburgh",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
-    'featured_image_td_id' => 'td_pic_2'
-));
-
-
-//  ----------------------------------------------------------------------------
-//
-td_demo_content::add_post(array(
-    'title' => "Oil Paintings - The life of a Superhero",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_3_id),
-    'featured_image_td_id' => 'td_pic_5'
-));
-td_demo_content::add_post(array(
-    'title' => 'A Tribute to the 80s by Arkuma',
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_5_id),
-    'featured_image_td_id' => 'td_pic_8'
-));
-td_demo_content::add_post(array(
-    'title' => "Movie Poster Series by Laura Racero",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_2_id),
-    'featured_image_td_id' => 'td_pic_3'
-));
-td_demo_content::add_post(array(
-    'title' => "Photographic Paintings by Fabian Oefner",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "The Adjustment League",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_4_id),
     'featured_image_td_id' => 'td_pic_6'
 ));
 td_demo_content::add_post(array(
-    'title' => "Hand Painted Signs by Jeff Canham",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "When Morning Comes",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_3_id),
-    'featured_image_td_id' => 'td_pic_9'
+    'featured_image_td_id' => 'td_pic_5'
 ));
-
-
-//  ----------------------------------------------------------------------------
-//
 td_demo_content::add_post(array(
-    'title' => "From Rust-Buckets to Creative Sculptures",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
-    'categories_id_array' => array($demo_cat_6_id),
+    'title' => "Once in a Town Called Moth",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
 td_demo_content::add_post(array(
-    'title' => "The Astonishing Works of Onur Senturk",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "Do Not Say We Have Nothing",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "Gertie’s Leap to Greatness",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => "Mad Enchantment: Claude Monet and the Painting of the Water Lilies",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => 'A Mortal Song',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_11'
+));
+td_demo_content::add_post(array(
+    'title' => "The Break",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_12'
+));
+td_demo_content::add_post(array(
+    'title' => "Life in the Court of Matane",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "The Descent of Man by Grayson Perry review",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_13'
+));
+td_demo_content::add_post(array(
+    'title' => 'Blood of Extraction: Canadian Imperialism in Latin America',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => "Clara Humble and the Not-So-Super Powers",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => "Lila and the Crow",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => "Congratulations on Everything",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "Hungry Bird",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_4'
 ));
 td_demo_content::add_post(array(
-    'title' => "The Art of Imagination by Ignacio Nazabal",
-    'file' => td_global::$get_template_directory . '/includes/demos/art_book/pages/post_default.txt',
+    'title' => "The Liszts",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_5'
+));
+td_demo_content::add_post(array(
+    'title' => "Little Deaths by Emma Flint review",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => "Five Roses",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+td_demo_content::add_post(array(
+    'title' => "The 5 New Watch Trends To Try Now",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_4_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'Girl Mans Up',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => "Nostalgia",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
     'featured_image_td_id' => 'td_pic_10'
+));
+
+td_demo_content::add_post(array(
+    'title' => "The Best Books You May Have Missed",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => 'The Path of Most Resistance',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_12'
+));
+td_demo_content::add_post(array(
+    'title' => "A Squiggly Story",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_9_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "Memoirs of a Sidekick",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_14'
+));
+td_demo_content::add_post(array(
+    'title' => 'Making it Right: Building Peace, Settling Conflict',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_3'
+));
+td_demo_content::add_post(array(
+    'title' => "Pandas on the Eastside",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_2'
+));
+td_demo_content::add_post(array(
+    'title' => "Niagara Motel",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_2_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => "The National Book Awards Longlist: Poetry",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => 'The “Red” Kelly Story',
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_6'
+));
+td_demo_content::add_post(array(
+    'title' => "High Five For Fitness",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_6_id),
+    'featured_image_td_id' => 'td_pic_7'
+));
+td_demo_content::add_post(array(
+    'title' => "Take Us to Your Chief",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_3_id),
+    'featured_image_td_id' => 'td_pic_9'
+));
+td_demo_content::add_post(array(
+    'title' => "Roald Dahl Turns a Hundred",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_4'
+));
+td_demo_content::add_post(array(
+    'title' => "The National Book Awards Longlist: Fiction",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+
+//  ----------------------------------------------------------------------------
+td_demo_content::add_post(array(
+    'title' => "Things You Should Pack When Travel",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_8_id),
+    'featured_image_td_id' => 'td_pic_10'
+));
+td_demo_content::add_post(array(
+    'title' => "Shenzheners",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_5_id),
+    'featured_image_td_id' => 'td_pic_11'
+));
+td_demo_content::add_post(array(
+    'title' => "I Enjoy Strawberry Deserts",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_7_id),
+    'featured_image_td_id' => 'td_pic_1'
+));
+td_demo_content::add_post(array(
+    'title' => "This Week in Fiction: Petina Gappah on the Insular World of Boarding School",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_8'
+));
+td_demo_content::add_post(array(
+    'title' => "Carla Hayden Takes Charge of the World’s Largest Library",
+    'file' => td_global::$get_template_directory . '/includes/demos/bookshelf/pages/post_default.txt',
+    'categories_id_array' => array($demo_cat_10_id),
+    'featured_image_td_id' => 'td_pic_3'
 ));
