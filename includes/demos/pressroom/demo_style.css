@@ -1,0 +1,100 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+.mx_image_background {
+  background-color: #f2f2f2;
+}
+.td-visibility-hidden {
+  visibility: hidden;
+}
+/*  ----------------------------------------------------------------------------
+    from bootstrap
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+usage:
+.td-block-row {
+  .mx-row(td-block-span);
+}
+
+@all_span_selector - is the begining of the span selector
+ */
+/* Bookshelf demo */
+.td-pressroom .td-header-style-2 .td-header-menu-wrap:before {
+  display: none;
+}
+.td-pressroom .td_block_template_1 .block-title > * {
+  margin-top: 11px;
+}
+.td-pressroom .td_block_template_1 .block-title:after {
+  top: 0;
+  bottom: auto;
+  height: 7px;
+  background-color: #000;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='100')";
+  filter: alpha(opacity=100);
+}
+.td-pressroom .td-footer-template-15 .block-title > *,
+.td-pressroom .td_block_widget .block-title > * {
+  margin-top: 9px;
+  font-size: 24px;
+}
+.td-pressroom .td-footer-template-15 .block-title:after,
+.td-pressroom .td_block_widget .block-title:after {
+  bottom: auto;
+  height: 5px;
+}
+.td-pressroom .td-footer-template-15 .block-title > * {
+  margin-top: 0;
+}
+.td-pressroom .td-footer-template-15 .block-title:after {
+  display: none;
+}
+.td-pressroom .td_block_big_grid_rd_bg_5 .td-big-grid-post .td-module-thumb a:last-child:before {
+  opacity: 0.7;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='70')";
+  filter: alpha(opacity=70);
+}
+.td-pressroom .td_ajax_load_more {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 13px 25px;
+  background-color: #42bdcd;
+  font-weight: 400;
+  text-transform: none;
+  color: #fff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.td-pressroom .td_ajax_load_more:hover {
+  background-color: #000;
+  color: #fff;
+}
+.td-pressroom .td_ajax_load_more i {
+  display: none;
+}
+.td-pressroom .td-post-template-rd-2 .td_block_related_posts .td-related-title > a {
+  margin-top: 0;
+  font-size: 24px;
+}
