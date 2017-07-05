@@ -2635,7 +2635,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
 .td-header-menu-social {
   float: right;
   margin-right: 14px;
-  /* responsive portrait phone */
+  /* responsive tablet + phone */
 }
 .td-header-menu-social .td-social-icon-wrap a {
   color: #000;
@@ -2652,7 +2652,7 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
     font-size: 13px !important;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1140px) {
   .td-header-menu-social {
     display: none;
   }
@@ -2709,6 +2709,12 @@ ul.sf-js-enabled > li > a > i.td-icon-menu-down:before {
   opacity: 0.08;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='8')";
   filter: alpha(opacity=8);
+  /* responsive tablet + phone */
+}
+@media (max-width: 1140px) {
+  .td-header-menu-social + .td-header-menu-search .td-search-btns-wrap a:before {
+    display: none;
+  }
 }
 .td-ionmag-multicolumn-2 .sub-menu {
   padding: 16px 0;
