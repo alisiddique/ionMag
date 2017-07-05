@@ -14,7 +14,8 @@ function td_css_demo_gen() {
 		.td-pressroom .td-pressroom-dark-block .td_module_wrap:hover .entry-title a {
 		  color: @theme_color;
 		}
-		.td-pressroom .td_ajax_load_more {
+		.td-pressroom .td_ajax_load_more,
+		.td-pressroom .td-scroll-up {
 		  background-color: @theme_color;
 		}
 		

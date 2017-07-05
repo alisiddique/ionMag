@@ -16,6 +16,13 @@
     .block-title {
       > * {
         margin-top: 11px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          margin-top: 9px;
+          font-size: 28px;
+          line-height: 26px;
+        }
       }
 
       &:after {
@@ -24,6 +31,11 @@
         height: 7px;
         background-color: #000;
         .opacity(1);
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          height: 5px;
+        }
       }
     }
   }
@@ -61,11 +73,22 @@
       > * {
         margin-top: 9px;
         font-size: 24px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          margin-top: 8px;
+          font-size: 22px;
+        }
       }
 
       &:after {
         bottom: auto;
         height: 5px;
+
+        /* responsive portrait phone */
+        @media (max-width: @responsive_p_phone_max) {
+          height: 4px;
+        }
       }
     }
   }
@@ -130,6 +153,11 @@
         > a {
           margin-top: 0;
           font-size: 24px;
+
+          /* responsive portrait phone */
+          @media (max-width: @responsive_p_phone_max) {
+            font-size: 22px;
+          }
         }
       }
     }
@@ -157,6 +185,18 @@
     .td_social_type .td-sp:before {
       background-color: #000;
     }
+  }
+
+  .td-scroll-up {
+    background-color: @td_theme_color;
+    border-color: transparent;
+    .border-radius(100px);
+  }
+
+
+  // demos button
+  #td-theme-settings .td-skin-buy a {
+    background-color: #e29b00;
   }
 
 }

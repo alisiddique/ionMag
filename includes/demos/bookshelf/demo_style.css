@@ -128,3 +128,6 @@ usage:
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='100')";
   filter: alpha(opacity=100);
 }
+.td-bookshelf #td-theme-settings .td-skin-buy a {
+  background-color: #e29b00;
+}
