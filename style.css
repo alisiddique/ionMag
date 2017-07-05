@@ -1587,12 +1587,16 @@ body.td-ad-background-link .td-container-wrap {
 }
 .td-header-style-2 .td-header-menu-social {
   float: none;
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 70px;
   margin-right: 0;
-  margin-left: 21px;
 }
-.td-header-style-2 .td-header-menu-social + .td-header-menu-search .td-search-btns-wrap a:before {
-  display: none;
+.td-header-style-2 .td-header-menu-social + .td-header-menu-search #td-header-search-button i {
+  margin-left: 0;
+}
+.td-header-style-2 .td-header-menu-no-search .td-header-menu-social {
+  right: 0;
 }
 .td-header-style-2 #td-header-search-button i {
   margin-left: 10px;

@@ -397,6 +397,9 @@ function td_css_generator() {
     .td-header-menu-search #td-header-search-button .td-icon-search {
       color: @menu_text_color;
     }
+    .td-header-menu-social + .td-header-menu-search .td-search-btns-wrap a:before {
+      background-color: @menu_text_color;
+    }
     
     /* MENU ACTIVE & HOVER COLOR */
     /* @submenu_hover_color */
