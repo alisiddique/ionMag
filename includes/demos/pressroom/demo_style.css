@@ -49,6 +49,19 @@ usage:
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='100')";
   filter: alpha(opacity=100);
 }
+.td-pressroom .td-pressroom-dark-block .block-title:after {
+  background-color: #fff;
+}
+.td-pressroom .td-pressroom-dark-block .td_module_wrap:before {
+  background-color: #fff;
+}
+.td-pressroom .td-pressroom-dark-block .td_module_wrap:hover .entry-title a {
+  color: #42bdcd;
+}
+.td-pressroom .td-pressroom-dark-block .entry-title a,
+.td-pressroom .td-pressroom-dark-block .td-module-meta-info {
+  color: #fff;
+}
 .td-pressroom .td-footer-template-15 .block-title > *,
 .td-pressroom .td_block_widget .block-title > * {
   margin-top: 9px;
@@ -94,9 +107,37 @@ usage:
 .td-pressroom .td_ajax_load_more i {
   display: none;
 }
+.td-pressroom .td-post-template-rd-2 .td-post-header .entry-title {
+  margin-top: 15px;
+  padding-top: 12px;
+}
+.td-pressroom .td-post-template-rd-2 .td-post-header .entry-title:after {
+  top: 0;
+  bottom: auto;
+  width: 90px;
+  height: 8px;
+  background-color: #000;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='100')";
+  filter: alpha(opacity=100);
+}
 .td-pressroom .td-post-template-rd-2 .td_block_related_posts .td-related-title > a {
   margin-top: 0;
   font-size: 24px;
+}
+.td-pressroom.td_category_template_rd_1 .td-category-header .entry-title {
+  margin-top: 15px;
+  padding-top: 12px;
+}
+.td-pressroom.td_category_template_rd_1 .td-category-header .entry-title:after {
+  top: 0;
+  bottom: auto;
+  width: 90px;
+  height: 8px;
+  background-color: #000;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity='100')";
+  filter: alpha(opacity=100);
 }
 .td-pressroom .td-social-style9 .td_social_type .td-sp:before {
   background-color: #000;

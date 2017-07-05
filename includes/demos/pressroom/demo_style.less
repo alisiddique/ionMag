@@ -28,6 +28,33 @@
     }
   }
 
+  .td-pressroom-dark-block {
+    .block-title {
+      &:after {
+        background-color: #fff;
+      }
+    }
+
+    .td_module_wrap {
+      &:before {
+        background-color: #fff;
+      }
+
+      &:hover {
+        .entry-title {
+          a {
+            color: @td_theme_color;
+          }
+        }
+      }
+    }
+
+    .entry-title a,
+    .td-module-meta-info {
+      color: #fff;
+    }
+  }
+
   .td-footer-template-15,
   .td_block_widget {
     .block-title {
@@ -82,11 +109,45 @@
   }
 
   .td-post-template-rd-2 {
+    .td-post-header {
+      .entry-title {
+        margin-top: 15px;
+        padding-top: 12px;
+
+        &:after {
+          top: 0;
+          bottom: auto;
+          width: 90px;
+          height: 8px;
+          background-color: #000;
+          .opacity(1);
+        }
+      }
+    }
+
     .td_block_related_posts {
       .td-related-title {
         > a {
           margin-top: 0;
           font-size: 24px;
+        }
+      }
+    }
+  }
+
+  &.td_category_template_rd_1 {
+    .td-category-header {
+      .entry-title {
+        margin-top: 15px;
+        padding-top: 12px;
+
+        &:after {
+          top: 0;
+          bottom: auto;
+          width: 90px;
+          height: 8px;
+          background-color: #000;
+          .opacity(1);
         }
       }
     }

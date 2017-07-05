@@ -11,6 +11,9 @@ function td_css_demo_gen() {
 	<style>
 
 		/* @theme_color */
+		.td-pressroom .td-pressroom-dark-block .td_module_wrap:hover .entry-title a {
+		  color: @theme_color;
+		}
 		.td-pressroom .td_ajax_load_more {
 		  background-color: @theme_color;
 		}
