@@ -1253,6 +1253,10 @@ body.td-ad-background-link .td-container-wrap {
 .td-header-menu-wrap.td-affix .td-main-menu-logo {
   margin-right: 32px;
 }
+.td-header-menu-wrap.td-affix #td-header-menu {
+  display: block;
+  width: 100%;
+}
 .td-header-menu-wrap.td-affix .sf-menu ul ul {
   margin-top: -15px;
   padding: 15px 0;
