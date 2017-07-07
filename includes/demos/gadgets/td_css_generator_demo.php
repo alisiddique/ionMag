@@ -11,14 +11,15 @@ function td_css_demo_gen() {
 	<style>
 
 		/* @theme_color */
-		.td-pressroom .td-pressroom-dark-block .td_module_wrap:hover .entry-title a {
-		  color: @theme_color;
+		.td-ionmag-gadgets .td_wrapper_video_playlist .td_video_controls_playlist_wrapper,
+		.td-ionmag-gadgets .td-footer-wrapper .td_block_template_3 .td-block-title > * {
+			background-color: @theme_color;
 		}
-		.td-pressroom .td_ajax_load_more,
-		.td-pressroom .td-scroll-up {
-		  background-color: @theme_color;
+
+		.td-ionmag-gadgets .td_wrapper_video_playlist .td_video_currently_playing:after {
+			border-left-color: @theme_color !important;
 		}
-		
+
 	</style>
 	";
 

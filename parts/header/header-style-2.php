@@ -21,7 +21,13 @@ Header style 2
     </div>
 
     <div class="td-header-menu-wrap-full td-container-wrap <?php echo td_util::get_option('td_full_menu'); ?>">
-        <div class="td-header-menu-wrap">
+        <?php
+            $menuSearchClass = '';
+            if(!td_util::get_option('tds_search_placement') == '')
+                $menuSearchClass = 'td-header-menu-no-search';
+        ?>
+
+        <div class="td-header-menu-wrap <?php echo $menuSearchClass ?>">
             <div class="td-container td-header-row td-header-main-menu">
                 <?php locate_template('parts/header/header-menu.php', true);?>
             </div>
