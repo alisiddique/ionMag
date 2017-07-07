@@ -31,6 +31,7 @@ class td_block_pinterest extends td_block {
 
         //get the block title
         $buffy .= $this->get_block_title();
+	    $buffy .= $this->get_pull_down_filter();
         $buffy .= '<div id=' . $this->block_uid . ' class="td-pinterest-wrap td_block_inner td-column-' . $td_column_number . '">';
         $buffy.= td_pinterest::render_generic($atts);
         $buffy .= '</div>';
