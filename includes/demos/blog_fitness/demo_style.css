@@ -1,0 +1,147 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+.mx_image_background {
+  background-color: #f2f2f2;
+}
+.td-visibility-hidden {
+  visibility: hidden;
+}
+/*  ----------------------------------------------------------------------------
+    from bootstrap
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+usage:
+.td-block-row {
+  .mx-row(td-block-span);
+}
+
+@all_span_selector - is the begining of the span selector
+ */
+/* Premium demo */
+.td-ionmag-blog-fitness .td-header-style-pr-2 .td-header-logo-wrap:after,
+.td-ionmag-blog-fitness .td-header-style-pr-3 .td-header-logo-wrap:after {
+  display: none;
+}
+.td-ionmag-blog-fitness .td-header-menu-wrap {
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.09);
+}
+.td-ionmag-blog-fitness .td-header-logo-wrap.td-container-wrap {
+  background-color: #f4f4f4;
+  -webkit-box-shadow: inset 0px -3px 5px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: inset 0px -3px 5px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0px -3px 5px 0 rgba(0, 0, 0, 0.07);
+}
+.td-ionmag-blog-fitness .td-header-menu-wrap:before,
+.td-ionmag-blog-fitness .td-header-menu-wrap:after {
+  display: none;
+}
+.td-ionmag-blog-fitness .td-main-page-wrap {
+  padding: 0;
+}
+.td-ionmag-blog-fitness .td_module_trending_now .entry-title {
+  font-family: "Roboto", "Open Sans", sans-serif;
+}
+.td-ionmag-blog-fitness .td_block_big_grid_rd_bg_fl_5 .td-big-grid-post .td-meta-info-container {
+  padding: 18px 20px 18px !important;
+}
+.td-ionmag-blog-fitness .td_block_big_grid_rd_bg_fl_5 .td-big-grid-post .td-meta-info-container:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ff71fc;
+  opacity: 0.5;
+}
+.td-ionmag-blog-fitness .td_block_big_grid_rd_bg_fl_5 .td-big-grid-post .entry-title {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-info {
+  margin: 0;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-info .td-post-category-wrap {
+  margin-bottom: 0;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-info .td-post-category-wrap .td-post-category:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 767px) {
+  .td-ionmag-blog-fitness .td_module_rd_8 .td-module-thumb {
+    margin: 0;
+  }
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder {
+  background-color: transparent;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ff71fc;
+  opacity: 0.6;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder .entry-title {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder .entry-title a {
+  color: #fff;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder .entry-title a:hover {
+  opacity: 0.9;
+}
+.td-ionmag-blog-fitness .td_module_rd_8 .td-module-meta-holder-alt {
+  display: none;
+}
+.td-ionmag-blog-fitness .td-fitness-vlog .td-element-style {
+  -webkit-box-shadow: inset 0 -3px 5px 0 rgba(0, 0, 0, 0.07), inset 0 3px 5px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: inset 0 -3px 5px 0 rgba(0, 0, 0, 0.07), inset 0 3px 5px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: inset 0 -3px 5px 0 rgba(0, 0, 0, 0.07), inset 0 3px 5px 0 rgba(0, 0, 0, 0.07);
+}
+.td-ionmag-blog-fitness .td_wrapper_video_playlist .td_video_controls_playlist_wrapper {
+  background-color: #d36ee5;
+}
+.td-ionmag-blog-fitness .td_wrapper_video_playlist .td_video_currently_playing:after {
+  border-left-color: #d36ee5 !important;
+}
+.td-ionmag-blog-fitness .td_block_author .td-author-name:after {
+  height: 3px;
+}
+.td-ionmag-blog-fitness .widget_recent_entries li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.td-ionmag-blog-fitness .post .td-post-header .entry-title {
+  text-transform: uppercase;
+  font-size: 36px;
+  line-height: 42px;
+}
+.td-ionmag-blog-fitness .td-live-theme-demos .td-skin-buy a {
+  background-color: #d36ee5;
+}

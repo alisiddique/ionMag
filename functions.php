@@ -90,7 +90,7 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
                             foreach (td_global::$demo_list as $demo_id => $stack_params) {
                                 $td_demo_names[$stack_params['text']] = $demo_id;
                                 ?>
-                                <div class="td-set-theme-style"><a href="<?php echo td_global::$demo_list[$demo_id]['demo_url'] ?>" class="td-set-theme-style-link td-popup td-popup-<?php echo $td_demo_names[$stack_params['text']] ?>" data-img-url="<?php echo td_global::$get_template_directory_uri ?>/demos_popup/large/<?php echo $demo_id; ?>.jpg"></a></div>
+                                <div class="td-set-theme-style"><a href="<?php echo td_global::$demo_list[$demo_id]['demo_url'] ?>" class="td-set-theme-style-link td-popup td-popup-<?php echo $td_demo_names[$stack_params['text']] ?>" data-img-url="<?php echo td_global::$get_template_directory_uri ?>/demos_popup/large/<?php echo $demo_id; ?>.jpg"><span></span></a></div>
                             <?php } ?>
                             <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty1"></a></div>
                             <div class="td-set-theme-style-empty"><a href="#" class="td-popup td-popup-empty7"></a></div>
@@ -119,4 +119,4 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
     }
 }
 
-//td_demo_state::update_state("art_book", 'full');
+//td_demo_state::update_state("gadgets", 'full');
