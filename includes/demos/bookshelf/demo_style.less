@@ -1,0 +1,111 @@
+@import "../../less_files/variables.less";
+@import "../../less_files/mixin.less";
+
+/* Bookshelf demo */
+.td-bookshelf {
+
+  .td-header-style-pr-6 {
+    .sf-menu {
+      > li {
+        &.current-menu-item > a,
+        > a:hover {
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(~'100% - 30px');
+            height: 4px;
+            background-color: #fff;
+          }
+        }
+
+        &:last-child {
+          &.current-menu-item > a,
+          > a:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .td-bookshelf-cover {
+    .td-custom-image a {
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        height: calc(~'100vh - 27px') !important;
+      }
+
+      &:before {
+        .opacity(0.1);
+      }
+
+      &:after {
+        margin: 0;
+        background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        .opacity(0.9);
+        border: none;
+      }
+    }
+
+    .td-custom-title {
+      padding-top: 90px;
+
+      /* desktop only */
+      @media (min-width: @responsive_l_tablet_max) {
+        width: 44%;
+      }
+      /* responsive landscape tablet */
+      @media (min-width: @responsive_l_tablet_min) and (max-width: @responsive_l_tablet_max) {
+        width: 70%;
+      }
+      /* tablet + desktop */
+      @media (min-width: @responsive_p_tablet_min) {
+        left: 50%;
+        .transform(translate(-50%, -50%));
+      }
+    }
+
+    .entry-title {
+      font-family: Lora;
+      font-size: 32px;
+      line-height: 40px;
+      font-style: italic;
+
+      /* responsive portrait tablet */
+      @media (min-width: @responsive_p_tablet_min) and (max-width: @responsive_p_tablet_max) {
+        font-size: 28px;
+        line-height: 38px;
+      }
+      /* responsive portrait phone */
+      @media (max-width: @responsive_p_phone_max) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .td-footer-template-9 {
+    .td-social-style-2 {
+      .td-icon-font {
+        &:after {
+          border-width: 2px;
+          .opacity(1);
+        }
+      }
+    }
+  }
+
+
+  // demos button
+  #td-theme-settings .td-skin-buy a {
+    background-color: #7b2e00;
+  }
+
+}

@@ -25,6 +25,10 @@ $td_less_files = array (
 		'source' => 'includes/less_files/woocommerce/main.less',
 		'destination' => 'style-woocommerce.css'
 	),
+	'bbpress' => array (
+		'source' => 'includes/less_files/bbpress/main.less',
+		'destination' => 'style-bbpress.css'
+	),
 	'wp-admin.css' => array (
 		'source' => 'includes/wp_booster/wp-admin/css/wp-admin.less',
 		'destination' => 'includes/wp_booster/wp-admin/css/wp-admin.css'
@@ -64,6 +68,18 @@ $td_less_files = array (
 	'art_book' => array (
 		'source' => 'includes/demos/art_book/demo_style.less',
 		'destination' => 'includes/demos/art_book/demo_style.css'
+	),
+	'auto_zone' => array (
+		'source' => 'includes/demos/auto_zone/demo_style.less',
+		'destination' => 'includes/demos/auto_zone/demo_style.css'
+	),
+	'bookshelf' => array (
+		'source' => 'includes/demos/bookshelf/demo_style.less',
+		'destination' => 'includes/demos/bookshelf/demo_style.css'
+	),
+	'pressroom' => array (
+		'source' => 'includes/demos/pressroom/demo_style.less',
+		'destination' => 'includes/demos/pressroom/demo_style.css'
 	),
 );
 

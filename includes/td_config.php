@@ -6,7 +6,7 @@
 define("TD_THEME_NAME", "ionMag");
 define("TD_THEME_VERSION", "__td_deploy_version__");
 define("TD_THEME_DEMO_URL", "http://demo.wpion.com/" . strtolower(TD_THEME_NAME));
-define("TD_THEME_DEMO_DOC_URL", 'http://forum.wpion.com/installing-demo/');  //the url to the demo documentation
+define("TD_THEME_DEMO_DOC_URL", 'https://www.wpion.com/members/installing-demo/');  //the url to the demo documentation
 define("TD_FEATURED_CAT", "Featured"); //featured cat name
 define("TD_FEATURED_CAT_SLUG", "featured"); //featured cat slug
 define("TD_THEME_OPTIONS_NAME", "td_012"); //where to store our options
@@ -626,6 +626,20 @@ class td_config {
                 'post_format_icon_size' => 'normal',
                 'used_on' => array(
                     'Big grid 1'
+                ),
+                'no_image_path' => td_global::$get_template_directory_uri,
+            )
+        );
+
+	    td_api_thumb::add('td_980x580',
+            array(
+                'name' => 'td_980x580',
+                'width' => 980,
+                'height' => 580,
+                'crop' => array('center', 'top'),
+                'post_format_icon_size' => 'normal',
+                'used_on' => array(
+                    'Slide - 3 column'
                 ),
                 'no_image_path' => td_global::$get_template_directory_uri,
             )
@@ -3477,10 +3491,10 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR HEADER AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a>',
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a>',
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_phone' => array(
 					    'desc' => '<p>Google Adsense requiers that you do not use big header ads on mobiles!</p>',
 				    ),
@@ -3498,10 +3512,10 @@ class td_config {
 				    'ad_field_notice' => 'To show the ads on the sidebar, please drag the "[taDiv] Ad box" widget to the desired sidebar.',
 				    'ad_field_code' => array(
 					    'title' => 'YOUR SIDEBAR AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
 				    'ad_field_title' => false,
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3515,9 +3529,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE TOP AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3531,9 +3545,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE INLINE AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 			    )
 		    )
 	    );
@@ -3545,9 +3559,9 @@ class td_config {
 			    'fields' => array(
 				    'ad_field_code' => array(
 					    'title' => 'YOUR ARTICLE BOTTOM AD',
-					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="http://forum.wpion.com/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
+					    'desc' => 'Paste your ad code here. Google Adsense will be made responsive automatically. <br><br> To add non Adsense responsive ads <br> <a target="_blank" href="https://www.wpion.com/members/using-other-ads-non-adsense-ads/">click here</a> (last paragraph)'
 				    ),
-				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="http://forum.wpion.com/header-ads/" target="_blank">link</a>',
+				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    )
@@ -3624,6 +3638,421 @@ class td_config {
 			    ),
 		    )
 	    );
+
+
+
+	    td_api_tinymce_formats::add('td_tinymce_item_1',
+                array(
+                    'title' => 'Text padding'
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_1',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => 'text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-0',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_2',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-4',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_3',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-1',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_4',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢ text ⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-3',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_5',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢ text ⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-6',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_6',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢ text ⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-2',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_tinymce_item_1_7',
+                array(
+                    'parent_id' => 'td_tinymce_item_1',
+                    'title' => '⇢⇢⇢ text ⇠⇠⇠',
+                    'block' => 'div',
+                    'classes' => 'td-paragraph-padding-5',
+                    'wrapper' => true,
+                ));
+
+
+            td_api_tinymce_formats::add('td_tinymce_item_3',
+                array(
+                    'title' => 'Arrow list',
+                    'selector' => 'ul',
+                    'classes' => 'td-arrow-list'
+                ));
+
+
+            td_api_tinymce_formats::add('td_blockquote',
+                array(
+                    'title' => 'Quotes'
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_1',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote td_quote_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_2',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote td_quote_right',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_3',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box center',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_center',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_4',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_5',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Quote box right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_quote_box td_box_right',
+                    'wrapper' => true,
+                ));
+
+
+            td_api_tinymce_formats::add('td_blockquote_6',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote center',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_center',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_7',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote left',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_left',
+                    'wrapper' => true,
+                ));
+
+            td_api_tinymce_formats::add('td_blockquote_8',
+                array(
+                    'parent_id' => 'td_blockquote',
+                    'title' => 'Pull quote right',
+                    'block' => 'blockquote',
+                    'classes' => 'td_pull_quote td_pull_right',
+                    'wrapper' => true,
+                ));
+
+
+            // two columns text
+            td_api_tinymce_formats::add('td_text_columns',
+                array(
+                    'title' => 'Text columns'
+                ));
+            td_api_tinymce_formats::add('td_text_columns_0',
+                array(
+                    'parent_id' => 'td_text_columns',
+                    'title' => 'two columns',
+                    'block' => 'div',
+                    'classes' => 'td_text_columns_two_cols',
+                    'wrapper' => true,
+                ));
+
+            // dropcap
+            td_api_tinymce_formats::add('td_dropcap',
+                array(
+                    'title' => 'Dropcaps'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_0',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Box',
+                    'classes' => 'dropcap',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_1',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Circle',
+                    'classes' => 'dropcap dropcap1',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_2',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Regular',
+                    'classes' => 'dropcap dropcap2',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_dropcap_3',
+                array(
+                    'parent_id' => 'td_dropcap',
+                    'title' => 'Bold',
+                    'classes' => 'dropcap dropcap3',
+                    'inline' => 'span'
+                ));
+
+            // Custom buttons in post Formats
+            td_api_tinymce_formats::add('td_btn',
+                array(
+                    'title' => 'Button'
+                ));
+            //Default button
+            td_api_tinymce_formats::add('td_default_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Default',
+                    'classes' => ' td_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_sm',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Small',
+                    'classes' => 'td_btn  td_btn_sm td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_md',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Normal',
+                    'classes' => 'td_btn td_btn_md td_default_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_default_btn_lg',
+                array(
+                    'parent_id' => 'td_default_btn',
+                    'title' => 'Default - Large',
+                    'classes' => 'td_btn td_btn_lg td_default_btn',
+                    'inline' => 'span'
+                ));
+            //Round button
+            td_api_tinymce_formats::add('td_round_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Round',
+                    'classes' => 'td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_sm',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Small',
+                    'classes' => 'td_btn td_btn_sm td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_md',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Normal',
+                    'classes' => 'td_btn td_btn_md td_round_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_round_btn_lg',
+                array(
+                    'parent_id' => 'td_round_btn',
+                    'title' => 'Round - Large',
+                    'classes' => 'td_btn td_btn_lg td_round_btn',
+                    'inline' => 'span'
+                ));
+            //Outlined button
+            td_api_tinymce_formats::add('td_outlined_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Outlined',
+                    'classes' => 'td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_sm',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Small',
+                    'classes' => 'td_btn td_btn_sm td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_md',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Normal',
+                    'classes' => 'td_btn td_btn_md td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_outlined_btn_lg',
+                array(
+                    'parent_id' => 'td_outlined_btn',
+                    'title' => 'Outlined - Large',
+                    'classes' => 'td_btn td_btn_lg td_outlined_btn',
+                    'inline' => 'span'
+                ));
+            //Shadow button
+            td_api_tinymce_formats::add('td_shadow_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => 'Shadow',
+                    'classes' => 'td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_sm',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Small',
+                    'classes' => 'td_btn td_btn_sm td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_md',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Normal',
+                    'classes' => 'td_btn td_btn_md td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_shadow_btn_lg',
+                array(
+                    'parent_id' => 'td_shadow_btn',
+                    'title' => 'Shadow - Large',
+                    'classes' => 'td_btn td_btn_lg td_shadow_btn',
+                    'inline' => 'span'
+                ));
+            //3D button
+            td_api_tinymce_formats::add('td_3D_btn',
+                array(
+                    'parent_id' => 'td_btn',
+                    'title' => '3D',
+                    'classes' => 'td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_sm',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Small',
+                    'classes' => 'td_btn td_btn_sm td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_md',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Normal',
+                    'classes' => 'td_btn td_btn_md td_3D_btn',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_3D_btn_lg',
+                array(
+                    'parent_id' => 'td_3D_btn',
+                    'title' => '3D - Large',
+                    'classes' => 'td_btn td_btn_lg td_3D_btn',
+                    'inline' => 'span'
+                ));
+
+            // highlighter
+            td_api_tinymce_formats::add('td_text_highlight',
+                array(
+                    'title' => 'Text highlighting'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_0',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Black censured',
+                    'classes' => 'td_text_highlight_0',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_red',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Red marker',
+                    'classes' => 'td_text_highlight_marker_red td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_blue',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Blue marker',
+                    'classes' => 'td_text_highlight_marker_blue td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_green',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Green marker',
+                    'classes' => 'td_text_highlight_marker_green td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_yellow',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Yellow marker',
+                    'classes' => 'td_text_highlight_marker_yellow td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+            td_api_tinymce_formats::add('td_text_highlight_pink',
+                array(
+                    'parent_id' => 'td_text_highlight',
+                    'title' => 'Pink marker',
+                    'classes' => 'td_text_highlight_marker_pink td_text_highlight_marker',
+                    'inline' => 'span'
+                ));
+
+            // clear elements
+            td_api_tinymce_formats::add('td_clear_elements',
+                array(
+                    'title' => 'Clear element',
+                    'selector' => 'a,p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img,code,blockquote',
+                    'styles' => array(
+                        'clear' => 'both'
+                    )
+                ));
 
 
         /**
@@ -4069,7 +4498,7 @@ class td_config {
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
-                'premium_demo' => "free"
+                'premium_demo' => "premium"
             ),
             'premium_magazine' => array(
                 'text' => 'Premium Magazine',
@@ -4143,6 +4572,66 @@ class td_config {
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'art_book' => array(
+                'text' => 'Art Book',
+                'folder' => td_global::$get_template_directory . '/includes/demos/art_book/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/art_book/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_art_book/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
+                ),
+                'premium_demo' => "free"
+            ),
+            'auto_zone' => array(
+                'text' => 'Auto Zone',
+                'folder' => td_global::$get_template_directory . '/includes/demos/auto_zone/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/auto_zone/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_auto_zone/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'bookshelf' => array(
+                'text' => 'Bookshelf',
+                'folder' => td_global::$get_template_directory . '/includes/demos/bookshelf/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/bookshelf/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_bookshelf/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'pressroom' => array(
+                'text' => 'Pressroom',
+                'folder' => td_global::$get_template_directory . '/includes/demos/pressroom/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/pressroom/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_pressroom/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
                 'premium_demo' => "premium"
             ),
@@ -4323,13 +4812,13 @@ class td_config {
             td_api_text::set('welcome_support_forum', '
             <h2>Support forum</h2>
             <p>We offer outstanding support through our forum. To get support first you need to register (create an account) and open a thread in the ' . TD_THEME_NAME . ' Section.</p>
-            <a class="button button-primary" href="http://forum.wpion.com/" target="_blank">Open forum</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/" target="_blank">Open forum</a>'
             );
 
             td_api_text::set('welcome_docs', '
             <h2>Docs and learning</h2>
             <p>Our online documentation will give you important information about the theme. This is a exceptional resource to start discovering the theme’s true potential.</p>
-            <a class="button button-primary" href="http://forum.wpion.com/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
             );
 
             td_api_text::set('welcome_video_tutorials', '
@@ -4351,7 +4840,8 @@ class td_config {
 				<div class="td-supported-plugin">Slider Revolution <span> - responsive WordPress Slider Plugin</span></div>'
             );
 
-            td_api_text::set('panel_existing_content_url', '<a href="http://forum.wpion.com/using-the-theme-with-existing-content/" target="_blank">read more</a>');
+            td_api_text::set('panel_existing_content_url', '<a href="https://www.wpion.com/members/using-the-theme-with-existing-content/" target="_blank">read more</a>');
+            td_api_text::set('panel_excerpt_modules_blocks_docs_url', '<a href="https://www.wpion.com/members/theme-modules-blocks/" target="_blank">here</a>');
 
 
 
@@ -4369,7 +4859,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/td-composer.png',
-                    'text' => 'Create beautiful pages with this custom frontend drag and drop builder<br><a href="http://forum.wpion.com/tagdiv-composer-overview/" target="_blank">Read more</a>',
+                    'text' => 'Create beautiful pages with this custom frontend drag and drop builder<br><a href="https://www.wpion.com/members/tagdiv-composer-overview/" target="_blank">Read more</a>',
                     'required_label' => 'required', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin
@@ -4385,7 +4875,7 @@ class td_config {
                     'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
                     'external_url' => '', // If set, overrides default API URL and points to an external URL
                     'img' => td_global::$get_template_directory_uri . '/includes/wp_booster/wp-admin/images/plugins/social.png',
-                    'text' => 'Display your activity on social networks with style using this cool feature<br><a href="http://forum.wpion.com/social-counter/" target="_blank">Read more</a>',
+                    'text' => 'Display your activity on social networks with style using this cool feature<br><a href="https://www.wpion.com/members/social-counter/" target="_blank">Read more</a>',
                     'required_label' => 'optional', //the text for required/recommended label - used also as a class for label bg color
 
 	                'td_activate' => true, // custom field used to activate the plugin
@@ -4496,425 +4986,6 @@ class td_config {
                     )
                 );
             };
-
-
-
-
-
-
-            td_api_tinymce_formats::add('td_tinymce_item_1',
-                array(
-                    'title' => 'Text padding'
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_1',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => 'text ⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-0',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_2',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢ text',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-4',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_3',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢ text ⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-1',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_4',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢ text ⇠⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-3',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_5',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢⇢ text ⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-6',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_6',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢⇢ text ⇠⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-2',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_tinymce_item_1_7',
-                array(
-                    'parent_id' => 'td_tinymce_item_1',
-                    'title' => '⇢⇢⇢ text ⇠⇠⇠',
-                    'block' => 'div',
-                    'classes' => 'td-paragraph-padding-5',
-                    'wrapper' => true,
-                ));
-
-
-            td_api_tinymce_formats::add('td_tinymce_item_3',
-                array(
-                    'title' => 'Arrow list',
-                    'selector' => 'ul',
-                    'classes' => 'td-arrow-list'
-                ));
-
-
-            td_api_tinymce_formats::add('td_blockquote',
-                array(
-                    'title' => 'Quotes'
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_1',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Quote left',
-                    'block' => 'blockquote',
-                    'classes' => 'td_quote td_quote_left',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_2',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Quote right',
-                    'block' => 'blockquote',
-                    'classes' => 'td_quote td_quote_right',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_3',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Quote box center',
-                    'block' => 'blockquote',
-                    'classes' => 'td_quote_box td_box_center',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_4',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Quote box left',
-                    'block' => 'blockquote',
-                    'classes' => 'td_quote_box td_box_left',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_5',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Quote box right',
-                    'block' => 'blockquote',
-                    'classes' => 'td_quote_box td_box_right',
-                    'wrapper' => true,
-                ));
-
-
-            td_api_tinymce_formats::add('td_blockquote_6',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Pull quote center',
-                    'block' => 'blockquote',
-                    'classes' => 'td_pull_quote td_pull_center',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_7',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Pull quote left',
-                    'block' => 'blockquote',
-                    'classes' => 'td_pull_quote td_pull_left',
-                    'wrapper' => true,
-                ));
-
-            td_api_tinymce_formats::add('td_blockquote_8',
-                array(
-                    'parent_id' => 'td_blockquote',
-                    'title' => 'Pull quote right',
-                    'block' => 'blockquote',
-                    'classes' => 'td_pull_quote td_pull_right',
-                    'wrapper' => true,
-                ));
-
-
-            // two columns text
-            td_api_tinymce_formats::add('td_text_columns',
-                array(
-                    'title' => 'Text columns'
-                ));
-            td_api_tinymce_formats::add('td_text_columns_0',
-                array(
-                    'parent_id' => 'td_text_columns',
-                    'title' => 'two columns',
-                    'block' => 'div',
-                    'classes' => 'td_text_columns_two_cols',
-                    'wrapper' => true,
-                ));
-
-            // dropcap
-            td_api_tinymce_formats::add('td_dropcap',
-                array(
-                    'title' => 'Dropcaps'
-                ));
-            td_api_tinymce_formats::add('td_dropcap_0',
-                array(
-                    'parent_id' => 'td_dropcap',
-                    'title' => 'Box',
-                    'classes' => 'dropcap',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_dropcap_1',
-                array(
-                    'parent_id' => 'td_dropcap',
-                    'title' => 'Circle',
-                    'classes' => 'dropcap dropcap1',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_dropcap_2',
-                array(
-                    'parent_id' => 'td_dropcap',
-                    'title' => 'Regular',
-                    'classes' => 'dropcap dropcap2',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_dropcap_3',
-                array(
-                    'parent_id' => 'td_dropcap',
-                    'title' => 'Bold',
-                    'classes' => 'dropcap dropcap3',
-                    'inline' => 'span'
-                ));
-
-            // Custom buttons in post Formats
-            td_api_tinymce_formats::add('td_btn',
-                array(
-                    'title' => 'Button'
-                ));
-            //Default button
-            td_api_tinymce_formats::add('td_default_btn',
-                array(
-                    'parent_id' => 'td_btn',
-                    'title' => 'Default',
-                    'classes' => ' td_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_default_btn_sm',
-                array(
-                    'parent_id' => 'td_default_btn',
-                    'title' => 'Default - Small',
-                    'classes' => 'td_btn  td_btn_sm td_default_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_default_btn_md',
-                array(
-                    'parent_id' => 'td_default_btn',
-                    'title' => 'Default - Normal',
-                    'classes' => 'td_btn td_btn_md td_default_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_default_btn_lg',
-                array(
-                    'parent_id' => 'td_default_btn',
-                    'title' => 'Default - Large',
-                    'classes' => 'td_btn td_btn_lg td_default_btn',
-                    'inline' => 'span'
-                ));
-            //Round button
-            td_api_tinymce_formats::add('td_round_btn',
-                array(
-                    'parent_id' => 'td_btn',
-                    'title' => 'Round',
-                    'classes' => 'td_round_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_round_btn_sm',
-                array(
-                    'parent_id' => 'td_round_btn',
-                    'title' => 'Round - Small',
-                    'classes' => 'td_btn td_btn_sm td_round_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_round_btn_md',
-                array(
-                    'parent_id' => 'td_round_btn',
-                    'title' => 'Round - Normal',
-                    'classes' => 'td_btn td_btn_md td_round_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_round_btn_lg',
-                array(
-                    'parent_id' => 'td_round_btn',
-                    'title' => 'Round - Large',
-                    'classes' => 'td_btn td_btn_lg td_round_btn',
-                    'inline' => 'span'
-                ));
-            //Outlined button
-            td_api_tinymce_formats::add('td_outlined_btn',
-                array(
-                    'parent_id' => 'td_btn',
-                    'title' => 'Outlined',
-                    'classes' => 'td_outlined_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_outlined_btn_sm',
-                array(
-                    'parent_id' => 'td_outlined_btn',
-                    'title' => 'Outlined - Small',
-                    'classes' => 'td_btn td_btn_sm td_outlined_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_outlined_btn_md',
-                array(
-                    'parent_id' => 'td_outlined_btn',
-                    'title' => 'Outlined - Normal',
-                    'classes' => 'td_btn td_btn_md td_outlined_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_outlined_btn_lg',
-                array(
-                    'parent_id' => 'td_outlined_btn',
-                    'title' => 'Outlined - Large',
-                    'classes' => 'td_btn td_btn_lg td_outlined_btn',
-                    'inline' => 'span'
-                ));
-            //Shadow button
-            td_api_tinymce_formats::add('td_shadow_btn',
-                array(
-                    'parent_id' => 'td_btn',
-                    'title' => 'Shadow',
-                    'classes' => 'td_shadow_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_shadow_btn_sm',
-                array(
-                    'parent_id' => 'td_shadow_btn',
-                    'title' => 'Shadow - Small',
-                    'classes' => 'td_btn td_btn_sm td_shadow_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_shadow_btn_md',
-                array(
-                    'parent_id' => 'td_shadow_btn',
-                    'title' => 'Shadow - Normal',
-                    'classes' => 'td_btn td_btn_md td_shadow_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_shadow_btn_lg',
-                array(
-                    'parent_id' => 'td_shadow_btn',
-                    'title' => 'Shadow - Large',
-                    'classes' => 'td_btn td_btn_lg td_shadow_btn',
-                    'inline' => 'span'
-                ));
-            //3D button
-            td_api_tinymce_formats::add('td_3D_btn',
-                array(
-                    'parent_id' => 'td_btn',
-                    'title' => '3D',
-                    'classes' => 'td_3D_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_3D_btn_sm',
-                array(
-                    'parent_id' => 'td_3D_btn',
-                    'title' => '3D - Small',
-                    'classes' => 'td_btn td_btn_sm td_3D_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_3D_btn_md',
-                array(
-                    'parent_id' => 'td_3D_btn',
-                    'title' => '3D - Normal',
-                    'classes' => 'td_btn td_btn_md td_3D_btn',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_3D_btn_lg',
-                array(
-                    'parent_id' => 'td_3D_btn',
-                    'title' => '3D - Large',
-                    'classes' => 'td_btn td_btn_lg td_3D_btn',
-                    'inline' => 'span'
-                ));
-
-            // highlighter
-            td_api_tinymce_formats::add('td_text_highlight',
-                array(
-                    'title' => 'Text highlighting'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_0',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Black censured',
-                    'classes' => 'td_text_highlight_0',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_red',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Red marker',
-                    'classes' => 'td_text_highlight_marker_red td_text_highlight_marker',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_blue',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Blue marker',
-                    'classes' => 'td_text_highlight_marker_blue td_text_highlight_marker',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_green',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Green marker',
-                    'classes' => 'td_text_highlight_marker_green td_text_highlight_marker',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_yellow',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Yellow marker',
-                    'classes' => 'td_text_highlight_marker_yellow td_text_highlight_marker',
-                    'inline' => 'span'
-                ));
-            td_api_tinymce_formats::add('td_text_highlight_pink',
-                array(
-                    'parent_id' => 'td_text_highlight',
-                    'title' => 'Pink marker',
-                    'classes' => 'td_text_highlight_marker_pink td_text_highlight_marker',
-                    'inline' => 'span'
-                ));
-
-            // clear elements
-            td_api_tinymce_formats::add('td_clear_elements',
-                array(
-                    'title' => 'Clear element',
-                    'selector' => 'a,p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img,code,blockquote',
-                    'styles' => array(
-                        'clear' => 'both'
-                    )
-                ));
-
 
         }
     }

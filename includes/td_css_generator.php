@@ -30,6 +30,9 @@ function td_css_generator() {
     .sf-menu ul .current-menu-item > a,
     .td_mega_menu_sub_cats .cur-sub-cat,
     .td_module_mega_menu:hover .entry-title a,
+    .td-theme-wrap .td_module_mega_menu:hover .td-item-details .entry-title a,
+    .td-theme-wrap .td_mega_menu_sub_cats .block-mega-child-cats .cur-sub-cat,
+    .td-theme-wrap .td_block_mega_menu .td-next-prev-wrap a:hover,
     .td-header-menu-search .td-search-btns-wrap:hover .td-icon-search,
     a,
     cite a:hover,
@@ -94,7 +97,19 @@ function td_css_generator() {
     .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
     .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
     .woocommerce-account .woocommerce-MyAccount-navigation a:hover,
-     .woocommerce a.added_to_cart:hover{
+    .woocommerce a.added_to_cart:hover,
+    #bbpress-forums li.bbp-header .bbp-reply-content span a:hover,
+    #bbpress-forums .bbp-forum-freshness a:hover,
+    #bbpress-forums .bbp-topic-freshness a:hover,
+    #bbpress-forums .bbp-forums-list li a:hover,
+    #bbpress-forums .bbp-forum-title:hover,
+    #bbpress-forums .bbp-topic-permalink:hover,
+    #bbpress-forums .bbp-topic-started-by a:hover,
+    #bbpress-forums .bbp-topic-started-in a:hover,
+    #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,
+    .widget_display_replies .bbp-author-name,
+    .widget_display_topics .bbp-author-name {
       color: @theme_color;
     }
     
@@ -144,6 +159,7 @@ function td_css_generator() {
     .td_default_btn,
     .td_round_btn, 
     .td_outlined_btn:hover,
+    .td-theme-wrap .sf-menu .td-mega-menu .td-post-category:hover,
     .woocommerce div.product .woocommerce-tabs ul.tabs li.active :after,
     .single-product .product .related h2:not(.woocommerce-loop-product__title):after,
     .single-product .product .upsells h2:after,
@@ -158,7 +174,11 @@ function td_css_generator() {
     .woocommerce-page .woocommerce a.button:hover,
     .woocommerce-account div.woocommerce .button:hover,
     .td-footer-wrapper .widget_product_search input[type=\"submit\"]:hover,
-    .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover {
+    .woocommerce-cart .woocommerce table.cart .button:hover, .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover, 
+    #bbpress-forums button:hover,
+    .bbp_widget_login .button:hover,
+    #bbpress-forums .bbp-pagination .current,
+    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a {
       background-color: @theme_color;
     }
     
@@ -187,7 +207,8 @@ function td_css_generator() {
     .widget_calendar #today,
     .td-tags span,
     .widget_categories li:hover > a span:before,
-    .td_outlined_btn {
+    .td_outlined_btn,
+     #bbpress-forums .bbp-pagination .current {
       border-color: @theme_color;
     }
     
@@ -208,9 +229,9 @@ function td_css_generator() {
     div .block-title label,
     div .block-title span,
     div .block-title a,
-    .td-block-title-wrap .td-block-title label,
-    .td-block-title-wrap .td-block-title span,
-    .td-block-title-wrap .td-block-title a,
+    .td-theme-wrap div .td-block-title label,
+    .td-theme-wrap div .td-block-title span,
+    .td-theme-wrap div .td-block-title a,
     .td_block_template_6 .td-block-title:after,
     .td-footer-wrapper div .td_block_template_6 .td-block-title:after,
     .td_block_template_13 .td-block-title > span,
@@ -219,7 +240,7 @@ function td_css_generator() {
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover,
     .td_block_template_14 .td-wrapper-pulldown-filter .td-pulldown-filter-display-option:hover i,
-    div .td-trending-now-title{
+    div .td-trending-now-title {
       color: @text_header_color;
     }
     .block-title:after {
@@ -298,53 +319,53 @@ function td_css_generator() {
     
     /* TOP MENU BACKGROUND COLOR */
     /* @top_menu_color */
-    .td-header-top-menu {
+    .td-header-wrap .td-header-top-menu {
       background-color: @top_menu_color;
     }
     
     /* TOP MENU TEXT COLOR */
     /* @top_menu_text_color */
-    .td-header-top-menu,
-    .td-header-top-menu a,
-    .td-header-sp-top-widget .td-icon-search {
+    .td-header-wrap .td-header-top-menu,
+    .td-header-wrap .td-header-top-menu a,
+    .td-header-wrap .td-header-sp-top-widget .td-icon-search {
       color: @top_menu_text_color;
     }
-    .td-header-top-menu:before,
-    .td-header-sp-top-widget .td-search-btns-wrap:before,
-    .td-header-sp-top-widget .td-social-icon-wrap:first-of-type:before,
-    .td-header-sp-top-widget .td-social-icon-wrap:after {
+    .td-header-wrap .td-header-top-menu:before,
+    .td-header-wrap .td-header-sp-top-widget .td-search-btns-wrap:before,
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap:first-of-type:before,
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap:after {
         background-color: @top_menu_text_color;
     }
     
     /* TOP MENU TEXT HOVER COLOR */
     /* @top_menu_text_hover_color */
-    .td-header-top-menu .top-header-menu a:hover,
-    .td-header-top-menu .top-header-menu .current-menu-item > a,
-    .td-header-top-menu .top-header-menu .current-menu-ancestor > a,
-    .td-header-top-menu .top-header-menu .current-category-ancestor > a,
-    .td-header-sp-top-widget .td-icon-search:hover,
-    .td-icon-search {
+    .td-header-wrap .td-header-top-menu .top-header-menu a:hover,
+    .td-header-wrap .td-header-top-menu .top-header-menu .current-menu-item > a,
+    .td-header-wrap .td-header-top-menu .top-header-menu .current-menu-ancestor > a,
+    .td-header-wrap .td-header-top-menu .top-header-menu .current-category-ancestor > a,
+    .td-header-wrap .td-header-sp-top-widget .td-icon-search:hover,
+    .td-header-wrap .td-icon-search {
       color: @top_menu_text_hover_color;
     }
     
     /* TOP MENU SOCIAL ICONS COLOR */
     /* @top_social_icons_color */
-    .td-header-sp-top-widget .td-social-icon-wrap a {
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap a {
       color: @top_social_icons_color;
     }
     
     /* TOP MENU SOCIAL ICONS HOVER COLOR */
     /* @top_social_icons_hover_color */
-    .td-header-sp-top-widget .td-social-icon-wrap:hover i {
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap:hover i {
       color: @top_social_icons_hover_color;
     }
 
     /* TOP BORDER COLOR */
     /* @top_border_color */
-    .td-header-top-menu:before,
-    .td-header-sp-top-widget .td-search-btns-wrap:before,
-    .td-header-sp-top-widget .td-social-icon-wrap:first-of-type:before,
-    .td-header-sp-top-widget .td-social-icon-wrap:after {
+    .td-header-wrap .td-header-top-menu:before,
+    .td-header-wrap .td-header-sp-top-widget .td-search-btns-wrap:before,
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap:first-of-type:before,
+    .td-header-wrap .td-header-sp-top-widget .td-social-icon-wrap:after {
       background-color: @top_border_color;
       opacity: 1;
     }
@@ -372,8 +393,12 @@ function td_css_generator() {
     /* MENU TEXT COLOR */
     /* @menu_text_color */
     .sf-menu > li > a,
+    .td-header-menu-social .td-social-icon-wrap a,
     .td-header-menu-search #td-header-search-button .td-icon-search {
       color: @menu_text_color;
+    }
+    .td-header-menu-social + .td-header-menu-search .td-search-btns-wrap a:before {
+      background-color: @menu_text_color;
     }
     
     /* MENU ACTIVE & HOVER COLOR */
@@ -460,7 +485,7 @@ function td_css_generator() {
     .td-theme-wrap .td_mega_menu_sub_cats a,
     .td-theme-wrap .td-mega-span .td-item-details > span,
     .td-theme-wrap .td-mega-span .td-item-details > div,
-    .td-theme-wrap .td_block_mega_menu .td-next-prev-wrap > a{
+    .td-theme-wrap .td_block_mega_menu .td-next-prev-wrap > a {
         color: @mega_menu_color;
     }
     @media (min-width: 1141px) {
@@ -534,7 +559,7 @@ function td_css_generator() {
     /* MOBILE MENU / MOBILE SEARCH COLORS */
     /* @mobile_menu_color */
     @media (max-width: 767px) {
-        .td-header-wrap .td-header-main-menu {
+        .td-header-wrap .td-header-menu-wrap {
             background-color: @mobile_menu_color !important;
         }
     }
@@ -702,7 +727,7 @@ function td_css_generator() {
     /* HEADER COLORS */
 
     /* @header_wrap_color */
-    .td-header-logo-wrap {
+    .td-header-wrap {
       background-color: @header_wrap_color;
     }
     
@@ -716,6 +741,35 @@ function td_css_generator() {
     /* @text_logo_tagline_color */
     .td-header-wrap .td-logo-text-container .td-tagline-text {
         color: @text_logo_tagline_color;
+    }
+    
+   
+    /* ------------------------------------------------------ */
+    /* HEADER BACKGROUND */
+    
+    /* @header_background_image */
+    .td-header-wrap:before {
+        background-image: url('@header_background_image');
+    }
+
+    /* @header_background_repeat */
+    .td-header-wrap:before {
+        background-repeat: @header_background_repeat;
+    }
+
+    /* @header_background_size */
+    .td-header-wrap:before {
+        background-size: @header_background_size;
+    }
+
+    /* @header_background_position */
+    .td-header-wrap:before {
+        background-position: @header_background_position;
+    }
+
+    /* @header_background_opacity */
+    .td-header-wrap:before {
+        opacity: @header_background_opacity;
     }
 
 
@@ -982,6 +1036,7 @@ function td_css_generator() {
     }
     /* @main_menu */
     .td-theme-wrap .sf-menu > li > a,
+    .td-header-menu-social .td-social-icon-wrap i,
     .td-theme-wrap .td-header-menu-search #td-header-search-button .td-icon-search {
         @main_menu
     }
@@ -1237,13 +1292,15 @@ function td_css_generator() {
     
     /* @page_title */
     .td-page-title,
-    .td-category-header .entry-title {
+    .td-category-header .entry-title,
+    .woocommerce-page .page-title {
     	@page_title
     }
     /* @page_content */
     .td-page-content,
     .td-page-content p,
-    .td-page-content .td_block_text_with_title {
+    .td-page-content .td_block_text_with_title,
+    .woocommerce-page .page-description > p {
     	@page_content
     }
     /* @page_h1 */
@@ -1287,7 +1344,9 @@ function td_css_generator() {
     
     /* @breadcrumb */
     .entry-crumbs a,
-    .entry-crumbs span  {
+    .entry-crumbs span,
+    #bbpress-forums .bbp-breadcrumb a,
+    #bbpress-forums .bbp-breadcrumb .bbp-breadcrumb-current {
     	@breadcrumb
     }
     /* @pagination */
@@ -1316,7 +1375,8 @@ function td_css_generator() {
     .widget_display_topics a,
     .widget_display_views a,
     .widget_display_stats,
-    .widget_categories li span {
+    .widget_categories li span,
+    .woocommerce .product-categories a {
     	@default_widgets
     }
     /* @default_buttons */
@@ -1330,10 +1390,71 @@ function td_css_generator() {
 		@default_buttons
 	}
 	
+	/* @woocommerce_products */
+	.woocommerce .product a .woocommerce-loop-product__title,
+	.woocommerce .widget.woocommerce .product_list_widget a,
+	.woocommerce-cart .woocommerce .product-name a {
+		@woocommerce_products
+	}
+	/* @woocommerce_product_title */
+	.woocommerce .product .summary .product_title {
+		@woocommerce_product_title
+	}
+	
 	
 	/* @body_text */
     body, p {
     	@body_text
+    }
+    
+    /* @bbpress_header */
+    #bbpress-forums .bbp-header .bbp-forums,
+    #bbpress-forums .bbp-header .bbp-topics,
+    #bbpress-forums .bbp-header {
+    	@bbpress_header
+    }
+    /* @bbpress_titles */
+    #bbpress-forums .hentry .bbp-forum-title,
+    #bbpress-forums .hentry .bbp-topic-permalink {
+    	@bbpress_titles
+    }
+    /* @bbpress_subcategories */
+    #bbpress-forums .bbp-forums-list li {
+    	@bbpress_subcategories
+    }
+    /* @bbpress_description */
+    #bbpress-forums .bbp-forum-info .bbp-forum-content {
+    	@bbpress_description
+    }
+    /* @bbpress_author */
+    #bbpress-forums div.bbp-forum-author a.bbp-author-name,
+    #bbpress-forums div.bbp-topic-author a.bbp-author-name,
+    #bbpress-forums div.bbp-reply-author a.bbp-author-name,
+    #bbpress-forums div.bbp-search-author a.bbp-author-name,
+    #bbpress-forums .bbp-forum-freshness .bbp-author-name,
+    #bbpress-forums .bbp-topic-freshness a:last-child {
+    	@bbpress_author
+    }
+    /* @bbpress_replies */
+    #bbpress-forums .hentry .bbp-topic-content p,
+    #bbpress-forums .hentry .bbp-reply-content p {
+    	@bbpress_replies
+    }
+    /* @bbpress_notices */
+    #bbpress-forums div.bbp-template-notice p {
+    	@bbpress_notices
+    }
+    /* @bbpress_pagination */
+    #bbpress-forums .bbp-pagination-count,
+    #bbpress-forums .page-numbers {
+    	@bbpress_pagination
+    }
+    /* @bbpress_topic */
+    #bbpress-forums .bbp-topic-started-by,
+    #bbpress-forums .bbp-topic-started-by a,
+    #bbpress-forums .bbp-topic-started-in,
+    #bbpress-forums .bbp-topic-started-in a {
+    	@bbpress_topic
     }
 
     </style>
@@ -1430,6 +1551,13 @@ function td_css_generator() {
     if (!empty($td_css_compiler->settings['mobile_gradient_one_mob']) && empty($td_css_compiler->settings['mobile_gradient_two_mob'])) {
         $td_css_compiler->load_setting_raw('mobile_gradient_two_mob', '#b8333e');
     }
+
+    // header background
+    $td_css_compiler->load_setting('header_background_image');
+    $td_css_compiler->load_setting('header_background_repeat');
+    $td_css_compiler->load_setting('header_background_size');
+    $td_css_compiler->load_setting('header_background_position');
+    $td_css_compiler->load_setting('header_background_opacity');
 
     // sign in/join color
     $td_css_compiler->load_setting('login_text_color');
