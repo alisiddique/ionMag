@@ -1,0 +1,68 @@
+/*  ----------------------------------------------------------------------------
+    responsive settings
+*/
+/* responsive landscape tablet */
+/* responsive portrait tablet */
+/* responsive portrait phone */
+.mx_image_background {
+  background-color: #f2f2f2;
+}
+.td-visibility-hidden {
+  visibility: hidden;
+}
+/*  ----------------------------------------------------------------------------
+    from bootstrap
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+usage:
+.td-block-row {
+  .mx-row(td-block-span);
+}
+
+@all_span_selector - is the begining of the span selector
+ */
+/* Premium demo */
+.td-ionmag-gadgets .td_module_1 {
+  text-align: center;
+}
+.td-ionmag-gadgets .td_module_1 .entry-title:after {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.td-ionmag-gadgets .td_wrapper_video_playlist .td_video_controls_playlist_wrapper {
+  background-color: #ff823a;
+}
+.td-ionmag-gadgets .td_wrapper_video_playlist .td_video_currently_playing:after {
+  border-left-color: #ff823a !important;
+}
+.td-ionmag-gadgets .td-footer-wrapper .td_block_template_3 .td-block-title > * {
+  background-color: #ff823a;
+}
+.td-ionmag-gadgets .widget_recent_entries li a {
+  font-family: Raleway, Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.td-ionmag-gadgets .td_block_related_posts .entry-title {
+  font-family: Raleway, Verdana, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.td-ionmag-gadgets .td-live-theme-demos .td-skin-buy a {
+  background-color: #ff823a;
+}

@@ -33,6 +33,14 @@ $td_less_files = array (
 		'source' => 'includes/wp_booster/wp-admin/css/wp-admin.less',
 		'destination' => 'includes/wp_booster/wp-admin/css/wp-admin.css'
 	),
+	'blog_fitness' => array (
+		'source' => 'includes/demos/blog_fitness/demo_style.less',
+		'destination' => 'includes/demos/blog_fitness/demo_style.css'
+	),
+	'gadgets' => array (
+		'source' => 'includes/demos/gadgets/demo_style.less',
+		'destination' => 'includes/demos/gadgets/demo_style.css'
+	),
 	'blog_beauty' => array (
 		'source' => 'includes/demos/blog_beauty/demo_style.less',
 		'destination' => 'includes/demos/blog_beauty/demo_style.css'

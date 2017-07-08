@@ -1,0 +1,169 @@
+@import "../../less_files/variables.less";
+@import "../../less_files/mixin.less";
+
+/* Premium demo */
+.td-ionmag-blog-fitness {
+
+  //header
+  .td-header-style-pr-2 .td-header-logo-wrap:after,
+  .td-header-style-pr-3 .td-header-logo-wrap:after {
+    display: none;
+  }
+
+  .td-header-menu-wrap {
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.09);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.09);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.09);
+  }
+
+  .td-header-logo-wrap.td-container-wrap {
+    background-color: #f4f4f4;
+    -webkit-box-shadow: inset 0px -3px 5px 0 rgba(0,0,0,0.07);
+    -moz-box-shadow: inset 0px -3px 5px 0 rgba(0,0,0,0.07);
+    box-shadow: inset 0px -3px 5px 0 rgba(0,0,0,0.07);
+  }
+
+  .td-header-menu-wrap:before, .td-header-menu-wrap:after {
+    display: none;
+  }
+
+
+  //body
+  .td-main-page-wrap {
+    padding: 0;
+  }
+
+  //trending now
+  .td_module_trending_now {
+    .entry-title {
+      font-family: "Roboto", "Open Sans", sans-serif;
+    }
+  }
+
+    //big grid
+  .td_block_big_grid_rd_bg_fl_5 .td-big-grid-post {
+
+    .td-meta-info-container {
+      padding: 18px 20px 18px !important;
+
+      &:before {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ff71fc;
+        opacity: 0.5;
+      }
+    }
+
+    .entry-title {
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 500;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+
+  .td_module_rd_8 {
+    .td-module-meta-info {
+      margin: 0;
+
+      .td-post-category-wrap {
+        margin-bottom: 0;
+
+        .td-post-category:hover {
+          background-color: rgba(0,0,0,0.6);
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      .td-module-thumb {
+        margin: 0;
+      }
+    }
+
+    .td-module-meta-holder {
+      background-color: transparent;
+
+      &:before {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ff71fc;
+        opacity: 0.6;
+      }
+
+      .entry-title {
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+
+        a {
+          color: #fff;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    .td-module-meta-holder-alt {
+      display: none;
+    }
+  }
+
+
+  //video playlist
+  .td-fitness-vlog {
+    .td-element-style {
+      -webkit-box-shadow: inset 0 -3px 5px 0 rgba(0,0,0,0.07), inset 0 3px 5px 0 rgba(0,0,0,0.07);
+      -moz-box-shadow: inset 0 -3px 5px 0 rgba(0,0,0,0.07), inset 0 3px 5px 0 rgba(0,0,0,0.07);
+      box-shadow: inset 0 -3px 5px 0 rgba(0,0,0,0.07), inset 0 3px 5px 0 rgba(0,0,0,0.07);
+    }
+  }
+
+
+  .td_wrapper_video_playlist {
+    .td_video_controls_playlist_wrapper {
+      background-color: #d36ee5;
+    }
+
+    .td_video_currently_playing:after {
+      border-left-color: #d36ee5 !important;
+    }
+  }
+
+
+  //author box
+  .td_block_author .td-author-name:after {
+    height: 3px;
+  }
+
+  //recent posts
+  .widget_recent_entries li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+
+  .post .td-post-header .entry-title {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+
+  //demo pannel download button
+  // demos button
+  .td-live-theme-demos .td-skin-buy a {
+    background-color: #d36ee5;
+  }
+}

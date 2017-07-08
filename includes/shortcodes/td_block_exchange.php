@@ -30,6 +30,7 @@ class td_block_exchange extends td_block {
             //get the block title
             $buffy .= '<div class="td-block-title-wrap">';
                 $buffy .= $this->get_block_title();
+	            $buffy .= $this->get_pull_down_filter();
             $buffy .= '</div>';
             $buffy .= '<div id=' . $this->block_uid . ' class="td-exchange-wrap td_block_inner td-column-' . $td_column_number . '">';
                 $buffy.= td_exchange::render_generic($atts);
