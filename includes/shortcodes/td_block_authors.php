@@ -75,6 +75,7 @@ class td_block_authors extends td_block {
         // block title wrap
         $buffy .= '<div class="td-block-title-wrap">';
             $buffy .= $this->get_block_title(); //get the block title
+	        $buffy .= $this->get_pull_down_filter();
         $buffy .= '</div>';
 
         if (!empty($td_authors)) {

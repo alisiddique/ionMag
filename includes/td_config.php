@@ -2023,99 +2023,60 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_authors',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_authors.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "param_name" => "custom_url",
-                        "type" => "textfield",
-                        "value" => "",
-                        "heading" => 'Block title url',
-                        "description" => "Optional - Custom url when the block title is clicked",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array (
-                        "param_name" => "roles",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "User roles",
-                        "description" => "Optional - Filter by role, add one or more, separate them with a comma (ex. Administrator, Editor, Author, Contributor, Subscriber)",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "sort",
-                        "type" => "dropdown",
-                        "value" => array('- Sort by name -' => '', 'Sort by post count' => 'post_count'),
-                        "heading" => 'Sort authors by',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "exclude",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Exclude authors IDs",
-                        "description" => "Write the IDs separated by comma",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "include",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Include authors IDs",
-                        "description" => "Write the IDs separated by comma - do not use with exclude",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
+	                array(
+	                    array (
+	                        "param_name" => "roles",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "User roles",
+	                        "description" => "Optional - Filter by role, add one or more, separate them with a comma (ex. Administrator, Editor, Author, Contributor, Subscriber)",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "sort",
+	                        "type" => "dropdown",
+	                        "value" => array('- Sort by name -' => '', 'Sort by post count' => 'post_count'),
+	                        "heading" => 'Sort authors by',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "exclude",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Exclude authors IDs",
+	                        "description" => "Write the IDs separated by comma",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "include",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Include authors IDs",
+	                        "description" => "Write the IDs separated by comma - do not use with exclude",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2131,99 +2092,75 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_author',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_author.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block',
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block',
-                    ),
-                    array(
-                        "param_name" => "author_id",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author ID",
-                        "description" => 'Set the author id',
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small",
-                    ),
-                    array(
-                        "param_name" => "author_url_text",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author page link text",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "author_url",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author page link url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "open_in_new_window",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig',
-		                'group' => ''
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "author_id",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author ID",
+	                        "description" => 'Set the author id',
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small",
+	                    ),
+	                    array(
+	                        "param_name" => "author_url_text",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author page link text",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "author_url",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author page link url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "open_in_new_window",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => ""
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig',
+			                'group' => ''
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
