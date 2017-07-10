@@ -2240,304 +2240,274 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_image_box',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_image_box.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig"
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "height",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => 'Image height',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small"
-                    ),
-                    array(
-                        "param_name" => "gap",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => 'Image gap',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small"
-                    ),
-                    array(
-                        "param_name" => "alignment",
-                        "type" => "dropdown",
-                        "value" => array(
-                            'Top' => 'top',
-                            'Center' => '',
-                            'Bottom' => 'bottom'
-                        ),
-                        "heading" => 'Image alignment',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "display",
-                        "type" => "dropdown",
-                        "value" => array(
-                            'Horizontal' => '',
-                            'Vertical' => 'vertical'
-                        ),
-                        "heading" => 'Layout',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "style",
-                        "type" => "dropdown",
-                        "value" => array(
-                            '1 - With border' => '',
-                            '2 - White box' => 'style-2'
-                        ),
-                        "heading" => 'Box style',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig'
-	                ),
-	                array(
-                        "param_name" => "image_item0",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 1",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "image_title_item0",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item0",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item0",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item1",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item1",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 2",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item1",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item1",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item1",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item2",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item2",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 3",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item2",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item2",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item2",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item3",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item3",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 4",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item3",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item3",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item3",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "height",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => 'Image height',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small"
+	                    ),
+	                    array(
+	                        "param_name" => "gap",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => 'Image gap',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small"
+	                    ),
+	                    array(
+	                        "param_name" => "alignment",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            'Top' => 'top',
+	                            'Center' => '',
+	                            'Bottom' => 'bottom'
+	                        ),
+	                        "heading" => 'Image alignment',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "display",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            'Horizontal' => '',
+	                            'Vertical' => 'vertical'
+	                        ),
+	                        "heading" => 'Layout',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "style",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            '1 - With border' => '',
+	                            '2 - White box' => 'style-2'
+	                        ),
+	                        "heading" => 'Box style',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig'
+		                ),
+		                array(
+	                        "param_name" => "image_item0",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 1",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "image_title_item0",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item0",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item0",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item1",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item1",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 2",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item1",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item1",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item1",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item2",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item2",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 3",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item2",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item2",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item2",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item3",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item3",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 4",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item3",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item3",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item3",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2553,81 +2523,48 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-popular_categories',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_popular_categories.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => "Block title",
-                        "heading" => 'Block title',
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "param_name" => "custom_url",
-                        "type" => "textfield",
-                        "value" => "",
-                        "heading" => 'Block title url',
-                        "description" => "Optional - Custom url when the block title is clicked",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "limit",
-                        "type" => "textfield",
-                        "value" => "6",
-                        "heading" => 'Limit the number of categories',
-                        "description" => 'Optional - Choose a custom limit category number for this block',
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small",
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig',
-		                'group' => ''
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "limit",
+	                        "type" => "textfield",
+	                        "value" => "6",
+	                        "heading" => 'Limit the number of categories',
+	                        "description" => 'Optional - Choose a custom limit category number for this block',
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small",
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig',
+			                'group' => ''
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
