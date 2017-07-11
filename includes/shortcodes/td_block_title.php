@@ -33,6 +33,7 @@ class td_block_title extends td_block {
 
             $buffy .= '<div class="td-block-title-wrap">';
                 $buffy .= $this->get_block_title();
+	            $buffy .= $this->get_pull_down_filter();
             $buffy .= '</div>';
             $buffy .= '<div class="td_mod_wrap">';
 
