@@ -4453,7 +4453,7 @@ class td_config {
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
                 ),
-                'premium_demo' => "free"
+                'premium_demo' => "premium"
             ),
             'blog_fitness' => array(
                 'text' => 'Fitness Blog',
@@ -4468,7 +4468,7 @@ class td_config {
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
-                'premium_demo' => "free"
+                'premium_demo' => "premium"
             ),
             'gadgets' => array(
                 'text' => 'Gadgets',
@@ -4483,7 +4483,7 @@ class td_config {
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
-                'premium_demo' => "free"
+                'premium_demo' => "premium"
             ),
             'blog_beauty' => array(
                 'text' => 'Beauty Blog',
