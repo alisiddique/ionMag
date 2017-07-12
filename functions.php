@@ -119,4 +119,8 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
     }
 }
 
+<<<<<<< Updated upstream
 //td_demo_state::update_state("gadgets", 'full');
+=======
+//td_demo_state::update_state("photography", 'full');
+>>>>>>> Stashed changes
