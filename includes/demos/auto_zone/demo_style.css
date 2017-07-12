@@ -34,6 +34,19 @@ usage:
 @all_span_selector - is the begining of the span selector
  */
 /* Auto zone demo */
+.td-md-is-firefox .td-auto-zone .td-auto-zone-margin,
+.ie8 .td-auto-zone .td-auto-zone-margin,
+.ie9 .td-auto-zone .td-auto-zone-margin,
+.ie10 .td-auto-zone .td-auto-zone-margin,
+.ie11 .td-auto-zone .td-auto-zone-margin {
+  display: flex;
+}
+.ie8 .stretch_row_content,
+.ie9 .stretch_row_content,
+.ie10 .stretch_row_content,
+.ie11 .stretch_row_content {
+  display: inline-block;
+}
 .td-auto-zone .sf-menu > li > a {
   padding-right: 50px;
 }

@@ -120,3 +120,4 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
 }
 
 //td_demo_state::update_state("gadgets", 'full');
+//td_demo_state::update_state("photography", 'full');
