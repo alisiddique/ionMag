@@ -4180,6 +4180,10 @@ class td_config {
                     'text' => 'Box Author Description',
                     'type' => 'default',
                 ),
+                'post_related' =>  array(
+                    'text' => 'Related Article Title',
+                    'type' => 'default',
+                ),
                 'post_share' =>  array(
                     'text' => 'Share Text',
                     'type' => 'default',
