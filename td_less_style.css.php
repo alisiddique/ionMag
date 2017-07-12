@@ -65,6 +65,10 @@ $td_less_files = array (
 		'source' => 'includes/demos/cook_book/demo_style.less',
 		'destination' => 'includes/demos/cook_book/demo_style.css'
 	),
+	'photography' => array (
+		'source' => 'includes/demos/photography/demo_style.less',
+		'destination' => 'includes/demos/photography/demo_style.css'
+	),
 	'art_book' => array (
 		'source' => 'includes/demos/art_book/demo_style.less',
 		'destination' => 'includes/demos/art_book/demo_style.css'

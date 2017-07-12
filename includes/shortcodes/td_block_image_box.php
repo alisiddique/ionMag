@@ -118,6 +118,7 @@ class td_block_image_box extends td_block {
 		// block title wrap
 		$buffy .= '<div class="td-block-title-wrap">';
 			$buffy .= $this->get_block_title();
+			$buffy .= $this->get_pull_down_filter();
 		$buffy .= '</div>';
 
 		switch(count($items)) {

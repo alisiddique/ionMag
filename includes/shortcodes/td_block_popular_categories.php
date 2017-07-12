@@ -48,7 +48,11 @@ class td_block_popular_categories extends td_block {
         //get the block css
         $buffy .= $this->get_block_css();
 
-        $buffy .= $this->get_block_title();
+	    // block title wrap
+        $buffy .= '<div class="td-block-title-wrap">';
+	        $buffy .= $this->get_block_title();
+		    $buffy .= $this->get_pull_down_filter();
+	    $buffy .= '</div>';
 
         if (!empty($categories)) {
             $buffy .= '<ul>';
