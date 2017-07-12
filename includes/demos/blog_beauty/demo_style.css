@@ -33,7 +33,7 @@ usage:
 
 @all_span_selector - is the begining of the span selector
  */
-/* Premium demo */
+/* Blog Beauty Demo */
 .td-ionmag-blog-beauty.td-boxed-layout .td-header-menu-wrap-full.td-container-wrap {
   width: 100% !important;
 }
@@ -56,6 +56,7 @@ usage:
   padding: 0;
 }
 .td-ionmag-blog-beauty .td-header-wrap.td-header-style-pr-3 {
+  background-color: #f1efed;
   /* responsive portrait tablet */
 }
 @media (max-width: 767px) {
