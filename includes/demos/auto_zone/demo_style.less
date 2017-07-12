@@ -2,11 +2,18 @@
 @import "../../less_files/mixin.less";
 
 /* Auto zone demo */
-//&.td-md-is-firefox {
-//  .td-auto-zone .td-auto-zone-cover-posts {
-//    display: flex;
-//  }
-//}
+&.td-md-is-firefox,
+&.ie8, &.ie9, &.ie10, &.ie11 {
+  .td-auto-zone .td-auto-zone-margin {
+    display: flex;
+  }
+}
+&.ie8, &.ie9, &.ie10, &.ie11 {
+  .stretch_row_content {
+    display: inline-block;
+  }
+}
+
 
 .td-auto-zone {
 
