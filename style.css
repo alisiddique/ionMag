@@ -15079,7 +15079,7 @@ input.search-submit:hover {
   .td-live-theme-demos .td-popup {
     height: 71px;
     width: 100px;
-    background-size: 100px 1278px;
+    background-size: 100px 1917px;
   }
   .td-live-theme-demos .td-popup span {
     width: 25px;
@@ -15089,8 +15089,18 @@ input.search-submit:hover {
 .td-live-theme-demos .td-popup:hover span {
   opacity: 0.8 !important;
 }
-.td-live-theme-demos .td-popup-blog_fitness span {
+.td-live-theme-demos .td-popup-art_book span,
+.td-live-theme-demos .td-popup-auto_zone span,
+.td-live-theme-demos .td-popup-blog_beauty span,
+.td-live-theme-demos .td-popup-blog_fitness span,
+.td-live-theme-demos .td-popup-bookshelf span,
+.td-live-theme-demos .td-popup-gadgets span,
+.td-live-theme-demos .td-popup-photography span,
+.td-live-theme-demos .td-popup-pressroom span {
   background: url('demos_popup/new-badge.png');
+}
+.td-live-theme-demos .td-popup-premium_magazine span {
+  background: url('demos_popup/popular-badge.png');
 }
 .td-live-theme-demos .td-popup-empty1 {
   background-position: 0 0;
@@ -15194,7 +15204,7 @@ input.search-submit:hover {
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-default {
-    background-position: 0 -1200px;
+    background-position: 0 -852px;
   }
 }
 .td-live-theme-demos .td-popup-premium_magazine {
@@ -15235,6 +15245,78 @@ input.search-submit:hover {
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-cook_book {
     background-position: 0 -1207px;
+  }
+}
+.td-live-theme-demos .td-popup-pressroom {
+  background-position: 0 -1800px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-pressroom {
+    background-position: 0 -1278px;
+  }
+}
+.td-live-theme-demos .td-popup-art_book {
+  background-position: 0 -1900px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-art_book {
+    background-position: 0 -1349px;
+  }
+}
+.td-live-theme-demos .td-popup-auto_zone {
+  background-position: 0 -2000px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-auto_zone {
+    background-position: 0 -1420px;
+  }
+}
+.td-live-theme-demos .td-popup-bookself {
+  background-position: 0 -2100px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-bookself {
+    background-position: 0 -1491px;
+  }
+}
+.td-live-theme-demos .td-popup-blog_beauty {
+  background-position: 0 -2200px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-blog_beauty {
+    background-position: 0 -1562px;
+  }
+}
+.td-live-theme-demos .td-popup-blog_fitness {
+  background-position: 0 -2300px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-blog_fitness {
+    background-position: 0 -1633px;
+  }
+}
+.td-live-theme-demos .td-popup-gadgets {
+  background-position: 0 -2400px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-gadgets {
+    background-position: 0 -1704px;
+  }
+}
+.td-live-theme-demos .td-popup-fashion {
+  background-position: 0 -2500px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-fashion {
+    background-position: 0 -1775px;
+  }
+}
+.td-live-theme-demos .td-popup-photography {
+  background-position: 0 -2600px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-photography {
+    background-position: 0 -1846px;
   }
 }
 .td-live-theme-demos .td-screen-demo {
