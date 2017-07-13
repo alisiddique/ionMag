@@ -119,4 +119,4 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
     }
 }
 
-//td_demo_state::update_state("pressroom", 'full');
+//td_demo_state::update_state("fashion", 'full');
