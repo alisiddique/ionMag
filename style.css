@@ -15079,7 +15079,7 @@ input.search-submit:hover {
   .td-live-theme-demos .td-popup {
     height: 71px;
     width: 100px;
-    background-size: 100px 1917px;
+    background-size: 100px 1704px;
   }
   .td-live-theme-demos .td-popup span {
     width: 25px;
@@ -15093,14 +15093,13 @@ input.search-submit:hover {
 .td-live-theme-demos .td-popup-auto_zone span,
 .td-live-theme-demos .td-popup-blog_beauty span,
 .td-live-theme-demos .td-popup-blog_fitness span,
+.td-live-theme-demos .td-popup-blog_baby span,
 .td-live-theme-demos .td-popup-bookshelf span,
 .td-live-theme-demos .td-popup-gadgets span,
 .td-live-theme-demos .td-popup-photography span,
-.td-live-theme-demos .td-popup-pressroom span {
+.td-live-theme-demos .td-popup-pressroom span,
+.td-live-theme-demos .td-popup-fashion span {
   background: url('demos_popup/new-badge.png');
-}
-.td-live-theme-demos .td-popup-premium_magazine span {
-  background: url('demos_popup/popular-badge.png');
 }
 .td-live-theme-demos .td-popup-empty1 {
   background-position: 0 0;
@@ -15166,157 +15165,133 @@ input.search-submit:hover {
     background-position: 0 -497px;
   }
 }
-.td-live-theme-demos .td-popup-empty9 {
-  background-position: 0 -800px;
-}
-@media (max-width: 1366px) {
-  .td-live-theme-demos .td-popup-empty9 {
-    background-position: 0 -568px;
-  }
-}
-.td-live-theme-demos .td-popup-empty10 {
-  background-position: 0 -900px;
-}
-@media (max-width: 1366px) {
-  .td-live-theme-demos .td-popup-empty10 {
-    background-position: 0 -639px;
-  }
-}
-.td-live-theme-demos .td-popup-empty11 {
-  background-position: 0 -1000px;
-}
-@media (max-width: 1366px) {
-  .td-live-theme-demos .td-popup-empty11 {
-    background-position: 0 -710px;
-  }
-}
-.td-live-theme-demos .td-popup-empty12 {
-  background-position: 0 -1100px;
-}
-@media (max-width: 1366px) {
-  .td-live-theme-demos .td-popup-empty12 {
-    background-position: 0 -781px;
-  }
-}
 .td-live-theme-demos .td-popup-default {
-  background-position: 0 -1200px;
+  background-position: 0 -800px;
   /* responsive laptop */
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-default {
-    background-position: 0 -852px;
+    background-position: 0 -568px;
   }
 }
 .td-live-theme-demos .td-popup-premium_magazine {
-  background-position: 0 -1300px;
+  background-position: 0 -900px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-premium_magazine {
-    background-position: 0 -923px;
+    background-position: 0 -639px;
   }
 }
 .td-live-theme-demos .td-popup-viral {
-  background-position: 0 -1400px;
+  background-position: 0 -1000px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-viral {
-    background-position: 0 -994px;
+    background-position: 0 -710px;
   }
 }
 .td-live-theme-demos .td-popup-voyage {
-  background-position: 0 -1500px;
+  background-position: 0 -1100px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-voyage {
-    background-position: 0 -1065px;
+    background-position: 0 -781px;
   }
 }
 .td-live-theme-demos .td-popup-tech {
-  background-position: 0 -1600px;
+  background-position: 0 -1200px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-tech {
-    background-position: 0 -1136px;
+    background-position: 0 -852px;
   }
 }
 .td-live-theme-demos .td-popup-cook_book {
-  background-position: 0 -1700px;
+  background-position: 0 -1300px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-cook_book {
-    background-position: 0 -1207px;
+    background-position: 0 -923px;
   }
 }
 .td-live-theme-demos .td-popup-pressroom {
-  background-position: 0 -1800px;
+  background-position: 0 -1400px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-pressroom {
-    background-position: 0 -1278px;
+    background-position: 0 -994px;
   }
 }
 .td-live-theme-demos .td-popup-art_book {
-  background-position: 0 -1900px;
+  background-position: 0 -1500px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-art_book {
-    background-position: 0 -1349px;
+    background-position: 0 -1065px;
   }
 }
 .td-live-theme-demos .td-popup-auto_zone {
-  background-position: 0 -2000px;
+  background-position: 0 -1600px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-auto_zone {
-    background-position: 0 -1420px;
+    background-position: 0 -1136px;
   }
 }
-.td-live-theme-demos .td-popup-bookself {
-  background-position: 0 -2100px;
+.td-live-theme-demos .td-popup-bookshelf {
+  background-position: 0 -1700px;
 }
 @media (max-width: 1366px) {
-  .td-live-theme-demos .td-popup-bookself {
-    background-position: 0 -1491px;
+  .td-live-theme-demos .td-popup-bookshelf {
+    background-position: 0 -1207px;
   }
 }
 .td-live-theme-demos .td-popup-blog_beauty {
-  background-position: 0 -2200px;
+  background-position: 0 -1800px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-blog_beauty {
-    background-position: 0 -1562px;
+    background-position: 0 -1278px;
   }
 }
 .td-live-theme-demos .td-popup-blog_fitness {
-  background-position: 0 -2300px;
+  background-position: 0 -1900px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-blog_fitness {
-    background-position: 0 -1633px;
+    background-position: 0 -1349px;
   }
 }
 .td-live-theme-demos .td-popup-gadgets {
-  background-position: 0 -2400px;
+  background-position: 0 -2000px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-gadgets {
-    background-position: 0 -1704px;
+    background-position: 0 -1420px;
   }
 }
 .td-live-theme-demos .td-popup-fashion {
-  background-position: 0 -2500px;
+  background-position: 0 -2100px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-fashion {
-    background-position: 0 -1775px;
+    background-position: 0 -1491px;
   }
 }
 .td-live-theme-demos .td-popup-photography {
-  background-position: 0 -2600px;
+  background-position: 0 -2200px;
 }
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup-photography {
-    background-position: 0 -1846px;
+    background-position: 0 -1562px;
+  }
+}
+.td-live-theme-demos .td-popup-blog_baby {
+  background-position: 0 -2300px;
+}
+@media (max-width: 1366px) {
+  .td-live-theme-demos .td-popup-blog_baby {
+    background-position: 0 -1633px;
   }
 }
 .td-live-theme-demos .td-screen-demo {
