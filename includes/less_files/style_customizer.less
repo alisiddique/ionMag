@@ -252,11 +252,44 @@
     width: 140px;
     height: @td_popup_sprite_height;
 
+    //badge
+    span {
+      display: block;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 1;
+      transition: opacity 0.1s ease;
+    }
+
     /* responsive laptop */
     @media (max-width: 1366px) {
       height: @td_popup_sprite_height_m;
       width: 100px;
       background-size: 100px 1278px;
+
+      span {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &:hover {
+      span {
+        opacity: 0.8 !important;
+      }
+    }
+  }
+
+
+  .td-popup-blog_fitness {
+    span {
+      background: url('demos_popup/new-badge.png');
     }
   }
 
@@ -382,17 +415,12 @@
       background-position: 0 -16 * @td_popup_sprite_height_m;
     }
   }
-.td-popup-cook_book {
+  .td-popup-cook_book {
     background-position: 0 -17 * @td_popup_sprite_height;
     @media (max-width: 1366px) {
       background-position: 0 -17 * @td_popup_sprite_height_m;
     }
   }
-
-
-
-
-
 
 
 

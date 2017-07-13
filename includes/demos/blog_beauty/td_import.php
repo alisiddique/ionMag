@@ -54,6 +54,7 @@ td_demo_misc::add_social_buttons(array(
     ads
  */
 td_demo_misc::clear_all_ads();
+
 td_demo_misc::add_ad_image('sidebar', 'td_blog_beauty_sidebar_ad');
 
 

@@ -15062,12 +15062,35 @@ input.search-submit:hover {
   height: 100px;
   /* responsive laptop */
 }
+.td-live-theme-demos .td-popup span {
+  display: block;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+}
 @media (max-width: 1366px) {
   .td-live-theme-demos .td-popup {
     height: 71px;
     width: 100px;
     background-size: 100px 1278px;
   }
+  .td-live-theme-demos .td-popup span {
+    width: 25px;
+    height: 25px;
+  }
+}
+.td-live-theme-demos .td-popup:hover span {
+  opacity: 0.8 !important;
+}
+.td-live-theme-demos .td-popup-blog_fitness span {
+  background: url('demos_popup/new-badge.png');
 }
 .td-live-theme-demos .td-popup-empty1 {
   background-position: 0 0;

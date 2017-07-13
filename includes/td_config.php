@@ -2023,99 +2023,60 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_authors',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_authors.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "param_name" => "custom_url",
-                        "type" => "textfield",
-                        "value" => "",
-                        "heading" => 'Block title url',
-                        "description" => "Optional - Custom url when the block title is clicked",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array (
-                        "param_name" => "roles",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "User roles",
-                        "description" => "Optional - Filter by role, add one or more, separate them with a comma (ex. Administrator, Editor, Author, Contributor, Subscriber)",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "sort",
-                        "type" => "dropdown",
-                        "value" => array('- Sort by name -' => '', 'Sort by post count' => 'post_count'),
-                        "heading" => 'Sort authors by',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "exclude",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Exclude authors IDs",
-                        "description" => "Write the IDs separated by comma",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "include",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Include authors IDs",
-                        "description" => "Write the IDs separated by comma - do not use with exclude",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
+	                array(
+	                    array (
+	                        "param_name" => "roles",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "User roles",
+	                        "description" => "Optional - Filter by role, add one or more, separate them with a comma (ex. Administrator, Editor, Author, Contributor, Subscriber)",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "sort",
+	                        "type" => "dropdown",
+	                        "value" => array('- Sort by name -' => '', 'Sort by post count' => 'post_count'),
+	                        "heading" => 'Sort authors by',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "exclude",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Exclude authors IDs",
+	                        "description" => "Write the IDs separated by comma",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "include",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Include authors IDs",
+	                        "description" => "Write the IDs separated by comma - do not use with exclude",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2131,99 +2092,75 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_author',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_author.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block',
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block',
-                    ),
-                    array(
-                        "param_name" => "author_id",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author ID",
-                        "description" => 'Set the author id',
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small",
-                    ),
-                    array(
-                        "param_name" => "author_url_text",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author page link text",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "author_url",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Author page link url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-big",
-                    ),
-                    array(
-                        "param_name" => "open_in_new_window",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig',
-		                'group' => ''
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "author_id",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author ID",
+	                        "description" => 'Set the author id',
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small",
+	                    ),
+	                    array(
+	                        "param_name" => "author_url_text",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author page link text",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "author_url",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Author page link url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-big",
+	                    ),
+	                    array(
+	                        "param_name" => "open_in_new_window",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => ""
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig',
+			                'group' => ''
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2303,304 +2240,274 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-td_block_image_box',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_image_box.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => 'Block title',
-                        "heading" => "Block title",
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig"
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '', //Default Red color
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
-                    array(
-                        "param_name" => "height",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => 'Image height',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small"
-                    ),
-                    array(
-                        "param_name" => "gap",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => 'Image gap',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small"
-                    ),
-                    array(
-                        "param_name" => "alignment",
-                        "type" => "dropdown",
-                        "value" => array(
-                            'Top' => 'top',
-                            'Center' => '',
-                            'Bottom' => 'bottom'
-                        ),
-                        "heading" => 'Image alignment',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "display",
-                        "type" => "dropdown",
-                        "value" => array(
-                            'Horizontal' => '',
-                            'Vertical' => 'vertical'
-                        ),
-                        "heading" => 'Layout',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "style",
-                        "type" => "dropdown",
-                        "value" => array(
-                            '1 - With border' => '',
-                            '2 - White box' => 'style-2'
-                        ),
-                        "heading" => 'Box style',
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-dropdown-big",
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+	                self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig'
-	                ),
-	                array(
-                        "param_name" => "image_item0",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 1",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "image_title_item0",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item0",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item0",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item1",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item1",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 2",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item1",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item1",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item1",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item2",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item2",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 3",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item2",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item2",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item2",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-		                "param_name" => "horizontal_separator_item3",
-		                "type" => "horizontal_separator",
-                        "value" => "",
-		                "class" => "",
-                        "group" => 'Images'
-	                ),
-                    array(
-                        "param_name" => "image_item3",
-                        "type" => "attach_image",
-                        "value" => '',
-                        "heading" => "Image 4",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "image_title_item3",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom title",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-                    array(
-                        "param_name" => "custom_url_item3",
-                        "type" => "textfield",
-                        "value" => '',
-                        "heading" => "Custom url",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                        "group" => 'Images'
-                    ),
-	                array(
-                        "param_name" => "open_in_new_window_item3",
-                        "type" => "checkbox",
-                        "value" => '',
-                        "heading" => "Open in new window",
-                        "description" => "",
-                        "holder" => "div",
-                        "class" => "",
-                        "group" => 'Images'
-                    ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "height",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => 'Image height',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small"
+	                    ),
+	                    array(
+	                        "param_name" => "gap",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => 'Image gap',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small"
+	                    ),
+	                    array(
+	                        "param_name" => "alignment",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            'Top' => 'top',
+	                            'Center' => '',
+	                            'Bottom' => 'bottom'
+	                        ),
+	                        "heading" => 'Image alignment',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "display",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            'Horizontal' => '',
+	                            'Vertical' => 'vertical'
+	                        ),
+	                        "heading" => 'Layout',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "style",
+	                        "type" => "dropdown",
+	                        "value" => array(
+	                            '1 - With border' => '',
+	                            '2 - White box' => 'style-2'
+	                        ),
+	                        "heading" => 'Box style',
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-dropdown-big",
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig'
+		                ),
+		                array(
+	                        "param_name" => "image_item0",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 1",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "image_title_item0",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item0",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item0",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item1",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item1",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 2",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item1",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item1",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item1",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item2",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item2",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 3",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item2",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item2",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item2",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+			                "param_name" => "horizontal_separator_item3",
+			                "type" => "horizontal_separator",
+	                        "value" => "",
+			                "class" => "",
+	                        "group" => 'Images'
+		                ),
+	                    array(
+	                        "param_name" => "image_item3",
+	                        "type" => "attach_image",
+	                        "value" => '',
+	                        "heading" => "Image 4",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "image_title_item3",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom title",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+	                    array(
+	                        "param_name" => "custom_url_item3",
+	                        "type" => "textfield",
+	                        "value" => '',
+	                        "heading" => "Custom url",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-extrabig",
+	                        "group" => 'Images'
+	                    ),
+		                array(
+	                        "param_name" => "open_in_new_window_item3",
+	                        "type" => "checkbox",
+	                        "value" => '',
+	                        "heading" => "Open in new window",
+	                        "description" => "",
+	                        "holder" => "div",
+	                        "class" => "",
+	                        "group" => 'Images'
+	                    ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -2616,81 +2523,48 @@ class td_config {
                 "category" => 'Blocks',
                 'icon' => 'icon-pagebuilder-popular_categories',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_popular_categories.php',
-                "params" => array(
-                    array(
-                        "param_name" => "custom_title",
-                        "type" => "textfield",
-                        "value" => "Block title",
-                        "heading" => 'Block title',
-                        "description" => "Custom title for this block",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "param_name" => "custom_url",
-                        "type" => "textfield",
-                        "value" => "",
-                        "heading" => 'Block title url',
-                        "description" => "Optional - Custom url when the block title is clicked",
-                        "holder" => "div",
-                        "class" => "tdc-textfield-extrabig",
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title text color',
-                        "param_name" => "header_text_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title text color for this block'
-                    ),
-                    array(
-                        "type" => "colorpicker",
-                        "holder" => "div",
-                        "class" => "",
-                        "heading" => 'Title background color',
-                        "param_name" => "header_color",
-                        "value" => '',
-                        "description" => 'Optional - Choose a custom title background color for this block'
-                    ),
-                    array(
-                        "param_name" => "limit",
-                        "type" => "textfield",
-                        "value" => "6",
-                        "heading" => 'Limit the number of categories',
-                        "description" => 'Optional - Choose a custom limit category number for this block',
-                        "holder" => "div",
-                        "class" => "tdc-textfield-small",
-                    ),
-                    array(
-                        "param_name" => "separator",
-                        "type" => "horizontal_separator",
-                        "value" => "",
-                        "class" => ""
-                    ),
+                "params" => array_merge(
+                    self::get_map_block_general_array(),
 	                array(
-		                'param_name' => 'el_class',
-		                'type' => 'textfield',
-		                'value' => '',
-		                'heading' => 'Extra class',
-		                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
-		                'class' => 'tdc-textfield-extrabig',
-		                'group' => ''
-	                ),
-	                array (
-                        'param_name' => 'css',
-                        'value' => '',
-                        'type' => 'css_editor',
-                        'heading' => 'Css',
-                        'group' => 'Design options',
-                    ),
-	                array (
-		                'param_name' => 'tdc_css',
-		                'value' => '',
-		                'type' => 'tdc_css_editor',
-		                'heading' => '',
-		                'group' => 'Design options',
-		            ),
+	                    array(
+	                        "param_name" => "limit",
+	                        "type" => "textfield",
+	                        "value" => "6",
+	                        "heading" => 'Limit the number of categories',
+	                        "description" => 'Optional - Choose a custom limit category number for this block',
+	                        "holder" => "div",
+	                        "class" => "tdc-textfield-small",
+	                    ),
+	                    array(
+	                        "param_name" => "separator",
+	                        "type" => "horizontal_separator",
+	                        "value" => "",
+	                        "class" => ""
+	                    ),
+		                array(
+			                'param_name' => 'el_class',
+			                'type' => 'textfield',
+			                'value' => '',
+			                'heading' => 'Extra class',
+			                'description' => 'Style particular content element differently - add a class name and refer to it in custom CSS',
+			                'class' => 'tdc-textfield-extrabig',
+			                'group' => ''
+		                ),
+		                array (
+	                        'param_name' => 'css',
+	                        'value' => '',
+	                        'type' => 'css_editor',
+	                        'heading' => 'Css',
+	                        'group' => 'Design options',
+	                    ),
+		                array (
+			                'param_name' => 'tdc_css',
+			                'value' => '',
+			                'type' => 'tdc_css_editor',
+			                'heading' => '',
+			                'group' => 'Design options',
+			            ),
+	                )
                 )
             )
         );
@@ -4306,6 +4180,10 @@ class td_config {
                     'text' => 'Box Author Description',
                     'type' => 'default',
                 ),
+                'post_related' =>  array(
+                    'text' => 'Related Article Title',
+                    'type' => 'default',
+                ),
                 'post_share' =>  array(
                     'text' => 'Share Text',
                     'type' => 'default',
@@ -4441,21 +4319,6 @@ class td_config {
                 'required_plugins' => array(),
                 'premium_demo' => "free"
 		    ),
-            'blog_beauty' => array(
-                'text' => 'Beauty Blog',
-                'folder' => td_global::$get_template_directory . '/includes/demos/blog_beauty/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/blog_beauty/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_blog_beauty/',
-                'td_css_generator_demo' => false,               // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
-                'required_plugins' => array(                    // required plugins for the demo to work properly
-                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
-                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
-                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
-                ),
-                'premium_demo' => "premium"
-            ),
             'premium_magazine' => array(
                 'text' => 'Premium Magazine',
                 'folder' => td_global::$get_template_directory . '/includes/demos/premium_magazine/',
@@ -4465,6 +4328,135 @@ class td_config {
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'auto_zone' => array(
+                'text' => 'Auto Zone',
+                'folder' => td_global::$get_template_directory . '/includes/demos/auto_zone/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/auto_zone/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_auto_zone/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'art_book' => array(
+                'text' => 'Art Book',
+                'folder' => td_global::$get_template_directory . '/includes/demos/art_book/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/art_book/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_art_book/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'blog_beauty' => array(
+                'text' => 'Beauty Blog',
+                'folder' => td_global::$get_template_directory . '/includes/demos/blog_beauty/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/blog_beauty/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_blog_beauty/',
+                'td_css_generator_demo' => false,               // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'blog_fitness' => array(
+                'text' => 'Fitness Blog',
+                'folder' => td_global::$get_template_directory . '/includes/demos/blog_fitness/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/blog_fitness/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_blog_fitness/',
+                'td_css_generator_demo' => true,               // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'pressroom' => array(
+                'text' => 'Pressroom',
+                'folder' => td_global::$get_template_directory . '/includes/demos/pressroom/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/pressroom/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_pressroom/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'bookshelf' => array(
+                'text' => 'Bookshelf',
+                'folder' => td_global::$get_template_directory . '/includes/demos/bookshelf/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/bookshelf/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_bookshelf/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'gadgets' => array(
+                'text' => 'Gadgets',
+                'folder' => td_global::$get_template_directory . '/includes/demos/gadgets/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/gadgets/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_gadgets/',
+                'td_css_generator_demo' => true,               // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
+                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
+                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
+                ),
+                'premium_demo' => "premium"
+            ),
+            'photography' => array(
+                'text' => 'Photography',
+                'folder' => td_global::$get_template_directory . '/includes/demos/photography/',
+                'img' => td_global::$get_template_directory_uri . '/includes/demos/photography/screenshot.png',
+                'demo_url' => 'http://demo.tagdiv.com/ionmag_photography/',
+                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
+                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
+                'required_plugins' => array(                    // required plugins for the demo to work properly
+                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
@@ -4480,6 +4472,7 @@ class td_config {
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
@@ -4495,6 +4488,7 @@ class td_config {
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
@@ -4510,9 +4504,10 @@ class td_config {
                 'uses_custom_style_css' => true,                // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
+                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
                 'premium_demo' => "premium"
             ),
@@ -4525,68 +4520,9 @@ class td_config {
                 'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
                 'required_plugins' => array(                    // required plugins for the demo to work properly
                     'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
+                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
                     'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
-                ),
-                'premium_demo' => "premium"
-            ),
-            'art_book' => array(
-                'text' => 'Art Book',
-                'folder' => td_global::$get_template_directory . '/includes/demos/art_book/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/art_book/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_art_book/',
-                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
-                'required_plugins' => array(                    // required plugins for the demo to work properly
-                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
-                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php'
-                ),
-                'premium_demo' => "premium"
-            ),
-            'auto_zone' => array(
-                'text' => 'Auto Zone',
-                'folder' => td_global::$get_template_directory . '/includes/demos/auto_zone/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/auto_zone/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_auto_zone/',
-                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
-                'required_plugins' => array(                    // required plugins for the demo to work properly
-                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
-                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
-                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
-                ),
-                'premium_demo' => "premium"
-            ),
-            'bookshelf' => array(
-                'text' => 'Bookshelf',
-                'folder' => td_global::$get_template_directory . '/includes/demos/bookshelf/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/bookshelf/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_bookshelf/',
-                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
-                'required_plugins' => array(                    // required plugins for the demo to work properly
-                    'ionMag Header Styles - Premium Pack' => 'td-header-styles-pack/td-header-styles-pack.php',
-                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
-                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
-                    'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
-                ),
-                'premium_demo' => "premium"
-            ),
-            'pressroom' => array(
-                'text' => 'Pressroom',
-                'folder' => td_global::$get_template_directory . '/includes/demos/pressroom/',
-                'img' => td_global::$get_template_directory_uri . '/includes/demos/pressroom/screenshot.png',
-                'demo_url' => 'http://demo.tagdiv.com/ionmag_pressroom/',
-                'td_css_generator_demo' => true,                // must have a td_css_generator_demo.php in demo's folder
-                'uses_custom_style_css' => true,               // load a custom demo_style.less - must also be added to td_less_style.css.php
-                'required_plugins' => array(                    // required plugins for the demo to work properly
-                    'ionMag Blocks & Modules - Red Premium Pack' => 'td-blocks-red-pack/td-blocks-red-pack.php',
-                    'ionMag Post Templates - Red Premium Pack' => 'td-posts-red-pack/td-posts-red-pack.php',
-                    'ionMag Big Grids - Red Premium Pack' => 'td-grids-red-pack/td-grids-red-pack.php',
                     'ionMag Category Templates - Red Premium Pack' => 'td-categories-red-pack/td-categories-red-pack.php'
                 ),
                 'premium_demo' => "premium"

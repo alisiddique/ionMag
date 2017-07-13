@@ -1275,6 +1275,10 @@ function td_css_generator() {
     .post .author-box-wrap .td-author-description {
         @box_author_description
     }
+    /* @post_related */
+    .td_block_related_posts .entry-title a {
+        @post_related
+    }
     /* @post_share */
     .post .td-post-share-title {
         @post_share

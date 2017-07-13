@@ -33,6 +33,14 @@ $td_less_files = array (
 		'source' => 'includes/wp_booster/wp-admin/css/wp-admin.less',
 		'destination' => 'includes/wp_booster/wp-admin/css/wp-admin.css'
 	),
+	'blog_fitness' => array (
+		'source' => 'includes/demos/blog_fitness/demo_style.less',
+		'destination' => 'includes/demos/blog_fitness/demo_style.css'
+	),
+	'gadgets' => array (
+		'source' => 'includes/demos/gadgets/demo_style.less',
+		'destination' => 'includes/demos/gadgets/demo_style.css'
+	),
 	'blog_beauty' => array (
 		'source' => 'includes/demos/blog_beauty/demo_style.less',
 		'destination' => 'includes/demos/blog_beauty/demo_style.css'
@@ -56,6 +64,10 @@ $td_less_files = array (
 	'cook_book' => array (
 		'source' => 'includes/demos/cook_book/demo_style.less',
 		'destination' => 'includes/demos/cook_book/demo_style.css'
+	),
+	'photography' => array (
+		'source' => 'includes/demos/photography/demo_style.less',
+		'destination' => 'includes/demos/photography/demo_style.css'
 	),
 	'art_book' => array (
 		'source' => 'includes/demos/art_book/demo_style.less',
