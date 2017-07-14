@@ -215,6 +215,9 @@ usage:
   font-weight: 600;
   color: #757581;
 }
+.td-ionmag-photo .td-photo-dark-row .td_block_pinterest.td_block_template_12 .td-block-title-wrap {
+  display: none;
+}
 .td-ionmag-photo .td-photo-dark-row .td_block_pinterest .td-pinterest-user,
 .td-ionmag-photo .td-photo-dark-row .td_block_pinterest .td-pinterest-followers {
   color: #fff;
