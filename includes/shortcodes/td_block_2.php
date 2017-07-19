@@ -30,6 +30,15 @@ class td_block_2 extends td_block {
 
         //get the ajax pagination for this block
         $buffy .= $this->get_block_pagination();
+
+
+        // block template lock
+        $block_template_id = $this->get_att('block_template_id');
+        if ($block_template_id != '' && $block_template_id != 'td_block_template_1') {
+            $buffy .= td_util::get_template_lock();
+        }
+
+
         $buffy .= '</div> <!-- ./block -->';
         return $buffy;
     }
