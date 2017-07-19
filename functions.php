@@ -115,4 +115,4 @@ if (TD_DEBUG_LIVE_THEME_STYLE) {
     }
 }
 
-//td_demo_state::update_state("fashion", 'full');
+//td_demo_state::update_state("blog_baby", 'full');

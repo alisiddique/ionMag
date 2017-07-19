@@ -37,6 +37,10 @@ $td_less_files = array (
 		'source' => 'includes/demos/blog_fitness/demo_style.less',
 		'destination' => 'includes/demos/blog_fitness/demo_style.css'
 	),
+	'blog_baby' => array (
+		'source' => 'includes/demos/blog_baby/demo_style.less',
+		'destination' => 'includes/demos/blog_baby/demo_style.css'
+	),
 	'gadgets' => array (
 		'source' => 'includes/demos/gadgets/demo_style.less',
 		'destination' => 'includes/demos/gadgets/demo_style.css'
