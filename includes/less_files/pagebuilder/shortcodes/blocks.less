@@ -38,21 +38,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url('http://localhost/test/lock.png');
+    background: url('@{td_css_path}images/lock.png') repeat;
   }
 }
 
 
-// block lock -
-.td-template-lock {
-
-}
+// block lock
 .td-lock-wrap {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  .transform(translateY(-50%));
   margin: auto;
   text-align: center;
   display: table;
