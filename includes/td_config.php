@@ -4558,6 +4558,7 @@ class td_config {
         td_api_features::set('tagdiv_slide_gallery', true);
         td_api_features::set('text_logo', false);
 	    td_api_features::set('check_for_updates', true);
+	    td_api_features::set('admin_go_premium_popup', true);
 
 
         if (is_admin()) {
