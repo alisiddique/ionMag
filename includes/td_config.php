@@ -3471,7 +3471,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3486,7 +3486,7 @@ class td_config {
 				    ),
 				    'ad_field_advantage_usage' => 'If you leave the AdSense size boxes on Auto, the theme will automatically resize the <strong>Google Ads</strong>. For more info follow this <a href="https://www.wpion.com/members/header-ads/" target="_blank">link</a>',
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3503,7 +3503,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3515,7 +3515,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3528,7 +3528,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3541,7 +3541,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3554,7 +3554,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3567,7 +3567,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
@@ -3580,7 +3580,7 @@ class td_config {
 				    'ad_field_position_content' => false,
 				    'ad_field_after_paragraph' => false,
 			    ),
-                'premium' => true
+                'premium' => false
 		    )
 	    );
 
