@@ -1570,7 +1570,7 @@ function td_css_generator() {
     }
 
     // header background
-    $td_css_compiler->load_setting_raw('header_background_image', 'http://192.168.0.40/wp_012/wp-content/uploads/2016/08/11.jpg');
+    $td_css_compiler->load_setting('header_background_image');
     $td_css_compiler->load_setting('header_background_repeat');
     $td_css_compiler->load_setting('header_background_size');
     $td_css_compiler->load_setting('header_background_position');
