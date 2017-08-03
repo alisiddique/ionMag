@@ -34,7 +34,8 @@ class td_block_template_1 extends td_block_template {
             .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
             .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
             .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td-instagram-user a {
+            .$unique_block_class .td-instagram-user a,
+            .$unique_block_class .td-trending-now-title {
                 color: @header_text_color;
             }
             .$unique_block_class .td_module_wrap .td-post-category:hover,
@@ -86,7 +87,8 @@ class td_block_template_1 extends td_block_template {
             .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-list:before,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before {
+            .$unique_block_class .td-exchange-header:before,
+            .$unique_block_class .td-trending-now-title {
                 background-color: @header_color;
             }
 

@@ -20,6 +20,17 @@ class td_block_template_18 extends td_block_template {
         // the css that will be compiled by the block, <style> - will be removed by the compiler
         $raw_css = "
         <style>
+        
+            /* @header_text_color */
+            .$unique_block_class .td-trending-now-title {
+                color: @header_text_color !important;
+            }
+
+            /* @header_color */
+            .$unique_block_class .td-trending-now-title {
+                background-color: @header_color !important;
+            }
+        
             /* @header_color_a */
             .$unique_block_class .td-block-title > span,
             .$unique_block_class .td-block-title > a {
@@ -81,6 +92,8 @@ class td_block_template_18 extends td_block_template {
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
+        $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
+        $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
         $td_css_compiler->load_setting_raw('header_color_a', $this->get_att('header_text_color_a'));
         $td_css_compiler->load_setting_raw('header_color_b', $this->get_att('header_text_color_b'));
 

@@ -21,12 +21,14 @@ class td_block_template_7 extends td_block_template {
         <style>
 
             /* @header_text_color */
-            div.$unique_block_class .td-block-title * {
+            div.$unique_block_class .td-block-title *,
+            .$unique_block_class .td-trending-now-title {
                 color: @header_text_color !important;
             }
             
             /* @header_color */
-            div.$unique_block_class .td-block-title * {
+            div.$unique_block_class .td-block-title *,
+            .$unique_block_class .td-trending-now-title {
                 background-color: @header_color !important;
             }
 

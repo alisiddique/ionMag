@@ -26,7 +26,8 @@ class td_block_template_12 extends td_block_template {
             }
         
             /* @header_text_color */
-            div.$unique_block_class .td-block-title * {
+            div.$unique_block_class .td-block-title *,
+            .$unique_block_class .td-trending-now-title {
                 color: @header_text_color !important;
             }
             
@@ -56,12 +57,18 @@ class td_block_template_12 extends td_block_template {
             .$unique_block_class .td-exchange-header:before {
                 background-color: @accent_text_color !important;
             }
+                        
+            /* @header_color */
+            .$unique_block_class .td-trending-now-title {
+                background-color: @header_color;
+            }
         </style>
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
         $td_css_compiler->load_setting_raw('button_color', $this->get_att('button_color'));
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
+        $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
         $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
 
         $compiled_style = $td_css_compiler->compile_css();

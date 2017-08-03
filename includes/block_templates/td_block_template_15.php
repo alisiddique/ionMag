@@ -24,12 +24,14 @@ class td_block_template_15 extends td_block_template {
             /* @header_text_color */
             div.$unique_block_class .td-block-title *,
             .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option,
-            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i {
+            .$unique_block_class .td-wrapper-pulldown-filter .td-pulldown-filter-display-option i,
+            .$unique_block_class .td-trending-now-title {
                 color: @header_text_color !important;
             }
 
             /* @header_color */
-            .$unique_block_class .td-block-title {
+            .$unique_block_class .td-block-title,
+            .$unique_block_class .td-trending-now-title {
                 background-color: @header_color !important;
             }
 
