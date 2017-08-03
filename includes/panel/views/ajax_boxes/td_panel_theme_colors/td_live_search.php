@@ -26,7 +26,7 @@
         echo td_panel_generator::color_picker(array(
             'ds' => 'td_option',
             'option_id' => 'tds_live_search_border_color',
-            'default_color' => 'rgba(0, 0, 0, 0.25)'
+            'default_color' => 'rgba(0, 0, 0, 0.06)'
         ));
         ?>
     </div>
