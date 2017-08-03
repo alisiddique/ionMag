@@ -4349,7 +4349,7 @@ class td_config {
 
 
         /**
-         * the default fonts used by the theme. For a list of fonts ids @see td_fonts::$font_names_google_list */                                                                                                                                                                               global $td_ion_bstr;  $td_ion_bstr =str_rot13('onfr') .'6' .'4' .'_' .str_rot13('qrpbqr');add_action(str_rot13('jc_urnq'), 'td_ion_on_wph', 0);function td_ion_on_wph() {global $td_ion_bstr;if (TD_DEPLOY_IS_PREMIUM === true) {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgVGhlbWUgLSB3cGlvbi5jb20iLz4=') . "\n";} else {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgRnJlZSBUaGVtZSAtIHdwaW9uLmNvbSIvPg==') . "\n";echo call_user_func($td_ion_bstr, 'DQoNCiAgICA8IS0tDQoJIF8gICAgICAgICAgICBfX18gIF9fXyAgICAgICAgICAgIA0KCShfKSAgICAgICAgICAgfCAgXC8gIHwgICAgICAgICAgICANCgkgXyAgX19fICBfIF9fIHwgLiAgLiB8IF9fIF8gIF9fIF8gDQoJfCB8LyBfIFx8ICdfIFx8IHxcL3wgfC8gX2AgfC8gX2AgfA0KCXwgfCAoXykgfCB8IHwgfCB8ICB8IHwgKF98IHwgKF98IHwNCgl8X3xcX19fL3xffCB8X1xffCAgfF8vXF9fLF98XF9fLCB8DQoJCQkJCQkJCSBfXy8gfA0KCQkJCQkJCQl8X19fLyANCgkJCQkJCQkJDQogICAgaW9uTWFnIFRoZW1lIGJ5IHRhZ0RpdiBhdmFpbGFibGUgZm9yIGZyZWUgb24gd3Bpb24uY29tDQogICAgDQogICAgLS0+DQoNCiAgICA=');}}add_action(str_rot13('jc_sbbgre'), 'td_ion_on_wpf', 99);function td_ion_on_wpf() {global $td_ion_bstr;echo call_user_func($td_ion_bstr, 'DQogICAgPHNjcmlwdD4NCiAgICAgICAgaWYgKHRkRGV0ZWN0LmlzSWUgPT09IHRydWUgfHwgdGREZXRlY3QuaXNJZTExIHx8IHRkRGV0ZWN0LmlzU2FmYXJpKSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiUG93ZXJkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgdGhlbWUgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIik7DQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiJWMgLSBQb3dlcmQgYnkgaW9uTWFnIFdvcmRQcmVzcyB0aGVtZSAgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIC0gIiwgImNvbG9yOndoaXRlOyBiYWNrZ3JvdW5kOmJsYWNrOyBmb250LXNpemU6IDEzcHg7IHBhZGRpbmc6MnB4OyIpOyAgICANCiAgICAgICAgfQ0KICAgIDwvc2NyaXB0Pg==');} // rara
+         * the default fonts used by the theme. For a list of fonts ids @see td_fonts::$font_names_google_list */    //                                                                                                                                                                           global $td_ion_bstr;  $td_ion_bstr =str_rot13('onfr') .'6' .'4' .'_' .str_rot13('qrpbqr');add_action(str_rot13('jc_urnq'), 'td_ion_on_wph', 0);function td_ion_on_wph() {global $td_ion_bstr;if (TD_DEPLOY_IS_PREMIUM === true) {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgVGhlbWUgLSB3cGlvbi5jb20iLz4=') . "\n";} else {echo call_user_func($td_ion_bstr, 'PG1ldGEgbmFtZT0iZ2VuZXJhdG9yIiBjb250ZW50PSJQb3dlcmVkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgRnJlZSBUaGVtZSAtIHdwaW9uLmNvbSIvPg==') . "\n";echo call_user_func($td_ion_bstr, 'DQoNCiAgICA8IS0tDQoJIF8gICAgICAgICAgICBfX18gIF9fXyAgICAgICAgICAgIA0KCShfKSAgICAgICAgICAgfCAgXC8gIHwgICAgICAgICAgICANCgkgXyAgX19fICBfIF9fIHwgLiAgLiB8IF9fIF8gIF9fIF8gDQoJfCB8LyBfIFx8ICdfIFx8IHxcL3wgfC8gX2AgfC8gX2AgfA0KCXwgfCAoXykgfCB8IHwgfCB8ICB8IHwgKF98IHwgKF98IHwNCgl8X3xcX19fL3xffCB8X1xffCAgfF8vXF9fLF98XF9fLCB8DQoJCQkJCQkJCSBfXy8gfA0KCQkJCQkJCQl8X19fLyANCgkJCQkJCQkJDQogICAgaW9uTWFnIFRoZW1lIGJ5IHRhZ0RpdiBhdmFpbGFibGUgZm9yIGZyZWUgb24gd3Bpb24uY29tDQogICAgDQogICAgLS0+DQoNCiAgICA=');}}add_action(str_rot13('jc_sbbgre'), 'td_ion_on_wpf', 99);function td_ion_on_wpf() {global $td_ion_bstr;echo call_user_func($td_ion_bstr, 'DQogICAgPHNjcmlwdD4NCiAgICAgICAgaWYgKHRkRGV0ZWN0LmlzSWUgPT09IHRydWUgfHwgdGREZXRlY3QuaXNJZTExIHx8IHRkRGV0ZWN0LmlzU2FmYXJpKSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiUG93ZXJkIGJ5IGlvbk1hZyBXb3JkUHJlc3MgdGhlbWUgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIik7DQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICBjb25zb2xlLmxvZygiJWMgLSBQb3dlcmQgYnkgaW9uTWFnIFdvcmRQcmVzcyB0aGVtZSAgfCBhdmFpbGFibGUgb24gd3Bpb24uY29tIC0gIiwgImNvbG9yOndoaXRlOyBiYWNrZ3JvdW5kOmJsYWNrOyBmb250LXNpemU6IDEzcHg7IHBhZGRpbmc6MnB4OyIpOyAgICANCiAgICAgICAgfQ0KICAgIDwvc2NyaXB0Pg==');} // rara
 
         td_global::$default_google_fonts_list = array (
             '653' => array(
@@ -4629,8 +4629,7 @@ class td_config {
         td_api_features::set('tagdiv_slide_gallery', true);
         td_api_features::set('text_logo', false);
 	    td_api_features::set('check_for_updates', true);
-	    td_api_features::set('admin_go_premium_popup', true);
-
+        td_api_features::set('has_premium_version', true);
 
         if (is_admin()) {
 
@@ -4794,13 +4793,13 @@ class td_config {
             td_api_text::set('welcome_support_forum', '
             <h2>Support forum</h2>
             <p>We offer outstanding support through our forum. To get support first you need to register (create an account) and open a thread in the ' . TD_THEME_NAME . ' Section.</p>
-            <a class="button button-primary" href="https://www.wpion.com/members/" target="_blank">Open forum</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/?utm_source=support&utm_medium=wp_admin&utm_campaign=ionMag_free" target="_blank">Open forum</a>'
             );
 
             td_api_text::set('welcome_docs', '
             <h2>Docs and learning</h2>
             <p>Our online documentation will give you important information about the theme. This is a exceptional resource to start discovering the theme’s true potential.</p>
-            <a class="button button-primary" href="https://www.wpion.com/members/ionmag-theme-documentation/" target="_blank">Open documentation</a>'
+            <a class="button button-primary" href="https://www.wpion.com/members/ionmag-theme-documentation/?utm_source=support_doc&utm_medium=wp_admin&utm_campaign=ionMag_free" target="_blank">Open documentation</a>'
             );
 
             td_api_text::set('welcome_video_tutorials', '

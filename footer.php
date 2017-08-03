@@ -86,35 +86,14 @@
                             echo $tds_footer_copyright;
 
 
-                            // Please do not remove this Powered by notice if you want to help us continue the development of the theme.
-                            // Thanks! ~ tagDiv team ~
-                            if (TD_DEPLOY_IS_PREMIUM === false) {
-                                echo '<br>Powered by <a href="https://www.wpion.com/free-news-theme/">ionMag news theme</a>';
-                            }
+
                             ?>
 
                         </div>
                     </div>
                 </div>
             </div>
-        <?php } else {
-            if (TD_DEPLOY_IS_PREMIUM === false) {
-                ?>
-                <div class="td-sub-footer-container">
-                    <div class="td-container">
-                        <div class="td-pb-row">
-                            <div class="td-pb-span12 td-sub-footer-copy">
-                                <?php
-                                // Please do not remove this Powered by notice if you want to help us continue the development of the theme.
-                                // Thanks! ~ tagDiv team ~
-                                    echo 'Powered by <a href="https://www.wpion.com/free-news-theme/">ionMag news theme</a>';
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php
-            }
+        <?php
         }
         ?>
     </div>
