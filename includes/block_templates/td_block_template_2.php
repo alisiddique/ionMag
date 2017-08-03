@@ -40,8 +40,7 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td_authors_wrap:hover .td-authors-name a,
             .$unique_block_class .td_authors_wrap.td-active .td-authors-name a,
             .$unique_block_class .td-authors-url a:hover,
-            .$unique_block_class .td-instagram-user a,
-            .$unique_block_class .td-trending-now-title {
+            .$unique_block_class .td-instagram-user a {
                 color: @accent_text_color !important;
             }
             
@@ -50,8 +49,7 @@ class td_block_template_2 extends td_block_template {
             .$unique_block_class .td-subcat-filter .td-subcat-dropdown ul:before,
             .$unique_block_class .td-weather-information:before,
             .$unique_block_class .td-weather-week:before,
-            .$unique_block_class .td-exchange-header:before,
-            .$unique_block_class .td-trending-now-title {
+            .$unique_block_class .td-exchange-header:before {
                 background-color: @accent_text_color !important;
             }
             

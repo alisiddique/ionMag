@@ -96,12 +96,6 @@ class td_block_template_1 extends td_block_template {
     ";
 
         $td_css_compiler = new td_css_compiler($raw_css);
-
-//        echo "header_color   <br>";
-//        var_dump($this->get_att('header_color'));
-//        echo "<br><br> header_text_color   <br>";
-//        var_dump($this->get_att('header_text_color'));
-
         $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
 
