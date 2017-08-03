@@ -22,7 +22,8 @@ class td_block_template_6 extends td_block_template {
         <style>
             /* @header_text_color */
             div.$unique_block_class .td-block-title *,
-            div.$unique_block_class .td-block-title:after {
+            div.$unique_block_class .td-block-title:after,
+            .$unique_block_class .td-trending-now-title {
                 color: @header_text_color;
             }
             
@@ -60,7 +61,12 @@ class td_block_template_6 extends td_block_template {
             .$unique_block_class .td-exchange-header:before {
                 background-color: @accent_text_color !important;
             }
-
+                        
+            /* @header_color */
+            .$unique_block_class .td-trending-now-title {
+                background-color: @header_color;
+            }
+            
         </style>
     ";
 
@@ -68,6 +74,7 @@ class td_block_template_6 extends td_block_template {
         $td_css_compiler->load_setting_raw('header_text_color', $this->get_att('header_text_color'));
         $td_css_compiler->load_setting_raw('header_image', wp_get_attachment_url($this->get_att('header_image'))); // @TODO tre citit dupa ID
         $td_css_compiler->load_setting_raw('accent_text_color', $this->get_att('accent_text_color'));
+        $td_css_compiler->load_setting_raw('header_color', $this->get_att('header_color'));
 
         $compiled_style = $td_css_compiler->compile_css();
 
