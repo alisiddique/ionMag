@@ -16,6 +16,23 @@
     </div>
 </div>
 
+<!-- Menu background color -->
+<div class="td-box-row">
+    <div class="td-box-description">
+        <span class="td-box-title">MENU STICKY BACKGROUND COLOR</span>
+        <p>Select menu sticky background color</p>
+    </div>
+    <div class="td-box-control-full">
+        <?php
+        echo td_panel_generator::color_picker(array(
+            'ds' => 'td_option',
+            'option_id' => 'tds_menu_sticky_color',
+            'default_color' => ''
+        ));
+        ?>
+    </div>
+</div>
+
 <!-- Menu text color -->
 <div class="td-box-row">
     <div class="td-box-description">

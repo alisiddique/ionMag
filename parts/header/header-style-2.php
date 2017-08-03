@@ -3,6 +3,7 @@ Header style 2
 -->
 
 <div class="td-header-wrap td-header-style-2">
+    <div class="td-header-bg td-container-wrap"></div>
     <div class="td-header-top-menu td-container-wrap <?php echo td_util::get_option('td_full_top_bar'); ?>">
         <div class="td-container td-header-row">
             <?php td_api_top_bar_template::_helper_show_top_bar() ?>
