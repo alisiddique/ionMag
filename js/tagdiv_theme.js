@@ -4718,8 +4718,6 @@ function td_done_resizing(){
     td_resize_videos();
 }
 
-
-
 /*  ----------------------------------------------------------------------------
     Resize the videos
  */
@@ -4802,11 +4800,6 @@ function td_resize_videos() {
     //    td_video.css('height', '100%', 'important');
     //})
 }
-
-
-
-
-
 
 //handles mobile menu
 function td_mobile_menu() {
@@ -4917,8 +4910,6 @@ function td_mobile_menu_toogle() {
     });
 }
 
-
-
 /*  ----------------------------------------------------------------------------
     Add retina support
  */
@@ -4983,9 +4974,6 @@ if(!tdDetect.isTouchDevice && tdUtil.getBackendVar('td_ad_background_click_link'
         //stopBubble(event);
     });
 }
-
-
-
 
 
 /**
