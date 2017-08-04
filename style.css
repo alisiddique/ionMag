@@ -1289,6 +1289,7 @@ body.td-ad-background-link .td-container-wrap {
   }
 }
 .td-header-bg {
+  background-color: transparent;
   position: absolute;
   top: 0;
   bottom: 0;
