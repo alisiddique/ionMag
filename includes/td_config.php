@@ -3415,6 +3415,19 @@ class td_config {
         );
 
 
+        /**
+         * the td_api_sub_footer
+         */
+        td_api_sub_footer_template::add('td_sub_footer_template_1',
+            array(
+                'img' => td_global::$get_template_directory_uri . '/images/panel/sub_footer_templates/icon-sub-footer-1.png',
+                'file' => td_global::$get_template_directory . '/parts/footer/td_sub_footer_template_1.php',
+                'text' => 'Style 1'
+
+            )
+        );
+
+
 	    /**
 	     * the td_api_ad
 	     */
