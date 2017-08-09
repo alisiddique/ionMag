@@ -1836,6 +1836,7 @@ class td_config {
                 "class" => 'td_block_trending_now',
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td_block_trending_now',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_trending_now.php',
                 "params" => self::td_block_trending_now_params(),
@@ -1851,6 +1852,7 @@ class td_config {
                 "class" => "td_block_video_playlist_youtube",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-youtube',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_video_youtube.php',
                 "params" => array(
@@ -1919,6 +1921,7 @@ class td_config {
                 "class" => "td_block_video_playlist_vimeo",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-vimeo',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_video_vimeo.php',
                 "params" => array(
@@ -1987,6 +1990,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-ads',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_ad_box.php',
 	            "params" => array_merge(
@@ -2060,6 +2064,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td_block_authors',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_authors.php',
                 "params" => array_merge(
@@ -2129,6 +2134,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td_block_author',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_author.php',
                 "params" => array_merge(
@@ -2213,6 +2219,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-weather',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_weather.php',
                 "params" => array_merge(
@@ -2277,6 +2284,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td_block_image_box',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_image_box.php',
                 "params" => array_merge(
@@ -2560,6 +2568,7 @@ class td_config {
                 "class" => "td_block_popular_categories",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-popular_categories',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_popular_categories.php',
                 "params" => array_merge(
@@ -2618,6 +2627,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-title',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_title.php',
                 "params" => array_merge(
@@ -2661,6 +2671,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-exchange',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_exchange.php',
                 "params" => array_merge(
@@ -2811,6 +2822,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-instagram',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_instagram.php',
                 "params" =>
@@ -2945,6 +2957,7 @@ class td_config {
                 "class" => "",
                 "controls" => "full",
                 "category" => 'Blocks',
+	            'tdc_category' => 'Extended',
                 'icon' => 'icon-pagebuilder-td-pinterest',
                 'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_pinterest.php',
                 "params" => array_merge(
@@ -3097,6 +3110,7 @@ class td_config {
 			    "class" => "",
 			    "controls" => "full",
 			    "category" => 'Blocks',
+			    'tdc_category' => 'Extended',
 			    'icon' => 'icon-pagebuilder-td_block_list_menu',
 			    'file' => td_global::$get_template_directory . '/includes/shortcodes/td_block_list_menu.php',
 			    'params' => array_merge(
