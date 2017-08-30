@@ -3224,28 +3224,32 @@ class td_config {
         td_api_top_bar_template::add('td_top_bar_template_1',
             array(
                 'img' => td_global::$get_template_directory_uri . '/images/panel/top_bar_templates/icon-top-bar-1.png',
-                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_1.php'
+                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_1.php',
+                'text' => 'Style 1'
             )
         );
 
         td_api_top_bar_template::add('td_top_bar_template_2',
             array(
                 'img' => td_global::$get_template_directory_uri . '/images/panel/top_bar_templates/icon-top-bar-2.png',
-                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_2.php'
+                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_2.php',
+                'text' => 'Style 2'
             )
         );
 
         td_api_top_bar_template::add('td_top_bar_template_3',
             array(
                 'img' => td_global::$get_template_directory_uri . '/images/panel/top_bar_templates/icon-top-bar-3.png',
-                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_3.php'
+                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_3.php',
+                'text' => 'Style 3'
             )
         );
 
         td_api_top_bar_template::add('td_top_bar_template_4',
             array(
                 'img' => td_global::$get_template_directory_uri . '/images/panel/top_bar_templates/icon-top-bar-4.png',
-                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_4.php'
+                'file' => td_global::$get_template_directory . '/parts/header/td_top_bar_template_4.php',
+                'text' => 'Style 4'
             )
         );
 
