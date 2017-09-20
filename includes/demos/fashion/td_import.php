@@ -136,7 +136,7 @@ $demo_cat_1_id =td_demo_category::add_category(array(
         'tdc_sidebar_pos' => '', //sidebar_left, sidebar_right, no_sidebar
     ));
     $demo_cat_6_id =td_demo_category::add_category(array(
-        'category_name' => 'Victoria’s Secret',
+        'category_name' => 'Victoriaï¿½s Secret',
         'parent_id' => $demo_cat_1_id,
         'category_template' => '',
         'top_posts_style' => '',
@@ -200,7 +200,7 @@ $demo_cat_10_id =td_demo_category::add_category(array(
 $td_about_page = td_demo_content::add_page(array(
     'title' => 'About me',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/about.txt',
-    'template' => 'page.php',   // the page template full file name with .php
+    'template' => 'page.php',   // the page template full file name with .php, for default no extension needed
     'td_layout' => '',
     'sidebar_position' => '',
     'homepage' => false
@@ -208,7 +208,7 @@ $td_about_page = td_demo_content::add_page(array(
 $td_contact_page = td_demo_content::add_page(array(
     'title' => 'Contact',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/contact.txt',
-    'template' => 'page.php',   // the page template full file name with .php
+    'template' => 'page.php',   // the page template full file name with .php, for default no extension needed
     'td_layout' => '',
     'sidebar_position' => '',
     'homepage' => false
@@ -216,7 +216,7 @@ $td_contact_page = td_demo_content::add_page(array(
 $td_homepage_page = td_demo_content::add_page(array(
     'title' => 'Home',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/homepage.txt',
-    'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php
+    'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php, for default no extension needed
     'td_layout' => 'td_module_rd_6',
     'sidebar_position' => '',
     'homepage' => true
@@ -310,19 +310,19 @@ td_demo_content::add_post(array(
     'featured_image_td_id' => 'td_pic_9'
 ));
 td_demo_content::add_post(array(
-    'title' => '6 Perfect Valentine’s Day Outfits For Every Occasion',
+    'title' => '6 Perfect Valentineï¿½s Day Outfits For Every Occasion',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_1_id,$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_2'
 ));
 td_demo_content::add_post(array(
-    'title' => 'The 10 Runway Trends You’ll Be Wearing This Year',
+    'title' => 'The 10 Runway Trends Youï¿½ll Be Wearing This Year',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_1_id,$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_3'
 ));
 td_demo_content::add_post(array(
-    'title' => 'Let’s Remember The Best Ever Oscars Dresses',
+    'title' => 'Letï¿½s Remember The Best Ever Oscars Dresses',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_1_id,$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_4'
@@ -376,7 +376,7 @@ td_demo_content::add_post(array(
     'featured_image_td_id' => 'td_pic_11'
 ));
 td_demo_content::add_post(array(
-    'title' => 'Local Designers Impress at Fashion Palette’s Summer Show',
+    'title' => 'Local Designers Impress at Fashion Paletteï¿½s Summer Show',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_1_id,$demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_15'
@@ -408,13 +408,13 @@ td_demo_content::add_post(array(
     'featured_image_td_id' => 'td_pic_1'
 ));
 td_demo_content::add_post(array(
-    'title' => 'H&M’s Supermodel Campaign Is the Hottest Thing We’ve Seen All Week',
+    'title' => 'H&Mï¿½s Supermodel Campaign Is the Hottest Thing Weï¿½ve Seen All Week',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_9_id),
     'featured_image_td_id' => 'td_pic_9'
 ));
 td_demo_content::add_post(array(
-    'title' => 'Beauty Editors Tell Us Which Products They’re Excited to Use',
+    'title' => 'Beauty Editors Tell Us Which Products Theyï¿½re Excited to Use',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_8'
@@ -510,7 +510,7 @@ td_demo_content::add_post(array(
     'featured_image_td_id' => 'td_pic_3'
 ));
 td_demo_content::add_post(array(
-    'title' => 'History of Victoria’s Secret’s Sexiest Angels',
+    'title' => 'History of Victoriaï¿½s Secretï¿½s Sexiest Angels',
     'file' => td_global::$get_template_directory . '/includes/demos/fashion/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_3_id),
     'featured_image_td_id' => 'td_pic_2'
