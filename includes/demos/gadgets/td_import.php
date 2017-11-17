@@ -305,7 +305,7 @@ $demo_cat_13_id =td_demo_category::add_category(array(
 $td_homepage_id = td_demo_content::add_page(array(
     'title' => 'Home',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/homepage.txt',
-    'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php
+    'template' => 'page-pagebuilder-latest.php',   // the page template full file name with .php, for default no extension needed
     'sidebar_position' => 'no_sidebar',
     'homepage' => true,
     'limit' => '9'
@@ -387,7 +387,7 @@ td_demo_menus::add_category(array(
 // posts in featured category
 
 td_demo_content::add_post(array(
-    'title' => 'Here’s a New Way to Take Better Photos for Instagram',
+    'title' => 'Hereï¿½s a New Way to Take Better Photos for Instagram',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
     'featured_image_td_id' => 'td_pic_1'
@@ -401,7 +401,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Malware May Soon Infect Smart Home’s Operating Systems',
+    'title' => 'Malware May Soon Infect Smart Homeï¿½s Operating Systems',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
     'featured_image_td_id' => 'td_pic_3'
@@ -415,7 +415,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'The Smart Wireless Earphones for DJ’s Are a Real Breakthrough',
+    'title' => 'The Smart Wireless Earphones for DJï¿½s Are a Real Breakthrough',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array(get_cat_ID(TD_FEATURED_CAT)),
     'featured_image_td_id' => 'td_pic_5'
@@ -496,7 +496,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Computer Internet Connection Doesn’t Work (Ethernet or WiFi)',
+    'title' => 'Computer Internet Connection Doesnï¿½t Work (Ethernet or WiFi)',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id,$demo_cat_3_id,$demo_cat_4_id,$demo_cat_5_id,$demo_cat_6_id,$demo_cat_7_id,$demo_cat_8_id,$demo_cat_9_id,$demo_cat_10_id,$demo_cat_11_id,$demo_cat_12_id,$demo_cat_13_id),
     'featured_image_td_id' => 'td_pic_11'
@@ -521,7 +521,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => '12 Computer Security Mistakes You’re Probably Making',
+    'title' => '12 Computer Security Mistakes Youï¿½re Probably Making',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_13_id),
     'featured_image_td_id' => 'td_pic_11'
@@ -544,7 +544,7 @@ td_demo_content::add_post(array(
 /* ------------------------------------------------------------------ */
 
 td_demo_content::add_post(array(
-    'title' => 'Friday’s Internet Outages May Be Just the Beginning',
+    'title' => 'Fridayï¿½s Internet Outages May Be Just the Beginning',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_12_id),
     'featured_image_td_id' => 'td_pic_1'
@@ -612,7 +612,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Here’s a New Way to Take Better Photos for Instagram',
+    'title' => 'Hereï¿½s a New Way to Take Better Photos for Instagram',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_10_id),
     'featured_image_td_id' => 'td_pic_10'
@@ -679,7 +679,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Malware May Soon Infect Smart Home’s Operating Systems',
+    'title' => 'Malware May Soon Infect Smart Homeï¿½s Operating Systems',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_8_id),
     'featured_image_td_id' => 'td_pic_8'
@@ -792,7 +792,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Apple’s Next Smartphone May Have Ultra HD OLED Screens',
+    'title' => 'Appleï¿½s Next Smartphone May Have Ultra HD OLED Screens',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_4_id),
     'featured_image_td_id' => 'td_pic_3'
@@ -836,7 +836,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'Air Hogs Drone Gives You a Bird’s-Eye View in VR Mode',
+    'title' => 'Air Hogs Drone Gives You a Birdï¿½s-Eye View in VR Mode',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_3_id),
     'featured_image_td_id' => 'td_pic_9'
@@ -852,7 +852,7 @@ td_demo_content::add_post(array(
 ));
 
 td_demo_content::add_post(array(
-    'title' => 'The Smart Wireless Earphones for DJ’s Are a Real Breakthrough',
+    'title' => 'The Smart Wireless Earphones for DJï¿½s Are a Real Breakthrough',
     'file' => td_global::$get_template_directory . '/includes/demos/gadgets/pages/post_default.txt',
     'categories_id_array' => array($demo_cat_2_id),
     'featured_image_td_id' => 'td_pic_1'
