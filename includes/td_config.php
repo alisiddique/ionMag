@@ -2226,11 +2226,21 @@ class td_config {
                     self::get_map_block_general_array(),
                     array(
                         array(
+                            "param_name" => "w_key",
+                            "type" => "textfield",
+                            "value" => '',
+                            "heading" => "Api key",
+                            "description" => 'Create a free acount and get an api key - <a href="https://www.wpion.com/members/weather-widget/" target="_blank">How to get an api key</a>',
+                            "holder" => "div",
+                            "class" => "",
+                            'group' => 'Weather'
+                        ),
+                        array(
                             "param_name" => "w_location",
                             "type" => "textfield",
                             "value" => '',
                             "heading" => "Location",
-                            "description" => '<a href="http://openweathermap.org/find" target="_blank">Find your location</a> - You can use "city name" or "city name,country code" (ex: London,uk). Note that the widget will autotranslate itself to the language from the theme panel only if a translation is available. <a href="http://bugs.openweathermap.org/projects/api/wiki/Api_2_5_weather" target="_blank">The available languages</a> (section 4.2)',
+                            "description" => '<a href="https://openweathermap.org/find" target="_blank">Find your location</a> - You can use "city name" or "city name,country code" (ex: London,uk). Note that the widget will autotranslate itself to the language from the theme panel only if a translation is available. <a href="https://bugs.openweathermap.org/projects/api/wiki/Api_2_5_weather" target="_blank">The available languages</a> (section 4.2)',
                             "holder" => "div",
                             "class" => "",
                             'group' => 'Weather'
