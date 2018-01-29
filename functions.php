@@ -56,7 +56,10 @@ function td_wc_loop_shop_columns($number_columns) {
 }
 
 // Number of product per page 8
-add_filter('loop_shop_per_page', create_function('$cols', 'return 8;'));
+add_filter('loop_shop_per_page', 'td_wc_loop_shop_per_page' );
+function td_wc_loop_shop_per_page($cols) {
+    return 8;
+}
 
 if (!function_exists('woocommerce_output_related_products')) {
     // Number of related products

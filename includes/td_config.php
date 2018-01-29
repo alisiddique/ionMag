@@ -2253,6 +2253,7 @@ class td_config {
                                 'Fahrenheit' => 'imperial' ,
                             ),
                             "heading" => 'Units:',
+                            "description" => "",
                             "holder" => "div",
                             "class" => "tdc-dropdown-big",
                             'group' => 'Weather',
@@ -2725,6 +2726,7 @@ class td_config {
                                 'ZAR - South African Rand' => 'zar'
                             ),
                             "heading" => 'Base currency:',
+                            "description" => "",
                             "holder" => "div",
                             "class" => "",
                             'group' => 'Exchange'
