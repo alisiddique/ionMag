@@ -102,7 +102,7 @@ if (!empty($post->ID)) {
         <?php } ?>
     </div>
 
-    <div class="td-container td-pb-article-list <?php echo $el_class ?>">
+    <div class="td-container td-pb-article-list <?php echo $el_class; ?>">
         <div class="td-pb-row">
             <?php
             // set the $cur_single_template_sidebar_pos - for gallery and video playlist
