@@ -60,11 +60,14 @@ if (!empty($post->ID)) {
         $td_list_custom_title =__td('LATEST ARTICLES', TD_THEME_NAME);
     }
 
-
     if (!empty($td_homepage_loop['list_custom_title_show'])) {
         $list_custom_title_show = false;
     }
 
+    $el_class = '';
+    if (!empty($td_homepage_loop['el_class'])) {
+        $el_class = $td_homepage_loop['el_class'];
+    } 
 
 }
 ?>
@@ -99,7 +102,7 @@ if (!empty($post->ID)) {
         <?php } ?>
     </div>
 
-    <div class="td-container td-pb-article-list">
+    <div class="td-container td-pb-article-list <?php echo $el_class ?>">
         <div class="td-pb-row">
             <?php
             // set the $cur_single_template_sidebar_pos - for gallery and video playlist
