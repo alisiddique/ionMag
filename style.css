@@ -12299,6 +12299,21 @@ body .dropcap3 {
 .td-icon-block-header:before {
   content: '\e907';
 }
+.td-icon-dailymotion:before {
+  content: '\e908';
+}
+.td-icon-twitch:before {
+  content: '\e909';
+}
+.td-icon-xing:before {
+  content: '\e90a';
+}
+.td-icon-ebay:before {
+  content: '\e90b';
+}
+.td-icon-telegram:before {
+  content: '\f2c6';
+}
 .rain-d:before {
   content: "\e80e";
   display: none;
@@ -12509,6 +12524,21 @@ body .dropcap3 {
 }
 .td-social-icon-wrap:hover i.td-icon-youtube {
   color: #bb0000;
+}
+.td-social-icon-wrap:hover i.td-icon-dailymotion {
+  color: #41bafc;
+}
+.td-social-icon-wrap:hover i.td-icon-twitch {
+  color: #4a377d;
+}
+.td-social-icon-wrap:hover i.td-icon-xing {
+  color: #1e6567;
+}
+.td-social-icon-wrap:hover i.td-icon-ebay {
+  color: #db2e32;
+}
+.td-social-icon-wrap:hover i.td-icon-telegram {
+  color: #3b9de1;
 }
 /* Magnific Popup CSS */
 .mfp-bg {
