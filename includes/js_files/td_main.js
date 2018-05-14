@@ -31,11 +31,15 @@ if (tdUtil.getBackendVar('tds_smart_sidebar') == 'enabled' && tdDetect.isIos ===
     jQuery(window).load(function() {
         // find the rows and the sidebars objects and add them to the magic sidebar object array
         jQuery('.td-ss-row').each(function () {
-            //@todo check to see if the sidebar + content is pressent
-            var td_smart_sidebar_item = new tdSmartSidebar.item();
-            td_smart_sidebar_item.sidebar_jquery_obj = jQuery(this).children('.td-pb-span4').find('.wpb_wrapper:first');
-            td_smart_sidebar_item.content_jquery_obj = jQuery(this).children('.td-pb-span8').find('.wpb_wrapper:first');
-            tdSmartSidebar.add_item(td_smart_sidebar_item);
+            var td_smart_sidebar_item = new tdSmartSidebar.item(),
+                content = jQuery(this).children('.td-pb-span8').find('.wpb_wrapper:first'),
+                sidebar = jQuery(this).children('.td-pb-span4').find('.wpb_wrapper:first');
+
+            if (content.length > 0 && sidebar.length > 0) {
+                td_smart_sidebar_item.sidebar_jquery_obj = sidebar;
+                td_smart_sidebar_item.content_jquery_obj = content;
+                tdSmartSidebar.add_item(td_smart_sidebar_item);
+            }
         });
 
 
